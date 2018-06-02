@@ -61,10 +61,19 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+  git 
+  extract
+  ssh-agent
+  autojump
+  vi-mode
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# make sure the autosuggestions color differs from the solarized dark background color
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
 # User configuration
 
@@ -114,3 +123,6 @@ export GOPATH=/data/gowork
 # set PATH so it includes user's private bin directories and go directories
 PATH="$GOPATH/bin:$GOROOT/bin:$HOME/bin:$HOME/.local/bin:$PATH"
 
+DEFAULT_USER=$USER
+
+set clipboard=unnamedplus
