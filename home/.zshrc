@@ -121,7 +121,7 @@ export GOROOT=/usr/local/go
 export GOPATH=/data/gowork
 
 # set PATH so it includes user's private bin directories and go directories
-PATH="$GOPATH/bin:$GOROOT/bin:$HOME/bin:$HOME/.local/bin:$PATH"
+PATH="$PATH:$GOPATH/bin:$GOROOT/bin:$HOME/bin:$HOME/.local/bin:$(yarn global bin)"
 
 DEFAULT_USER=$USER
 
