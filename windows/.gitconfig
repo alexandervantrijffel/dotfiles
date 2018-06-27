@@ -1,0 +1,61 @@
+[user]
+	email = avantrijffel@deloitte.nl
+	name = Alexander van Trijffel
+[log]
+	decorate = true
+	abbrevCommit = true
+[core]
+	autocrlf = false
+	excludesfile = ~/.gitignore
+[credential]
+	helper = wincred
+[alias]
+	ga = git add .
+	gs= git status --untracked-files=all
+	gp = git push
+	gpff = git pull --ff-only
+	gl = git log --max-count=12 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --dat$
+	gcm = "git commit -m  "
+	gd = git diff -w --word-diff
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = always	
+[apply]
+        whitespace = nowarn
+[merge]
+        conflictstyle = diff3
+
+	tool = meld
+[mergetool "meld"]
+        prompt = false
+        keepBackup = false
+        keepTemporaries = false
+	path = C:\\Program Files (x86)\\Meld\\meld\\meld.exe
+[mergetool]
+        keepBackup = false
+		ff = only
+[diff]
+	tool = meld
+[difftool]
+        prompt = false
+[difftool "meld"]
+        path = C:\\Program Files (x86)\\Meld\\Meld.exe
+[help]
+        autocorrect = 1
+[push]
+        # See `git help config` (search for push.default)
+        # for more information on different options of the below setting.
+        #
+        # Setting to git 2.0 default to surpress warning message
+        default = simple
+	followTags = true
+[github]
+        user = alexandervantrijffel
+[web]
+        browser = google-chrome
+[status]
+        showUntrackedFiles = all
+[transfer]
+        fsckobjects = true
