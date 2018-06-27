@@ -9,14 +9,6 @@
 	excludesfile = ~/.gitignore
 [credential]
 	helper = wincred
-[alias]
-	ga = git add .
-	gs= git status --untracked-files=all
-	gp = git push
-	gpff = git pull --ff-only
-	gl = git log --max-count=12 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --dat$
-	gcm = "git commit -m  "
-	gd = git diff -w --word-diff
 [color]
         diff = auto
         status = auto
