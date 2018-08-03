@@ -16,6 +16,12 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+export GOROOT=/usr/lib/go-1.10
+export GOPATH=/data/gowork
+
+# set PATH so it includes user's private bin directories and go directories
+PATH="$PATH:$GOPATH/bin:$GOROOT/bin:$HOME/bin:$HOME/.local/bin"
+ 
 ## exports for GO are in /etc/profile
 # DISABLE touchpad
 echo Disabling touchpad in ~/.profile
