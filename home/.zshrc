@@ -82,6 +82,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+export EDITOR='vim'
+
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -112,17 +114,18 @@ alias l='ls -CFh'
 alias gs="git status --untracked-files=all"
 alias gp="git push"
 alias gpff="git pull --ff-only"
-alias gl="git log --max-count=8 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
+alias gl="git log --max-count=10 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
 alias gcm="git commit -m  "
 alias gd="git diff --word-diff -w"
 alias ga="git add ."
 
-export GOROOT=/usr/local/go
-export GOPATH=/data/gowork
-
 # set PATH so it includes user's private bin directories and go directories
-PATH="$PATH:$GOPATH/bin:$GOROOT/bin:$HOME/bin:$HOME/.local/bin:$(yarn global bin)"
+PATH="$PATH:$HOME/bin:$HOME/.local/bin:$(yarn global bin)"
 
 DEFAULT_USER=$USER
 
 set clipboard=unnamedplus
+
+source /etc/zsh/zprofile
+
+bindkey ' ' magic-space

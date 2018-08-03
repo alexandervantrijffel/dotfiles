@@ -1,48 +1,36 @@
 [user]
-	email = alexander@here
-	name = Alexander van Trijffel
+	email = lex@work.com
+	name = Alexander
 [log]
 	decorate = true
 	abbrevCommit = true
-[core]
-	autocrlf = false
-	excludesfile = ~/.gitignore
-[alias]
-    ga = git add .
-	gs= git status --untracked-files=all
-	gp = git push
-	gpff = git pull --ff-only
-	gl = git log --max-count=12 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --dat$
-	gcm = "git commit -m  "
-	gd = git diff -w --word-diff
+[diff]
+	tool = meld
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = always	
-[apply]
-        whitespace = nowarn
+	ui = always
+	status = auto
+	branch = auto
+  diff = auto
 [merge]
-        conflictstyle = diff3
+	ff = only
+	tool = meld
+	conflictstyle = diff3
 [mergetool]
-        keepBackup = false
-		ff = only
-[difftool]
-        prompt = false
-[help]
-        autocorrect = 1
+	keepBackup = false
+[apply]
+	whitespace = nowarn
 [push]
-        # See `git help config` (search for push.default)
-        # for more information on different options of the below setting.
-        #
-        # Setting to git 2.0 default to surpress warning message
-        default = simple
-     	followTags = true
-[github]
-        user = alexandervantrijffel
-[web]
-        browser = google-chrome
-[status]
-        showUntrackedFiles = all
+	default = simple
+	followTags = true
 [transfer]
-        fsckobjects = true
+	fsckobjects = false
+[http]
+  sslVerify = true
+[help]
+  autocorrect = 1
+[github]
+  user = alexandervantrijffel
+[web]
+  browser = google-chrome
+[status]
+  showUntrackedFiles = all
