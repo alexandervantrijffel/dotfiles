@@ -1,0 +1,7 @@
+{
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "vim.easymotion": true,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    }
+}
