@@ -1,14 +1,11 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/arctica/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-
 ZSH_THEME="agnoster"
 
 # Set list of themes to load
@@ -75,21 +72,10 @@ source $ZSH/oh-my-zsh.sh
 # make sure the autosuggestions color differs from the solarized dark background color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-export EDITOR='vim'
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -102,12 +88,7 @@ export EDITOR='vim'
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-# some more ls aliases
 alias ll='exa -alFbgh'
 alias la='exa -albgh'
 alias l='ls -CFh'
@@ -120,12 +101,19 @@ alias gd="git diff --word-diff -w"
 alias ga="git add ."
 
 # set PATH so it includes user's private bin directories and go directories
-PATH="$PATH:$HOME/bin:$HOME/.local/bin:$(yarn global bin)"
+PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/localbin:$(yarn global bin)"
+
+VSCODE='/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
+if [ -d "$VSCODE" ]; then
+  export PATH="$PATH:$VSCODE"
+fi
 
 DEFAULT_USER=$USER
 
 set clipboard=unnamedplus
 
-source /etc/zsh/zprofile
+if [ -d "/etc/zsh" ]; then
+  source /etc/zsh/zprofile
+fi
 
 bindkey ' ' magic-space
