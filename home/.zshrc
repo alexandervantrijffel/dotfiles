@@ -116,4 +116,5 @@ if [ -d "/etc/zsh" ]; then
   source /etc/zsh/zprofile
 fi
 
+# after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
