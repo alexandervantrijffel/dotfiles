@@ -2,10 +2,16 @@ func! myspacevim#before() abort
   set wrap
   set ignorecase
   set smartcase
+
   " highlight search results
   set incsearch
+
+  " jump up/down row on screen instead of line in document
+  nmap j gj
+  nmap k gk
   iunmap jk
   inoremap jj <esc>
+
   set clipboard+=unnamed
 
   " Normal mode
