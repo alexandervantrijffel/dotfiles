@@ -100,8 +100,11 @@ alias gcm="git commit -m  "
 alias gd="git diff --word-diff -w"
 alias ga="git add ."
 
-# set PATH so it includes user's private bin directories and go directories
-PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/localbin:$(yarn global bin)"
+which yarn
+if [ $? -eq 0 ]; then
+	# set PATH so it includes user's private bin directories and go directories
+	PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/localbin:$(yarn global bin)"
+fi
 
 VSCODE='/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
 if [ -d "$VSCODE" ]; then
