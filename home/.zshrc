@@ -115,9 +115,29 @@ DEFAULT_USER=$USER
 
 set clipboard=unnamedplus
 
-if [ -d "/etc/zsh" ]; then
-  source /etc/zsh/zprofile
-fi
+[ -d "/etc/zsh" ] &&  source /etc/zsh/zprofile
 
 # after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
+
+which bat
+if [ $? -eq 0 ]; then
+  alias cat='bat'
+fi
+
+which prettyping
+if [ $? -eq 0 ]; then
+  alias ping='prettyping'
+fi
+
+if [ -f ~/.fzf.zsh ];
+  source ~/.fzf.zsh
+  alias preview="fzf --preview 'bat --color \"always\" {}'"
+  # add support for ctrl+o to open selected file in VS Code
+  export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+fi
+
+which htop
+if [ $? -eq 0 ]; then
+  alias top="sudo htop" # alias top and fix high sierra bug
+fi
