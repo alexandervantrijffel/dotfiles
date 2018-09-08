@@ -130,7 +130,7 @@ if [ $? -eq 0 ]; then
   alias ping='prettyping'
 fi
 
-if [ -f ~/.fzf.zsh ];
+if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
   alias preview="fzf --preview 'bat --color \"always\" {}'"
   # add support for ctrl+o to open selected file in VS Code
