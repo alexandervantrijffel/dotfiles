@@ -31,3 +31,7 @@
   browser = google-chrome
 [status]
   showUntrackedFiles = all
+[credential "https://gitlab.com"]
+	avtnl = avtnl
+[credential]
+	helper = store
