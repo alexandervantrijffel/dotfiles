@@ -95,6 +95,7 @@ alias l='ls -CFh'
 alias gs="git status --untracked-files=all"
 alias gp="git push"
 alias gpu="git push -u origin "
+alias gpf="git push --force"
 alias gpff="git pull --ff-only"
 alias gl="git log --max-count=10 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
 alias gcm="git commit -m  "
