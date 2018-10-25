@@ -102,6 +102,7 @@ alias gcm="git commit -m  "
 alias gd="git diff --word-diff -w"
 alias gds="git diff --staged --word-diff -w"
 alias ga="git add ."
+alias gba="git branch -a"
 
 which yarn
 if [ $? -eq 0 ]; then
