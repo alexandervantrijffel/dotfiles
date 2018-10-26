@@ -100,6 +100,7 @@ alias gpff="git pull --ff-only"
 alias gl="git log --max-count=10 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
 alias gcm="git commit -m  "
 alias gd="git diff --word-diff -w"
+alias gds="gd --staged"
 alias gds="git diff --staged --word-diff -w"
 alias ga="git add ."
 alias gba="git branch -a"
@@ -144,4 +145,8 @@ fi
 which htop
 if [ $? -eq 0 ]; then
   alias top="sudo htop" # alias top and fix high sierra bug
+fi
+
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
 fi
