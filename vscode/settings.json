@@ -40,5 +40,7 @@
             "after": ["<Esc>"]
         }
     ],
-  "vim.easymotion": true
+  "vim.easymotion": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true
 }
