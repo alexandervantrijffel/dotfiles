@@ -39,3 +39,7 @@ default_height = 30
 
 [[layers]]
 name = 'ctrlp'
+
+[[layers]]
+name = 'lang#javascript'
+auto_fix = true
