@@ -42,5 +42,6 @@
     ],
   "vim.easymotion": true,
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "breadcrumbs.enabled": true
 }
