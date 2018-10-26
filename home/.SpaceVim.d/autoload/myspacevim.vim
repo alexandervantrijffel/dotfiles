@@ -30,6 +30,8 @@ func! myspacevim#before() abort
   map <leader>. <Plug>(vim-easymotion-prefix)
   let g:EasyMotion_do_mapping = 1
 
+  let g:spacevim_automatic_update = 1
+
   let g:spacevim_custom_plugins = [
             \ ['pangloss/vim-javascript', {'merged' : 0}],
             \ ['mxw/vim-jsx', {'merged' : 0}],
