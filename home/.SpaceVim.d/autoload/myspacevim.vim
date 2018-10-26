@@ -35,19 +35,17 @@ func! myspacevim#before() abort
             \ ['mxw/vim-jsx', {'merged' : 0}],
             \ ['w0rp/ale', {'merged' : 0}],
             \ ['907th/vim-auto-save', {'merged' : 0}],
-            \ ['prettier/vim-prettier', {'merged' : 0}],
             \ ]
 
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
 
   let g:ale_linters = {
-            \   'javascript': ['standard'],
+            \   'javascript': ['eslint'],
             \}
-  let g:ale_fixers = {'javascript': ['standard']}
+  let g:ale_fixers = {'javascript': ['prettier','eslint']}
 
   let g:ale_lint_on_save = 1
   let g:ale_fix_on_save = 1
-  
   let g:auto_save = 1
 endf
 
