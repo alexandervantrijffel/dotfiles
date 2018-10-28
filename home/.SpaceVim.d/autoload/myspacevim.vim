@@ -37,7 +37,27 @@ func! myspacevim#before() abort
             \ ['mxw/vim-jsx', {'merged' : 0}],
             \ ['w0rp/ale', {'merged' : 0}],
             \ ['907th/vim-auto-save', {'merged' : 0}],
+            \ ['fatih/vim-go', {'merged' : 0}],
+            \ ['Shougo/deoplete.nvim', {'merged' : 0}],
+            \ ['zchee/deoplete-go', {'merged' : 0}],
+            \ ['majutsushi/tagbar', {'merged' : 0}],
+            \ ['jodosha/vim-godebug', {'merged' : 0}],
+            \ ['rakr/vim-one', {'merged' : 0}],
             \ ]
+
+  " run 'pip3 install neovim' for vim
+  let g:deoplete#enable_at_startup = 1
+	let g:go_highlight_types = 1
+	let g:go_highlight_fields = 1
+	let g:go_highlight_functions = 1
+	let g:go_highlight_methods = 1
+	let g:go_highlight_operators = 1
+	let g:go_highlight_build_constraints = 1
+	let g:go_highlight_structs = 1
+	let g:go_highlight_generate_tags = 1
+	let g:go_highlight_extra_types = 1
+	let g:go_list_type = "quickfix"
+	let g:go_fmt_command = "goimports"
 
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
 
