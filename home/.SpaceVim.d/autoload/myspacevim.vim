@@ -44,6 +44,7 @@ func! myspacevim#before() abort
   let g:ale_linters = {
             \   'javascript': ['eslint'],
             \}
+  " Run 'yarn global install prettier' for this one
   let g:ale_fixers = {'javascript': ['prettier','eslint']}
 
   let g:ale_lint_on_save = 1
