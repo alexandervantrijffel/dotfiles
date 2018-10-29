@@ -2,6 +2,7 @@ func! myspacevim#before() abort
   set wrap
   set ignorecase
   set smartcase
+  set splitright
 
   " highlight search results
   set incsearch
@@ -47,6 +48,7 @@ func! myspacevim#before() abort
   " run 'pip3 install neovim' for vim
   " and :GoInstallBinaries
   let g:deoplete#enable_at_startup = 1
+  let g:go_auto_sameids = 1
 	let g:go_highlight_types = 1
 	let g:go_highlight_fields = 1
 	let g:go_highlight_functions = 1
@@ -59,6 +61,13 @@ func! myspacevim#before() abort
 	let g:go_list_type = "quickfix"
 	let g:go_fmt_command = "goimports"
   let g:go_metalinter_command = "gometalinter --config=" . $HOME . "/.gometalinter.json"
+  let g:go_test_show_name=1
+  let g:go_term_enabled = 1
+  let g:go_auto_type_info = 1
+
+  au FileType go nmap <leader>t :GoDeclsDir<cr>
+  " alternative for gd
+  au FileType go nmap <F12> <Plug>(go-def)
 
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
 
