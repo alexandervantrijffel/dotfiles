@@ -64,6 +64,8 @@ func! myspacevim#before() abort
   let g:go_test_show_name=1
   let g:go_term_enabled = 1
   let g:go_auto_type_info = 1
+  " 'snakecase' is also supported
+  let g:go_addtags_transform = "camelcase"
 
   au FileType go nmap <leader>t :GoDeclsDir<cr>
   " alternative for gd
