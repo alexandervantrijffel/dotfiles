@@ -42,7 +42,6 @@ func! myspacevim#before() abort
             \ ['zchee/deoplete-go', {'merged' : 0}],
             \ ['majutsushi/tagbar', {'merged' : 0}],
             \ ['jodosha/vim-godebug', {'merged' : 0}],
-            \ ['rakr/vim-one', {'merged' : 0}],
             \ ]
 
   " run 'pip3 install neovim' for vim
