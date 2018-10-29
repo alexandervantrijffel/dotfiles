@@ -27,6 +27,7 @@
     statusline_display_mode = false
     bootstrap_before = "myspacevim#before"
     bootstrap_after = "myspacevim#after"
+    vimcompatible = true
 
 # Enable autocomplete layer
 [[layers]]
