@@ -45,6 +45,7 @@ func! myspacevim#before() abort
             \ ]
 
   " run 'pip3 install neovim' for vim
+  " and :GoInstallBinaries
   let g:deoplete#enable_at_startup = 1
 	let g:go_highlight_types = 1
 	let g:go_highlight_fields = 1
@@ -57,6 +58,7 @@ func! myspacevim#before() abort
 	let g:go_highlight_extra_types = 1
 	let g:go_list_type = "quickfix"
 	let g:go_fmt_command = "goimports"
+  let g:go_metalinter_command = "gometalinter --config=" . $HOME . "/.gometalinter.json"
 
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
 
