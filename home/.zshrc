@@ -74,8 +74,14 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
 # export LANG=en_US.UTF-8
 
-export VISUAL=vim
-export EDITOR="$VISUAL"
+which nvim
+if [ $? -eq 0 ]; then
+  EDITOR=nvim
+  VISUAL=nvim
+else
+  EDITOR=vim
+  VISUAL=vim
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
