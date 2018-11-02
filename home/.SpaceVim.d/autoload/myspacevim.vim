@@ -68,6 +68,7 @@ func! myspacevim#before() abort
   let g:go_addtags_transform = "camelcase"
 
   au FileType go nmap <leader>t :GoDeclsDir<cr>
+  au FileType go nmap <leader><F12> :GoReferrers<cr>
   " alternative for gd
   au FileType go nmap <F12> <Plug>(go-def)
 
@@ -76,7 +77,8 @@ func! myspacevim#before() abort
   let g:ale_linters = {
             \   'javascript': ['eslint'],
             \}
-  " Run 'yarn global install prettier' for this one
+  " Run 'yarn global add prettier eslint babel-eslint eslint-plugin-react`' 
+  " and (in project directory) 'eslint --init' for this one
   let g:ale_fixers = {'javascript': ['prettier','eslint']}
 
   let g:ale_lint_on_save = 1
@@ -86,5 +88,4 @@ endf
 
 func! myspacevim#after() abort
   exec "iunmap jk"
-  
 endf
