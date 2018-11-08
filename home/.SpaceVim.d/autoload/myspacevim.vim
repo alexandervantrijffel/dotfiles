@@ -3,15 +3,23 @@ func! myspacevim#before() abort
   set ignorecase
   set smartcase
   set splitright
+  inoremap jj <esc>
+  set clipboard+=unnamed
 
   " highlight search results
   set incsearch
 
+  :set number relativenumber
+  " set absolute numbers in insert mode
+  :augroup numbertoggle
+  :  autocmd!
+  :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  :augroup END
+  
   " jump up/down row on screen instead of line in document
   nmap j gj
   nmap k gk
-  inoremap jj <esc>
-  set clipboard+=unnamed
 
   " Normal mode
   nnoremap <C-j> :m .+1<CR>==
@@ -24,10 +32,11 @@ func! myspacevim#before() abort
   " Visual mode
   vnoremap <C-j> :m '>+1<CR>gv=gv
   vnoremap <C-k> :m '<-2<CR>gv=gv
+
   " map s <Plug>(vim-easymotion-s)
   " nnoremap <SPACE> <Plug>(vim-easymotion-s2)
-  map <leader>. <Plug>(vim-easymotion-prefix)
-  let g:EasyMotion_do_mapping = 1
+  " map <leader>. <Plug>(vim-easymotion-prefix)
+  " let g:EasyMotion_do_mapping = 1
 
   let g:spacevim_automatic_update = 1
 
