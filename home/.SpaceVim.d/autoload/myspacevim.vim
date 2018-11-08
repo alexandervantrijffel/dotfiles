@@ -88,6 +88,10 @@ func! myspacevim#before() abort
   " alternative for gd
   au FileType go nmap <F12> <Plug>(go-def)
 
+  " jump to next error
+  map <C-n> :cnext<CR>
+  map <C-m> :cprevious<CR>
+
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
 
   let g:ale_linters = {
