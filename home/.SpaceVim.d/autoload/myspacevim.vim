@@ -43,6 +43,7 @@ func! myspacevim#before() abort
             \ ['zchee/deoplete-go', {'merged' : 0}],
             \ ['majutsushi/tagbar', {'merged' : 0}],
             \ ['jodosha/vim-godebug', {'merged' : 0}],
+            \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ]
 
   " run 'pip3 install neovim' for vim
@@ -84,6 +85,9 @@ func! myspacevim#before() abort
   let g:ale_lint_on_save = 1
   let g:ale_fix_on_save = 1
   let g:auto_save = 1
+
+  let g:ackprg = 'ag --vimgrep'
+  nmap <leader>a :Ack! 
 endf
 
 func! myspacevim#after() abort
