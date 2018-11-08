@@ -16,7 +16,12 @@ func! myspacevim#before() abort
   :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
   :augroup END
-  
+
+  " move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
+  inoremap <A-$> <C-o>$
+  inoremap <A-h> <Left>
+  inoremap <A-l> <Right>
+
   " jump up/down row on screen instead of line in document
   nmap j gj
   nmap k gk
