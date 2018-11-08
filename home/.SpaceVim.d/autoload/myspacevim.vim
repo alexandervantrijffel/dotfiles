@@ -46,6 +46,9 @@ func! myspacevim#before() abort
             \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ]
 
+  " When the installation of ack.vim fails, run this command:
+  " git clone --config transfer.fsckObjects=false https://github.com/mileszs/ack.vim.git ~/.cache/vimfiles/repos/github.com/mileszs/ack.vim
+
   " run 'pip3 install neovim' for vim
   " and :GoInstallBinaries
   let g:deoplete#enable_at_startup = 1
