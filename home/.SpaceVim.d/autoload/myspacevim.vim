@@ -46,10 +46,10 @@ func! myspacevim#before() abort
             \ ['w0rp/ale', {'merged' : 0}],
             \ ['907th/vim-auto-save', {'merged' : 0}],
             \ ['fatih/vim-go', {'merged' : 0}],
+            \ ['jodosha/vim-godebug', {'merged' : 0}],
             \ ['Shougo/deoplete.nvim', {'merged' : 0}],
             \ ['zchee/deoplete-go', {'merged' : 0}],
             \ ['majutsushi/tagbar', {'merged' : 0}],
-            \ ['jodosha/vim-godebug', {'merged' : 0}],
             \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ]
 

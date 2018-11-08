@@ -49,3 +49,6 @@ auto_fix = true
 
 [[layers]]
 name = "colorscheme"
+
+[[layers]]
+  name = "lang#go"
