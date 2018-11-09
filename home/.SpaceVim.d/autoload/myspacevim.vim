@@ -81,12 +81,12 @@ func! myspacevim#before() abort
 	let g:go_highlight_extra_types = 1
 	let g:go_list_type = "quickfix"
 	let g:go_fmt_command = "goimports"
-  let g:go_metalinter_command = "gometalinter --config=" . $HOME . "/.gometalinter.json"
   let g:go_test_show_name=1
   let g:go_term_enabled = 1
   let g:go_auto_type_info = 1
   " 'snakecase' is also supported
   let g:go_addtags_transform = "camelcase"
+  let g:go_metalinter_autosave = 1
 
   au FileType go nmap <leader>t :GoDeclsDir<cr>
   au FileType go nmap <leader><F12> :GoReferrers<cr>
