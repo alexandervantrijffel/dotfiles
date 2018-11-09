@@ -1,12 +1,12 @@
 #! /bin/sh -
 
-if ! hash golangci-lint &>/dev/null; then
+if ! type golangci-lint &>/dev/null; then
   echo "missing golangci-lint"
   echo "install via: https://github.com/golangci/golangci-lint"
   exit 127
 fi
 
-if ! hash inotifywait &>/dev/null; then
+if ! type inotifywait &>/dev/null; then
   echo "missing inotifywait"
   echo "apt install inotify-tool"
   exit 127
