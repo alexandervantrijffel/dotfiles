@@ -86,7 +86,7 @@ func! myspacevim#before() abort
   let g:go_auto_type_info = 1
   " 'snakecase' is also supported
   let g:go_addtags_transform = "camelcase"
-  let g:go_metalinter_autosave = 1
+  let g:go_metalinter_autosave = 0
 
   au FileType go nmap <leader>t :GoDeclsDir<cr>
   au FileType go nmap <leader><F12> :GoReferrers<cr>
