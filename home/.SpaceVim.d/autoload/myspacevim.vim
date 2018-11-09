@@ -19,8 +19,13 @@ func! myspacevim#before() abort
 
   " move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
   inoremap <A-$> <C-o>$
+  inoremap <A-^> <C-o>^
   inoremap <A-h> <Left>
+  inoremap <A-j> <Esc>j
+  inoremap <A-k> <Esc>k
   inoremap <A-l> <Right>
+  inoremap <A-O> <C-O>O
+  inoremap <A-o> <C-o>o
 
   " jump up/down row on screen instead of line in document
   nmap j gj
