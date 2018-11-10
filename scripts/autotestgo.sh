@@ -1,7 +1,17 @@
 #! /bin/sh -
 
-# Make sure to install golangci-lint for this
-# https://github.com/golangci/golangci-lint
+if ! type golangci-lint 1>/dev/null; then
+  echo "missing golangci-lint"
+  echo "install via: https://github.com/golangci/golangci-lint"
+  exit 127
+fi
+
+if ! type inotifywait 1>/dev/null; then
+  echo "missing inotifywait"
+  echo "apt install inotify-tool"
+  exit 127
+fi
+
 
 if [ -z ${1} ]; then
 DIR=.
