@@ -3,7 +3,8 @@ func! myspacevim#before() abort
   set ignorecase
   set smartcase
   set splitright
-  inoremap jj <esc>
+  set autoread 
+  au CursorHold * checktime    
   set clipboard+=unnamed
 
   " highlight search results
@@ -26,6 +27,8 @@ func! myspacevim#before() abort
   inoremap <A-l> <Right>
   inoremap <A-O> <C-O>O
   inoremap <A-o> <C-o>o
+
+  inoremap jj <esc>
 
   " jump up/down row on screen instead of line in document
   nmap j gj
@@ -109,6 +112,8 @@ func! myspacevim#before() abort
   let g:ale_lint_on_save = 1
   let g:ale_fix_on_save = 1
   let g:auto_save = 1
+  let g:auto_save_no_updatetime = 1
+  let g:auto_save_in_insert_mode = 0
 
   let g:ackprg = 'ag --vimgrep'
   nmap <leader>a :Ack! 
