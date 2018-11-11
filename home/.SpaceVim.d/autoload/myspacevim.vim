@@ -62,7 +62,7 @@ func! myspacevim#before() abort
             \ ['jodosha/vim-godebug', {'merged' : 0}],
             \ ['Shougo/deoplete.nvim', {'merged' : 0}],
             \ ['zchee/deoplete-go', {'merged' : 0}],
-            \ ['mdempsky/gocode', {'merged' : 0, }],
+            \ ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
             \ ['majutsushi/tagbar', {'merged' : 0}],
             \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ]
@@ -72,6 +72,7 @@ func! myspacevim#before() abort
 
   " run 'pip3 install neovim' for vim
   " and :GoInstallBinaries
+  " or later :GoUpdateBinaries
   let g:deoplete#enable_at_startup = 1
   let g:go_auto_sameids = 1
 	let g:go_highlight_types = 1
@@ -92,11 +93,15 @@ func! myspacevim#before() abort
   let g:go_addtags_transform = "camelcase"
   let g:go_metalinter_autosave = 0
   let g:deoplete#sources#go#pointer = 1
+  let g:deoplete#sources#go#builtin_objects = 1
+  set completeopt+=noselect
+  let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+  let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+  let g:go_def_mode = 'godef'
 
+  au FileType go nmap <leader>r :GoRename<cr>
   au FileType go nmap <leader>t :GoDeclsDir<cr>
   au FileType go nmap <leader><F12> :GoReferrers<cr>
-  " alternative for gd
-  au FileType go nmap <F12> <Plug>(go-def)
 
   " jump to next error
   map <C-n> :cnext<CR>
