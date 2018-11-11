@@ -62,6 +62,7 @@ func! myspacevim#before() abort
             \ ['jodosha/vim-godebug', {'merged' : 0}],
             \ ['Shougo/deoplete.nvim', {'merged' : 0}],
             \ ['zchee/deoplete-go', {'merged' : 0}],
+            \ ['mdempsky/gocode', {'merged' : 0, }],
             \ ['majutsushi/tagbar', {'merged' : 0}],
             \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ]
@@ -90,6 +91,7 @@ func! myspacevim#before() abort
   " 'snakecase' is also supported
   let g:go_addtags_transform = "camelcase"
   let g:go_metalinter_autosave = 0
+  let g:deoplete#sources#go#pointer = 1
 
   au FileType go nmap <leader>t :GoDeclsDir<cr>
   au FileType go nmap <leader><F12> :GoReferrers<cr>
