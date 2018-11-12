@@ -4,7 +4,13 @@ func! myspacevim#before() abort
   set smartcase
   set splitright
   set autoread 
+  " autosave
+  let g:auto_save = 1
+  let g:auto_save_no_updatetime = 1
+  let g:auto_save_in_insert_mode = 0
   au CursorHold * checktime    
+  " autocomplete
+  set completeopt+=noselect
   set clipboard+=unnamed
 
   " highlight search results
@@ -94,7 +100,6 @@ func! myspacevim#before() abort
   let g:go_metalinter_autosave = 0
   let g:deoplete#sources#go#pointer = 1
   let g:deoplete#sources#go#builtin_objects = 1
-  set completeopt+=noselect
   let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
   let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
   let g:go_def_mode = 'godef'
@@ -102,6 +107,11 @@ func! myspacevim#before() abort
   au FileType go nmap <leader>r :GoRename<cr>
   au FileType go nmap <leader>t :GoDeclsDir<cr>
   au FileType go nmap <leader><F12> :GoReferrers<cr>
+
+  au FileType go nmap <A-f> :GoFmt<cr>
+  au FileType go imap jf <Esc>:GoFmt<cr>
+
+  let g:go_fmt_autosave = 0
 
   " jump to next error
   map <C-n> :cnext<CR>
@@ -118,9 +128,6 @@ func! myspacevim#before() abort
 
   let g:ale_lint_on_save = 1
   let g:ale_fix_on_save = 1
-  let g:auto_save = 1
-  let g:auto_save_no_updatetime = 1
-  let g:auto_save_in_insert_mode = 0
 
   let g:ackprg = 'ag --vimgrep'
   nmap <leader>a :Ack! 
