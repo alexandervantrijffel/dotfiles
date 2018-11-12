@@ -90,15 +90,18 @@ func! myspacevim#before() abort
 	let g:go_highlight_extra_types = 1
 	let g:go_list_type = "quickfix"
 	let g:go_fmt_command = "goimports"
+  let g:go_fmt_autosave = 0
   let g:go_test_show_name=1
   let g:go_term_enabled = 1
   let g:go_auto_type_info = 1
   " 'snakecase' is also supported
   let g:go_addtags_transform = "camelcase"
   let g:go_metalinter_autosave = 1
-  " disabled golint because of obnoxious 'should have comment or be
-  " unexported' warning
+  " disabled golint because of obnoxious 'should have comment or be unexported' warning
+  let g:go_metalinter_autosave_enabled = ['vet', 'errcheck']
   let g:go_metalinter_enabled = ['vet', 'errcheck']
+  let g:go_metalinter_command = "gometalinter --exclude=\"\\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\""
+
   let g:go_def_mode = 'godef'
 
   au FileType go nmap <leader>r :GoRename<cr>
@@ -108,7 +111,6 @@ func! myspacevim#before() abort
   au FileType go nmap <A-f> :GoFmt<cr>:w<cr>
   au FileType go imap jf <Esc>:GoFmt<cr>:w<cr>
 
-  let g:go_fmt_autosave = 0
   "
   " autocomplete
   let g:deoplete#sources#go#pointer = 1
