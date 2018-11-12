@@ -9,8 +9,6 @@ func! myspacevim#before() abort
   let g:auto_save_no_updatetime = 1
   let g:auto_save_in_insert_mode = 0
   au CursorHold * checktime    
-  " autocomplete
-  set completeopt+=noselect
   set clipboard+=unnamed
 
   " highlight search results
@@ -97,21 +95,27 @@ func! myspacevim#before() abort
   let g:go_auto_type_info = 1
   " 'snakecase' is also supported
   let g:go_addtags_transform = "camelcase"
-  let g:go_metalinter_autosave = 0
-  let g:deoplete#sources#go#pointer = 1
-  let g:deoplete#sources#go#builtin_objects = 1
-  let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-  let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+  let g:go_metalinter_autosave = 1
+  " disabled golint because of obnoxious 'should have comment or be
+  " unexported' warning
+  let g:go_metalinter_enabled = ['vet', 'errcheck']
   let g:go_def_mode = 'godef'
 
   au FileType go nmap <leader>r :GoRename<cr>
   au FileType go nmap <leader>t :GoDeclsDir<cr>
   au FileType go nmap <leader><F12> :GoReferrers<cr>
 
-  au FileType go nmap <A-f> :GoFmt<cr>
-  au FileType go imap jf <Esc>:GoFmt<cr>
+  au FileType go nmap <A-f> :GoFmt<cr>:w<cr>
+  au FileType go imap jf <Esc>:GoFmt<cr>:w<cr>
 
   let g:go_fmt_autosave = 0
+  "
+  " autocomplete
+  let g:deoplete#sources#go#pointer = 1
+  let g:deoplete#sources#go#builtin_objects = 1
+  let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+  let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+  set completeopt+=noselect
 
   " jump to next error
   map <C-n> :cnext<CR>
