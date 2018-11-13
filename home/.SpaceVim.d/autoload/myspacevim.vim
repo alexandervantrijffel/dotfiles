@@ -55,6 +55,16 @@ func! myspacevim#before() abort
   " map <leader>. <Plug>(vim-easymotion-prefix)
   " let g:EasyMotion_do_mapping = 1
 
+  let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
+  " run 'yarn global add standard' for this
+  let g:ale_linters = {
+            \   'javascript': ['standard'],
+            \}
+  " run 'yarn global add prettier-standard' for this
+  let g:ale_fixers = {'javascript': ['prettier-standard']}
+  let g:ale_completion_enabled = 1
+  let g:ale_lint_on_save = 1
+  let g:ale_fix_on_save = 1
   let g:spacevim_automatic_update = 1
 
   let g:spacevim_custom_plugins = [
@@ -123,17 +133,6 @@ func! myspacevim#before() abort
   map <C-n> :cnext<CR>
   map <C-m> :cprevious<CR>
 
-  let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
-
-  let g:ale_linters = {
-            \   'javascript': ['eslint'],
-            \}
-  " Run 'yarn global add prettier eslint babel-eslint eslint-plugin-react`' 
-  " and (in project directory) 'eslint --init' for this one
-  let g:ale_fixers = {'javascript': ['prettier','eslint']}
-
-  let g:ale_lint_on_save = 1
-  let g:ale_fix_on_save = 1
 
   let g:ackprg = 'ag --vimgrep'
   nmap <leader>a :Ack! 
