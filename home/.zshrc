@@ -98,6 +98,7 @@ fi
 alias ll='exa -alFbgh'
 alias la='exa -albgh'
 alias l='ls -CFh'
+alias gc="git checkout "
 alias gs="git status --untracked-files=all"
 alias gp="git push"
 alias gpu="git push -u origin $(git branch | grep \* | cut -d ' ' -f2)"
