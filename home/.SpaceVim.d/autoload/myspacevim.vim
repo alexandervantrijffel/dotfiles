@@ -56,7 +56,8 @@ func! myspacevim#before() abort
   " let g:EasyMotion_do_mapping = 1
 
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
-  " run 'yarn global add standard prettier-standard eslint' for this
+  " run 'yarn global add standard prettier-standard eslint eslint-plugin-prettier' for this
+>>>>>>> Improved instruction
   let g:ale_linters = {
             \   'javascript': ['standard'],
             \}
