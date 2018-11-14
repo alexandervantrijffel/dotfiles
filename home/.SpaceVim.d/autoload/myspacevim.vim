@@ -105,10 +105,10 @@ func! myspacevim#before() abort
   let g:go_auto_type_info = 1
   " 'snakecase' is also supported
   let g:go_addtags_transform = "camelcase"
-  let g:go_metalinter_autosave = 1
+  let g:go_metalinter_autosave = 0
   " disabled golint because of obnoxious 'should have comment or be unexported' warning
-  let g:go_metalinter_autosave_enabled = ['vet', 'errcheck']
-  let g:go_metalinter_enabled = ['vet', 'errcheck']
+  let g:go_metalinter_autosave_enabled = ['errcheck']
+  let g:go_metalinter_enabled = ['errcheck']
   let g:go_metalinter_command = "gometalinter --exclude=\"\\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\""
 
   let g:go_def_mode = 'godef'
