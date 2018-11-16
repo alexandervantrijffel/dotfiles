@@ -22,6 +22,7 @@ func! myspacevim#before() abort
   :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
   :augroup END
 
+  nmap Y y$
   " move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
   inoremap <A-$> <C-o>$
   inoremap <A-^> <C-o>^
