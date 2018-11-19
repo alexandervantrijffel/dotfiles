@@ -28,7 +28,7 @@ inotifywait -r -e create -m --exclude "nopkg|\.git" $DIR | while read directory 
      RESULT=$?
      if [ $RESULT -eq 0 ]; then
        echo "Running tests of package ${directory#./}"
-       go test $directory
+       go test -v -tags=integration $directory
      fi
   ;; esac
 done
