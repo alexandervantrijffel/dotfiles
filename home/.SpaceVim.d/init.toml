@@ -41,9 +41,6 @@ default_position = 'top'
 default_height = 30
 
 [[layers]]
-name = 'ctrlp'
-
-[[layers]]
 name = 'lang#javascript'
 auto_fix = true
 
@@ -52,3 +49,6 @@ name = "colorscheme"
 
 [[layers]]
   name = "lang#go"
+
+[[layers]]
+name = "fzf"

@@ -67,7 +67,10 @@ func! myspacevim#before() abort
   let g:ale_fix_on_save = 1
   let g:spacevim_automatic_update = 1
 
+  " based on dein.vim plugin manager
+  " Update with :DeinUpdate
   let g:spacevim_custom_plugins = [
+            \ ['wsdjeg/dein-ui.vim', {'merged' : 0}],
             \ ['pangloss/vim-javascript', {'merged' : 0}],
             \ ['mxw/vim-jsx', {'merged' : 0}],
             \ ['w0rp/ale', {'merged' : 0}],
