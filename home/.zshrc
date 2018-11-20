@@ -147,6 +147,7 @@ if [ -f ~/.fzf.zsh ]; then
   alias preview="fzf --preview 'bat --color \"always\" {}'"
   # add support for ctrl+o to open selected file in VS Code
   export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
 fi
 
 which htop
