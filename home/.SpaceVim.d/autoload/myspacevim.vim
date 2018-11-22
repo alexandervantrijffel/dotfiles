@@ -15,13 +15,13 @@ func! myspacevim#before() abort
   " highlight search results
   set incsearch
 
-  :set number relativenumber
+  set number relativenumber
   " set absolute numbers in insert mode
-  :augroup numbertoggle
-  :  autocmd!
-  :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-  :augroup END
+  augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+  augroup END
 
   nmap Y y$
   " move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
