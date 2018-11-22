@@ -10,7 +10,8 @@ func! myspacevim#before() abort
   let g:auto_save_in_insert_mode = 0
   au CursorHold * checktime    
   set clipboard+=unnamed
-
+  let g:spacevim_enable_vimfiler_welcome = 0
+  
   " highlight search results
   set incsearch
 
