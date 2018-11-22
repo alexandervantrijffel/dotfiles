@@ -70,6 +70,7 @@ func! myspacevim#before() abort
   " based on dein.vim plugin manager
   " Update with :DeinUpdate
   let g:spacevim_custom_plugins = [
+            \ ['junegunn/fzf.vim', {'merged' : 0}],
             \ ['wsdjeg/dein-ui.vim', {'merged' : 0}],
             \ ['pangloss/vim-javascript', {'merged' : 0}],
             \ ['mxw/vim-jsx', {'merged' : 0}],
@@ -83,6 +84,13 @@ func! myspacevim#before() abort
             \ ['majutsushi/tagbar', {'merged' : 0}],
             \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ]
+ 
+  " homebrew
+  set rtp+=/usr/local/opt/fzf 
+  " rest
+  set rtp+=~/.fzf
+
+  nnoremap <C-p> :FZF<CR>
 
   " When the installation of ack.vim fails, run this command:
   " git clone --config transfer.fsckObjects=false https://github.com/mileszs/ack.vim.git ~/.cache/vimfiles/repos/github.com/mileszs/ack.vim

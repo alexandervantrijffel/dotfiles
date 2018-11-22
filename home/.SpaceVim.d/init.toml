@@ -49,6 +49,3 @@ name = "colorscheme"
 
 [[layers]]
   name = "lang#go"
-
-[[layers]]
-name = "fzf"
