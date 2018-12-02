@@ -84,6 +84,8 @@ func! myspacevim#before() abort
             \ ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
             \ ['majutsushi/tagbar', {'merged' : 0}],
             \ ['mileszs/ack.vim', {'merged' : 0}],
+            \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
+            \ ['tpope/vim-fugitive', {'merged' : 0}],
             \ ]
  
   " homebrew
