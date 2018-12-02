@@ -86,6 +86,8 @@ func! myspacevim#before() abort
             \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['tpope/vim-fugitive', {'merged' : 0}],
+            \ ['tpope/vim-commentary', {'merged' : 0}],
+            \ ['alvan/vim-closetag', {'merged' : 0}],
             \ ]
  
   " homebrew
@@ -149,6 +151,8 @@ func! myspacevim#before() abort
 
   let g:ackprg = 'ag --vimgrep'
   nmap <leader>a :Ack! 
+
+  let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
 
   " close buffer with \bd or :Bclose
   :call InstallBclose()
