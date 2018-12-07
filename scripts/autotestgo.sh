@@ -21,8 +21,9 @@ fi
 
 HOST=AB
 
-inotifywait -r -e create -m --exclude "nopkg|\.git" $DIR | while read directory events filename; do
-  case $filename in (*".go")
+inotifywait -r -m -e CREATE --format "%w" --exclude "nopkg|\.git" $DIR | while read directory; do
+  if ls ${directory}/*.go > /dev/null
+  then
      echo "Executing golangci-lint"
      golangci-lint run -E goimports -E dupl -E megacheck -E unconvert $directory/...
      RESULT=$?
@@ -30,7 +31,7 @@ inotifywait -r -e create -m --exclude "nopkg|\.git" $DIR | while read directory 
        echo "Running tests of package ${directory#./}"
        go test -v -tags=integration $directory
      fi
-  ;; esac
+  fi
 done
 
 
