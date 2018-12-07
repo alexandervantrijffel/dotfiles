@@ -88,6 +88,7 @@ func! myspacevim#before() abort
             \ ['tpope/vim-fugitive', {'merged' : 0}],
             \ ['tpope/vim-commentary', {'merged' : 0}],
             \ ['alvan/vim-closetag', {'merged' : 0}],
+            \ ['zxqfl/tabnine-vim', {'merged' : 0}],
             \ ]
  
   " homebrew
@@ -130,6 +131,8 @@ func! myspacevim#before() abort
 
   let g:go_def_mode = 'godef'
 
+  " Run this for go:
+  " go get -u github.com/sourcegraph/go-langserver
   au FileType go nmap <leader>r :GoRename<cr>
   au FileType go nmap <leader>t :GoDeclsDir<cr>
   au FileType go nmap <leader><F12> :GoReferrers<cr>
