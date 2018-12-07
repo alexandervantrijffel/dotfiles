@@ -43,5 +43,7 @@
   "vim.easymotion": true,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "breadcrumbs.enabled": true
+  "breadcrumbs.enabled": true,
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true
 }
