@@ -152,10 +152,6 @@ func! myspacevim#before() abort
   let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
   set completeopt+=noselect
 
-  " jump to next error
-  map <C-n> :cnext<CR>
-  map <C-m> :cprevious<CR>
-
   let g:ackprg = 'ag --vimgrep'
   nmap <leader>a :Ack! 
 
