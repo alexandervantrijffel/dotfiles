@@ -79,6 +79,7 @@ func! myspacevim#before() abort
             \ ['907th/vim-auto-save', {'merged' : 0}],
             \ ['fatih/vim-go', {'merged' : 0}],
             \ ['jodosha/vim-godebug', {'merged' : 0}],
+  " update / install with UpdateRemotePlugins
             \ ['Shougo/deoplete.nvim', {'merged' : 0}],
             \ ['zchee/deoplete-go', {'merged' : 0}],
             \ ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
@@ -89,8 +90,11 @@ func! myspacevim#before() abort
             \ ['tpope/vim-commentary', {'merged' : 0}],
             \ ['alvan/vim-closetag', {'merged' : 0}],
             \ ['zxqfl/tabnine-vim', {'merged' : 0}],
+  " run install.sh in $HOME/.cache/. .... tbodt/deoplete-tabnine to install in
+  " case of errors
+            \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
             \ ]
- 
+
   " homebrew
   set rtp+=/usr/local/opt/fzf 
   " rest
