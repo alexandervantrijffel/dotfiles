@@ -89,10 +89,9 @@ func! myspacevim#before() abort
             \ ['tpope/vim-fugitive', {'merged' : 0}],
             \ ['tpope/vim-commentary', {'merged' : 0}],
             \ ['alvan/vim-closetag', {'merged' : 0}],
-            \ ['zxqfl/tabnine-vim', {'merged' : 0}],
             \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
             \ ]
-
+  
   " for deoplete-tabnine run install.sh in $HOME/.cache/. .... tbodt/deoplete-tabnine 
   " to install in case of errors
 
