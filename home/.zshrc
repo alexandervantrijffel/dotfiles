@@ -95,9 +95,7 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 
-alias ll='exa -alFbgh'
-alias la='exa -albgh'
-alias l='ls -CFh'
+alias dc="docker-compose "
 alias gc="git checkout "
 alias gs="git status --untracked-files=all"
 alias gp="git push"
@@ -111,6 +109,9 @@ alias gds="gd --staged"
 alias gds="git diff --staged --word-diff -w"
 alias ga="git add ."
 alias gba="git branch -a"
+alias ll='exa -alFbgh'
+alias la='exa -albgh'
+alias l='ls -CFh'
 
 which yarn
 if [ $? -eq 0 ]; then
