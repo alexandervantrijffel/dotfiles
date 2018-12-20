@@ -12,6 +12,11 @@ if ! type inotifywait 1>/dev/null; then
   exit 127
 fi
 
+if ! type gotestsum 1>/dev/null; then
+  echo "missing gotestsum"
+  echo "go get gotest.tools/gotestsum"
+  exit 127
+fi
 
 if [ -z ${1} ]; then
 DIR=.
@@ -29,7 +34,8 @@ inotifywait -r -m -e CREATE --format "%w" --exclude "nopkg|\.git" $DIR | while r
      RESULT=$?
      if [ $RESULT -eq 0 ]; then
        echo "Running tests of package ${directory#./}"
-       go test -v -tags=integration $directory
+       # go test -v -tags=integration $directory
+       gotestsum --format dots
      fi
   fi
 done
