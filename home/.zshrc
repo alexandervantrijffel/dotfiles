@@ -150,6 +150,11 @@ if [ -f ~/.fzf.zsh ]; then
   export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
 fi
 
+which ag
+if [ $? -eq 0 ]; then
+  alias ag='ag --pager "less -R"'
+fi
+
 which htop
 if [ $? -eq 0 ]; then
   alias top="sudo htop" # alias top and fix high sierra bug
