@@ -70,7 +70,7 @@ func! myspacevim#before() abort
 
   " based on dein.vim plugin manager
   " Update with :DeinUpdate
-  " update / install others with UpdateRemotePlugins
+  " update / install others with :UpdateRemotePlugins
   let g:spacevim_custom_plugins = [
             \ ['junegunn/fzf.vim', {'merged' : 0}],
             \ ['wsdjeg/dein-ui.vim', {'merged' : 0}],
@@ -105,7 +105,7 @@ func! myspacevim#before() abort
   " When the installation of ack.vim fails, run this command:
   " git clone --config transfer.fsckObjects=false https://github.com/mileszs/ack.vim.git ~/.cache/vimfiles/repos/github.com/mileszs/ack.vim
 
-  " run 'pip3 install neovim' for vim
+  " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries
   " or later :GoUpdateBinaries
   let g:deoplete#enable_at_startup = 1
@@ -144,7 +144,6 @@ func! myspacevim#before() abort
   au FileType go nmap <A-f> :GoFmt<cr>:w<cr>
   au FileType go imap jf <Esc>:GoFmt<cr>:w<cr>
 
-  "
   " autocomplete
   let g:deoplete#sources#go#pointer = 1
   let g:deoplete#sources#go#builtin_objects = 1
