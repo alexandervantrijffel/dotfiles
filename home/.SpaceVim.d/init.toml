@@ -29,7 +29,16 @@
     bootstrap_after = "myspacevim#after"
     vimcompatible = true
 
-# Enable autocomplete layer
+    jsx_ext_required = 0 # Allow JSX in normal JS files 
+    # run 'yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier' for this
+    ale_completion_enabled = 1
+    ale_lint_on_save = 1
+    ale_fix_on_save = 1
+    spacevim_automatic_update = 1
+    # autocomplete
+    ackprg = "ag --vimgrep"
+    closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
+
 [[layers]]
 name = 'autocomplete'
 auto-completion-return-key-behavior = "complete"
@@ -48,4 +57,28 @@ auto_fix = true
 name = "colorscheme"
 
 [[layers]]
-  name = "lang#go"
+name = "lang#go"
+go_auto_sameids = 1
+go_highlight_types = 1
+go_highlight_fields = 1
+go_highlight_functions = 1
+go_highlight_methods = 1
+go_highlight_operators = 1
+go_highlight_build_constraints = 1
+go_highlight_structs = 1
+go_highlight_generate_tags = 1
+go_highlight_extra_types = 1
+go_list_type = "quickfix"
+go_fmt_command = "goimports"
+go_fmt_autosave = 0
+go_test_show_name=1
+go_term_enabled = 1
+go_auto_type_info = 1
+# 'snakecase' is also supported
+go_addtags_transform = "camelcase"
+go_metalinter_autosave = 0
+# disabled golint because of obnoxious 'should have comment or be unexported' warning
+go_metalinter_autosave_enabled = ['errcheck']
+go_metalinter_enabled = ['errcheck']
+go_metalinter_command = "gometalinter --exclude=\"\\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\""
+go_def_mode = 'godef'
