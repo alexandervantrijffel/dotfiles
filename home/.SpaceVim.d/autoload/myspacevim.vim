@@ -35,6 +35,7 @@ func! myspacevim#before() abort
   inoremap <A-o> <C-o>o
 
   inoremap jj <esc>
+  inoremap <esc> NO ESC LUTSER
 
   " jump up/down row on screen instead of line in document
   nmap j gj
@@ -57,17 +58,11 @@ func! myspacevim#before() abort
   " map <leader>. <Plug>(vim-easymotion-prefix)
   " let g:EasyMotion_do_mapping = 1
 
-  let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
   " run 'yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier' for this
   let g:ale_linters = {
             \   'javascript': ['standard'],
             \}
   let g:ale_fixers = {'javascript': ['prettier-standard']}
-  let g:ale_completion_enabled = 1
-  let g:ale_lint_on_save = 1
-  let g:ale_fix_on_save = 1
-  let g:spacevim_automatic_update = 1
-
   " based on dein.vim plugin manager
   " Update with :DeinUpdate
   " update / install others with :UpdateRemotePlugins
@@ -91,6 +86,10 @@ func! myspacevim#before() abort
             \ ['alvan/vim-closetag', {'merged' : 0}],
             \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
             \ ]
+
+  " run 'pip3 install pynvim' for vim
+  " and :GoInstallBinaries
+  " or later :GoUpdateBinaries
   
   " for deoplete-tabnine run install.sh in $HOME/.cache/. .... tbodt/deoplete-tabnine 
   " to install in case of errors
@@ -105,35 +104,6 @@ func! myspacevim#before() abort
   " When the installation of ack.vim fails, run this command:
   " git clone --config transfer.fsckObjects=false https://github.com/mileszs/ack.vim.git ~/.cache/vimfiles/repos/github.com/mileszs/ack.vim
 
-  " run 'pip3 install pynvim' for vim
-  " and :GoInstallBinaries
-  " or later :GoUpdateBinaries
-  let g:deoplete#enable_at_startup = 1
-  let g:go_auto_sameids = 1
-	let g:go_highlight_types = 1
-	let g:go_highlight_fields = 1
-	let g:go_highlight_functions = 1
-	let g:go_highlight_methods = 1
-	let g:go_highlight_operators = 1
-	let g:go_highlight_build_constraints = 1
-	let g:go_highlight_structs = 1
-	let g:go_highlight_generate_tags = 1
-	let g:go_highlight_extra_types = 1
-	let g:go_list_type = "quickfix"
-	let g:go_fmt_command = "goimports"
-  let g:go_fmt_autosave = 0
-  let g:go_test_show_name=1
-  let g:go_term_enabled = 1
-  let g:go_auto_type_info = 1
-  " 'snakecase' is also supported
-  let g:go_addtags_transform = "camelcase"
-  let g:go_metalinter_autosave = 0
-  " disabled golint because of obnoxious 'should have comment or be unexported' warning
-  let g:go_metalinter_autosave_enabled = ['errcheck']
-  let g:go_metalinter_enabled = ['errcheck']
-  let g:go_metalinter_command = "gometalinter --exclude=\"\\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\""
-
-  let g:go_def_mode = 'godef'
 
   " Run this for go:
   " go get -u github.com/sourcegraph/go-langserver
@@ -144,6 +114,7 @@ func! myspacevim#before() abort
   au FileType go nmap <A-f> :GoFmt<cr>:w<cr>
   au FileType go imap jf <Esc>:GoFmt<cr>:w<cr>
 
+  let g:deoplete#enable_at_startup = 1
   " autocomplete
   let g:deoplete#sources#go#pointer = 1
   let g:deoplete#sources#go#builtin_objects = 1
@@ -151,10 +122,7 @@ func! myspacevim#before() abort
   let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
   set completeopt+=noselect
 
-  let g:ackprg = 'ag --vimgrep'
   nmap <leader>a :Ack! 
-
-  let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
 
   " close buffer with \bd or :Bclose
   :call InstallBclose()
