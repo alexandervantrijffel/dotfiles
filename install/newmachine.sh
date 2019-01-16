@@ -1,8 +1,18 @@
+#!/bin/sh
+
 # no last login message on mac
 touch ~/.hushlogin
 
-THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+THISDIR=$(cd `dirname $0` && pwd)
 DOTFILES="$(dirname "$THISDIR")"
 
 # brew install fortune cowsay lolcat
-ln -s $DOTFILES/fortunes /usr/local/share/games/fortunes
+
+FORTUNES="/usr/share/games/fortunes"
+if [ ! -d $FORTUNES ]; then
+  FORTUNES="/usr/local/share/games/fortunes"
+fi
+echo "DOTFILES is $DOTFILES"
+echo "Replacing folder $FORTUNES"
+sudo rm -rf $FORTUNES
+sudo ln -s $DOTFILES/fortunes $FORTUNES
