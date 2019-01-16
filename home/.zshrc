@@ -74,20 +74,13 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
 # export LANG=en_US.UTF-8
 
-which nvim
-if [ $? -eq 0 ]; then
+if type nvim 1>/dev/null; then
   EDITOR=nvim
   VISUAL=nvim
 else
   EDITOR=vim
   VISUAL=vim
 fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -99,7 +92,7 @@ alias dc="docker-compose "
 alias gc="git checkout "
 alias gs="git status --untracked-files=all"
 alias gp="git push"
-alias gpu="git push -u origin $(git branch | grep \* | cut -d ' ' -f2)"
+alias gpu="git push -u origin \$(git branch | grep \* | cut -d ' ' -f2)"
 alias gpf="git push --force"
 alias gpff="git pull --ff-only"
 alias gl="git log --max-count=10 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
@@ -109,12 +102,11 @@ alias gds="gd --staged"
 alias gds="git diff --staged --word-diff -w"
 alias ga="git add ."
 alias gba="git branch -a"
-alias ll='exa -alFbgh'
-alias la='exa -albgh'
-alias l='ls -CFh'
+alias ll="exa -alFbgh"
+alias la="exa -albgh"
+alias l="ls -CFh"
 
-which yarn
-if [ $? -eq 0 ]; then
+if type yarn 1>/dev/null; then
 	# set PATH so it includes user's private bin directories and go directories
 	PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/localbin:$(yarn global bin)"
 fi
@@ -133,13 +125,11 @@ set clipboard=unnamedplus
 # after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
 
-which bat
-if [ $? -eq 0 ]; then
+if type bat 1>/dev/null; then
   alias cat='bat'
 fi
 
-which prettyping
-if [ $? -eq 0 ]; then
+if type prettyping 1>/dev/null; then
   alias ping='prettyping'
 fi
 
@@ -151,16 +141,18 @@ if [ -f ~/.fzf.zsh ]; then
   export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
 fi
 
-which ag
-if [ $? -eq 0 ]; then
+if type ag 1>/dev/null; then
   alias ag='ag --pager "less -R"'
 fi
 
-which htop
-if [ $? -eq 0 ]; then
+if type htop 1>/dev/null; then
   alias top="sudo htop" # alias top and fix high sierra bug
 fi
 
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
+fi
+
+if type fortune 1>/dev/null; then
+  fortune
 fi
