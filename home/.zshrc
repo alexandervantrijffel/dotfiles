@@ -154,5 +154,5 @@ if [ -f ~/.zshrc.local ]; then
 fi
 
 if type fortune 1>/dev/null; then
-  fortune
+  fortune | cowsay -f meow | lolcat
 fi
