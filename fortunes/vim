@@ -5,3 +5,5 @@ VIM: Use CTRL+E and CTRL+Y to scroll down/up
 VIM: vimfiler file tree: r rename file, N new file, K new directory, mm move file, dd delete file
 %
 VIM: overwrite text: select text to overwrite in visual mode and then p for paste
+%
+VIM: ysMOTION) insert quotes around motion, cs'" change surrounding quotes, ds delete surrounding
