@@ -127,7 +127,7 @@ set clipboard=unnamedplus
 bindkey ' ' magic-space
 
 if type bat 1>/dev/null; then
-  alias cat='bat'
+  alias cat='bat --style="header"'
 fi
 
 if type prettyping 1>/dev/null; then
