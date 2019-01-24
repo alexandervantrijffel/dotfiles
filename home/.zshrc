@@ -66,6 +66,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   kubectl
+  colorize
 )
 
 source $ZSH/oh-my-zsh.sh
