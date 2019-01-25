@@ -89,6 +89,7 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 
+alias grep="grep -i"
 alias dc="docker-compose "
 alias gc="git checkout "
 alias gs="git status --untracked-files=all"
