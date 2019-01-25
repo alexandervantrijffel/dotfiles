@@ -36,7 +36,6 @@
     ale_fix_on_save = 1
     spacevim_automatic_update = 1
     # autocomplete
-    ackprg = "ag --vimgrep"
     closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
 
 [[layers]]

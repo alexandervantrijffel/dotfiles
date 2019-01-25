@@ -6,7 +6,11 @@ touch ~/.hushlogin
 THISDIR=$(cd `dirname $0` && pwd)
 DOTFILES="$(dirname "$THISDIR")"
 
-# brew install fortune cowsay lolcat
+if [ "$(uname)" == "Darwin" ]; then
+  brew install ack fortune cowsay lolcat
+else
+  apt update && apt install the-silver-searcher
+fi
 
 FORTUNES="/usr/share/games/fortunes"
 if [ ! -d $FORTUNES ]; then
