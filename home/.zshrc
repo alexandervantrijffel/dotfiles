@@ -90,8 +90,8 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 
-alias d="docker"
 alias kc="kubectl"
+alias grep="grep -i"
 alias dc="docker-compose "
 alias gc="git checkout "
 # alias gs="git status --untracked-files=all"
@@ -99,10 +99,10 @@ alias ts="tig status"
 alias tl="tig log"
 alias gp="git push"
 alias gpu="git push -u origin \$(git branch | grep \* | cut -d ' ' -f2)"
-alias gpf="git push --force"
+alias gpforce="git push --force"
 alias gpff="git pull --ff-only"
 alias tl="tig log"
-# alias gl="git log --max-count=10 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
+alias gl="git log --max-count=10 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
 alias gcm="git commit -m  "
 alias gd="git diff --word-diff -w"
 alias gds="gd --staged"
