@@ -69,7 +69,11 @@ plugins=(
   colorize
 )
 
+
 source $ZSH/oh-my-zsh.sh
+
+# execute auto suggestion with CTRL right arrow
+bindkey "^[[1;5C" autosuggest-execute
 
 # make sure the autosuggestions color differs from the solarized dark background color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'

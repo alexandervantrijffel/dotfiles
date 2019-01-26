@@ -108,6 +108,9 @@ func! myspacevim#before() abort
     let g:ackprg = 'ag --vimgrep'
   endif
 
+  let g:go_fmt_command = "goimports"
+  let g:go_fmt_autosave = 0
+
   " Run this for go:
   " go get -u github.com/sourcegraph/go-langserver
   au FileType go nmap <leader>r :GoRename<cr>
