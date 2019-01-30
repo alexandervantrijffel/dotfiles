@@ -34,8 +34,24 @@ func! myspacevim#before() abort
   inoremap <A-O> <C-O>O
   inoremap <A-o> <C-o>o
 
+  " no esc
   inoremap jj <esc>
-  inoremap <esc> NO ESC LUTSER
+  inoremap  <esc> <NOP>
+
+  " no cursors
+  inoremap  <Up>    iNO CURSOR IN NORMAL MODE LUTSER<esc>
+  inoremap  <Down>  iNO CURSOR IN NORMAL MODE LUTSER<esc>
+  inoremap  <Left>  iNO CURSOR IN NORMAL MODE LUTSER<esc>
+
+  noremap   <Up>    iNO CURSOR IN NORMAL MODE LUTSER<esc>
+  noremap   <Down>  iNO CURSOR IN NORMAL MODE LUTSER<esc>
+  noremap   <Left>  iNO CURSOR IN NORMAL MODE LUTSER<esc>
+  noremap   <Right> iNO CURSOR IN NORMAL MODE LUTSER<esc>
+
+  vnoremap   <Up>    iNO CURSOR IN NORMAL MODE LUTSER<esc>
+  vnoremap   <Down>  iNO CURSOR IN NORMAL MODE LUTSER<esc>
+  vnoremap   <Left>  iNO CURSOR IN NORMAL MODE LUTSER<esc>
+  vnoremap   <Right> iNO CURSOR IN NORMAL MODE LUTSER<esc>
 
   " jump up/down row on screen instead of line in document
   nmap j gj
