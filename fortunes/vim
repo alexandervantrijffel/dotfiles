@@ -9,3 +9,19 @@ VIM: overwrite text: select text to overwrite in visual mode and then p for past
 VIM: ysMOTION) insert quotes around motion, cs'" change surrounding quotes, ds delete surrounding
 %
 VIM caw: delete word under cursor and enter insert mode
+%
+VIM: s substitute char and enter insert mode. S substitute line, enter insert mode
+%
+VIM: F back find      T back till     ; repeat t/T/f/F     , reverse t/T/f/F
+%
+VIM: U undo line
+%
+VIM: ~ (shift `) toggle case of selection or cursor
+%
+VIM: # previous word under cursor * next word under cursor
+%
+VIM: % goto matching ( { ^
+%
+VIM: ( ) begin / end of sentence     { } begin / end of paragraph
+%
+VIM: H screen top     M screen middle     L screen bottom
