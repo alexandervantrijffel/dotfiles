@@ -75,7 +75,8 @@ go_auto_type_info = 1
 go_addtags_transform = "camelcase"
 go_metalinter_autosave = 0
 # disabled golint because of obnoxious 'should have comment or be unexported' warning
-go_metalinter_autosave_enabled = ['errcheck']
-go_metalinter_enabled = ['errcheck']
+# use ale with gometalinter instead
+go_metalinter_autosave_enabled = ['']
+go_metalinter_enabled = ['']
 go_metalinter_command = "gometalinter --exclude=\"\\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\""
 go_def_mode = 'godef'
