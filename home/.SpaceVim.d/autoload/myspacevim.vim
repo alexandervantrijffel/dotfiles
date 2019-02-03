@@ -77,8 +77,11 @@ func! myspacevim#before() abort
   " run 'yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier' for this
   let g:ale_linters = {
             \   'javascript': ['standard'],
+            \   'go': ['gometalinter'],
             \}
   let g:ale_fixers = {'javascript': ['prettier-standard']}
+  let g:ale_list_window_size = 10
+
   " based on dein.vim plugin manager
   " Update with :DeinUpdate
   " update / install others with :UpdateRemotePlugins
