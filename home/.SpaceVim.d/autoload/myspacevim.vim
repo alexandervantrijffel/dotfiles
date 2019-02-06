@@ -35,7 +35,10 @@ func! myspacevim#before() abort
   inoremap <A-o> <C-o>o
 
   " no esc
-  inoremap jj <esc>
+  inoremap q <esc>
+  inoremap <C-q> q
+  noremap wq :wq<cr>
+  noremap wq! :wq!<cr>
   inoremap  <esc> <NOP>
 
   " no cursors
