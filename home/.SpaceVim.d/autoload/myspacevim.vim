@@ -36,6 +36,8 @@ func! myspacevim#before() abort
 
   " no esc
   inoremap q <esc>
+  inoremap <C-c> <esc>uu
+  noremap q :q<esc>
   inoremap <C-q> q
   noremap wq :wq<cr>
   noremap wq! :wq!<cr>
@@ -60,6 +62,8 @@ func! myspacevim#before() abort
   nmap j gj
   nmap k gk
 
+  " Move line up/down
+  
   " Normal mode
   nnoremap <C-j> :m .+1<CR>==
   nnoremap <C-k> :m .-2<CR>==
@@ -72,6 +76,7 @@ func! myspacevim#before() abort
   vnoremap <C-j> :m '>+1<CR>gv=gv
   vnoremap <C-k> :m '<-2<CR>gv=gv
 
+  
   " map s <Plug>(vim-easymotion-s)
   " nnoremap <SPACE> <Plug>(vim-easymotion-s2)
   " map <leader>. <Plug>(vim-easymotion-prefix)
