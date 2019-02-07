@@ -27,3 +27,5 @@ VIM: ( ) begin / end of sentence     { } begin / end of paragraph
 VIM: H screen top     M screen middle     L screen bottom
 %
 VIM: in filetree: s v - open file in split vertical edit     s g - open file in split horizontally edit
+%
+spaceVIM: <space>w= balance windows     <space>w+ toggle window layout
