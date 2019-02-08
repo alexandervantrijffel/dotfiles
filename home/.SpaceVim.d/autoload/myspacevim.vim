@@ -89,7 +89,11 @@ func! myspacevim#before() abort
             \}
   let g:ale_fixers = {'javascript': ['prettier-standard']}
   let g:ale_list_window_size = 10
-  let g:ale_go_golangci_lint_options = '-E goimports'
+  let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
+  let g:ale_completion_enabled = 1
+  let g:ale_lint_on_save = 1
+  let g:ale_fix_on_save = 1
+  let g:spacevim_automatic_update = 1
 
   " based on dein.vim plugin manager
   " Update with :DeinUpdate
@@ -138,6 +142,7 @@ func! myspacevim#before() abort
 
   let g:go_fmt_command = "goimports"
   let g:go_fmt_autosave = 0
+  let g:ale_go_golangci_lint_options = '-E goimports'
 
   " Run this for go:
   " go get -u github.com/sourcegraph/go-langserver
