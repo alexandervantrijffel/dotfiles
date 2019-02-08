@@ -2,7 +2,7 @@
 
 curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
 chmod u+x nvim.appimage
-./nvim.appimage
+mv ./nvim.appimage /usr/bin/nvim
 
 ln -s $HOME/.SpaceVim $HOME/.config/nvim
 ln -s ~/.vim ~/.SpaceVim
