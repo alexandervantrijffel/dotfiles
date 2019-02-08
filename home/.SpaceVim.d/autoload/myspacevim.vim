@@ -27,64 +27,6 @@ func! myspacevim#before() abort
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
   augroup END
 
-  nmap Y y$
-
-  " move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
-  inoremap <A-$> <C-o>$
-  inoremap <A-^> <C-o>^
-  inoremap <A-h> <Left>
-  inoremap <A-j> <Esc>j
-  inoremap <A-k> <Esc>k
-  inoremap <A-l> <Right>
-  inoremap <A-O> <C-O>O
-  inoremap <A-o> <C-o>o
-
-  " no esc
-  inoremap jj <esc>
-  inoremap <C-c> <esc>uu
-  noremap q :q<esc>
-  noremap wq :wq<cr>
-  noremap wq! :wq!<cr>
-  inoremap  <esc> <NOP>
-
-  " no cursors
-  inoremap  <Up>    <NOP>
-  inoremap  <Down>  <NOP>
-  inoremap  <Left>  <NOP>
-
-  noremap   <Up>    <NOP>
-  noremap   <Down>  <NOP>
-  noremap   <Left>  <NOP>
-  noremap   <Right> <NOP>
-
-  vnoremap   <Up>    <NOP>
-  vnoremap   <Down>  <NOP>
-  vnoremap   <Left>  <NOP>
-  vnoremap   <Right> <NOP>
-
-  " jump up/down row on screen instead of line in document
-  nmap j gj
-  nmap k gk
-
-  " Move line up/down
-  
-  " Normal mode
-  nnoremap <C-j> :m .+1<CR>==
-  nnoremap <C-k> :m .-2<CR>==
-
-  " Insert mode
-  inoremap <C-j> <ESC>:m .+1<CR>==gi
-  inoremap <C-k> <ESC>:m .-2<CR>==gi
-
-  " Visual mode
-  vnoremap <C-j> :m '>+1<CR>gv=gv
-  vnoremap <C-k> :m '<-2<CR>gv=gv
-
-  " map s <Plug>(vim-easymotion-s)
-  " nnoremap <SPACE> <Plug>(vim-easymotion-s2)
-  " map <leader>. <Plug>(vim-easymotion-prefix)
-  " let g:EasyMotion_do_mapping = 1
-
   " run 'yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier' for this
   let g:ale_linters = {
             \   'javascript': ['standard'],
@@ -96,6 +38,7 @@ func! myspacevim#before() abort
   let g:ale_completion_enabled = 1
   let g:ale_lint_on_save = 1
   let g:ale_fix_on_save = 1
+  let g:ale_go_golangci_lint_options = '-E goimports'
   let g:spacevim_automatic_update = 1
 
   " based on dein.vim plugin manager
@@ -142,10 +85,10 @@ func! myspacevim#before() abort
   if executable('ag')
     let g:ackprg = 'ag --vimgrep'
   endif
+  nmap <leader>a :Ack! 
 
   let g:go_fmt_command = "goimports"
   let g:go_fmt_autosave = 0
-  let g:ale_go_golangci_lint_options = '-E goimports'
 
   " Run this for go:
   " go get -u github.com/sourcegraph/go-langserver
@@ -164,7 +107,66 @@ func! myspacevim#before() abort
   let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
   set completeopt+=noselect
 
-  nmap <leader>a :Ack! 
+  :call CustomMappings()
+
+  " close buffer with \bd or :Bclose
+  :call InstallBclose()
+endf
+
+func! myspacevim#after() abort
+endf
+
+function CustomMappings()
+  nmap Y y$
+
+  " move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
+  inoremap <A-$> <C-o>$
+  inoremap <A-^> <C-o>^
+  inoremap <A-h> <Left>
+  inoremap <A-j> <Esc>j
+  inoremap <A-k> <Esc>k
+  inoremap <A-l> <Right>
+  inoremap <A-O> <C-O>O
+  inoremap <A-o> <C-o>o
+
+  " no esc
+  inoremap jj <esc>
+  inoremap <C-c> <esc>uu
+  noremap q :q<esc>
+  inoremap  <esc> <NOP>
+
+  " no cursors
+  inoremap  <Up>    <NOP>
+  inoremap  <Down>  <NOP>
+  inoremap  <Left>  <NOP>
+
+  noremap   <Up>    <NOP>
+  noremap   <Down>  <NOP>
+  noremap   <Left>  <NOP>
+  noremap   <Right> <NOP>
+
+  vnoremap   <Up>    <NOP>
+  vnoremap   <Down>  <NOP>
+  vnoremap   <Left>  <NOP>
+  vnoremap   <Right> <NOP>
+
+  " jump up/down row on screen instead of line in document
+  nmap j gj
+  nmap k gk
+
+  " Move line up/down
+  
+  " Normal mode
+  nnoremap <C-j> :m .+1<CR>==
+  nnoremap <C-k> :m .-2<CR>==
+
+  " Insert mode
+  inoremap <C-j> <ESC>:m .+1<CR>==gi
+  inoremap <C-k> <ESC>:m .-2<CR>==gi
+
+  " Visual mode
+  vnoremap <C-j> :m '>+1<CR>gv=gv
+  vnoremap <C-k> :m '<-2<CR>gv=gv
 
   " ,' Surround a word with 'single quotes'
   map ,' ysiw'
@@ -198,14 +200,7 @@ func! myspacevim#before() abort
   map ,> ysiw>
   map ,< ysiw<
   vmap ,< c<<C-R>"><ESC>
-
-  " close buffer with \bd or :Bclose
-  :call InstallBclose()
-endf
-
-func! myspacevim#after() abort
-  exec "iunmap jk"
-endf
+endfunction
 
 function InstallBclose()
   " Delete buffer while keeping window layout (don't close buffer's windows).
