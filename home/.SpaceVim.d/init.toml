@@ -29,8 +29,6 @@
     bootstrap_after = "myspacevim#after"
     vimcompatible = true
 
-    # autocomplete
-    closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
 
 [[layers]]
 name = 'autocomplete'

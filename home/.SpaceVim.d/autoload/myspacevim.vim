@@ -3,12 +3,16 @@ func! myspacevim#before() abort
   set ignorecase
   set smartcase
   set splitright
-  set autoread 
   " autosave
   let g:auto_save = 1
   let g:auto_save_no_updatetime = 1
   let g:auto_save_in_insert_mode = 0
+
+  " autocomplete
+  let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
+
   au CursorHold * checktime    
+
   set clipboard+=unnamed
   let g:spacevim_enable_vimfiler_welcome = 0
   
