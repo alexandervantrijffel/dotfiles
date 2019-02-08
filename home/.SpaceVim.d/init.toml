@@ -29,12 +29,6 @@
     bootstrap_after = "myspacevim#after"
     vimcompatible = true
 
-    jsx_ext_required = 0 # Allow JSX in normal JS files 
-    # run 'yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier' for this
-    ale_completion_enabled = 1
-    ale_lint_on_save = 1
-    ale_fix_on_save = 1
-    spacevim_automatic_update = 1
     # autocomplete
     closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
 
