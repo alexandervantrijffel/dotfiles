@@ -77,7 +77,6 @@ func! myspacevim#before() abort
   vnoremap <C-j> :m '>+1<CR>gv=gv
   vnoremap <C-k> :m '<-2<CR>gv=gv
 
-  
   " map s <Plug>(vim-easymotion-s)
   " nnoremap <SPACE> <Plug>(vim-easymotion-s2)
   " map <leader>. <Plug>(vim-easymotion-prefix)
