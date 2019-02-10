@@ -3,9 +3,10 @@
 declare -i ID
 
 ID=`xinput list | grep -Eo 'Synaptics TM3288-003\s*id\=[0-9]{1,2}' | grep -Eo '[0-9]{1,2}' | tail -n1`
-if [ -z "$ID" ]; then
+
+if [ -z "$ID" -o  "$ID" = "0" ]; then
   echo "No Synaptics TM3288-003 touchpad found."
-  return
+  exit
 fi
 
 # ID=`xinput list | grep -Eo 'Generic Mouse\s*id\=[0-9]{1,2}' | grep -Eo '[0-9]{1,2}'`
