@@ -171,10 +171,9 @@ if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | lolcat
 fi
 
-
 if ! type pbcopy 1>/dev/null; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 fi
 
-
+# ubuntu terminal window blue background color #0F293C
