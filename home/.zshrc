@@ -77,7 +77,6 @@ set -o vi
 # execute auto suggestion with CTRL right arrow
 bindkey "^[[1;5C" autosuggest-execute
 
-
 # make sure the autosuggestions color differs from the solarized dark background color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
@@ -125,9 +124,13 @@ if type yarn 1>/dev/null; then
 	PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/localbin:$(yarn global bin)"
 fi
 
-VSCODE='/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
-if [ -d "$VSCODE" ]; then
-  export PATH="$PATH:$VSCODE"
+if [ "$(uname)" == "Darwin" ]; then
+  VSCODE='/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
+  if [ -d "$VSCODE" ]; then
+    export PATH="$PATH:$VSCODE"
+  fi
+else
+  feh --bg-scale /data/images/backgrounds -z -r -D1800
 fi
 
 DEFAULT_USER=$USER
