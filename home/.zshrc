@@ -124,7 +124,7 @@ if type yarn 1>/dev/null; then
 	PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/localbin:$(yarn global bin)"
 fi
 
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
   VSCODE='/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
   if [ -d "$VSCODE" ]; then
     export PATH="$PATH:$VSCODE"
