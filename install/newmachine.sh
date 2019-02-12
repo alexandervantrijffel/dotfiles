@@ -3,7 +3,7 @@
 THISDIR=$(cd `dirname $0` && pwd)
 DOTFILES="$(dirname "$THISDIR")"
 
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
   # no last login message on mac
   touch ~/.hushlogin
 
