@@ -9,7 +9,7 @@ if [ "$(uname)" = "Darwin" ]; then
 
   brew install ack fortune cowsay lolcat
 else
-  sudo apt update && sudo apt install curl zsh the-silver-searcher feh htop fortune shutter -y
+  sudo apt update && sudo apt install curl zsh the-silver-searcher feh htop fortune shutter rofi -y
   
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf 
   ~/.fzf/install 
