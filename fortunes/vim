@@ -29,3 +29,5 @@ VIM: H screen top     M screen middle     L screen bottom
 VIM: in filetree: s v - open file in split vertical edit     s g - open file in split horizontally edit
 %
 spaceVIM: <space>w= balance windows     <space>w+ toggle window layout
+%
+VIM: <leader><leader>s quick jump to character in document, <leader><leader>w jump to word (with vim-easymotion)
