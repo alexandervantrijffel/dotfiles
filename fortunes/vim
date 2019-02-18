@@ -1,4 +1,4 @@
-VIM: Multi replace by selecting the text to replace in visual mode, press CTRL+R
+VIM: Multi replace by selecting the text to replace in visual mode, press CTRL+R for replace command. Press CTRL+R 0 in colon command mode to paste from register 0.
 %
 VIM: Use CTRL+E and CTRL+Y to scroll down/up
 %
