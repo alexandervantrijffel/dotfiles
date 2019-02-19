@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+xbacklight -get | cut --delimiter=. -f1

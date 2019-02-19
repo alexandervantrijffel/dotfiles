@@ -169,8 +169,29 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+# status_command i3status
 bar {
-        status_command i3status
+  i3bar_command i3bar
+  status_command /usr/bin/i3blocks -c /home/arctica/.i3/i3blocks.conf
+  position top
+  font pango:SauceCodePro Nerd Font
+  strip_workspace_numbers yes
+  separator_symbol "-"
+  workspace_buttons yes
+  bindsym button4 nop
+  bindsym button5 nop
+  tray_padding 0
+  colors {
+    statusline    #ffffff
+    background    #000000
+    separator     #000000ff
+      #                  BORDER      BACKGROUND    TEXT
+    focused_workspace   #00000000    #00000000   #c6ff00
+    inactive_workspace  #00000000    #00000000   #dddddd
+    active_workspace    #00000000    #00000000   #ffffff
+    urgent_workspace    #b71c1c      #b71c1c     #00000000
+    binding_mode        #b71c1c      #b71c1c     #00000000
+  }
 }
 
 #######################################################################
@@ -193,3 +214,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
+# Next Song
+bindsym XF86AudioNext exec --no-startup-id cmus-remote --next && pkill --signal SIGRTMIN+13 i3blocks
+# Prev Song
+bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev && pkill --signal SIGRTMIN+13 i3blocks
+# Play Pause
+bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause && pkill --signal SIGRTMIN+13 i3blocks
