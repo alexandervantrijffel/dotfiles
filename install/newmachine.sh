@@ -12,7 +12,10 @@ else
   sudo apt update && sudo apt install curl zsh the-silver-searcher feh htop fortune shutter -y
 
   # i3 extensions
-  apt install rofi alsa-utils pulseaudio i3blocks -y 
+  sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
+
+  # todo! download battery i3blocks script from https://github.com/vivien/i3blocks-contrib/tree/master/battery
+  # and store as executable file /usr/share/i3blocks/battery
 
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf 
   ~/.fzf/install 
