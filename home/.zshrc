@@ -131,7 +131,7 @@ if [ "$(uname)" = "Darwin" ]; then
     export PATH="$PATH:$VSCODE"
   fi
 else
-  feh --bg-scale /data/images/backgrounds -z -r -D1800
+  feh --bg-fill /data/images/backgrounds -z -r -D1800
 fi
 
 DEFAULT_USER=$USER
