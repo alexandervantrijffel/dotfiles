@@ -2,6 +2,7 @@
 
 THISDIR=$(cd `dirname $0` && pwd)
 DOTFILES="$(dirname "$THISDIR")"
+echo "DOTFILES is $DOTFILES"
 
 if [ "$(uname)" = "Darwin" ]; then
   # no last login message on mac
@@ -9,7 +10,6 @@ if [ "$(uname)" = "Darwin" ]; then
 
   brew install ack fortune cowsay lolcat yarn python
 else
-
   # 
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
@@ -19,8 +19,7 @@ else
   # i3 extensions
   sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
 
-  # todo! download battery i3blocks script from https://github.com/vivien/i3blocks-contrib/tree/master/battery
-  # and store as executable file /usr/share/i3blocks/battery
+  ln -s $DOTFILES/home/.i3 $HOME/.i3 
 
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf 
   ~/.fzf/install 
@@ -37,7 +36,6 @@ FORTUNES="/usr/share/games/fortunes"
 if [ ! -d $FORTUNES ]; then
   FORTUNES="/usr/local/share/games/fortunes"
 fi
-echo "DOTFILES is $DOTFILES"
 echo "Replacing folder $FORTUNES"
 sudo rm -rf $FORTUNES
 sudo ln -s $DOTFILES/fortunes $FORTUNES
