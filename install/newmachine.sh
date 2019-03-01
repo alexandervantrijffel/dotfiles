@@ -8,7 +8,7 @@ if [ "$(uname)" = "Darwin" ]; then
   # no last login message on mac
   touch ~/.hushlogin
 
-  brew install ack fortune cowsay lolcat yarn python
+  brew install ack fortune cowsay lolcat yarn python exa
 else
   # 
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -30,6 +30,8 @@ else
 
   # sudo apt-get build-dep shotwell
   # sudo apt-get install yelp-tools appstream-util libgcr-3-dev libgdata-dev libwebp-dev
+
+  # todo install exa manually
 fi
 
 FORTUNES="/usr/share/games/fortunes"
