@@ -31,3 +31,5 @@ VIM: in filetree: s v - open file in split vertical edit     s g - open file in 
 spaceVIM: <space>w= balance windows     <space>w+ toggle window layout
 %
 VIM: <leader><leader>s quick jump to character in document, <leader><leader>w jump to word, <leader><leader>b jump backwards to word (with vim-easymotion)
+%
+VIM: create new file and start editing immediately with :w filepath
