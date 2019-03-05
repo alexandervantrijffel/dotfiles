@@ -107,6 +107,7 @@ alias gcb="git checkout -b "
 alias gfa="git fetch --all"
 alias gp="git push"
 alias gpu="git push -u origin \$(git branch | grep \* | cut -d ' ' -f2)"
+alias gpf='echo no gpf please'
 alias gpforce="git push --force"
 alias gpff="git pull --ff-only"
 alias tl="tig log"
