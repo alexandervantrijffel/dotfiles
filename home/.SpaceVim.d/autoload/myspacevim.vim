@@ -67,6 +67,7 @@ func! myspacevim#before() abort
 
   " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries
+  " or :GoUpdate
   " or later :GoUpdateBinaries
   
   " for deoplete-tabnine run install.sh in $HOME/.cache/. .... tbodt/deoplete-tabnine 
@@ -98,6 +99,8 @@ func! myspacevim#before() abort
 
   au FileType go nmap <A-f> :GoFmt<cr>:w<cr>
   au FileType go imap jf <Esc>:GoFmt<cr>:w<cr>
+
+  au FileType go nmap gi :GoInfo<cr>
 
   let g:deoplete#enable_at_startup = 1
   " autocomplete
