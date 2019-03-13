@@ -203,6 +203,36 @@ function CustomMappings()
   map ,> ysiw>
   map ,< ysiw<
   vmap ,< c<<C-R>"><ESC>
+
+  " replace text inside/around block elements, jump to next block if 
+  " the cursor is not in one
+  noremap ci) /)<cr>ci)
+  noremap ci( /(<cr>ci(
+  noremap ci{ /{<cr>ci{
+  noremap ci} /}<cr>ci}
+  noremap ci[ /[<cr>ci[
+  noremap ci] /]<cr>ci]
+  noremap ci[ /[<cr>ci[
+  noremap ci] /]<cr>ci]
+  noremap ci< /<<cr>ci<
+  noremap ci> /><cr>ci>
+  noremap ci" /"<cr>ci"
+  noremap ci' /'<cr>ci'
+  noremap ci` /{<cr>ci`
+
+  noremap ca) /)<cr>ca)
+  noremap ca( /(<cr>ca(
+  noremap ca{ /{<cr>ca{
+  noremap ca} /}<cr>ca}
+  noremap ca[ /[<cr>ca[
+  noremap ca] /]<cr>ca]
+  noremap ca[ /[<cr>ca[
+  noremap ca] /]<cr>ca]
+  noremap ca< /<<cr>ca<
+  noremap ca> /><cr>ca>
+  noremap ca" /"<cr>ca"
+  noremap ca' /'<cr>ca'
+  noremap ca` /{<cr>ca`
 endfunction
 
 function InstallBclose()
