@@ -134,6 +134,7 @@ if [ "$(uname)" = "Darwin" ]; then
   fi
 else
   feh --bg-fill /data/images/backgrounds -z -r -D1800
+  alias open='xdg-open'
 fi
 
 DEFAULT_USER=$USER
