@@ -24,18 +24,16 @@ else
 DIR=$1
 fi
 
-HOST=AB
-
 inotifywait -r -m -e CREATE --format "%w" --exclude "nopkg|\.git" $DIR | while read directory; do
   if ls ${directory}/*.go > /dev/null
   then
      echo "Executing golangci-lint"
-     golangci-lint run -E goimports -E dupl -E megacheck -E unconvert $directory/...
+     golangci-lint run -E goimports -E dupl -E megacheck -E unconvert "${directory}/"
      RESULT=$?
      if [ $RESULT -eq 0 ]; then
        echo "Running tests of package ${directory#./}"
        # go test -v -tags=integration $directory
-       gotestsum --format dots
+       gotestsum --format dots "${directory}"
      fi
   fi
 done
