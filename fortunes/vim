@@ -35,3 +35,4 @@ VIM: <leader><leader>s quick jump to character in document, <leader><leader>w ju
 VIM: create new file and start editing immediately with :w filepath
 %
 VIM: :GoInfo show definition of go method
+
