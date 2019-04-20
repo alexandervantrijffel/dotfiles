@@ -32,6 +32,10 @@ else
   # sudo apt-get install yelp-tools appstream-util libgcr-3-dev libgdata-dev libwebp-dev
 
   # todo install exa manually
+
+  # teiler
+  sudo apt install xininfo ffmpeg xclip maim slop
+  # install teiler as described at https://carnager.github.io/teiler/
 fi
 
 FORTUNES="/usr/share/games/fortunes"
