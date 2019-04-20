@@ -35,6 +35,11 @@ else
 
   # teiler
   sudo apt install xininfo ffmpeg xclip maim slop
+  sudo git clone https://github.com/carnager/teiler.git /opt/teiler
+  sudo ln -s /opt/teiler/teiler /usr/local/bin/
+  sudo ln -s /opt/teiler/teiler_helper /usr/local/bin/
+  mkdir -pv ~/.config/teiler/profiles/mp4-pulse
+
   # install teiler as described at https://carnager.github.io/teiler/
 fi
 
