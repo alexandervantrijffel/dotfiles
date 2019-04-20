@@ -38,7 +38,7 @@ func! myspacevim#before() abort
   let g:ale_completion_enabled = 1
   let g:ale_lint_on_save = 1
   let g:ale_fix_on_save = 1
-  let g:ale_go_golangci_lint_options = '-E goimports'
+  let g:ale_go_golangci_lint_options = '-E goimports -D typecheck'
   let g:spacevim_automatic_update = 1
 
   " based on dein.vim plugin manager
