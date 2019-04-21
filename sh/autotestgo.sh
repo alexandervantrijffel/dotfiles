@@ -25,7 +25,7 @@ DIR=$1
 fi
 
 inotifywait -r -m -e CREATE --format "%w" --exclude "nopkg|\.git" $DIR | while read directory; do
-  if ls ${directory}/*.go > /dev/null
+  if ls ${directory}*.go > /dev/null
   then
      echo "Executing golangci-lint"
      golangci-lint run -E goimports -E dupl -E megacheck -E unconvert "${directory}/"
