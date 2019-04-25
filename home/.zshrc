@@ -64,6 +64,7 @@ plugins=(
   autojump
   vi-mode
   zsh-autosuggestions
+  zsh-completions
   zsh-syntax-highlighting
   kubectl
   colorize
