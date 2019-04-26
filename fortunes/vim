@@ -35,4 +35,5 @@ VIM: <leader><leader>s quick jump to character in document, <leader><leader>w ju
 VIM: create new file and start editing immediately with :w filepath
 %
 VIM: :GoInfo show definition of go method
-
+%
+VIM: In insert mode, CTRL+W for delete last word, CTRL+h for delete last character
