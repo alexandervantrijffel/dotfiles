@@ -97,6 +97,7 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 
+alias du="du -max-depth=1"
 alias kc="kubectl"
 alias grep="grep -i"
 alias dc="docker-compose "
