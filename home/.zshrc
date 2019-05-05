@@ -98,13 +98,11 @@ fi
 #
 
 alias du="du -max-depth=1"
-alias kc="kubectl"
-alias grep="grep -i"
 alias dc="docker-compose "
 alias gc="git checkout "
 # alias gs="git status --untracked-files=all"
+alias grep="grep -i"
 alias gs="git show"
-alias ts="tig status"
 alias tl="tig log"
 alias gcb="git checkout -b "
 alias gfa="git fetch --all"
@@ -113,7 +111,6 @@ alias gpu="git push -u origin \$(git branch | grep \* | cut -d ' ' -f2)"
 alias gpf='echo no gpf please'
 alias gpforce="git push --force"
 alias gpff="git pull --ff-only"
-alias tl="tig log"
 alias gl="git log --max-count=10 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
 alias gcm="git commit -m  "
 alias gd="git diff --word-diff -w"
@@ -124,6 +121,10 @@ alias gba="git branch -a"
 alias ll="exa -alFbgh"
 alias la="exa -albgh"
 alias l="ls -CFh"
+alias kc="kubectl"
+alias psg="ps -a | grep $1"
+alias tl="tig log"
+alias ts="tig status"
 
 if type yarn 1>/dev/null; then
 	# set PATH so it includes user's private bin directories and go directories
