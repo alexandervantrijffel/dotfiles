@@ -46,6 +46,7 @@ func! myspacevim#before() abort
   " update / install others with :UpdateRemotePlugins
   let g:spacevim_custom_plugins = [
             \ ['junegunn/fzf.vim', {'merged' : 0}],
+            \ ['tpope/vim-fugitive', {'merged' : 0}],
             \ ['wsdjeg/dein-ui.vim', {'merged' : 0}],
             \ ['pangloss/vim-javascript', {'merged' : 0}],
             \ ['mxw/vim-jsx', {'merged' : 0}],
