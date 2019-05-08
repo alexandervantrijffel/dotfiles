@@ -8,13 +8,14 @@ if [ "$(uname)" = "Darwin" ]; then
   # no last login message on mac
   touch ~/.hushlogin
 
-  brew install ack fortune cowsay lolcat yarn python exa
+  brew install ack fortune cowsay lolcat yarn python exa lnav
 else
   # 
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
-  sudo apt update && sudo apt install yarn python3-pip curl zsh the-silver-searcher feh htop fortune shutter -y
+  sudo apt update && sudo apt install yarn python3-pip curl zsh the-silver-searcher feh htop fortune shutter lnav -y
+
 
   # i3 extensions
   sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
@@ -34,7 +35,7 @@ else
   # todo install exa manually
 
   # teiler
-  sudo apt install xininfo ffmpeg xclip maim slop
+  sudo apt install xininfo ffmpeg xclip maim slop -y
   sudo git clone https://github.com/carnager/teiler.git /opt/teiler
   sudo ln -s /opt/teiler/teiler /usr/local/bin/
   sudo ln -s /opt/teiler/teiler_helper /usr/local/bin/
@@ -42,6 +43,8 @@ else
 
   # install teiler as described at https://carnager.github.io/teiler/
 fi
+
+lnav -i $(pwd)/home/.lnav/formats/*.json
 
 FORTUNES="/usr/share/games/fortunes"
 if [ ! -d $FORTUNES ]; then
