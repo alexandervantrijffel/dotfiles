@@ -125,6 +125,7 @@ alias kc="kubectl"
 alias psg="ps -a | grep $1"
 alias tl="tig log"
 alias ts="tig status"
+alias yrs="yarn run start"
 
 if type yarn 1>/dev/null; then
 	# set PATH so it includes user's private bin directories and go directories

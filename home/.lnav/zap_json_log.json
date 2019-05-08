@@ -1,0 +1,43 @@
+{
+  "zap_json_log" : {
+        "title" : "zap json log",
+        "description" : "Log format configuration for uber zap JSON logs",
+        "json" : true,
+        "level-field" : "level",
+        "timestamp-field" : "ts",
+        "line-format" : [
+            { "field" : "__timestamp__" },
+            " ",
+            { "field" : "msg" },
+            " (",
+            { "field" : "caller" },
+            ")"
+        ],
+        "value": {
+          "ts": {
+             "kind": "string"
+          }
+        },
+        "value": {
+          "caller": {
+             "kind": "string"
+          }
+        },
+        "value": {
+          "msg": {
+             "kind": "string"
+          }
+        },
+        "value": {
+          "appname": {
+             "hidden": true
+          }
+        },
+        "value": {
+          "level": {
+             "hidden": true
+          }
+        }
+    }
+}
+
