@@ -39,3 +39,5 @@ VIM: :GoInfo show definition of go method
 VIM: In insert mode, CTRL+W for delete last word, CTRL+h for delete last character
 %
 VIM: merge conflicts with vim diff: run git mergetool, :diffg LO , :diffg RE , :diffg BA , ]c next conflict , [c previous conflict https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool
+%
+VIM: yank until the second / character : y2f/
