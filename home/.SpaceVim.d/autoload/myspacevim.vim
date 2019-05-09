@@ -19,6 +19,9 @@ func! myspacevim#before() abort
   " highlight search results
   set incsearch
 
+  " live update of substitution
+  set inccommand=nosplit
+
   set number relativenumber
   " set absolute numbers in insert mode
   augroup numbertoggle
