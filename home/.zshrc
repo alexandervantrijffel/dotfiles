@@ -118,7 +118,7 @@ alias gds="gd --staged"
 alias gds="git diff --staged --word-diff -w"
 alias ga="git add . -p"
 alias gba="git branch -a"
-alias history="history -a"
+alias gr="go run -tags=DEBUG main.go | lnav -q"
 alias ll="exa -alFbgh"
 alias la="exa -albgh"
 alias l="ls -CFh"
@@ -127,6 +127,7 @@ alias psg="ps -a | grep $1"
 alias tl="tig log"
 alias ts="tig status"
 alias yrs="yarn run start"
+
 
 if type yarn 1>/dev/null; then
 	# set PATH so it includes user's private bin directories and go directories
