@@ -41,8 +41,11 @@ func! myspacevim#before() abort
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
   let g:ale_completion_enabled = 1
   let g:ale_lint_on_save = 1
-  let g:ale_fix_on_save = 1
+  let g:ale_fix_on_save = 0
   let g:ale_go_golangci_lint_options = '-E goimports -D typecheck'
+
+  au FileType javascript nmap <A-f> :ALEFix<cr>:w<cr>
+
   let g:spacevim_automatic_update = 1
 
   " based on dein.vim plugin manager
@@ -119,6 +122,7 @@ func! myspacevim#before() abort
 
   " close buffer with \bd or :Bclose
   :call InstallBclose()
+
 endf
 
 func! myspacevim#after() abort
@@ -140,7 +144,7 @@ function CustomMappings()
   " no esc
   inoremap jj <esc>
   inoremap <C-c> <esc>uu
-  noremap q :q<esc>
+  noremap <C-q> :q<esc>
   inoremap  <esc> <NOP>
 
   " no cursors
