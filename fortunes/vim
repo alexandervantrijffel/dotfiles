@@ -1,6 +1,6 @@
 VIM: Multi replace by selecting the text to replace in visual mode, press CTRL+R for replace command. Press CTRL+R 0 in colon command mode to paste from register 0.
 %
-VIM: Multi replace by searching for the full text to replace, enter cgn, repeat the . dot command multiple times to apply to multiple search results
+VIM: Multi replace by searching for the full text to replace, enter cgn, repeat the . dot command multiple times to apply to multiple search results. Jump to next search result with gn, previous with gN.
 %
 VIM: Use CTRL+E and CTRL+Y to scroll down/up
 %
