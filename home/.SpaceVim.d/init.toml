@@ -11,10 +11,9 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-# colorscheme = "molokai"
+    # colorscheme = "molokai"
     # background = "dark"
     colorscheme = "material"
-    # colorscheme_bg = "light"
     colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
@@ -29,7 +28,6 @@
     bootstrap_before = "myspacevim#before"
     bootstrap_after = "myspacevim#after"
     vimcompatible = true
-
 
 [[layers]]
 name = 'autocomplete'
