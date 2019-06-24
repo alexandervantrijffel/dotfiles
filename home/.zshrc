@@ -190,4 +190,6 @@ if ! type pbcopy 1>/dev/null; then
   alias pbpaste='xclip -selection clipboard -o'
 fi
 
+export LC_ALL=en_US.UTF-8
+
 # ubuntu terminal window blue background color #0F293C
