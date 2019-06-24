@@ -79,6 +79,10 @@ func! myspacevim#before() abort
   " and :GoInstallBinaries
   " or :GoUpdate
   " or later :GoUpdateBinaries
+  "
+  " or :SPUpdate
+  " and 
+  " :SPUpdate spacevim
   
   " for deoplete-tabnine run install.sh in $HOME/.cache/. .... tbodt/deoplete-tabnine 
   " to install in case of errors
