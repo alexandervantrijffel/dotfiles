@@ -67,3 +67,6 @@ go get gotest.tools/gotestsum
 
 sudo ln -s $(pwd)/../sh/autotestgo.sh autotestgo
 sudo ln -s $(pwd)/../sh/autorungo.sh autorungo
+
+echo "Setup bluetooth as described in https://github.com/ev3dev/ev3dev.github.io/pull/24/files/50787e9fae767f4a8e5e1748c5bb70b40eb9f259"
+echo "and https://wiki.debian.org/BluetoothUser/a2dp"
