@@ -45,3 +45,4 @@ VIM: merge conflicts with vim diff: run git mergetool, :diffg LO , :diffg RE , :
 VIM: yank until the second / character : y2f/
 %
 VIM: :0Glog to view history of current file. :copen to open earlier version of file (with vim-fugitive)
+%
