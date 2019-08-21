@@ -1,3 +1,6 @@
 View directory history: dirs -v 
 %
 Edit command line in editor: ALT+v
+%
+CTRL+drag in terminal for block selection mode
+%
