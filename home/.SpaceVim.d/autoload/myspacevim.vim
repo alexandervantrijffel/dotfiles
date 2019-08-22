@@ -3,7 +3,7 @@ func! myspacevim#before() abort
   set ignorecase
   set smartcase
   set splitright
-  " prevent artitrary code execution https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
+  " prevent arbitrary code execution https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
   set nomodeline
   " autosave
   let g:auto_save = 1
@@ -86,6 +86,7 @@ func! myspacevim#before() abort
   
   " for deoplete-tabnine run install.sh in $HOME/.cache/. .... tbodt/deoplete-tabnine 
   " to install in case of errors
+  " to update pull repo ~/.cache/vimfiles/repos/github.com/zxqfl/tabnine-vimu
 
   " homebrew
   set rtp+=/usr/local/opt/fzf 
