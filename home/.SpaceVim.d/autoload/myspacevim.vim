@@ -1,4 +1,7 @@
 func! myspacevim#before() abort
+  " this is necessary for the material theme to show correctly
+  let g:spacevim_enable_guicolors = 1
+
   set wrap
   set ignorecase
   set smartcase
