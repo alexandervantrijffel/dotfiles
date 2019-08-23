@@ -41,6 +41,7 @@ func! myspacevim#before() abort
             \   'javascript': ['standard'],
             \   'go': ['golangci-lint'],
             \}
+  " \   'go': ['gopls'],
   let g:ale_fixers = {'javascript': ['prettier-standard']}
   let g:ale_list_window_size = 10
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
@@ -108,6 +109,7 @@ func! myspacevim#before() abort
 
   let g:go_fmt_command = "goimports"
   let g:go_fmt_autosave = 0
+  let g:go_info_mode='gopls'
 
   " Run this for go:
   " go get -u github.com/sourcegraph/go-langserver
@@ -160,7 +162,10 @@ function CustomMappings()
   " no cursors
   inoremap  <Up>    <NOP>
   inoremap  <Down>  <NOP>
-  inoremap  <Left>  <NOP>
+
+  " left cursor in insert mode is used by vim-go plugin to move left
+  " after inserting () when calling a method, so we better not disable it
+  " inoremap  <Left>  <NOP>
 
   noremap   <Up>    <NOP>
   noremap   <Down>  <NOP>
@@ -223,35 +228,6 @@ function CustomMappings()
   map ,< ysiw<
   vmap ,< c<<C-R>"><ESC>
 
-  " replace text inside/around block elements, jump to next block if 
-  " the cursor is not in one
-  noremap ci) /)<cr>ci)
-  noremap ci( /(<cr>ci(
-  noremap ci{ /{<cr>ci{
-  noremap ci} /}<cr>ci}
-  noremap ci[ /[<cr>ci[
-  noremap ci] /]<cr>ci]
-  noremap ci[ /[<cr>ci[
-  noremap ci] /]<cr>ci]
-  noremap ci< /<<cr>ci<
-  noremap ci> /><cr>ci>
-  noremap ci" /"<cr>ci"
-  noremap ci' /'<cr>ci'
-  noremap ci` /{<cr>ci`
-
-  noremap ca) /)<cr>ca)
-  noremap ca( /(<cr>ca(
-  noremap ca{ /{<cr>ca{
-  noremap ca} /}<cr>ca}
-  noremap ca[ /[<cr>ca[
-  noremap ca] /]<cr>ca]
-  noremap ca[ /[<cr>ca[
-  noremap ca] /]<cr>ca]
-  noremap ca< /<<cr>ca<
-  noremap ca> /><cr>ca>
-  noremap ca" /"<cr>ca"
-  noremap ca' /'<cr>ca'
-  noremap ca` /{<cr>ca`
 endfunction
 
 function InstallBclose()
