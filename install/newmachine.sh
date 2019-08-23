@@ -13,9 +13,7 @@ else
   # 
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-
   sudo apt update && sudo apt install yarn python3-pip curl zsh the-silver-searcher feh htop fortune shutter lnav -y
-
 
   # i3 extensions
   sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
@@ -54,8 +52,8 @@ echo "Replacing folder $FORTUNES"
 sudo rm -rf $FORTUNES
 sudo ln -s $DOTFILES/fortunes $FORTUNES
 
-yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier
-pip3 install pynvim
+
+yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier pip3 install pynvim import-js
 
 git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
