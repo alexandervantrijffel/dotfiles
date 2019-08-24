@@ -22,9 +22,9 @@
     # install nerd fonts
     statusline_separator = "arrow"
     statusline_inactive_separator = "arrow"
+    statusline_display_mode = false
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
-    statusline_display_mode = false
     bootstrap_before = "myspacevim#before"
     bootstrap_after = "myspacevim#after"
     vimcompatible = true
@@ -50,6 +50,7 @@ default_height = 30
 [[layers]]
 name = 'lang#javascript'
 auto_fix = true
+enable_flow_syntax = true
 
 [[layers]]
 name = "lang#go"
@@ -74,5 +75,5 @@ go_metalinter_autosave = 0
 # use ale with gometalinter instead
 go_metalinter_autosave_enabled = ['']
 go_metalinter_enabled = ['']
-go_metalinter_command = "gometalinter --exclude=\"\\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\""
+# go_metalinter_command = "gometalinter --exclude=\"\\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\""
 go_def_mode = 'godef'
