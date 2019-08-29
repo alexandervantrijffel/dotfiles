@@ -1,4 +1,6 @@
 func! myspacevim#before() abort
+  let g:mapleader = ";"
+
   " this is necessary for the material theme to show correctly
   let g:spacevim_enable_guicolors = 1
 
