@@ -13,7 +13,9 @@ else
   # 
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  sudo apt update && sudo apt install yarn python3-pip curl zsh the-silver-searcher feh htop fortune shutter lnav -y
+  sudo apt update && sudo apt install yarn python3-pip curl -y
+  sudo apt install zsh feh htop fortune shutter lnav i3 -y
+  sudo apt install silversearcher-ag -y
 
   # i3 extensions
   sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
@@ -23,7 +25,8 @@ else
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf 
   ~/.fzf/install 
 
-  sudo dpkg -i bat_0.10.0_amd64.deb # adapt version number and architecture
+  curl https://github.com/sharkdp/bat/releases/download/v0.11.0/bat_0.11.0_amd64.deb -o bat_0.11.0_amd64.deb
+  sudo dpkg -i bat_0.11.0_amd64.deb # adapt version number and architecture
 
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
