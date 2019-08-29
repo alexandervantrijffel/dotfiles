@@ -16,7 +16,7 @@ else
   curl -o- -L https://yarnpkg.com/install.sh | bash
   sudo apt update && sudo apt install pip yarn python3-pip -y
   sudo apt install feh htop fortune shutter lnav i3 -y
-  sudo apt install silversearcher-ag exa feh -y
+  sudo apt install silversearcher-ag exa fonts-powerline -y
 
   # i3 extensions
   sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
