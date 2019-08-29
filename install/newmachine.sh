@@ -31,6 +31,7 @@ else
 
   sudo apt install zsh
   sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
   # add -s to make this permanent
   chsh /bin/zsh
