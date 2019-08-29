@@ -13,7 +13,7 @@ else
   sudo apt update && sudo apt install pip curl -y
   # 
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  curl -o- -L https://yarnpkg.com/install.sh | bash
   sudo apt update && sudo apt install yarn python3-pip -y
   sudo apt install zsh feh htop fortune shutter lnav i3 -y
   sudo apt install silversearcher-ag -y
