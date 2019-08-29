@@ -15,7 +15,7 @@ else
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   curl -o- -L https://yarnpkg.com/install.sh | bash
   sudo apt update && sudo apt install pip yarn python3-pip -y
-  sudo apt install zsh feh htop fortune shutter lnav i3 -y
+  sudo apt install feh htop fortune shutter lnav i3 -y
   sudo apt install silversearcher-ag -y
 
   # i3 extensions
@@ -29,7 +29,11 @@ else
   curl https://github.com/sharkdp/bat/releases/download/v0.11.0/bat_0.11.0_amd64.deb -o bat_0.11.0_amd64.deb
   sudo dpkg -i bat_0.11.0_amd64.deb # adapt version number and architecture
 
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sudo apt install zsh
+  sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+  # add -s to make this permanent
+  chsh /bin/zsh
 
   # sudo apt-get build-dep shotwell
   # sudo apt-get install yelp-tools appstream-util libgcr-3-dev libgdata-dev libwebp-dev
@@ -56,8 +60,7 @@ echo "Replacing folder $FORTUNES"
 sudo rm -rf $FORTUNES
 sudo ln -s $DOTFILES/fortunes $FORTUNES
 
-
-yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier pip3 install pynvim import-js
+yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier install pynvim import-js
 
 git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
