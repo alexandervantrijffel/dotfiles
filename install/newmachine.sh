@@ -10,11 +10,11 @@ if [ "$(uname)" = "Darwin" ]; then
 
   brew install ack fortune cowsay lolcat yarn python exa lnav
 else
-  sudo apt update && sudo apt install pip curl -y
+  sudo apt update && sudo apt install curl
   # 
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   curl -o- -L https://yarnpkg.com/install.sh | bash
-  sudo apt update && sudo apt install yarn python3-pip -y
+  sudo apt update && sudo apt install pip yarn python3-pip -y
   sudo apt install zsh feh htop fortune shutter lnav i3 -y
   sudo apt install silversearcher-ag -y
 
@@ -71,5 +71,9 @@ sudo ln -s $(pwd)/../sh/autotestgo.sh /usr/local/bin/autotestgo
 sudo ln -s $(pwd)/../sh/autorungo.sh /usr/local/bin/autorungo
 sudo ln -s $(pwd)/../sh/whatismyip.sh /usr/local/bin/whatismyip
 
+sudo apt autoremove -y
+
 echo "Setup bluetooth as described in https://github.com/ev3dev/ev3dev.github.io/pull/24/files/50787e9fae767f4a8e5e1748c5bb70b40eb9f259"
 echo "and https://wiki.debian.org/BluetoothUser/a2dp"
+
+
