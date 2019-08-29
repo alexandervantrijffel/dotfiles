@@ -18,7 +18,7 @@ func! myspacevim#before() abort
 
   au CursorHold * checktime    
 
-  set clipboard+=unnamed
+  set clipboard+=unnamed,unnamedplus
   let g:spacevim_enable_vimfiler_welcome = 0
   let g:indentLine_setConceal = 0 
 
