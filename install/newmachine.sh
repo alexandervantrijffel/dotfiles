@@ -16,7 +16,7 @@ else
   curl -o- -L https://yarnpkg.com/install.sh | bash
   sudo apt update && sudo apt install pip yarn python3-pip -y
   sudo apt install feh htop fortune shutter lnav i3 -y
-  sudo apt install silversearcher-ag -y
+  sudo apt install silversearcher-ag exa feh -y
 
   # i3 extensions
   sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
@@ -30,11 +30,10 @@ else
   sudo dpkg -i bat_0.11.0_amd64.deb # adapt version number and architecture
 
   sudo apt install zsh
-  sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-  # add -s to make this permanent
-  chsh /bin/zsh
+  chsh -s $(which zsh)
 
   # sudo apt-get build-dep shotwell
   # sudo apt-get install yelp-tools appstream-util libgcr-3-dev libgdata-dev libwebp-dev
