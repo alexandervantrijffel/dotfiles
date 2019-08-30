@@ -16,7 +16,7 @@ else
   curl -o- -L https://yarnpkg.com/install.sh | bash
   sudo apt update && sudo apt install pip yarn python3-pip -y
   sudo apt install feh htop fortune shutter lnav i3 -y
-  sudo apt install silversearcher-ag exa fonts-powerline tig autojump -y
+  sudo apt install silversearcher-ag exa fonts-powerline tig autojump cowsay fortune -y
 
   # i3 extensions
   sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
@@ -73,6 +73,9 @@ go get gotest.tools/gotestsum
 sudo ln -s $(pwd)/../sh/autotestgo.sh /usr/local/bin/autotestgo
 sudo ln -s $(pwd)/../sh/autorungo.sh /usr/local/bin/autorungo
 sudo ln -s $(pwd)/../sh/whatismyip.sh /usr/local/bin/whatismyip
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 
 sudo apt autoremove -y
 
