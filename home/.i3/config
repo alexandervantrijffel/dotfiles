@@ -222,3 +222,6 @@ bindsym XF86AudioNext exec --no-startup-id cmus-remote --next && pkill --signal 
 bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev && pkill --signal SIGRTMIN+13 i3blocks
 # Play Pause
 bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause && pkill --signal SIGRTMIN+13 i3blocks
+
+# for clipboard sharing with host
+exec vmware-user --no-startup-id
