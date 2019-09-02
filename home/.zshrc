@@ -139,6 +139,16 @@ if [ "$(uname)" = "Darwin" ]; then
   if [ -d "$VSCODE" ]; then
     export PATH="$PATH:$VSCODE"
   fi
+
+  bindkey -v
+  bindkey '^a' beginning-of-line
+  bindkey '^b' backward-char
+  bindkey '^e' end-of-line
+  bindkey '^f' forward-char
+  bindkey '^h' backward-delete-char
+  bindkey '^k' kill-line
+  bindkey '^u' kill-whole-line
+  bindkey '^w' backward-kill-word
 else
   feh --bg-fill /data/images/backgrounds -z -r -D1800
   alias open='xdg-open'
