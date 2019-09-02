@@ -192,4 +192,7 @@ fi
 
 export LC_ALL=en_US.UTF-8
 
+# my life is complete now
+bindkey 'jj' vi-cmd-mode
+
 # ubuntu terminal window blue background color #0F293C
