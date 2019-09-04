@@ -70,8 +70,8 @@ plugins=(
   kubectl
   colorize
   z
+  shrink-path
 )
-
 
 source $ZSH/oh-my-zsh.sh
 
@@ -160,10 +160,14 @@ else
   # caps lock = control key
   # re-run this when plugging in another keyboard
   setxkbmap -option ctrl:nocaps
-
 fi
 
+# customize prompt
 DEFAULT_USER=$USER
+
+prompt_dir() {
+ prompt_segment blue white $(shrink_path -f -s)
+}
 
 set clipboard=unnamedplus
 
@@ -213,5 +217,7 @@ export LC_ALL=en_US.UTF-8
 
 # my life is complete now
 bindkey 'jj' vi-cmd-mode
+
+
 
 # ubuntu terminal window blue background color #0F293C
