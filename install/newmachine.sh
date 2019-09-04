@@ -8,7 +8,7 @@ if [ "$(uname)" = "Darwin" ]; then
   # no last login message on mac
   touch ~/.hushlogin
 
-  brew install ack fortune cowsay lolcat yarn python exa lnav
+  brew install ack fortune cowsay lolcat yarn python exa lnav z
 else
   sudo apt update && sudo apt install curl
   # 
@@ -77,10 +77,10 @@ sudo apt autoremove -y
 echo "Setup bluetooth as described in https://github.com/ev3dev/ev3dev.github.io/pull/24/files/50787e9fae767f4a8e5e1748c5bb70b40eb9f259"
 echo "and https://wiki.debian.org/BluetoothUser/a2dp"
 
+echo "todo on ubuntu: install z manually: https://github.com/rupa/z"
 echo "install go manually before continueing: https://golang.org/dl/"
 read blah
 
 go get -u github.com/cespare/reflex
 go get -u github.com/golangci/golangci-lint
 go get gotest.tools/gotestsum
-
