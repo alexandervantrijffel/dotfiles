@@ -57,17 +57,19 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+  # autojump
+
 plugins=(
   git 
   extract
   ssh-agent
-  autojump
   vi-mode
   zsh-autosuggestions
   zsh-completions
   zsh-syntax-highlighting
   kubectl
   colorize
+  z
 )
 
 
