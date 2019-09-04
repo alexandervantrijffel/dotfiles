@@ -155,7 +155,8 @@ else
   feh --bg-fill /data/images/backgrounds -z -r -D1800
   alias open='xdg-open'
   
-  . $(which z)
+  . z
+
   # caps lock = control key
   # re-run this when plugging in another keyboard
   setxkbmap -option ctrl:nocaps
