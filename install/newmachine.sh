@@ -78,7 +78,7 @@ echo "Setup bluetooth as described in https://github.com/ev3dev/ev3dev.github.io
 echo "and https://wiki.debian.org/BluetoothUser/a2dp"
 
 echo "todo on ubuntu: install z manually: https://github.com/rupa/z"
-echo "to change caps lock to control on ubuntu, edit /usr/share/X11/xkb/symbols/pc and /usr/share/X11/xkb/keycodes/evdev"
+echo "to change caps lock to control on ubuntu, edit /usr/share/X11/xkb/symbols/pc Don't change evdev!"
 echo "refer to https://askubuntu.com/questions/33774/how-do-i-remap-the-caps-lock-and-ctrl-keys"
 echo ""
 echo "install go manually before continueing: https://golang.org/dl/"
