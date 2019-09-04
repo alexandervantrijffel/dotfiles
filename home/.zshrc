@@ -102,7 +102,7 @@ fi
 alias du="du -max-depth=1"
 alias dc="docker-compose "
 alias gc="git checkout "
-# alias gs="git status --untracked-files=all"
+alias gc-="git checkout -"
 alias grep="grep -i"
 alias gs="git show"
 alias tl="tig log"
