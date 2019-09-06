@@ -131,10 +131,7 @@ alias ts="tig status"
 alias yrs="yarn run start"
 
 
-if type yarn 1>/dev/null; then
-	# set PATH so it includes user's private bin directories and go directories
-	PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/localbin:$(yarn global bin)"
-fi
+PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/localbin:$HOME/.yarn/bin"
 
 if [ "$(uname)" = "Darwin" ]; then
   VSCODE='/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
