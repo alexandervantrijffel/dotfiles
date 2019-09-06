@@ -2,7 +2,7 @@ VIM: Multi replace by selecting the text to replace in visual mode, press CTRL+R
 %
 VIM: Multi replace by searching for the full text to replace, enter cgn, repeat the . dot command multiple times to apply to multiple search results. Jump to next search result with gn, previous with gN. dgn for delete search result.
 %
-VIM: Use CTRL+E and CTRL+Y to scroll down/up
+VIM: g; jump to last edited line       25G jump to linenumber 25
 %
 VIM: vimfiler file tree: r rename file, N new file, K new directory, mm move file, dd delete file
 %
