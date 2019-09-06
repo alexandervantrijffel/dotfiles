@@ -148,6 +148,7 @@ if [ "$(uname)" = "Darwin" ]; then
   bindkey '^k' kill-line
   bindkey '^u' kill-whole-line
   bindkey '^w' backward-kill-word
+
 else
   feh --bg-fill /data/images/backgrounds -z -r -D1800
   alias open='xdg-open'
@@ -172,6 +173,9 @@ set clipboard=unnamedplus
 
 # after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
+
+bindkey '^k' history-search-backward
+bindkey '^j' history-search-forward
 
 if type bat 1>/dev/null; then
   alias cat='bat'
