@@ -158,6 +158,9 @@ else
   # caps lock = control key
   # re-run this when plugging in another keyboard
   setxkbmap -option ctrl:nocaps
+
+  # auto detect new monitors in i3
+  xrandr --auto
 fi
 
 # customize prompt
