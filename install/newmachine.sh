@@ -20,8 +20,10 @@ else
 
   # i3 extensions
   sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
-
   ln -s $DOTFILES/home/.i3 $HOME/.i3 
+  ln -s $DOTFILES/home/.i3/config ~/.config/i3/config
+  sudo mv /usr/bin/dmenu /usr/bin/dmenu.org
+  sudo ln -s $(which rofi) /usr/bin/dmenu
 
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf 
   ~/.fzf/install 

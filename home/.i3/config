@@ -44,7 +44,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id "rofi -combi-modi drun,run -show combi"
+bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi"
 bindsym $mod+Shift+d exec --no-startup-id rofi -show window
 bindsym Mod1+Tab exec --no-startup-id rofi -show window
 
@@ -223,5 +223,3 @@ bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev && pkill --signal 
 # Play Pause
 bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause && pkill --signal SIGRTMIN+13 i3blocks
 
-# for clipboard sharing with host
-exec vmware-user --no-startup-id

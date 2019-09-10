@@ -159,8 +159,8 @@ else
   # re-run this when plugging in another keyboard
   setxkbmap -option ctrl:nocaps
 
-  # auto detect new monitors in i3
-  xrandr --auto
+  # for clipboard sharing with host
+  # exec vmware-user --no-startup-id
 fi
 
 # customize prompt
