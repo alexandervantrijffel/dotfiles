@@ -38,7 +38,8 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -140,8 +141,19 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
+# exit i3 (logs you out of your X session without confirmation)
 bindsym $mod+Shift+e exec i3-msg exit
+
+# I3 exit menu
+mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
+  bindsym l exec i3-msg exit
+  bindsym r exec systemctl reboot
+  bindsym s exec systemctl shutdown
+  bindsym Escape mode "default"
+  bindsym Return mode "default"
+}
+
+bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
