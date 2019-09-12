@@ -235,3 +235,13 @@ bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev && pkill --signal 
 # Play Pause
 bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause && pkill --signal SIGRTMIN+13 i3blocks
 
+# class                 border  backgr. text    indicator child_border
+client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
+client.focused_inactive #333333 #5F676A #ffffff #484e50
+client.unfocused        #333333 #424242 #888888 #292d2e 
+client.urgent           #C10004 #900000 #ffffff #900000
+
+client.background       #ff0000
+
+default_border pixel 3
+for_window [class=".*"] border pixel 1
