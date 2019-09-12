@@ -1,0 +1,24 @@
+[global_config]
+  borderless = True
+  title_receive_bg_color = "#002b36"
+  title_use_system_font = False
+  title_font = Hasklug Nerd Font Semi-Bold 9
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    font = Hasklug Nerd Font Medium 10
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollback_infinite = True
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
