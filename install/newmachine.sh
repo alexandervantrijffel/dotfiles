@@ -14,10 +14,11 @@ else
   # 
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   curl -o- -L https://yarnpkg.com/install.sh | bash
+  sudo add-apt-repository ppa:gnome-terminator
   sudo apt update && sudo apt install pip yarn python3-pip -y
-  sudo apt install feh htop fortune shutter lnav i3 -y
+  sudo apt install feh htop fortune shutter lnav i3 terminator -y
   sudo apt install silversearcher-ag exa fonts-powerline tig autojump cowsay fortune -y
-
+  
   # i3 extensions
   sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
   ln -s $DOTFILES/home/.i3 $HOME/.i3 
