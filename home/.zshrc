@@ -99,7 +99,7 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 
-alias du="du -max-depth=1"
+alias du="du -h --max-depth=1 "
 alias dc="docker-compose "
 alias gc="git checkout "
 alias gc-="git checkout -"
@@ -129,7 +129,6 @@ alias psg="ps -a | grep $1"
 alias tl="tig log"
 alias ts="tig status"
 alias yrs="yarn run start"
-
 
 PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/localbin:$HOME/.yarn/bin"
 
