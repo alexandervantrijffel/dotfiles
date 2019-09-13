@@ -245,4 +245,3 @@ client.background       #ff0000
 
 default_border pixel 3
 for_window [class=".*"] border pixel 1
-opacity-rule = [ "100:class_g = '.*'" ];
