@@ -26,13 +26,13 @@ font pango:monospace 8
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up l
-set $down k
-set $left j
-set $right semicolon
+set $left h
+set $down j
+set $up k
+set $right l
+# set $right semicolon
 
 set $mod Mod4
-
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -45,12 +45,14 @@ bindsym $mod+Return exec terminator
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi"
+bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi | xargs swaymsg exec --"
 bindsym $mod+Shift+d exec --no-startup-id rofi -show window
 bindsym Mod1+Tab exec --no-startup-id rofi -show window
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
+
+focus_follows_mouse no
 
 # change focus
 bindsym $mod+$left focus left
@@ -77,7 +79,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -148,7 +150,7 @@ bindsym $mod+Shift+e exec i3-msg exit
 mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
   bindsym l exec i3-msg exit
   bindsym r exec systemctl reboot
-  bindsym s exec systemctl shutdown
+  bindsym s exec shutdown -h now
   bindsym Escape mode "default"
   bindsym Return mode "default"
 }
@@ -185,7 +187,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 # status_command i3status
 bar {
-  i3bar_command i3bar
+  # i3bar_command i3bar
   status_command /usr/bin/i3blocks -c /home/arctica/.i3/i3blocks.conf
   position top
   font pango:SauceCodePro Nerd Font
@@ -201,7 +203,7 @@ bar {
     separator     #000000ff
       #                  BORDER      BACKGROUND    TEXT
     focused_workspace   #00000000    #00000000   #c6ff00
-    inactive_workspace  #00000000    #00000000   #dddddd
+    inactive_workspace  #00000000    #00000000   #ffffff
     active_workspace    #00000000    #00000000   #ffffff
     urgent_workspace    #b71c1c      #b71c1c     #00000000
     binding_mode        #b71c1c      #b71c1c     #00000000
@@ -236,12 +238,17 @@ bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev && pkill --signal 
 bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause && pkill --signal SIGRTMIN+13 i3blocks
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
-client.focused_inactive #333333 #5F676A #ffffff #484e50
-client.unfocused        #333333 #424242 #888888 #292d2e 
-client.urgent           #C10004 #900000 #ffffff #900000
+# client.focused          #3F8AC2 #096BAA #00BAA7 #00DA8E
+# client.focused_inactive #333333 #5F676A #ffffff #484e50
+# client.unfocused        #333333 #424242 #ffffff #292d2e 
+# client.urgent           #C10004 #900000 #ffffff #900000
 
-client.background       #ff0000
+# client.background       #ff0000
 
 default_border pixel 3
 for_window [class=".*"] border pixel 1
+
+# 5k resolution only works with sway based on wayland, not with i3
+# exec --no-startup-id xrandr --output DP-1 --mode 1920x1080 --left-of eDP-1
+# exec --no-startup-id xrandr --output DP-1 --mode 3840x1080 --rate 60 --left-of eDP-1 --primary 
+# exec --no-startup-id xrandr --output DP-1 --mode 5120x1440 --primary --rate 60 --left-of eDP-1
