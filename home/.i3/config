@@ -238,7 +238,7 @@ bindsym XF86AudioPrev exec --no-startup-id cmus-remote --prev && pkill --signal 
 bindsym XF86AudioPlay exec --no-startup-id cmus-remote --pause && pkill --signal SIGRTMIN+13 i3blocks
 
 default_border pixel 5
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 3
 
 # focus on external screen
 focus output XWAYLAND1

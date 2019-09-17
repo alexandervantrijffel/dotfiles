@@ -16,9 +16,13 @@ else
   curl -o- -L https://yarnpkg.com/install.sh | bash
   sudo add-apt-repository ppa:gnome-terminator
   sudo apt update && sudo apt install pip yarn python3-pip -y
-  sudo apt install feh htop fortune shutter lnav i3 terminator -y
+  sudo apt install feh htop fortune shutter lnav terminator -y
   sudo apt install silversearcher-ag exa fonts-powerline tig autojump cowsay fortune -y
   
+  # unofficial sway ppa
+  sudo add-apt-repository ppa:samoilov-lex/sway
+  sudo apt update && apt install sway
+
   # i3 extensions
   sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
   ln -s $DOTFILES/home/.i3 $HOME/.i3 
