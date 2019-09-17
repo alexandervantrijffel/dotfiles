@@ -158,6 +158,9 @@ else
   # re-run this when plugging in another keyboard
   setxkbmap -option ctrl:nocaps
 
+  # fix rider showing on Wayland
+  export _JAVA_AWT_WM_NONREPARENTING=1
+
   # for clipboard sharing with host
   # exec vmware-user --no-startup-id
 fi
@@ -220,7 +223,5 @@ export LC_ALL=en_US.UTF-8
 
 # my life is complete now
 bindkey 'jj' vi-cmd-mode
-
-
 
 # ubuntu terminal window blue background color #0F293C
