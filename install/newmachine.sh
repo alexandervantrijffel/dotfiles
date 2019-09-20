@@ -17,9 +17,11 @@ else
   sudo add-apt-repository ppa:gnome-terminator
   sudo apt update && sudo apt install pip yarn python3-pip -y
   sudo apt install feh htop fortune shutter lnav terminator -y
-  sudo apt install silversearcher-ag exa fonts-powerline tig autojump cowsay fortune -y
+  sudo apt install silversearcher-ag exa fonts-powerline tig autojump cowsay fortune xclip xsel -y
   
-  # unofficial sway ppa
+  # swayshot screenshot dependencies
+  sudo apt install xclip xsel wl-clipboard 
+  # todo: jq, grim
   sudo add-apt-repository ppa:samoilov-lex/sway
   sudo apt update && apt install sway
 
@@ -48,11 +50,11 @@ else
   # todo install exa manually
 
   # teiler
-  sudo apt install xininfo ffmpeg xclip maim slop -y
-  sudo git clone https://github.com/carnager/teiler.git /opt/teiler
-  sudo ln -s /opt/teiler/teiler /usr/local/bin/
-  sudo ln -s /opt/teiler/teiler_helper /usr/local/bin/
-  mkdir -pv ~/.config/teiler/profiles/mp4-pulse
+  # sudo apt install xininfo ffmpeg xclip maim slop -y
+  # sudo git clone https://github.com/carnager/teiler.git /opt/teiler
+  # sudo ln -s /opt/teiler/teiler /usr/local/bin/
+  # sudo ln -s /opt/teiler/teiler_helper /usr/local/bin/
+  # mkdir -pv ~/.config/teiler/profiles/mp4-pulse
 
   # install teiler as described at https://carnager.github.io/teiler/
 fi
