@@ -270,3 +270,7 @@ input "0:0:28:11:A5:71:82:65" {
 # set background image
 # output DP-1 bg ~/wallpaper.png stretch
 
+# select region
+bindsym Print exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/Screenshots/$(date +'screenshot_%Y%m%d_%H%M%S.png')
+# current window
+bindsym Shift+Print exec grim $(xdg-user-dir PICTURES)/Screenshots/$(date +'screenshot_%Y%m%d_%H%M%S.png')
