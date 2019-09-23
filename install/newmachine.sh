@@ -17,13 +17,10 @@ else
   sudo add-apt-repository ppa:gnome-terminator
   sudo apt update && sudo apt install pip yarn python3-pip -y
   sudo apt install feh htop fortune shutter lnav terminator -y
-  sudo apt install silversearcher-ag exa fonts-powerline tig autojump cowsay fortune xclip xsel -y
+  sudo apt install silversearcher-ag exa fonts-powerline tig autojump cowsay fortune -y
   
-  # swayshot screenshot dependencies
-  sudo apt install xclip xsel wl-clipboard 
-  # todo: jq, grim
-  sudo add-apt-repository ppa:samoilov-lex/sway
-  sudo apt update && apt install sway
+  # grim screenshots for sway
+  sudo apt install wl-clipboard grim
 
   # i3 extensions
   sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
