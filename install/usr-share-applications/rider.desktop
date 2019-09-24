@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=RiderFixed
+Comment=
+GenericName=IDE
+Keywords=IDE
+Exec=env _JAVA_AWT_WM_NONREPARENTING=1 rider
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/rider-2019.2.2/rider.png
+Categories=IDE
+MimeType=
+StartupNotify=true
+Actions=new-window;new-private-window;
