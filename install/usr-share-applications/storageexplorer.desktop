@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Azure Storage Explorer
+Comment=storageexplorer
+GenericName=Blob Container
+Keywords=
+Exec=storageexplorer
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/azurestorageexplorer/resources/app/out/app/icon.png
+Categories=IDE
+MimeType=
+StartupNotify=true
+Actions=new-window;new-private-window;
