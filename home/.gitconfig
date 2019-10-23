@@ -10,7 +10,7 @@
 	branch = auto
   diff = auto
 [merge]
-	ff = only
+  ff = only
 	conflictstyle = diff3
 [mergetool]
 	keepBackup = false
@@ -39,3 +39,5 @@
 	canFallBackToInsecureStore = true
 [core]
 	editor = nvim
+[pull]
+	rebase = true
