@@ -10,6 +10,7 @@ func! myspacevim#before() abort
   set splitright
   " prevent arbitrary code execution https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
   set nomodeline
+  set noswapfile
   " autosave
   let g:auto_save = 1
   let g:auto_save_no_updatetime = 1
