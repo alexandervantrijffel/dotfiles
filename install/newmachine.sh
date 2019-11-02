@@ -80,7 +80,19 @@ sudo ln -s $(pwd)/../sh/whatismyip.sh /usr/local/bin/whatismyip
 # from https://github.com/so-fancy/diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
-sudo apt autoremove -y
+git config --global color.ui true
+
+git config --global color.diff-highlight.oldNormal    "red bold"
+git config --global color.diff-highlight.oldHighlight "red bold 52"
+git config --global color.diff-highlight.newNormal    "green bold"
+git config --global color.diff-highlight.newHighlight "green bold 22"
+
+git config --global color.diff.meta       "11"
+git config --global color.diff.frag       "magenta bold"
+git config --global color.diff.commit     "yellow bold"
+git config --global color.diff.old        "red bold"
+git config --global color.diff.new        "green bold"
+git config --global color.diff.whitespace "red reverse"sudo apt autoremove -y
 
 echo "Setup bluetooth as described in https://github.com/ev3dev/ev3dev.github.io/pull/24/files/50787e9fae767f4a8e5e1748c5bb70b40eb9f259"
 echo "and https://wiki.debian.org/BluetoothUser/a2dp"
