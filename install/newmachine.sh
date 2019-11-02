@@ -77,6 +77,8 @@ sudo ln -s $(pwd)/../sh/autotestgo.sh /usr/local/bin/autotestgo
 sudo ln -s $(pwd)/../sh/autorungo.sh /usr/local/bin/autorungo
 sudo ln -s $(pwd)/../sh/whatismyip.sh /usr/local/bin/whatismyip
 
+# from https://github.com/so-fancy/diff-so-fancy
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 sudo apt autoremove -y
 
@@ -93,3 +95,6 @@ read blah
 go get -u github.com/cespare/reflex
 go get -u github.com/golangci/golangci-lint
 go get gotest.tools/gotestsum
+
+
+

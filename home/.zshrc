@@ -225,3 +225,6 @@ export LC_ALL=en_US.UTF-8
 bindkey 'jj' vi-cmd-mode
 
 # ubuntu terminal window blue background color #0F293C
+#
+#
+#
