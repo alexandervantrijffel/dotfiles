@@ -176,6 +176,10 @@ set clipboard=unnamedplus
 
 [ -d "/etc/zsh" ] &&  source /etc/zsh/zprofile
 
+if [ -d "/opt/node/bin" ]; then
+  PATH="$PATH:/opt/node/bin"
+fi
+
 # after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
 
