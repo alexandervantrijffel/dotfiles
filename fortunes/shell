@@ -4,3 +4,4 @@ Edit command line in editor: ALT+v
 %
 CTRL+drag in terminal for block selection mode
 %
+tldr <insert cmd line tool here> (lookup most used cmd line argument combos)

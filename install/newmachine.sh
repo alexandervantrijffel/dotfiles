@@ -94,6 +94,8 @@ git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"sudo apt autoremove -y
 
+sudo npm install -g tldr
+
 echo "Setup bluetooth as described in https://github.com/ev3dev/ev3dev.github.io/pull/24/files/50787e9fae767f4a8e5e1748c5bb70b40eb9f259"
 echo "and https://wiki.debian.org/BluetoothUser/a2dp"
 
