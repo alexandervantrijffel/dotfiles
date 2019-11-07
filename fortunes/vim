@@ -14,8 +14,6 @@ VIM: s substitute char and enter insert mode. S substitute line, enter insert mo
 %
 VIM: F back find      T back till     ; repeat t/T/f/F     , reverse t/T/f/F
 %
-VIM: U undo line
-%
 VIM: ~ (shift `) toggle case of selection or cursor
 %
 VIM: # previous word under cursor * next word under cursor
@@ -44,3 +42,4 @@ VIM: yank until the second / character : y2f/
 %
 VIM: :0Glog to view history of current file. :copen to open earlier version of file. :G for git status, stage/unstage/ignore file. :Gblame (with vim-fugitive)
 %
+VIM: CTRL+[x f]  autocomplete filename
