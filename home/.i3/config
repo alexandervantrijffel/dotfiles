@@ -239,7 +239,9 @@ default_border pixel 5
 for_window [class=".*"] border pixel 3
 
 # focus on external screen
-focus output XWAYLAND1
+# focus output XWAYLAND1
+# output DP-1 pos 0 0 res 3840x1080
+# focus output DP-1
 
 # 5k resolution only works with sway based on wayland, not with i3
 # exec --no-startup-id xrandr --output DP-1 --mode 1920x1080 --left-of eDP-1
