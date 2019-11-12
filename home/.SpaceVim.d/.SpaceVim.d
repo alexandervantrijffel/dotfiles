@@ -1,1 +1,0 @@
-/data/dev/github/alexandervantrijffel/dotfiles/home/.SpaceVim.d

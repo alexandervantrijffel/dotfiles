@@ -149,7 +149,9 @@ if [ "$(uname)" = "Darwin" ]; then
   bindkey '^w' backward-kill-word
 
 else
-  feh --bg-fill /data/images/backgrounds -z -r -D1800
+  if type feh 1>/dev/null; then
+    feh --bg-fill /data/images/backgrounds -z -r -D1800
+  fi
   alias open='xdg-open'
   
   . z

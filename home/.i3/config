@@ -249,30 +249,29 @@ for_window [class=".*"] border pixel 3
 # exec --no-startup-id xrandr --output DP-1 --mode 5120x1440 --primary --rate 60 --left-of eDP-1
 
 # leopold keyboard
-input "1204:1296:HID_Keyboard_HID_Keyboard_Consumer_Control" {
-  xkb_options ctrl:nocaps
-}
-input "1204:1296:HID_Keyboard_HID_Keyboard" {
-  xkb_options ctrl:nocaps
-}
-input "1204:1296:HID_Keyboard_HID_Keyboard" { 
-  xkb_options ctrl:nocaps
-}
-# lenovo laptop keyboard
-input "1:1:AT_Translated_Set_2_keyboard" { 
-  xkb_options ctrl:nocaps
-}
-# unknown keyboard
-input "0:0:28:11:A5:71:82:65" { 
-  xkb_options ctrl:nocaps
-}
+# input "1204:1296:HID_Keyboard_HID_Keyboard_Consumer_Control" {
+#   xkb_options ctrl:nocaps
+# }
+# input "1204:1296:HID_Keyboard_HID_Keyboard" {
+#   xkb_options ctrl:nocaps
+# }
+# input "1204:1296:HID_Keyboard_HID_Keyboard" { 
+#   xkb_options ctrl:nocaps
+# }
+# # lenovo laptop keyboard
+# input "1:1:AT_Translated_Set_2_keyboard" { 
+#   xkb_options ctrl:nocaps
+# }
+# # unknown keyboard
+# input "0:0:28:11:A5:71:82:65" { 
+#   xkb_options ctrl:nocaps
+# }
 
 # set background image
 # output DP-1 bg ~/wallpaper.png stretch
 
 # select region + send to clipboard
 bindsym Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
-
 # select region + save to file
 bindsym Shift+Print exec grim -g "$(slurp)" $(xdg-user-dir PICTURES)/Screenshots/$(date +'screenshot_%Y%m%d_%H%M%S.png')
 # current window + send to clipboard
