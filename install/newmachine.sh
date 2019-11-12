@@ -11,29 +11,23 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install ack fortune cowsay lolcat yarn python exa lnav z
 else
   sudo apt update && sudo apt install curl
-  # 
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   curl -o- -L https://yarnpkg.com/install.sh | bash
-  sudo add-apt-repository ppa:gnome-terminator
-  sudo apt update && sudo apt install pip yarn python3-pip -y
-  sudo apt install feh htop fortune shutter lnav terminator -y
-  sudo apt install silversearcher-ag exa fonts-powerline tig autojump cowsay fortune -y
-  
-  # grim screenshots for sway
-  sudo apt install wl-clipboard grim
+  sudo apt update && sudo apt install pip yarn python3-pip bat -y
+  sudo pip3 install pynvim
+  sudo apt install htop fortune lnav terminator silversearcher-ag -y
+  sudo apt install fonts-powerline tig cowsay fortune fd-find -y
+  cp $THISDIR/meow /usr/share/cowsay/cows/
 
   # i3 extensions
-  sudo apt install rofi alsa-utils pulseaudio i3blocks -y 
+  sudo apt install rofi alsa-utils i3blocks -y 
   ln -s $DOTFILES/home/.i3 $HOME/.i3 
   ln -s $DOTFILES/home/.i3/config ~/.config/i3/config
   sudo mv /usr/bin/dmenu /usr/bin/dmenu.org
   sudo ln -s $(which rofi) /usr/bin/dmenu
 
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf 
-  ~/.fzf/install 
-
-  curl https://github.com/sharkdp/bat/releases/download/v0.11.0/bat_0.11.0_amd64.deb -o bat_0.11.0_amd64.deb
-  sudo dpkg -i bat_0.11.0_amd64.deb # adapt version number and architecture
+  git clone --depth 1 https://github.com/junegunn/fzf.git /opt/.fzf 
+  /opt/.fzf/install 
 
   sudo apt install zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -66,10 +60,9 @@ echo "Replacing folder $FORTUNES"
 sudo rm -rf $FORTUNES
 sudo ln -s $DOTFILES/fortunes $FORTUNES
 
-yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier install pynvim import-js
+yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier install import-js tldr
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 
@@ -92,9 +85,9 @@ git config --global color.diff.frag       "magenta bold"
 git config --global color.diff.commit     "yellow bold"
 git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
-git config --global color.diff.whitespace "red reverse"sudo apt autoremove -y
+git config --global color.diff.whitespace "red reverse"
 
-sudo npm install -g tldr
+sudo apt autoremove -y
 
 echo "Setup bluetooth as described in https://github.com/ev3dev/ev3dev.github.io/pull/24/files/50787e9fae767f4a8e5e1748c5bb70b40eb9f259"
 echo "and https://wiki.debian.org/BluetoothUser/a2dp"
@@ -111,4 +104,10 @@ go get -u github.com/golangci/golangci-lint
 go get gotest.tools/gotestsum
 
 
+echo "only on native:"
+echo "apt install feh pulseaudio shutter"
+echo "todo install z script"
 
+
+  # grim screenshots for sway
+  # sudo apt install wl-clipboard grim
