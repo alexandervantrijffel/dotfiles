@@ -35,8 +35,8 @@
 	avtnl = avtnl
 [credential]
 	helper = store
-	helper = !/usr/lib/jvm/java-11-openjdk-amd64/bin/java -Ddebug=false -Djava.net.useSystemProxies=true -jar /opt/git-credential-manager/git-credential-manager-2.0.4.jar
 	canFallBackToInsecureStore = true
+	helper = !/usr/lib/jvm/java-11-openjdk-amd64/bin/java -Ddebug=false -Djava.net.useSystemProxies=true -jar /opt/git-credential-manager/git-credential-manager-2.0.4.jar
 [core]
 	editor = nvim
 	pager = diff-so-fancy | less --tabs=4 -RFX
