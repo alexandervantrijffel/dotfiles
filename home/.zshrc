@@ -225,6 +225,11 @@ if ! type pbcopy 1>/dev/null; then
   alias pbpaste='xclip -selection clipboard -o'
 fi
 
+if type vmware-user --no-startup-id 1>/dev/null; then
+  vmware-user --no-startup-d
+fi
+
+
 export LC_ALL=en_US.UTF-8
 
 # my life is complete now
