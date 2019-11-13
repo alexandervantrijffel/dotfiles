@@ -38,8 +38,6 @@ VIM: In insert mode, CTRL+W for delete last word, CTRL+h for delete last charact
 %
 VIM: merge conflicts with vim diff: run git mergetool, :diffg LO , :diffg RE , :diffg BA , ]c next conflict , [c previous conflict https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool
 %
-VIM: yank until the second / character : y2f/
-%
 VIM: :0Glog to view history of current file. :copen to open earlier version of file. :G for git status, stage/unstage/ignore file. :Gblame (with vim-fugitive)
 %
 VIM: CTRL+[x f]  autocomplete filename
