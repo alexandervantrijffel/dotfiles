@@ -93,14 +93,15 @@ else
   VISUAL=vim
 fi
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
 
 alias du="du -h --max-depth=1 "
 alias dc="docker-compose "
+if type fdfind 1>/dev/null; then
+  alias fd='fdfind'
+fi
 alias gc="git checkout "
 alias gc-="git checkout -"
 alias grep="grep -i"
@@ -162,9 +163,6 @@ else
 
   # fix rider showing on Wayland
   export _JAVA_AWT_WM_NONREPARENTING=1
-
-  # for clipboard sharing with host
-  # exec vmware-user --no-startup-id
 fi
 
 # customize prompt
@@ -225,7 +223,8 @@ if ! type pbcopy 1>/dev/null; then
   alias pbpaste='xclip -selection clipboard -o'
 fi
 
-if type vmware-user --no-startup-id 1>/dev/null; then
+# for clipboard sharing with host
+if type vmware-user 1>/dev/null; then
   vmware-user --no-startup-d
 fi
 
