@@ -34,7 +34,6 @@ set $up k
 set $right l
 
 set $mod Mod4
-set $sup Mod1
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

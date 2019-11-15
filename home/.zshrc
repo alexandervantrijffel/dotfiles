@@ -115,6 +115,7 @@ alias gpf='echo no gpf please'
 alias gpforce="git push --force"
 alias gpff="git pull --ff-only"
 alias gl="git log --max-count=10 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
+alias gca="git commit --amend"
 alias gcm="git commit -m  "
 alias gd="git diff --word-diff -w"
 alias gds="gd --staged"
