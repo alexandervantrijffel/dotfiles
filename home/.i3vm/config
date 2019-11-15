@@ -32,9 +32,8 @@ set $left h
 set $down j
 set $up k
 set $right l
-# set $right semicolon
 
-set $mod Mod1
+set $mod Mod4
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -89,6 +88,7 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# bindsym $mod+Shift+f exec i3-msg 'workspace 5:FF; exec $(which firefox)' 
 bindsym $mod+Shift+f exec $(which firefox)
 
 # change container layout (stacked, tabbed, toggle split)
