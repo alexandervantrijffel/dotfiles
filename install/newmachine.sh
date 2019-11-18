@@ -104,9 +104,16 @@ go get -u github.com/golangci/golangci-lint
 go get gotest.tools/gotestsum
 
 
+
 echo "only on native:"
 echo "apt install feh pulseaudio shutter"
+
+
+echo "todo: set correct dpi in ~/.Xresources"
+echo "Xft.dpi:110" > ~/.Xresources
+
 echo "todo install z script"
+
 
 
   # grim screenshots for sway
