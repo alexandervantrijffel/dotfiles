@@ -12,6 +12,7 @@
     font = RobotoMono Nerd Font Medium 10
     foreground_color = "#839496"
     show_titlebar = False
+    scrollbar_position = hidden
     scrollback_infinite = True
     use_system_font = False
 [layouts]
