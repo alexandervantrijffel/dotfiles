@@ -228,5 +228,7 @@ bar {
 #######################################################################
 # exec i3-config-wizard
 
-default_border pixel 5
-for_window [class=".*"] border pixel 3
+default_border pixel 3
+for_window [class=".*"] border pixel 1
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #03A9F4
+
