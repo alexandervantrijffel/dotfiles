@@ -88,8 +88,7 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# bindsym $mod+Shift+f exec i3-msg 'workspace 5:FF; exec $(which firefox)' 
-bindsym $mod+Shift+f exec $(which firefox)
+bindsym $mod+Shift+f workspace 5; exec --no-startup-id i3-msg exec $(which firefox)
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
@@ -228,7 +227,8 @@ bar {
 #######################################################################
 # exec i3-config-wizard
 
-default_border pixel 3
+default_border pixel 1
 for_window [class=".*"] border pixel 1
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #03A9F4
+hide_edge_borders vertical
 
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #03A9F4
