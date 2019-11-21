@@ -10,6 +10,8 @@ if [ "$(uname)" = "Darwin" ]; then
 
   brew install ack fortune cowsay lolcat yarn python exa lnav z
 else
+  # i3 gaps
+  sudo add-apt-repository ppa:kgilmer/speed-ricer
   sudo apt update && sudo apt install curl
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   curl -o- -L https://yarnpkg.com/install.sh | bash
@@ -20,9 +22,8 @@ else
   cp $THISDIR/meow /usr/share/cowsay/cows/
 
   # i3 extensions
-  sudo apt install rofi alsa-utils i3blocks -y 
-  ln -s $DOTFILES/home/.i3 $HOME/.i3 
-  ln -s $DOTFILES/home/.i3/config ~/.config/i3/config
+  sudo apt i3-gaps-wm install rofi alsa-utils i3blocks -y 
+  ln -s $DOTFILES/home/.config/i3/ $HOME/.i3/
   sudo mv /usr/bin/dmenu /usr/bin/dmenu.org
   sudo ln -s $(which rofi) /usr/bin/dmenu
 

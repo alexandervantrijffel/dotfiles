@@ -130,7 +130,7 @@ alias kc="kubectl"
 alias psg="ps -a | grep $1"
 alias tl="tig log"
 alias ts="tig status"
-alias yrs="yarn run start"
+alias yrs="yarn run start &"
 
 PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/localbin:$HOME/.yarn/bin"
 
@@ -234,5 +234,5 @@ bindkey 'jj' vi-cmd-mode
 # ubuntu terminal window blue background color #0F293C
 
 if type fortune 1>/dev/null; then
-  fortune | cowsay -f meow | xargs -0 echo -e "$(date "+ %A %e %B Week %V  %H:%M:%S")\n" | lolcat
+  fortune | cowsay -f meow | xargs -0 echo -e "$(date "+ %A %e %B Week %V")\n" | lolcat
 fi
