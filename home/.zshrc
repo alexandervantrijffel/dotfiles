@@ -152,7 +152,8 @@ if [ "$(uname)" = "Darwin" ]; then
 
 else
   if type feh 1>/dev/null; then
-    feh --bg-fill /data/images/backgrounds -z -r -D1800
+    feh --bg-fill $HOME/Pictures/backgrounds -z -r -D1800
+    # // or --bg-scale?
   fi
   alias open='xdg-open'
   

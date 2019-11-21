@@ -186,12 +186,15 @@ bindsym $mod+r mode "resize"
 # status_command i3status
 bar {
   # i3bar_command i3bar
-  status_command /usr/bin/i3blocks -c /home/arctica/.i3/i3blocks.conf
+  status_command /usr/bin/i3blocks -c $HOME/.config/i3/i3blocks.conf
   position top
   font pango:SauceCodePro Nerd Font
   strip_workspace_numbers yes
   separator_symbol "-"
   workspace_buttons yes
+  bindsym button1 nop
+  bindsym button2 nop
+  bindsym button3 nop
   bindsym button4 nop
   bindsym button5 nop
   tray_padding 0
@@ -213,7 +216,7 @@ bar {
 # keysym-based config which used their favorite modifier (alt or windows)
 #
 # i3-config-wizard will not launch if there already is a config file
-# in ~/.i3/config.
+# in ~/.config/i3/config.
 #
 # Please remove the following exec line:
 #######################################################################
