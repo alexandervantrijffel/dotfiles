@@ -104,8 +104,6 @@ go get -u github.com/cespare/reflex
 go get -u github.com/golangci/golangci-lint
 go get gotest.tools/gotestsum
 
-
-
 echo "only on native:"
 echo "apt install feh pulseaudio shutter"
 
@@ -115,7 +113,7 @@ echo "Xft.dpi:110" > ~/.Xresources
 
 echo "todo install z script"
 
-
+echo "todo link .xsessionrc"
 
   # grim screenshots for sway
   # sudo apt install wl-clipboard grim
