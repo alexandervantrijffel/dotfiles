@@ -216,10 +216,6 @@ if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
 
-if type fortune 1>/dev/null; then
-  fortune | cowsay -f meow | lolcat
-fi
-
 if ! type pbcopy 1>/dev/null; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
@@ -230,13 +226,13 @@ if type vmware-user 1>/dev/null; then
   vmware-user --no-startup-d
 fi
 
-
 export LC_ALL=en_US.UTF-8
 
 # my life is complete now
 bindkey 'jj' vi-cmd-mode
 
 # ubuntu terminal window blue background color #0F293C
-#
-#
-#
+
+if type fortune 1>/dev/null; then
+  fortune | cowsay -f meow | xargs -0 echo -e "$(date "+ %A %e %B Week %V  %H:%M:%S")\n" | lolcat
+fi

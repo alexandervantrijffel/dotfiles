@@ -363,6 +363,3 @@ mode "$mode_gaps_left" {
 
 exec --no-startup-id i3-msg "workspace 5:web; exec $(which firefox)"
 exec --no-startup-id i3-msg "workspace 1; exec terminator"
-# exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/firefox'
-
-# bindsym $mod+Shift+f workspace 5:web; exec --no-startup-id i3-msg exec $(which firefox)
