@@ -39,7 +39,7 @@ fi
 
 # enable window compositing
 if [ -f /usr/bin/compton ]; then
-    compton --fading --daemon --config "$HOME/.config/i3/compton.conf"
+    compton --fading --daemon --config "$HOME/.config/compton.conf"
 fi
 
 # enable touchpad basics
