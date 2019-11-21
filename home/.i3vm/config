@@ -195,8 +195,6 @@ bar {
   strip_workspace_numbers yes
   separator_symbol "-"
   workspace_buttons yes
-  bindsym button4 nop
-  bindsym button5 nop
   tray_padding 0
   colors {
     statusline    #ffffff
@@ -228,8 +226,10 @@ bar {
 #######################################################################
 # exec i3-config-wizard
 
-default_border pixel 1
-for_window [class=".*"] border pixel 1
+# default_border none
+
+default_border none
+for_window [class=".*"] border none
 hide_edge_borders vertical
 
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #03A9F4
@@ -250,6 +250,9 @@ set $mode_gaps_right Right Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_bottom Bottom Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_left Left Gaps: +|-|0 (local), Shift + +|-|0 (global)
 bindsym $mod+Shift+g mode "$mode_gaps"
+
+gaps outer 6
+gaps inner 12
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
