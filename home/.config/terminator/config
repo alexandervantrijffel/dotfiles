@@ -1,13 +1,14 @@
 [global_config]
   borderless = True
   title_receive_bg_color = "#002b36"
+  inactive_color_offset = 1.0
   title_use_system_font = False
   title_font = Hasklug Nerd Font Semi-Bold 11
 [keybindings]
 [profiles]
   [[default]]
     background_color = "#002b36"
-    background_darkness = 1.0
+    background_type = transparent
     cursor_color = "#aaaaaa"
     font = RobotoMono Nerd Font Medium 10
     foreground_color = "#839496"
