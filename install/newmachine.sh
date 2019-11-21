@@ -19,6 +19,7 @@ else
   sudo pip3 install pynvim
   sudo apt install htop fortune lnav terminator silversearcher-ag -y
   sudo apt install fonts-powerline tig cowsay fortune fd-find -y
+  sudo apt install inotify-tools -y
   cp $THISDIR/meow /usr/share/cowsay/cows/
 
   # i3 extensions
@@ -103,6 +104,7 @@ read blah
 go get -u github.com/cespare/reflex
 go get -u github.com/golangci/golangci-lint
 go get gotest.tools/gotestsum
+go get github.com/stretchr/testify/assert
 
 echo "only on native:"
 echo "apt install feh pulseaudio shutter"

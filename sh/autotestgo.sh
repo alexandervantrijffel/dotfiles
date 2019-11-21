@@ -8,7 +8,7 @@ fi
 
 if ! type inotifywait 1>/dev/null; then
   echo "missing inotifywait"
-  echo "apt install inotify-tool"
+  echo "apt install inotify-tools"
   exit 127
 fi
 
