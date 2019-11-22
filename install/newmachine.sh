@@ -106,6 +106,10 @@ go get -u github.com/golangci/golangci-lint
 go get gotest.tools/gotestsum
 go get github.com/stretchr/testify/assert
 
+
+sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/nvim 0
+sudo update-alternatives --config editor
+
 echo "only on native:"
 echo "apt install feh pulseaudio shutter"
 
