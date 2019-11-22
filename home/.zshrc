@@ -152,8 +152,8 @@ if [ "$(uname)" = "Darwin" ]; then
 
 else
   if type feh 1>/dev/null; then
-    feh --slideshow-delay 3600 --bg-fill $HOME/Pictures/backgrounds -z -r -D1800
-    # // or --bg-scale?
+    feh --slideshow-delay 3600 --bg-tile $HOME/Pictures/backgrounds -z -r -D1800
+    # // --bg-fill or --bg-scale?
   fi
   alias open='xdg-open'
   
@@ -234,5 +234,5 @@ bindkey 'jj' vi-cmd-mode
 # ubuntu terminal window blue background color #0F293C
 
 if type fortune 1>/dev/null; then
-  fortune | cowsay -f meow | xargs -0 echo -e "$(date "+ %A %e %B Week %V")\n" | lolcat
+  fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B Week %V")\n" | lolcat
 fi
