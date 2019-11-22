@@ -41,7 +41,7 @@
 	editor = nvim
 	pager = diff-so-fancy | less --tabs=4 -RFX
   # fix CRLF by replacing it with LF
-	autocrlf = input
+  autocrlf = input
 [pull]
 	rebase = true
 [color "diff-highlight"]
