@@ -14,7 +14,7 @@
 	tool = vimdiff
 [mergetool "vimdiff"]
 	keepBackup = false
-  cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
+  cmd = nvim -f -c \"Gvdiff\" \"$MERGED\"
 [apply]
 	whitespace = nowarn
 [push]
