@@ -214,9 +214,9 @@ bar {
   bindsym button4 nop
   bindsym button5 nop
   # auto hide doesn't work inside terminator
-  # mode hide
-  # hidden_state hide
-  # modifier $mod
+  mode hide
+  hidden_state hide
+  modifier $mod
 }
 
 #######################################################################
