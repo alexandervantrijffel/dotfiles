@@ -11,9 +11,10 @@
   diff = auto
 [merge]
   ff = only
-	conflictstyle = diff3
-[mergetool]
+	tool = vimdiff
+[mergetool "vimdiff"]
 	keepBackup = false
+  cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
 [apply]
 	whitespace = nowarn
 [push]
