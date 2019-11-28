@@ -17,6 +17,13 @@ func! myspacevim#before() abort
   let g:auto_save_no_updatetime = 1
   let g:auto_save_in_insert_mode = 0
 
+  " update with :OmniSharpInstall
+  let g:OmniSharp_server_stdio = 1
+  autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+  set completeopt+=preview
+  autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+  autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+
   " autocomplete
   let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
 
@@ -44,6 +51,7 @@ func! myspacevim#before() abort
   let g:ale_linters = {
             \   'javascript': ['standard'],
             \   'go': ['golangci-lint'],
+            \   'cs': ['OmniSharp'],
             \}
   " \   'go': ['gopls'],
   let g:ale_fixers = {'javascript': ['prettier-standard']}
@@ -59,7 +67,7 @@ func! myspacevim#before() abort
   let g:spacevim_automatic_update = 1
 
   " based on dein.vim plugin manager
-  " Update with :DeinUpdate
+  " Update with :DeinUpdate or :SPUpdate
   " update / install others with :UpdateRemotePlugins
   let g:spacevim_custom_plugins = [
             \ ['junegunn/fzf.vim', {'merged' : 0}],
@@ -81,14 +89,14 @@ func! myspacevim#before() abort
             \ ['tpope/vim-commentary', {'merged' : 0}],
             \ ['alvan/vim-closetag', {'merged' : 0}],
             \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
+            \ ['prabirshrestha/asyncomplete.vim', {'merged' : 0}],
+            \ ['yami-beta/asyncomplete-omni.vim', {'merged' : 0}],
             \ ]
   " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries
   " or :GoUpdate
   " or later :GoUpdateBinaries
   "
-  " or :SPUpdate
-  " and 
   " :SPUpdate spacevim
   
   " for deoplete-tabnine run install.sh in $HOME/.cache/. .... tbodt/deoplete-tabnine 

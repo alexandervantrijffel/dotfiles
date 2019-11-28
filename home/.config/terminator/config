@@ -5,6 +5,9 @@
   title_use_system_font = False
   title_font = Hasklug Nerd Font Semi-Bold 11
 [keybindings]
+  group_all = <Primary><Alt>backslash
+  group_tab = <Primary><Alt>backslash
+  group_tab_toggle = <Primary><Alt>backslash
 [profiles]
   [[default]]
     background_color = "#002b36"
