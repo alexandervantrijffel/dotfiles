@@ -102,6 +102,10 @@ alias dc="docker-compose "
 if type fdfind 1>/dev/null; then
   alias fd='fdfind'
 fi
+if type feh 1>/dev/null; then
+  # or use --zoom fill
+  alias fehfg='feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/bgsrcpics'
+fi
 alias gc="git checkout "
 alias gc-="git checkout -"
 alias grep="grep -i"
