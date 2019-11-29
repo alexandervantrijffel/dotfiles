@@ -3,3 +3,5 @@ View directory history: dirs -v
 Edit command line in editor: ALT+v
 %
 tldr <insert cmd line tool here> (lookup most used cmd line argument combos)
+%
+show calendar: cal -A 2     
