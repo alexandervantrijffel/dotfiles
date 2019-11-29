@@ -104,7 +104,7 @@ if type fdfind 1>/dev/null; then
 fi
 if type feh 1>/dev/null; then
   # or use --zoom fill
-  alias fehfg='feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/bgsrcpics'
+  alias fehfg='nohup feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/bgsrcpics &'
 fi
 alias gc="git checkout "
 alias gc-="git checkout -"
