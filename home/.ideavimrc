@@ -141,6 +141,7 @@ func! myspacevim#after() abort
 endf
 
 function CustomMappings()
+  nnoremap <C-t> :action SearchEverywhere <CR>
   nmap Y y$
 
   " move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
