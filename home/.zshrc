@@ -108,6 +108,7 @@ if type feh 1>/dev/null; then
 fi
 alias gc="git checkout "
 alias gc-="git checkout -"
+alias gca="git commit --amend --no-edit"
 alias grep="grep -i"
 alias gs="git show"
 alias tl="tig log"
