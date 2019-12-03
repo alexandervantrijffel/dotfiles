@@ -34,6 +34,7 @@ set $up k
 set $right l
 
 set $mod Mod4
+set $alt Mod1
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -43,7 +44,7 @@ floating_modifier $mod
 bindsym $mod+Return exec terminator
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+w kill
 
 # start rofi (a program launcher)
 bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi | xargs swaymsg exec --"
