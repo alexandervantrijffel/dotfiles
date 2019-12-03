@@ -1,4 +1,9 @@
 func! myspacevim#before() abort
+  " manual step for a new machine: edit colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material
+  "
+  " ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material
+  " let s:gui.selection  = { 'dark': '#00bcd4', 'light': '#BCBCBC' }
+
   let g:mapleader = ";"
 
   " this is necessary for the material theme to show correctly
