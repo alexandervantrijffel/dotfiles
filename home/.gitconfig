@@ -10,8 +10,8 @@
 	branch = auto
   diff = auto
 [merge]
-  ff = only
-	tool = vimdiff
+  # ff = only
+	tool = fugitive
 [mergetool "vimdiff"]
 	keepBackup = false
   cmd = nvim -f -c \"Gvdiff\" \"$MERGED\"
@@ -59,3 +59,5 @@
 	whitespace = red reverse
 [branch]
 	autosetuprebase = always
+[mergetool "fugitive"]
+	cmd = vim -f -c \"Gvdiff\" \"$MERGED\"

@@ -14,7 +14,7 @@
     # colorscheme = "NeoSolarized"
     # colorscheme = "base16-materialtheme-scheme"
     colorscheme = "material"
-    # colorscheme_bg = "dark"
+    colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     guicolors = true
