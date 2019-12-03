@@ -1,8 +1,6 @@
 func! myspacevim#before() abort
-  " manual step for a new machine: edit colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material
-  "
-  " ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material
-  " let s:gui.selection  = { 'dark': '#00bcd4', 'light': '#BCBCBC' }
+  " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
+  " https://github.com/alexandervantrijffel/vim-material
 
   let g:mapleader = ";"
 
@@ -96,7 +94,6 @@ func! myspacevim#before() abort
             \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
             \ ['prabirshrestha/asyncomplete.vim', {'merged' : 0}],
             \ ['yami-beta/asyncomplete-omni.vim', {'merged' : 0}],
-            \ ['chrisbra/Colorizer', {'merged' : 0}],
             \ ]
   " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries

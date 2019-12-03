@@ -8,29 +8,38 @@
 
 # All SpaceVim option below [option] section
 [options]
-    # set spacevim theme. by default colorscheme layer is not loaded,
-    # if you want to use more colorscheme, please load the colorscheme
-    # layer
-    # colorscheme = "NeoSolarized"
-    # colorscheme = "base16-materialtheme-scheme"
-    colorscheme = "material"
-    colorscheme_bg = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit
-    # true colors
-    guicolors = true
-    # Disable statusline separator, if you want to use other value, please
-    # install nerd fonts
-    statusline_separator = "arrow"
-    statusline_inactive_separator = "arrow"
-    statusline_display_mode = false
-    buffer_index_type = 4
-    enable_tabline_filetype_icon = true
-    bootstrap_before = "myspacevim#before"
-    bootstrap_after = "myspacevim#after"
-    vimcompatible = true
+  # set spacevim theme. by default colorscheme layer is not loaded,
+  # if you want to use more colorscheme, please load the colorscheme
+  # layer
+  # colorscheme = "NeoSolarized"
+  # colorscheme = "base16-materialtheme-scheme"
+  # colorscheme = "materialalexandervantrijffel"
+  colorscheme = "material"
+  # colorscheme = "OceanicNext"
+  colorscheme_bg = "dark"
+  # Disable guicolors in basic mode, many terminal do not support 24bit
+  # true colors
+  guicolors = true
+  # Disable statusline separator, if you want to use other value, please
+  # install nerd fonts
+  statusline_separator = "arrow"
+  statusline_inactive_separator = "arrow"
+  statusline_display_mode = false
+  buffer_index_type = 4
+  enable_tabline_filetype_icon = true
+  bootstrap_before = "myspacevim#before"
+  bootstrap_after = "myspacevim#after"
+  vimcompatible = true
 
 [[layers]]
   name = "colorscheme"
+
+[[custom_plugins]]
+  name = "alexandervantrijffel/vim-material"
+  merged = 0
+
+[[custom_plugins]]
+  name = "mhartington/oceanic-next"
   merged = 0
 
 # [[custom_plugins]]
@@ -38,46 +47,49 @@
 #   merged = 0
 
 [[layers]]
-name = 'autocomplete'
-auto-completion-return-key-behavior = "complete"
-auto-completion-tab-key-behavior = "smart"
+  name = 'autocomplete'
+  auto-completion-return-key-behavior = "complete"
+  auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
-name = 'shell'
-default_position = 'top'
-default_height = 30
+  name = 'shell'
+  default_position = 'top'
+  default_height = 30
 
 [[layers]]
-name = 'lang#javascript'
-auto_fix = true
-enable_flow_syntax = true
+  name = 'lang#javascript'
+  auto_fix = true
+  enable_flow_syntax = true
 
 [[layers]]
-name = "lang#go"
-go_auto_sameids = 1
-go_highlight_types = 1
-go_highlight_fields = 1
-go_highlight_functions = 1
-go_highlight_methods = 1
-go_highlight_operators = 1
-go_highlight_build_constraints = 1
-go_highlight_structs = 1
-go_highlight_generate_tags = 1
-go_highlight_extra_types = 1
-# go_list_type = "quickfix"
-go_test_show_name=1
-go_term_enabled = 1
-go_auto_type_info = 1
-# 'snakecase' is also supported
-go_addtags_transform = "camelcase"
-go_metalinter_autosave = 0
-# disabled golint because of obnoxious 'should have comment or be unexported' warning
-# use ale with gometalinter instead
-go_metalinter_autosave_enabled = ['']
-go_metalinter_enabled = ['']
-# go_metalinter_command = "gometalinter --exclude=\"\\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\""
-go_def_mode = 'godef'
+  name = "lang#go"
+  go_auto_sameids = 1
+  go_highlight_types = 1
+  go_highlight_fields = 1
+  go_highlight_functions = 1
+  go_highlight_methods = 1
+  go_highlight_operators = 1
+  go_highlight_build_constraints = 1
+  go_highlight_structs = 1
+  go_highlight_generate_tags = 1
+  go_highlight_extra_types = 1
+  # go_list_type = "quickfix"
+  go_test_show_name=1
+  go_term_enabled = 1
+  go_auto_type_info = 1
+  # 'snakecase' is also supported
+  go_addtags_transform = "camelcase"
+  go_metalinter_autosave = 0
+  # disabled golint because of obnoxious 'should have comment or be unexported' warning
+  # use ale with gometalinter instead
+  go_metalinter_autosave_enabled = ['']
+  go_metalinter_enabled = ['']
+  # go_metalinter_command = "gometalinter --exclude=\"\\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\""
+  go_def_mode = 'godef'
 
 [[layers]]
   name = "lang#csharp"
   highlight_types = 1
+
+[[custom_plugins]]
+  name = "chrisbra/Colorizer"
