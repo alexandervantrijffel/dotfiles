@@ -90,8 +90,8 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-bindsym $mod+Shift+f workspace 5:web; exec --no-startup-id i3-msg exec $(which firefox)
-bindsym $mod+Shift+Control+f exec $(which firefox)
+bindsym $mod+Shift+f workspace 5:web; exec --no-startup-id i3-msg exec $(which qutebrowser)
+bindsym $mod+Shift+Control+f exec $(which qutebrowser)
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
