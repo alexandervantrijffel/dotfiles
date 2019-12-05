@@ -605,7 +605,7 @@
 ## User agent to send. Unset to send the default. Note that the value
 ## read from JavaScript is always the global value.
 ## Type: String
-c.content.headers.user_agent = "Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/71.0"
+c.content.headers.user_agent = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0"
 
 ## Enable host blocking.
 ## Type: Bool
