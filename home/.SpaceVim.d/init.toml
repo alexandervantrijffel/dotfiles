@@ -90,6 +90,3 @@
 [[layers]]
   name = "lang#csharp"
   highlight_types = 1
-
-[[custom_plugins]]
-  name = "chrisbra/Colorizer"
