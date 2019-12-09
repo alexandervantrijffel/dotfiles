@@ -95,7 +95,7 @@ func! myspacevim#before() abort
             \ ['prabirshrestha/asyncomplete.vim', {'merged' : 0}],
             \ ['yami-beta/asyncomplete-omni.vim', {'merged' : 0}],
             \ ['chrisbra/Colorizer', {'merged' : 0}],
-            \ ['wellle/context.vim', {'merged' : 0}],
+            \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ]
   " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries
