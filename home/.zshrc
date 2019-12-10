@@ -97,6 +97,7 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+alias ag="ag --hidden --all-types --ignore-case --one-device "
 alias du="du -h --max-depth=1 "
 alias dc="docker-compose "
 if type fdfind 1>/dev/null; then
