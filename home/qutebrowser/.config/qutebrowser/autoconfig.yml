@@ -4,4 +4,4 @@
 config_version: 2
 settings:
   hints.chars:
-    global: abcdefghijklmnopqrstuvwxyz!@#$%^*()+{}:|?-=[];\,./
+    global: abcdefghijklmnopqrstuvwxyz!@#$%^*()+{}:|?-=[];\,./1234567890~
