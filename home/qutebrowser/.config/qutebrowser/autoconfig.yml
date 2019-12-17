@@ -3,5 +3,5 @@
 
 config_version: 2
 settings:
-  content.geolocation:
-    https://lastnoted.com: true
+  hints.chars:
+    global: abcdefghijklmnopqrstuvwxyz!@#$%^*()+{}:|?-=[];\,./

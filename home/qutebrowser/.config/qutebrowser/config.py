@@ -978,6 +978,7 @@ c.content.headers.user_agent = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0)
 ## Characters used for hint strings.
 ## Type: UniqueCharString
 # c.hints.chars = 'asdfghjkl'
+c.hints.chars = 'abcdefghijklmnopqrstuvwxyz!@#$%^*()+{}:|?-=[];\,./'
 
 ## Dictionary file to be used by the word hints.
 ## Type: File
