@@ -2,3 +2,4 @@ fortunes/*.dat
 bookmarks/
 quickmarks
 QtProject.conf
+nohup.out
