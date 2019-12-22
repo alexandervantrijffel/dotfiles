@@ -274,6 +274,10 @@ function CustomMappings()
   noremap ca" /"<cr>ca"
   noremap ca' /'<cr>ca'
   noremap ca` /{<cr>ca`
+
+  " previous/next tab
+  nnoremap ;j :bn<cr>
+  nnoremap ;k :bp<cr>
 endfunction
 
 function InstallBclose()
