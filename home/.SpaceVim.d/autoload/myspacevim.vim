@@ -278,6 +278,9 @@ function CustomMappings()
   " previous/next tab
   nnoremap ;j :bn<cr>
   nnoremap ;k :bp<cr>
+
+  " when deleting, yank to register e
+  nnoremap d "ed
 endfunction
 
 function InstallBclose()
