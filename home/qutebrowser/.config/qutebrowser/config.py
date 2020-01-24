@@ -1546,6 +1546,7 @@ c.hints.chars = 'abcdefghijklmnopqrstuvwxyz!@#$%^*()+{}:|?-=[];\,./1234567890~'
 ## `:open google qutebrowser`.
 ## Type: Dict
 # c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}'}
+c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?q={}'}
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
