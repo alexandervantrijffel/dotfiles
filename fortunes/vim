@@ -41,3 +41,5 @@ VIM: merge conflicts with vim diff: run git mergetool, :diffg LO , :diffg RE , :
 VIM: :0Glog to view history of current file. :copen to open earlier version of file. :G for git status, stage/unstage/ignore file. :Gblame (with vim-fugitive)
 %
 VIM: CTRL+[x f]  autocomplete filename
+%
+VIM: <space>fo open current file in file tree

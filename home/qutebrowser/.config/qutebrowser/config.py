@@ -1837,6 +1837,7 @@ config.bind('p3', 'spawn --userscript qute-lastpass -w')
 
 ## Bindings for passthrough mode
 # config.bind('<Shift-Escape>', 'leave-mode', mode='passthrough')
+config.bind('<Escape>', 'leave-mode', mode='passthrough')
 
 ## Bindings for prompt mode
 # config.bind('<Alt-B>', 'rl-backward-word', mode='prompt')
