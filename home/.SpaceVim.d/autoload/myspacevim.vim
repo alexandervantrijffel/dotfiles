@@ -97,7 +97,10 @@ func! myspacevim#before() abort
             \ ['chrisbra/Colorizer', {'merged' : 0}],
             \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
+            \ ['peitalin/vim-jsx-typescript', {'merged' : 0}],
+            \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
             \ ]
+
   " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries
   " or :GoUpdate

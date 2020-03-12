@@ -60,6 +60,9 @@
   default_height = 30
 
 [[layers]]
+name = "lang#typescript"
+
+[[layers]]
   name = 'lang#javascript'
   auto_fix = true
   enable_flow_syntax = true
@@ -94,8 +97,3 @@
   name = "lang#csharp"
   highlight_types = 1
 
-[[custom_plugins]]
-name = "peitalin/vim-jsx-typescript"
-
-[[custom_plugins]]
-name = "maxmellon/vim-jsx-pretty"
