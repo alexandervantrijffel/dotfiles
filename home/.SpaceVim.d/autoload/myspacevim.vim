@@ -34,7 +34,6 @@ func! myspacevim#before() abort
   au CursorHold * checktime    
 
   set clipboard+=unnamed,unnamedplus
-  let g:spacevim_enable_vimfiler_welcome = 0
   let g:indentLine_setConceal = 0 
 
   " highlight search results

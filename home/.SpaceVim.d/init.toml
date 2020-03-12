@@ -30,6 +30,9 @@
   bootstrap_before = "myspacevim#before"
   bootstrap_after = "myspacevim#after"
   vimcompatible = true
+  filemanager = "defx"
+  enable_tabline_filetype_icon = true
+  enable_tabline_filetype_icon = true
 
 [[layers]]
   name = "colorscheme"
@@ -90,3 +93,9 @@
 [[layers]]
   name = "lang#csharp"
   highlight_types = 1
+
+[[custom_plugins]]
+name = "peitalin/vim-jsx-typescript"
+
+[[custom_plugins]]
+name = "maxmellon/vim-jsx-pretty"
