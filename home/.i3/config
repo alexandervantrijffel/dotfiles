@@ -26,10 +26,10 @@ font pango:monospace 8
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $left h
-set $down j
-set $up k
-set $right l
+set $left j
+set $down k
+set $up l
+set $right ;
 # set $right semicolon
 
 set $mod Mod4

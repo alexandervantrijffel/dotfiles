@@ -2,7 +2,7 @@ func! myspacevim#before() abort
   " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
   " https://github.com/alexandervantrijffel/vim-material
 
-  let g:mapleader = ";"
+  let g:mapleader = "h"
 
   " this is necessary for the material theme to show correctly
   let g:spacevim_enable_guicolors = 1
@@ -189,31 +189,33 @@ function CustomMappings()
 
   noremap   <Up>    <NOP>
   noremap   <Down>  <NOP>
-  noremap   <Left>  <NOP>
   noremap   <Right> <NOP>
+
+  " jump up/down row on screen instead of line in document
+  nmap j <Left>
+  nmap k gj
+  nmap l gk
+
+  noremap   l k
+  noremap   ; l
 
   vnoremap   <Up>    <NOP>
   vnoremap   <Down>  <NOP>
-  vnoremap   <Left>  <NOP>
   vnoremap   <Right> <NOP>
-
-  " jump up/down row on screen instead of line in document
-  nmap j gj
-  nmap k gk
 
   " Move line up/down
   
   " Normal mode
-  nnoremap <C-j> :m .+1<CR>==
-  nnoremap <C-k> :m .-2<CR>==
+  nnoremap <C-k> :m .+1<CR>==
+  nnoremap <C-l> :m .-2<CR>==
 
   " Insert mode
-  inoremap <C-j> <ESC>:m .+1<CR>==gi
-  inoremap <C-k> <ESC>:m .-2<CR>==gi
+  inoremap <C-k> <ESC>:m .+1<CR>==gi
+  inoremap <C-l> <ESC>:m .-2<CR>==gi
 
   " Visual mode
-  vnoremap <C-j> :m '>+1<CR>gv=gv
-  vnoremap <C-k> :m '<-2<CR>gv=gv
+  vnoremap <C-k> :m '>+1<CR>gv=gv
+  vnoremap <C-l> :m '<-2<CR>gv=gv
 
   " ,' Surround a word with 'single quotes'
   map ,' ysiw'

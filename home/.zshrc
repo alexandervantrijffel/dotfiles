@@ -194,8 +194,8 @@ fi
 # after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
 
-bindkey '^k' history-search-backward
-bindkey '^j' history-search-forward
+bindkey '^l' history-search-backward
+bindkey '^k' history-search-forward
 
 if type bat 1>/dev/null; then
   alias cat='bat'
