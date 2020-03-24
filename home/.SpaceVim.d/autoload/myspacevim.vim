@@ -1,8 +1,8 @@
 func! myspacevim#before() abort
   " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
-  " https://github.com/alexandervantrijffel/vim-material
+" https://github.com/alexandervantrijffel/vim-material
 
-  let g:mapleader = "h"
+  let g:mapleader = "'"
 
   " this is necessary for the material theme to show correctly
   let g:spacevim_enable_guicolors = 1
@@ -191,13 +191,24 @@ function CustomMappings()
   noremap   <Down>  <NOP>
   noremap   <Right> <NOP>
 
-  " jump up/down row on screen instead of line in document
-  nmap j <Left>
-  nmap k gj
-  nmap l gk
+  " " jump up/down row on screen instead of line in document
+  " nmap j <Left>
+  " nmap k gj
+  " nmap l gk
 
-  noremap   l k
-  noremap   ; l
+  " noremap   l k
+  " noremap   ; l
+
+  " " jump up/down row on screen instead of line in document
+  noremap j <Left>
+  noremap k gj
+  noremap l gk
+  noremap ; l
+
+  vnoremap j <Left>
+  vnoremap k gj
+  vnoremap l gk
+  vnoremap ; l
 
   vnoremap   <Up>    <NOP>
   vnoremap   <Down>  <NOP>

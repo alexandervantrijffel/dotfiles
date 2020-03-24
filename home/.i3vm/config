@@ -26,12 +26,12 @@ font pango:Roboto Nerd Font 10
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
-# use these keys for focus, movement, and resize directions when reaching for
+# usesymotion-prefix) these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $left h
-set $down j
-set $up k
-set $right l
+set $left j
+set $down k
+set $up l
+set $right semicolon
 
 set $mod Mod4
 set $alt Mod1
@@ -66,7 +66,6 @@ bindsym $mod+$right focus right
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
-
 bindsym $mod+Right focus right
 
 # move focused window
