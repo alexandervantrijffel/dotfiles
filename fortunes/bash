@@ -1,3 +1,0 @@
-BASH SHELL: CTRL+D close     CTRL+S Stop output to screen (when processes dump too much data to stdout)     CTRL+Q resume output
-%
-BASH SHELL: CTRL+R recall command     CTRL+O execute command found with CTRL+R     CTRL+G close recall command
