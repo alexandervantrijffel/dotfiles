@@ -196,9 +196,6 @@ function CustomMappings()
   " nmap k gj
   " nmap l gk
 
-  " noremap   l k
-  " noremap   ; l
-
   " " jump up/down row on screen instead of line in document
   noremap j <Left>
   noremap k gj
@@ -292,8 +289,8 @@ function CustomMappings()
   noremap ca` /{<cr>ca`
 
   " previous/next tab
-  nnoremap ;k :bn<cr>
-  nnoremap ;l :bp<cr>
+  nnoremap <leader>k :bn<cr>
+  nnoremap <leader>l :bp<cr>
 
   " when deleting, yank to register e
   nnoremap d "ed
