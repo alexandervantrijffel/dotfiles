@@ -292,8 +292,8 @@ function CustomMappings()
   noremap ca` /{<cr>ca`
 
   " previous/next tab
-  nnoremap ;j :bn<cr>
-  nnoremap ;k :bp<cr>
+  nnoremap ;k :bn<cr>
+  nnoremap ;l :bp<cr>
 
   " when deleting, yank to register e
   nnoremap d "ed
