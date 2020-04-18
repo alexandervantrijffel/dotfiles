@@ -12,6 +12,7 @@
 [merge]
   # ff = only
 	tool = fugitive
+	renormalize = true
 [mergetool "vimdiff"]
 	keepBackup = false
   cmd = nvim -f -c \"Gvdiff\" \"$MERGED\"
