@@ -291,6 +291,8 @@ function CustomMappings()
   " previous/next tab
   nnoremap <leader>k :bn<cr>
   nnoremap <leader>l :bp<cr>
+  nnoremap K :bn<cr>
+  nnoremap L :bp<cr>
 
   " when deleting, yank to register e
   nnoremap d "ed
