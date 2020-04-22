@@ -165,6 +165,7 @@ else
     # // --bg-fill or --bg-scale?
   fi
   alias open='xdg-open'
+  alias python=python3
   
   . z
 

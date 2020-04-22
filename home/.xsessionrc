@@ -38,17 +38,17 @@ if [ -f /usr/bin/xset ]; then
 fi
 
 # enable window compositing
-if [ -f /usr/bin/compton ]; then
-    compton --fading --daemon --config "$HOME/.config/compton.conf"
-fi
+# if [ -f /usr/bin/compton ]; then
+#     compton --fading --daemon --config "$HOME/.config/compton.conf"
+# fi
 
 # enable touchpad basics
-if [ -f /usr/bin/xinput ]; then
-    xinput set-prop "AlpsPS/2 ALPS GlidePoint" \
-        "libinput Tapping Enabled" 1 &
-    xinput set-prop "AlpsPS/2 ALPS GlidePoint" \
-        "libinput Natural Scrolling Enabled" 1 &
-fi
+# if [ -f /usr/bin/xinput ]; then
+#     xinput set-prop "AlpsPS/2 ALPS GlidePoint" \
+#         "libinput Tapping Enabled" 1 &
+#     xinput set-prop "AlpsPS/2 ALPS GlidePoint" \
+#         "libinput Natural Scrolling Enabled" 1 &
+# fi
 
 # start redshift
 if [ -f /usr/bin/redshift ]; then
