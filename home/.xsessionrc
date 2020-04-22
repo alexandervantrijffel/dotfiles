@@ -62,7 +62,7 @@ if [ -f /usr/bin/gnome-keyring-daemon ]; then
   export SSH_AUTH_SOCK
 fi
 
-# start i3 and keep it running
+start i3 and keep it running
 if [ -f /usr/bin/i3 ]; then
-    exec i3
+     exec i3
 fi

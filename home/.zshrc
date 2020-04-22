@@ -174,6 +174,10 @@ else
 
   # fix rider showing on Wayland
   export _JAVA_AWT_WM_NONREPARENTING=1
+
+  if [ -f /usr/local/bin/scale125 ]; then 
+    /usr/local/bin/scale125
+  fi
 fi
 
 # customize prompt
