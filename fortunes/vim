@@ -43,3 +43,5 @@ VIM: :0Glog to view history of current file. :copen to open earlier version of f
 VIM: CTRL+[x f]  autocomplete filename
 %
 VIM: <space>fo open current file in file tree
+%
+VIM: With split windows: <space>1 left window <space2> right window
