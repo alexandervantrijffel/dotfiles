@@ -101,7 +101,8 @@ alias ag="ag --hidden --all-types --ignore-case --one-device "
 alias du="du -h --max-depth=1 "
 alias dc="docker-compose "
 if type fdfind 1>/dev/null; then
-  alias fd='fdfind'
+  alias fd='fdfind '
+  alias fdh='fdfind --hidden --no-ignore '
 fi
 if type feh 1>/dev/null; then
   # or use --zoom fill
