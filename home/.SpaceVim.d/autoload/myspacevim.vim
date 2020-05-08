@@ -125,7 +125,7 @@ func! myspacevim#before() abort
   if executable('ag')
     let g:ackprg = 'ag --vimgrep'
   endif
-  nmap <leader>a :Ack! "
+  nmap <leader>a :Ack! 
 
   let g:go_fmt_command = "goimports"
   let g:go_fmt_autosave = 0

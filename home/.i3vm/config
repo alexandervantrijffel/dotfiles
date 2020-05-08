@@ -89,8 +89,6 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-bindsym $mod+Shift+f workspace 5:web; exec --no-startup-id i3-msg exec QT_AUTO_SCREEN_SCALE_FACTOR=1 $(which qutebrowser) %u 
-bindsym $mod+Shift+Control+f exec QT_AUTO_SCREEN_SCALE_FACTOR=1 $(which qutebrowser) %u 
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
@@ -369,5 +367,8 @@ mode "$mode_gaps_left" {
         bindsym Escape mode "default"
 }
 
-exec --no-startup-id i3-msg "workspace 5:web; exec $(which qutebrowser)"
+bindsym $mod+Shift+f workspace 5:web; exec --no-startup-id i3-msg exec QT_AUTO_SCREEN_SCALE_FACTOR=1 $(which qutebrowser) %u 
+bindsym $mod+Shift+Control+f exec QT_AUTO_SCREEN_SCALE_FACTOR=1 $(which qutebrowser) %u 
+
+exec --no-startup-id i3-msg "workspace 5:web; exec QT_AUTO_SCREEN_SCALE_FACTOR=1 $(which qutebrowser)"
 exec --no-startup-id i3-msg "workspace 1; exec terminator"

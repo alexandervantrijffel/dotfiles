@@ -1,1 +1,1 @@
-xrandr --output Virtual1 --auto --mode 5120x1440 -s 5120x1440 --scale 1.2x1.2
+xrandr --output Virtual1 --auto --mode 5120x1440 -s 5120x1440 --scale 2.0x2.0
