@@ -1,0 +1,1 @@
+xrandr --output Virtual1 --auto --mode 2560x1600 -s 2560x1600 --scale 1.0x1.0

@@ -1,0 +1,4 @@
+az account set -s "01deb795-9e5d-4a24-9b8a-a8856d0b3de9"
+az aks get-credentials -g dttnl-xray-03-nonprod-rg -n piwviycykq-aks --admin
+kubectl config set-context --current --namespace=test-namespace
+kubectl cluster-info 

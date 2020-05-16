@@ -1,0 +1,4 @@
+az account set -s d1a9b40e-f8df-419f-ab7d-d414096f371a
+az aks get-credentials -n hrenoyamtm-aks -g dttnl-xray-03-prod-rg
+kubectl config set-context --current --namespace=prod-namespace
+kubectl cluster-info 
