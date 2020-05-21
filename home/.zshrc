@@ -135,6 +135,7 @@ alias gba="git branch -a"
 alias grd="go run -tags=debug main.go | lnav -q"
 alias ll="exa -alFbgh"
 alias l="ls -CFh"
+alias ka="k --namespace=argo "
 alias kc="kubectl"
 alias la="exa -albgh"
 alias lps="lpass show -x -G "
@@ -254,3 +255,4 @@ bindkey 'jj' vi-cmd-mode
 if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B Week %V")\n" | lolcat
 fi
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)

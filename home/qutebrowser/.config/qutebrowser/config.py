@@ -1179,7 +1179,7 @@ c.hints.chars = 'abcdefghijklmnopqrstuvwxyz!@#$%^*()+{}:|?-=[];\,./1234567890'
 ## as it can cause issues with some bitmap fonts. As an alternative to
 ## this, it's possible to set font sizes and the `zoom.default` setting.
 ## Type: Bool
-# c.qt.highdpi = False
+c.qt.highdpi = False
 
 ## When to use Chromium's low-end device mode. This improves the RAM
 ## usage of renderer processes, at the expense of performance.
