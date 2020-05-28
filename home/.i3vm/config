@@ -372,3 +372,11 @@ bindsym $mod+Shift+Control+f exec QT_AUTO_SCREEN_SCALE_FACTOR=1 $(which qutebrow
 
 exec --no-startup-id i3-msg "workspace 5:web; exec QT_AUTO_SCREEN_SCALE_FACTOR=1 $(which qutebrowser)"
 exec --no-startup-id i3-msg "workspace 1; exec terminator"
+
+# switch to previous workspace
+bindsym $mod+less workspace prev
+bindsym $mod+Shift+less move container to workspace prev
+
+# switch to next workspace
+bindsym $mod+greater workspace next
+bindsym $mod+Shift+greater move container to workspace next
