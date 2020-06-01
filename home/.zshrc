@@ -97,7 +97,12 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias ag="ag --hidden --all-types --ignore-case --one-device "
+if type ag 1>/dev/null; then
+alias ag='ag --hidden --all-types --ignore-case --one-device --pager "less -R" '
+fi
+if type batcat 1>/dev/null; then
+  alias cat='batcat -p '
+fi
 alias du="du -h --max-depth=1 "
 alias dc="docker-compose "
 if type fdfind 1>/dev/null; then
@@ -107,6 +112,13 @@ fi
 if type feh 1>/dev/null; then
   # or use --zoom fill
   alias fehfg='nohup feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/bgsrcpics &'
+fi
+if [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+  alias preview="fzf --preview 'bat --color \"always\" {}'"
+  # add support for ctrl+o to open selected file in VS Code
+  export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
 fi
 alias gc="git checkout "
 alias gc-="git checkout -"
@@ -133,12 +145,23 @@ alias ga="git add ."
 alias gap="git add . -p && git status"
 alias gba="git branch -a"
 alias grd="go run -tags=debug main.go | lnav -q"
+if type htop 1>/dev/null; then
+  alias top="sudo htop" # alias top and fix high sierra bug
+fi
 alias ll="exa -alFbgh"
 alias l="ls -CFh"
 alias ka="k --namespace=argo "
 alias la="exa -albgh"
 alias lps="lpass show -x -G "
+if ! type pbcopy 1>/dev/null; then
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+fi
+if type prettyping 1>/dev/null; then
+  alias ping='prettyping'
+fi
 alias psg="ps -a | grep $1"
+alias sudo="sudo -E "
 alias tl="tig log"
 alias ts="tig status"
 alias yrs="yarn run start &"
@@ -206,37 +229,9 @@ bindkey ' ' magic-space
 bindkey '^l' history-search-backward
 bindkey '^k' history-search-forward
 
-if type bat 1>/dev/null; then
-  alias cat='bat'
-fi
-
-if type prettyping 1>/dev/null; then
-  alias ping='prettyping'
-fi
-
-if [ -f ~/.fzf.zsh ]; then
-  source ~/.fzf.zsh
-  alias preview="fzf --preview 'bat --color \"always\" {}'"
-  # add support for ctrl+o to open selected file in VS Code
-  export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
-  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
-fi
-
-if type ag 1>/dev/null; then
-  alias ag='ag --pager "less -R"'
-fi
-
-if type htop 1>/dev/null; then
-  alias top="sudo htop" # alias top and fix high sierra bug
-fi
 
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
-fi
-
-if ! type pbcopy 1>/dev/null; then
-  alias pbcopy='xclip -selection clipboard'
-  alias pbpaste='xclip -selection clipboard -o'
 fi
 
 # for clipboard sharing with host
