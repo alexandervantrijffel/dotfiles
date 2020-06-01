@@ -62,3 +62,5 @@
 	autosetuprebase = always
 [mergetool "fugitive"]
 	cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
+[rerere]
+	enabled = true
