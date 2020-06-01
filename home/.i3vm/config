@@ -148,9 +148,12 @@ bindsym $mod+Shift+r exec maim -s | xclip -selection clipboard -t image/png
 # active window to clipboard 
 bindsym $mod+Shift+a exec maim -i $(xdotool getwindowfocus) | xclip -selection clipboard -t image/png
 # region to file
-bindsym $mod+Shift+Control+r exec maim -s | xclip -selection clipboard ~/Downloads/Screenshot-$(date +'screenshot_%Y%m%d_%H%M%S.png').png
+bindsym $mod+Shift+Control+r exec maim -s ~/Downloads/Screenshot-$(date +'screenshot_%Y%m%d_%H%M%S.png').png
 # active window to file
 bindsym $mod+Shift+Control+a exec maim -i $(xdotool getwindowfocus) ~/Downloads/Screenshot-$(date +'screenshot_%Y%m%d_%H%M%S.png').png
+# copy region to imgur
+# (requires https://github.com/tremby/imgur.sh)
+bindsym $mod+Shift+u exec "i3-msg exec rm -f /tmp/screenshot-imgur.png; maim -s /tmp/screenshot-imgur.png && $(which qutebrowser) $(imgur /tmp/screenshot-imgur.png | head)"
 
 # I3 exit menu
 mode "exit: [l]ogout, [r]eboot, [s]hutdown" {

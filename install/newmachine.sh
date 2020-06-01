@@ -20,6 +20,7 @@ else
   sudo apt install htop fortune lnav terminator silversearcher-ag -y
   sudo apt install fonts-powerline tig cowsay fortune fd-find -y
   sudo apt install inotify-tools -y
+  sudo apt install maim xclip xdotool -y
   cp $THISDIR/meow /usr/share/cowsay/cows/
 
   # i3 extensions
