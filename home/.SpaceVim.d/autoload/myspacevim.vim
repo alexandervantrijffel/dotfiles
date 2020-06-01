@@ -225,6 +225,8 @@ function CustomMappings()
   vnoremap <C-k> :m '>+1<CR>gv=gv
   vnoremap <C-l> :m '<-2<CR>gv=gv
 
+  vnoremap <C-c> "+y
+
   " ,' Surround a word with 'single quotes'
   map ,' ysiw'
   vmap ,' c'<C-R>"'<ESC>

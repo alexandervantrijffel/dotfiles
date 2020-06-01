@@ -24,7 +24,6 @@ font pango:Roboto Nerd Font 10
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
 
 # usesymotion-prefix) these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -89,7 +88,6 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
 # bindsym $mod+w layout tabbed
@@ -141,9 +139,18 @@ bindsym $mod+Shift+0 move container to workspace 10
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+# bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session without confirmation)
 bindsym $mod+Shift+e exec i3-msg exit
+
+# region to clipboard
+bindsym $mod+Shift+r exec maim -s | xclip -selection clipboard -t image/png
+# active window to clipboard 
+bindsym $mod+Shift+a exec maim -i $(xdotool getwindowfocus) | xclip -selection clipboard -t image/png
+# region to file
+bindsym $mod+Shift+Control+r exec maim -s | xclip -selection clipboard ~/Downloads/Screenshot-$(date +'screenshot_%Y%m%d_%H%M%S.png').png
+# active window to file
+bindsym $mod+Shift+Control+a exec maim -i $(xdotool getwindowfocus) ~/Downloads/Screenshot-$(date +'screenshot_%Y%m%d_%H%M%S.png').png
 
 # I3 exit menu
 mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
@@ -380,3 +387,4 @@ bindsym $mod+Shift+less move container to workspace prev
 # switch to next workspace
 bindsym $mod+greater workspace next
 bindsym $mod+Shift+greater move container to workspace next
+
