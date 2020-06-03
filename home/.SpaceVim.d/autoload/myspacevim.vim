@@ -21,6 +21,8 @@ func! myspacevim#before() abort
   let g:auto_save_in_insert_mode = 0
   let g:auto_save_silent = 1
 
+  let g:spacevim_enable_vimfiler_welcome = 0
+
   " update with :OmniSharpInstall
   let g:OmniSharp_server_stdio = 1
   autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
