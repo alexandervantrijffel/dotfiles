@@ -120,13 +120,19 @@ if [ -f ~/.fzf.zsh ]; then
   export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
   export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
 fi
+
+alias ga="git add ."
+alias gap="git add . -p && git status"
 alias gc="git checkout "
 alias gc-="git checkout -"
 alias gca="git commit --amend --no-edit"
+alias gcb="git checkout -b "
+alias gclean="git checkout -- . && git clean -fd ."
+alias gd="git diff --word-diff -w "
+alias gds="gd --staged --word-diff | git apply --cached --ignore-whitespace --unidiff-zero -"
+alias gds="git diff --staged --word-diff -w"
 alias grep="grep -i"
 alias gs="git show"
-alias tl="tig log"
-alias gcb="git checkout -b "
 alias gfa="git fetch --all"
 alias gp="git push"
 alias gpu="git push -u origin \$(git branch | grep \* | cut -d ' ' -f2)"
@@ -138,13 +144,8 @@ alias gls="git log --max-count=20 --decorate --graph --color --pretty=format:'%C
 alias glp="git log -p"
 alias gca="git commit --amend"
 alias gcm="git commit -m  "
-alias gd="git diff --word-diff -w"
-alias gds="gd --staged"
-alias gds="git diff --staged --word-diff -w"
-alias ga="git add ."
-alias gap="git add . -p && git status"
 alias gba="git branch -a"
-alias grd="go run -tags=debug main.go | lnav -q"
+alias gmnc="git merge --no-commit --no-ff "
 if type htop 1>/dev/null; then
   alias top="sudo htop" # alias top and fix high sierra bug
 fi
