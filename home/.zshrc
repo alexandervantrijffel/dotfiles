@@ -103,6 +103,7 @@ fi
 if type batcat 1>/dev/null; then
   alias cat='batcat -p '
 fi
+alias d="docker "
 alias du="du -h --max-depth=1 "
 alias dc="docker-compose "
 if type fdfind 1>/dev/null; then
