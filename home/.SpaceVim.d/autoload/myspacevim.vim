@@ -67,7 +67,6 @@ func! myspacevim#before() abort
   let g:ale_fix_on_save = 0
   let g:ale_go_golangci_lint_options = '-E goimports -D typecheck'
 
-  au FileType javascript nmap <A-f> :ALEFix<cr>:w<cr>
 
   let g:spacevim_automatic_update = 1
 
@@ -92,7 +91,6 @@ func! myspacevim#before() abort
             \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['tpope/vim-fugitive', {'merged' : 0}],
             \ ['tpope/vim-commentary', {'merged' : 0}],
-            \ ['alvan/vim-closetag', {'merged' : 0}],
             \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
             \ ['prabirshrestha/asyncomplete.vim', {'merged' : 0}],
             \ ['yami-beta/asyncomplete-omni.vim', {'merged' : 0}],
@@ -102,6 +100,7 @@ func! myspacevim#before() abort
             \ ['peitalin/vim-jsx-typescript', {'merged' : 0}],
             \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
             \ ]
+  " \ ['alvan/vim-closetag', {'merged' : 0}],
 
   " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries
@@ -119,30 +118,17 @@ func! myspacevim#before() abort
   " rest
   set rtp+=~/.fzf
 
-  nnoremap <C-p> :FZF<CR>
-
   " When the installation of ack.vim fails, run this command:
   " git clone --config transfer.fsckObjects=false https://github.com/mileszs/ack.vim.git ~/.cache/vimfiles/repos/github.com/mileszs/ack.vim
 
   if executable('ag')
     let g:ackprg = 'ag --vimgrep'
   endif
-  nmap <leader>a :Ack! 
 
   let g:go_fmt_command = "goimports"
   let g:go_fmt_autosave = 0
   let g:go_info_mode='gopls'
 
-  " Run this for go:
-  " go get -u github.com/sourcegraph/go-langserver
-  au FileType go nmap <leader>r :GoRename<cr>
-  au FileType go nmap <leader>t :GoDeclsDir<cr>
-  au FileType go nmap <leader>i :GoInfo<cr>
-  au FileType go nmap <leader><F12> :GoReferrers<cr>
-
-  au FileType go nmap <A-f> :GoFmt<cr>:w<cr>:GoBuild<cr>
-
-  au FileType go nmap gi :GoInfo<cr>
 
   let g:deoplete#enable_at_startup = 1
   " autocomplete
@@ -164,6 +150,34 @@ endf
 
 function CustomMappings()
   nmap Y y$
+
+  nnoremap <C-p> :FZF<CR>
+
+  au FileType javascript nmap <A-f> :ALEFix<cr>:w<cr>
+
+  " Run this for go:
+  " go get -u github.com/sourcegraph/go-langserver
+  au FileType go nmap <leader>r :GoRename<cr>
+  au FileType go nmap <leader>t :GoDeclsDir<cr>
+  au FileType go nmap <leader>i :GoInfo<cr>
+  au FileType go nmap <leader><F12> :GoReferrers<cr>
+
+  au FileType go nmap <A-f> :GoFmt<cr>:w<cr>:GoBuild<cr>
+
+  au FileType go nmap gi :GoInfo<cr>
+  nnoremap <C-p> :FZF<CR>
+  au FileType javascript nmap <A-f> :ALEFix<cr>:w<cr>
+
+  " Run this for go:
+  " go get -u github.com/sourcegraph/go-langserver
+  au FileType go nmap <leader>r :GoRename<cr>
+  au FileType go nmap <leader>t :GoDeclsDir<cr>
+  au FileType go nmap <leader>i :GoInfo<cr>
+  au FileType go nmap <leader><F12> :GoReferrers<cr>
+
+  au FileType go nmap <A-f> :GoFmt<cr>:w<cr>:GoBuild<cr>
+
+  au FileType go nmap gi :GoInfo<cr>
 
   " move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
   inoremap <A-$> <C-o>$
