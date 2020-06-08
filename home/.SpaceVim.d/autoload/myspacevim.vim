@@ -98,6 +98,8 @@ func! myspacevim#before() abort
             \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
             \ ['peitalin/vim-jsx-typescript', {'merged' : 0}],
+            \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}],
+            \ ['yuezk/vim-js', {'merged' : 0}],
             \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
             \ ]
   " \ ['alvan/vim-closetag', {'merged' : 0}],
@@ -152,6 +154,7 @@ function CustomMappings()
   nmap Y y$
 
   nnoremap <C-p> :FZF<CR>
+  nmap <C-p>p "ep
 
   au FileType javascript nmap <A-f> :ALEFix<cr>:w<cr>
 
