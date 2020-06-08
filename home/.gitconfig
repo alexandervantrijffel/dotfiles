@@ -1,5 +1,6 @@
 [user]
 	name = Alexander
+	email = Alexander
 [log]
 	decorate = true
 	abbrevCommit = true
