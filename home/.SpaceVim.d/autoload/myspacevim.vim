@@ -131,7 +131,6 @@ func! myspacevim#before() abort
   let g:go_fmt_autosave = 0
   let g:go_info_mode='gopls'
 
-
   let g:deoplete#enable_at_startup = 1
   " autocomplete
   let g:deoplete#sources#go#pointer = 1
@@ -155,6 +154,8 @@ function CustomMappings()
 
   nnoremap <C-p> :FZF<CR>
   nmap <C-p>p "ep
+
+  nmap <leader>a :Ack 
 
   au FileType javascript nmap <A-f> :ALEFix<cr>:w<cr>
 
