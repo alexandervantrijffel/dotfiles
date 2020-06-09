@@ -153,7 +153,6 @@ function CustomMappings()
   nmap Y y$
 
   nnoremap <C-p> :FZF<CR>
-  nmap <C-p>p "ep
 
   nmap <leader>a :Ack 
 
@@ -245,8 +244,6 @@ function CustomMappings()
   vnoremap <C-k> :m '>+1<CR>gv=gv
   vnoremap <C-l> :m '<-2<CR>gv=gv
 
-  vnoremap <C-c> "+y
-
   " ,' Surround a word with 'single quotes'
   map ,' ysiw'
   vmap ,' c'<C-R>"'<ESC>
@@ -316,8 +313,12 @@ function CustomMappings()
   nnoremap K :bn<cr>
   nnoremap L :bp<cr>
 
+
   " when deleting, yank to register e
   nnoremap d "ed
+  nmap <C-p>p "ep
+
+  vnoremap <C-c> "+y
 endfunction
 
 function InstallBclose()
