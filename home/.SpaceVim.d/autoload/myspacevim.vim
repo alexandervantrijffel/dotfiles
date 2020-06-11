@@ -318,6 +318,8 @@ function CustomMappings()
   nnoremap d "ed
   noremap <C-p>p "ep
   vnoremap <C-p>p "ep
+  noremap <C-p>P "eP
+  vnoremap <C-p>P "eP
 
   vnoremap <C-c> "+y
 endfunction
