@@ -163,7 +163,7 @@ function CustomMappings()
   au FileType go nmap <leader>r :GoRename<cr>
   au FileType go nmap <leader>t :GoDeclsDir<cr>
   au FileType go nmap <leader>i :GoInfo<cr>
-  au FileType go nmap <leader><F12> :GoReferrers<cr>
+  au FileType go nmap <F12> :GoReferrers<cr>
 
   au FileType go nmap <A-f> :GoFmt<cr>:w<cr>:GoBuild<cr>
 
