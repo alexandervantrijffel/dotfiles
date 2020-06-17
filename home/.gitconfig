@@ -13,9 +13,6 @@
   # ff = only
 	tool = fugitive
 	renormalize = true
-[mergetool "vimdiff"]
-	keepBackup = false
-  cmd = nvim -f -c \"Gvdiff\" \"$MERGED\"
 [apply]
 	whitespace = nowarn
 [push]
@@ -29,8 +26,6 @@
   autocorrect = 1
 [github]
   user = alexandervantrijffel
-[web]
-  browser = google-chrome
 [status]
   showUntrackedFiles = all
 [credential "https://gitlab.com"]
@@ -62,5 +57,8 @@
 	autosetuprebase = always
 [mergetool "fugitive"]
 	cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
+# [mergetool "vimdiff"]
+# 	keepBackup = false
+#   cmd = nvim -f -c \"Gvdiff\" \"$MERGED\"
 [rerere]
 	enabled = true
