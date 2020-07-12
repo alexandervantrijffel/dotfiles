@@ -377,10 +377,11 @@ mode "$mode_gaps_left" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+Shift+f workspace 1:main; exec --no-startup-id i3-msg exec QT_AUTO_SCREEN_SCALE_FACTOR=1 $(which qutebrowser) %u 
-bindsym $mod+Shift+Control+f exec QT_AUTO_SCREEN_SCALE_FACTOR=1 $(which qutebrowser) %u 
+bindsym $mod+Shift+f workspace 1:main; exec --no-startup-id i3-msg exec $(which qutebrowser) %u 
+# bindsym $mod+Shift+Control+f exec QT_AUTO_SCREEN_SCALE_FACTOR=1 $(which qutebrowser) %u 
+bindsym $mod+Shift+Control+f exec $(which qutebrowser) %u 
 
-exec --no-startup-id i3-msg "workspace 1:main; exec QT_AUTO_SCREEN_SCALE_FACTOR=1 $(which qutebrowser)"
+exec --no-startup-id i3-msg "workspace 1:main; exec $(which qutebrowser)"
 exec --no-startup-id i3-msg "workspace 1:main; exec terminator"
 
 # switch to previous workspace
