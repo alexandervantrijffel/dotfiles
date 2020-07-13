@@ -102,7 +102,6 @@ func! myspacevim#before() abort
             \ ['yuezk/vim-js', {'merged' : 0}],
             \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
             \ ]
-  " \ ['alvan/vim-closetag', {'merged' : 0}],
 
   " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries
