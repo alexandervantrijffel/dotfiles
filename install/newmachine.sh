@@ -12,7 +12,7 @@ if [ "$(uname)" = "Darwin" ]; then
 else
   # i3 gaps
   sudo add-apt-repository ppa:kgilmer/speed-ricer
-  sudo apt update && sudo apt install curl
+  sudo apt update && sudo apt install curl apt-transport-https
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   curl -o- -L https://yarnpkg.com/install.sh | bash
   sudo apt update && sudo apt install pip yarn python3-pip bat -y
