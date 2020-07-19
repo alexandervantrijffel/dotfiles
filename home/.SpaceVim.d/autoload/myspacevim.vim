@@ -314,11 +314,11 @@ function CustomMappings()
 
 
   " when deleting, yank to register e
-  nnoremap d "ed
-  noremap <C-p>p "ep
-  vnoremap <C-p>p "ep
-  noremap <C-p>P "eP
-  vnoremap <C-p>P "eP
+  " nnoremap d "ed
+  " noremap <C-p>p "ep
+  " vnoremap <C-p>p "ep
+  " noremap <C-p>P "eP
+  " vnoremap <C-p>P "eP
 
   vnoremap <C-c> "+y
 endfunction
