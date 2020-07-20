@@ -54,7 +54,7 @@ func! myspacevim#before() abort
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
   augroup END
 
-  " run 'yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier' for this
+  " run 'yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard' for this
   let g:ale_linters = {
             \   'javascript': ['standard'],
             \   'go': ['golangci-lint'],
@@ -143,7 +143,6 @@ func! myspacevim#before() abort
 
   " close buffer with \bd or :Bclose
   :call InstallBclose()
-
 endf
 
 func! myspacevim#after() abort
@@ -316,12 +315,13 @@ function CustomMappings()
 
   " when deleting, yank to register e
   " nnoremap d "ed
-  " noremap <C-p>p "ep
-  " vnoremap <C-p>p "ep
-  " noremap <C-p>P "eP
-  " vnoremap <C-p>P "eP
+  " when deleting, yank to register e
+  noremap x "ex
+  nmap <C-p>p "ep
+  nmap <C-p>P "eP
 
   vnoremap <C-c> "+y
+
 endfunction
 
 function InstallBclose()

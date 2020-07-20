@@ -33,7 +33,6 @@
   enable_vimfiler_welcome = false
   enable_vimfiler_filetypeicon = true
   enable_vimfiler_gitstatus = true
-  
 
 [[layers]]
   name = "colorscheme"

@@ -1,6 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-
-
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -172,7 +169,7 @@ alias tl="tig log"
 alias ts="tig status"
 alias yrs="yarn run start &"
 
-PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/localbin:$HOME/.yarn/bin"
+PATH="$PATH:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
 
 if [ "$(uname)" = "Darwin" ]; then
   VSCODE='/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
