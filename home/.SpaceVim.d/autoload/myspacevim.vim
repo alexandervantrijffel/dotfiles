@@ -21,7 +21,6 @@ func! myspacevim#before() abort
   let g:auto_save_in_insert_mode = 0
   let g:auto_save_silent = 1
 
-  let g:spacevim_enable_vimfiler_welcome = 0
 
   " update with :OmniSharpInstall
   let g:OmniSharp_server_stdio = 1
@@ -43,6 +42,9 @@ func! myspacevim#before() abort
 
   " live update of substitution
   set inccommand=nosplit
+ 
+  " keep n lines below and above the cursor
+  set scroll=5
 
   set number relativenumber
   " set absolute numbers in insert mode
@@ -64,9 +66,8 @@ func! myspacevim#before() abort
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
   let g:ale_completion_enabled = 1
   let g:ale_lint_on_save = 1
-  let g:ale_fix_on_save = 0
+  let g:ale_fix_on_save = 1
   let g:ale_go_golangci_lint_options = '-E goimports -D typecheck'
-
 
   let g:spacevim_automatic_update = 1
 

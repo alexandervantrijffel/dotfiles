@@ -17,22 +17,23 @@
   colorscheme = "material"
   # colorscheme = "OceanicNext"
   colorscheme_bg = "dark"
-  # Disable guicolors in basic mode, many terminal do not support 24bit
-  # true colors
-  guicolors = true
   # Disable statusline separator, if you want to use other value, please
   # install nerd fonts
   statusline_separator = "arrow"
   statusline_inactive_separator = "arrow"
-  statusline_display_mode = false
   buffer_index_type = 4
-  enable_tabline_filetype_icon = true
   bootstrap_before = "myspacevim#before"
   bootstrap_after = "myspacevim#after"
   vimcompatible = true
   filemanager = "defx"
   enable_tabline_filetype_icon = true
+  enable_statusline_display_mode = false
+  enable_guicolors = true
   enable_tabline_filetype_icon = true
+  enable_vimfiler_welcome = false
+  enable_vimfiler_filetypeicon = true
+  enable_vimfiler_gitstatus = true
+  
 
 [[layers]]
   name = "colorscheme"
@@ -60,12 +61,15 @@
   default_height = 30
 
 [[layers]]
-name = "lang#typescript"
+  name = "lang#typescript"
 
 [[layers]]
   name = 'lang#javascript'
   auto_fix = true
   enable_flow_syntax = true
+
+[[layers]]
+  name = 'lang#graphql'
 
 [[layers]]
   name = "lang#go"
