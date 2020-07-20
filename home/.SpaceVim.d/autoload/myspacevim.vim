@@ -21,7 +21,6 @@ func! myspacevim#before() abort
   let g:auto_save_in_insert_mode = 0
   let g:auto_save_silent = 1
 
-
   " update with :OmniSharpInstall
   let g:OmniSharp_server_stdio = 1
   autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
@@ -138,6 +137,38 @@ func! myspacevim#before() abort
   let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
   let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
   set completeopt+=noselect
+
+  " Override default ignore pattern in file tree to still
+  " show other . files
+  let g:vimfiler_ignore_pattern = '^\%(\.git\|\.DS_Store\)$'
+
+      let g:tagbar_type_go = {
+      \ 'ctagstype' : 'go',
+      \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+      \ ],
+      \ 'sro' : '.',
+      \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+      \ },
+      \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+      \ },
+      \ 'ctagsbin'  : 'gotags',
+      \ 'ctagsargs' : '-sort -silent'
+    \ }
 
   :call CustomMappings()
 
