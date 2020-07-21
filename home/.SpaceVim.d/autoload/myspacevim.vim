@@ -53,14 +53,17 @@ func! myspacevim#before() abort
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
   augroup END
 
-  " run 'yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard' for this
+  " run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest, @typescript-eslint/eslint-plugin@latest, @typescript-eslint/parser@latest' for this
   let g:ale_linters = {
             \   'javascript': ['standard'],
+            \   'typescript': ['standard'],
             \   'go': ['golangci-lint'],
             \   'cs': ['OmniSharp'],
             \}
   " \   'go': ['gopls'],
-  let g:ale_fixers = {'javascript': ['prettier-standard']}
+  let g:ale_fixers = {
+            \    'javascript': ['prettier-standard'],
+            \    'typescript': ['prettier-standard']}
   let g:ale_list_window_size = 10
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
   let g:ale_completion_enabled = 1
