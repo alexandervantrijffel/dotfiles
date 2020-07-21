@@ -57,13 +57,15 @@ func! myspacevim#before() abort
   let g:ale_linters = {
             \   'javascript': ['standard'],
             \   'typescript': ['standard'],
+            \   'typescriptreact': ['standard'],
             \   'go': ['golangci-lint'],
             \   'cs': ['OmniSharp'],
             \}
   " \   'go': ['gopls'],
   let g:ale_fixers = {
             \    'javascript': ['prettier-standard'],
-            \    'typescript': ['prettier-standard']}
+            \    'typescript': ['prettier-standard'],
+            \    'typescriptreact': ['prettier-standard'] }
   let g:ale_list_window_size = 10
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
   let g:ale_completion_enabled = 1
