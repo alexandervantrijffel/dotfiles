@@ -11,3 +11,5 @@ BASH SHELL: CTRL+D close     CTRL+S Stop output to screen (when processes dump t
 BASH SHELL: CTRL+R recall command     CTRL+O execute command found with CTRL+R     CTRL+G close recall command
 %
 CTRL-T find file (with fzf)
+%
+list open network ports with processes: sudo ss -t -p 
