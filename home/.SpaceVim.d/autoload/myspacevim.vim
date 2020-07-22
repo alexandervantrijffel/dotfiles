@@ -185,7 +185,6 @@ func! myspacevim#after() abort
 endf
 
 function CustomMappings()
-  nmap Y y$
 
   nnoremap <C-p> :FZF<CR>
 
@@ -356,8 +355,10 @@ function CustomMappings()
   nmap <C-p>p "ep
   nmap <C-p>P "eP
 
+  " yank to clipboard
   vnoremap <C-c> "+y
-
+  vnoremap yy "+yy
+  vnoremap Y "+y$
 endfunction
 
 function InstallBclose()
