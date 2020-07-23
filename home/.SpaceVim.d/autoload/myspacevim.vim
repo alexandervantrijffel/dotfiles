@@ -357,7 +357,10 @@ function CustomMappings()
 
   " yank to clipboard
   vnoremap <C-c> "+y
+  " copy line to clipboard
+  nnoremap <C-c> "+yy
   vnoremap yy "+yy
+  noremap yy "+yy
   vnoremap Y "+y$
 endfunction
 
