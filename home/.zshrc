@@ -244,6 +244,10 @@ if type vmware-user 1>/dev/null; then
   vmware-user --no-startup-d
 fi
 
+echo executing vmtoolsd 
+vmtoolsd -n vmusr &
+
+
 export LC_ALL=en_US.UTF-8
 
 # my life is complete now
