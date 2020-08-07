@@ -6,7 +6,7 @@ VIM: g; jump to last edited line       25G jump to linenumber 25
 %
 VIM: vimfiler file tree: r rename file, N new file, K new directory, mm move file, dd delete file
 %
-VIM: ysMOTION" insert quotes around motion, cs'" change surrounding quotes, ds delete surrounding punctuation mark
+VIM: ysMOTION" insert quotes around motion, ex: ysaw", cs'" change surrounding quotes, ds delete surrounding punctuation mark
 %
 VIM caw: delete word under cursor and enter insert mode
 %

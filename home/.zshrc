@@ -234,6 +234,14 @@ bindkey ' ' magic-space
 bindkey '^l' history-search-backward
 bindkey '^k' history-search-forward
 
+export HISTCONTROL=ignoreboth:erasedups
+
+unalias z
+
+z() {
+  _z $@ && pwd
+}
+
 
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
@@ -244,8 +252,8 @@ if type vmware-user 1>/dev/null; then
   vmware-user --no-startup-d
 fi
 
-echo executing vmtoolsd 
-vmtoolsd -n vmusr &
+# echo executing vmtoolsd 
+# vmtoolsd -n vmusr &
 
 
 export LC_ALL=en_US.UTF-8
