@@ -169,6 +169,7 @@ alias sudo="sudo -E "
 alias tl="tig log"
 alias ts="tig status"
 alias yrs="yarn run start &"
+alias pwd="pwd -L"
 
 PATH="$PATH:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
 
