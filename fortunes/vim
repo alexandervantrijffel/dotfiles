@@ -1,51 +1,51 @@
-VIM: Multi replace by selecting the text to replace in visual mode, press CTRL+R for replace command. Press CTRL+R 0 in colon command mode to paste from register 0.
+VIM Multi replace by selecting the text to replace in visual mode, press CTRL+R for replace command. Press CTRL+R 0 in colon command mode to paste from register 0.
 %
-VIM: Multi replace by searching for the full text to replace, enter cgn, repeat the . dot command multiple times to apply to multiple search results. Jump to next search result with gn, previous with gN. dgn for delete search result.
+VIM Multi replace by searching for the full text to replace, enter cgn, repeat the . dot command multiple times to apply to multiple search results. Jump to next search result with gn, previous with gN. dgn for delete search result.
 %
-VIM: g; jump to last edited line       25G jump to linenumber 25
+VIM g; jump to last edited line       25G jump to linenumber 25
 %
-VIM: vimfiler file tree: r rename file, N new file, K new directory, mm move file, dd delete file
+VIM ysMOTION" insert quotes around motion, ex ysaw", cs'" change surrounding quotes, ds delete surrounding punctuation mark
 %
-VIM: ysMOTION" insert quotes around motion, ex: ysaw", cs'" change surrounding quotes, ds delete surrounding punctuation mark
+VIM caw delete word under cursor and enter insert mode
 %
-VIM caw: delete word under cursor and enter insert mode
+VIM s substitute char and enter insert mode. S substitute line, enter insert mode
 %
-VIM: s substitute char and enter insert mode. S substitute line, enter insert mode
+VIM F back find      T back till     ; repeat t/T/f/F     , reverse t/T/f/F
 %
-VIM: F back find      T back till     ; repeat t/T/f/F     , reverse t/T/f/F
+VIM ~ toggle case of selection or cursor
 %
-VIM: ~ (shift `) toggle case of selection or cursor
+VIM # previous word under cursor * next word under cursor
 %
-VIM: # previous word under cursor * next word under cursor
+VIM ( ) begin / end of sentence     { } begin / end of paragraph
 %
-VIM: % goto matching ( { ^
+VIM H screen top     M screen middle     L screen bottom
 %
-VIM: ( ) begin / end of sentence     { } begin / end of paragraph
+VIM in filetree s v - open file in split vertical edit     s g - open file in split horizontally edit
 %
-VIM: H screen top     M screen middle     L screen bottom
+spaceVIM <space>w= balance windows     <space>w+ toggle window layout
 %
-VIM: in filetree: s v - open file in split vertical edit     s g - open file in split horizontally edit
+VIM <leader><leader>s quick jump to character in document, <leader><leader>w jump to word, <leader><leader>b jump backwards to word <leader><leader>e jump to word end (with vim-easymotion)
 %
-spaceVIM: <space>w= balance windows     <space>w+ toggle window layout
+VIM create new file and start editing immediately with w filepath
 %
-VIM: <leader><leader>s quick jump to character in document, <leader><leader>w jump to word, <leader><leader>b jump backwards to word <leader><leader>e jump to word end (with vim-easymotion)
+VIM GoInfo show definition of go method OR <C-K> show Go type definition
 %
-VIM: create new file and start editing immediately with :w filepath
+VIM In insert mode, CTRL+W for delete last word, CTRL+h for delete last character
 %
-VIM: :GoInfo show definition of go method
+VIM merge conflicts with vim diff run git mergetool, :diffg LO , :diffg RE , :diffg BA , ]c next conflict , [c previous conflict https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool
 %
-VIM: In insert mode, CTRL+W for delete last word, CTRL+h for delete last character
+VIM :0Glog to view history of current file. :copen to open earlier version of file. :G for git status, stage/unstage/ignore file. :Gblame (with vim-fugitive)
 %
-VIM: merge conflicts with vim diff: run git mergetool, :diffg LO , :diffg RE , :diffg BA , ]c next conflict , [c previous conflict https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool
+VIM CTRL+[x f]  autocomplete filename
 %
-VIM: :0Glog to view history of current file. :copen to open earlier version of file. :G for git status, stage/unstage/ignore file. :Gblame (with vim-fugitive)
+VIM <space>fo open current file in file tree
 %
-VIM: CTRL+[x f]  autocomplete filename
+VIM With split windows <space>1 left window <space2> right window
 %
-VIM: <space>fo open current file in file tree
+VIM <C-g> show full path to current file
 %
-VIM: With split windows: <space>1 left window <space2> right window
+VIM 25 enter jump 25 lines down
 %
-VIM: <C-g> show full path to current file
+VIM vimfiler file tree r rename file, N new file, K new directory, mm move file, dd delete file
 %
-VIM: <C-K> show Go type definition
+VIM % goto matching ( { ^
