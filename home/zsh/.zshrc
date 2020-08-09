@@ -5,37 +5,14 @@ export ZSH=~/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
 
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
+# hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -45,16 +22,13 @@ ZSH_THEME="agnoster"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-  # autojump
 
 plugins=(
   git 
@@ -82,13 +56,75 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
 # export LANG=en_US.UTF-8
 
-if type nvim 1>/dev/null; then
-  EDITOR=nvim
-  VISUAL=nvim
+if [ "$(uname)" = "Darwin" ]; then
+  VSCODE='/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
+  if [ -d "$VSCODE" ]; then
+    export PATH="$PATH:$VSCODE"
+  fi
+
+  bindkey -v
+
 else
-  EDITOR=vim
-  VISUAL=vim
+  if type feh 1>/dev/null; then
+    feh --slideshow-delay 1800 --bg-tile $HOME/Pictures/backgrounds -z -r -D1800
+    # // --bg-fill or --bg-scale?
+  fi
+  alias open='xdg-open'
+  alias python=python3
+  
+  . z
+
+  # caps lock = control key
+  # re-run this when plugging in another keyboard
+  setxkbmap -option ctrl:nocaps
+
+  # fix rider showing on Wayland
+  export _JAVA_AWT_WM_NONREPARENTING=1
+ 
+  # fix for qutebrowser
+  export QT_AUTO_SCREEN_SCALE_FACTOR=1
+
+  if [ -f /usr/local/bin/scale125 ]; then 
+    /usr/local/bin/scale125
+  fi
 fi
+
+# customize prompt
+DEFAULT_USER=$USER
+
+prompt_dir() {
+ prompt_segment blue white $(shrink_path -f -s)
+}
+
+set clipboard=unnamedplus
+
+# after entering repeat command like !-2, press space to auto-expand the command
+bindkey ' ' magic-space
+
+bindkey '^l' history-search-backward
+bindkey '^k' history-search-forward
+
+export HISTCONTROL=ignoreboth:erasedups
+
+unalias z
+
+z() {
+  _z $@ && pwd
+}
+
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
+
+# for clipboard sharing with host
+if type vmware-user 1>/dev/null; then
+  vmware-user --no-startup-d
+fi
+
+# echo executing vmtoolsd 
+# vmtoolsd -n vmusr &
+
+export LC_ALL=en_US.UTF-8
 
 # Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -171,100 +207,14 @@ alias ts="tig status"
 alias yrs="yarn run start &"
 alias pwd="pwd -L"
 
-PATH="$PATH:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
-
-if [ "$(uname)" = "Darwin" ]; then
-  VSCODE='/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
-  if [ -d "$VSCODE" ]; then
-    export PATH="$PATH:$VSCODE"
-  fi
-
-  bindkey -v
-  bindkey '^a' beginning-of-line
-  bindkey '^b' backward-char
-  bindkey '^e' end-of-line
-  bindkey '^f' forward-char
-  bindkey '^h' backward-delete-char
-  bindkey '^k' kill-line
-  bindkey '^u' kill-whole-line
-  bindkey '^w' backward-kill-word
-
-else
-  if type feh 1>/dev/null; then
-    feh --slideshow-delay 1800 --bg-tile $HOME/Pictures/backgrounds -z -r -D1800
-    # // --bg-fill or --bg-scale?
-  fi
-  alias open='xdg-open'
-  alias python=python3
-  
-  . z
-
-  # caps lock = control key
-  # re-run this when plugging in another keyboard
-  setxkbmap -option ctrl:nocaps
-
-  # fix rider showing on Wayland
-  export _JAVA_AWT_WM_NONREPARENTING=1
- 
-  # fix for qutebrowser
-  export QT_AUTO_SCREEN_SCALE_FACTOR=1
-
-  if [ -f /usr/local/bin/scale125 ]; then 
-    /usr/local/bin/scale125
-  fi
-fi
-
-# customize prompt
-DEFAULT_USER=$USER
-
-prompt_dir() {
- prompt_segment blue white $(shrink_path -f -s)
-}
-
-set clipboard=unnamedplus
-
-[ -d "/etc/zsh" ] &&  source /etc/zsh/zprofile
-
-if [ -d "/opt/node/bin" ]; then
-  PATH="$PATH:/opt/node/bin"
-fi
-
-# after entering repeat command like !-2, press space to auto-expand the command
-bindkey ' ' magic-space
-
-bindkey '^l' history-search-backward
-bindkey '^k' history-search-forward
-
-export HISTCONTROL=ignoreboth:erasedups
-
-unalias z
-
-z() {
-  _z $@ && pwd
-}
-
-
-if [ -f ~/.zshrc.local ]; then
-  source ~/.zshrc.local
-fi
-
-# for clipboard sharing with host
-if type vmware-user 1>/dev/null; then
-  vmware-user --no-startup-d
-fi
-
-# echo executing vmtoolsd 
-# vmtoolsd -n vmusr &
-
-
-export LC_ALL=en_US.UTF-8
-
 # my life is complete now
 bindkey 'jj' vi-cmd-mode
 
 # ubuntu terminal window blue background color #0F293C
 
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
 if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B Week %V")\n" | lolcat
 fi
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
