@@ -9,12 +9,14 @@ func! myspacevim#before() abort
 
   set wrap
   set ignorecase
+  set autoindent
   set smartcase
   set splitright
   " prevent arbitrary code execution https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
   set nomodeline
   set noswapfile
   set hlsearch
+
   " autosave
   let g:auto_save = 1
   let g:auto_save_no_updatetime = 1
@@ -174,6 +176,9 @@ func! myspacevim#before() abort
       \ 'ctagsbin'  : 'gotags',
       \ 'ctagsargs' : '-sort -silent'
     \ }
+
+  abbr ennil if err != nil { return 
+  abbr enil if err == nil { 
 
   :call CustomMappings()
 

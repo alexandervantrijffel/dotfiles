@@ -47,3 +47,5 @@ VIM: <space>fo open current file in file tree
 VIM: With split windows: <space>1 left window <space2> right window
 %
 VIM: <C-g> show full path to current file
+%
+VIM: <C-K> show Go type definition
