@@ -9,8 +9,6 @@ ZSH_THEME="agnoster"
 # sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 
-ENABLE_CORRECTION="true"
-
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
@@ -166,7 +164,7 @@ alias gcp="git cherry-pick "
 alias gcm="git commit -m  "
 alias gclean="git checkout -- . && git clean -fd ."
 alias gd="git diff --word-diff -w "
-alias gds="gd --staged --word-diff | git apply --cached --ignore-whitespace --unidiff-zero -"
+alias gds="gd --staged --word-diff | git apply --cached --ignore-whitespace --ignore-space-change --unidiff-zero -"
 alias gds="git diff --staged --word-diff -w"
 alias gra="git rebase --abort "
 alias grc="git rebase --continue "
