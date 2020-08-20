@@ -55,6 +55,42 @@ func! myspacevim#before() abort
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
   augroup END
 
+
+  let g:spacevim_automatic_update = 1
+
+  " based on dein.vim plugin manager
+  " Update with :DeinUpdate or :SPUpdate
+  " update / install others with :UpdateRemotePlugins
+  let g:spacevim_custom_plugins = [
+            \ ['junegunn/fzf.vim', {'merged' : 0}],
+            \ ['wsdjeg/dein-ui.vim', {'merged' : 0}],
+            \ ['w0rp/ale', {'merged' : 0}],
+            \ ['907th/vim-auto-save', {'merged' : 0}],
+            \ ['Shougo/deoplete.nvim', {'merged' : 0}],
+            \ ['fatih/vim-go', {'merged' : 0}],
+            \ ['zchee/deoplete-go', {'merged' : 0}],
+            \ ['jodosha/vim-godebug', {'merged' : 0}],
+            \ ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
+            \ ['majutsushi/tagbar', {'merged' : 0}],
+            \ ['mileszs/ack.vim', {'merged' : 0}],
+            \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
+            \ ['tpope/vim-fugitive', {'merged' : 0}],
+            \ ['tpope/vim-commentary', {'merged' : 0}],
+            \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
+            \ ['prabirshrestha/asyncomplete.vim', {'merged' : 0}],
+            \ ['yami-beta/asyncomplete-omni.vim', {'merged' : 0}],
+            \ ['chrisbra/Colorizer', {'merged' : 0}],
+            \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
+            \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
+            \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}], 
+            \ ]
+
+            " \ ['peitalin/vim-jsx-typescript', {'merged' : 0}],
+            " \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
+            " \ ['yuezk/vim-js', {'merged' : 0}],
+            " \ ['mxw/vim-jsx', {'merged' : 0}],
+            " \ ['pangloss/vim-javascript', {'merged' : 0}],
+
   " run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest, @typescript-eslint/eslint-plugin@latest, @typescript-eslint/parser@latest' for this
   let g:ale_linters = {
             \   'javascript': ['standard'],
@@ -74,41 +110,6 @@ func! myspacevim#before() abort
   let g:ale_lint_on_save = 1
   let g:ale_fix_on_save = 1
   let g:ale_go_golangci_lint_options = '-E goimports -D typecheck'
-
-  let g:spacevim_automatic_update = 1
-
-  " based on dein.vim plugin manager
-  " Update with :DeinUpdate or :SPUpdate
-  " update / install others with :UpdateRemotePlugins
-  let g:spacevim_custom_plugins = [
-            \ ['junegunn/fzf.vim', {'merged' : 0}],
-            \ ['tpope/vim-fugitive', {'merged' : 0}],
-            \ ['wsdjeg/dein-ui.vim', {'merged' : 0}],
-            \ ['pangloss/vim-javascript', {'merged' : 0}],
-            \ ['mxw/vim-jsx', {'merged' : 0}],
-            \ ['w0rp/ale', {'merged' : 0}],
-            \ ['907th/vim-auto-save', {'merged' : 0}],
-            \ ['fatih/vim-go', {'merged' : 0}],
-            \ ['jodosha/vim-godebug', {'merged' : 0}],
-            \ ['Shougo/deoplete.nvim', {'merged' : 0}],
-            \ ['zchee/deoplete-go', {'merged' : 0}],
-            \ ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
-            \ ['majutsushi/tagbar', {'merged' : 0}],
-            \ ['mileszs/ack.vim', {'merged' : 0}],
-            \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
-            \ ['tpope/vim-fugitive', {'merged' : 0}],
-            \ ['tpope/vim-commentary', {'merged' : 0}],
-            \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
-            \ ['prabirshrestha/asyncomplete.vim', {'merged' : 0}],
-            \ ['yami-beta/asyncomplete-omni.vim', {'merged' : 0}],
-            \ ['chrisbra/Colorizer', {'merged' : 0}],
-            \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
-            \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
-            \ ['peitalin/vim-jsx-typescript', {'merged' : 0}],
-            \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}],
-            \ ['yuezk/vim-js', {'merged' : 0}],
-            \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
-            \ ]
 
   " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries
