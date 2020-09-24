@@ -368,6 +368,18 @@ function CustomMappings()
   vnoremap yy "+yy
   noremap yy "+yy
   vnoremap Y "+y$
+
+  " when changing text, do not yank to clipboard but to register c
+  nnoremap cw "ccw
+  nnoremap cW "ccW
+  nnoremap ce "cce
+  nnoremap cE "ccE
+  nnoremap c$ "cc$
+  nnoremap ct "cct
+  nnoremap cf "ccf
+  nnoremap C "cC
+
+
 endfunction
 
 function InstallBclose()
