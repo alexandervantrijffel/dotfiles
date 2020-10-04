@@ -186,7 +186,9 @@ alias gmnc="git merge --no-commit --no-ff "
 if type htop 1>/dev/null; then
   alias top="sudo htop" # alias top and fix high sierra bug
 fi
-alias ll="exa -alFbgh"
+if type exa 1>/dev/null; then
+  alias ll="exa -alFbgh"
+fi
 alias l="ls -CFh"
 alias ka="k --namespace=argo "
 alias la="exa -albgh"
