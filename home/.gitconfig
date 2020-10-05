@@ -26,6 +26,7 @@
   autocorrect = 1
 [github]
   user = alexandervantrijffel
+  email = lexmail@gmail.com
 [status]
   showUntrackedFiles = all
 [credential "https://gitlab.com"]
