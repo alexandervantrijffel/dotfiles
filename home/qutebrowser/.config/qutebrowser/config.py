@@ -964,7 +964,7 @@ c.content.headers.user_agent = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0)
 ##   - unique-match: Auto-follow whenever there is a unique non-empty match in either the hint string (word mode) or filter (number mode).
 ##   - full-match: Follow the hint when the user typed the whole hint (letter, word or number mode) or the element's text (only in number mode).
 ##   - never: The user will always need to press Enter to follow a hint.
-# c.hints.auto_follow = 'unique-match'
+c.hints.auto_follow = 'always'
 
 ## Duration (in milliseconds) to ignore normal-mode key bindings after a
 ## successful auto-follow.
@@ -977,19 +977,18 @@ c.content.headers.user_agent = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0)
 
 ## Characters used for hint strings.
 ## Type: UniqueCharString
-# c.hints.chars = 'asdfghjkl'
 c.hints.chars = 'abcdefghijklmnopqrstuvwxyz!@#$%^*()+{}:|?-=[];\\,./1234567890'
 
 ## Dictionary file to be used by the word hints.
 ## Type: File
-# c.hints.dictionary = '/usr/share/dict/words'
+c.hints.dictionary = '/data/dev/github.com/alexandervantrijffel/dotfiles/home/qutebrowser/hintsdictionary'
 
 ## Which implementation to use to find elements to hint.
 ## Type: String
 ## Valid values:
 ##   - javascript: Better but slower
 ##   - python: Slightly worse but faster
-# c.hints.find_implementation = 'python'
+c.hints.find_implementation = 'javascript'
 
 ## Hide unmatched hints in rapid mode.
 ## Type: Bool
@@ -1009,7 +1008,7 @@ c.hints.chars = 'abcdefghijklmnopqrstuvwxyz!@#$%^*()+{}:|?-=[];\\,./1234567890'
 ##   - number: Use numeric hints. (In this mode you can also type letters from the hinted element to filter and reduce the number of elements that are hinted.)
 ##   - letter: Use the characters in the `hints.chars` setting.
 ##   - word: Use hints words based on the html elements and the extra words.
-# c.hints.mode = 'letter'
+c.hints.mode = 'word'
 
 ## Comma-separated list of regular expressions to use for 'next' links.
 ## Type: List of Regex
@@ -1179,7 +1178,7 @@ c.hints.chars = 'abcdefghijklmnopqrstuvwxyz!@#$%^*()+{}:|?-=[];\\,./1234567890'
 ## as it can cause issues with some bitmap fonts. As an alternative to
 ## this, it's possible to set font sizes and the `zoom.default` setting.
 ## Type: Bool
-c.qt.highdpi = False
+c.qt.highdpi = True
 
 ## When to use Chromium's low-end device mode. This improves the RAM
 ## usage of renderer processes, at the expense of performance.
@@ -1675,7 +1674,7 @@ config.bind('L', 'tab-prev')
 # config.bind('cd', 'download-clear')
 # config.bind('co', 'tab-only')
 # config.bind('d', 'tab-close')
-# config.bind('f', 'hint')
+config.bind('f', 'hint all current')
 # config.bind('g$', 'tab-focus -1')
 # config.bind('g0', 'tab-focus 1')
 # config.bind('gB', 'set-cmd-text -s :bookmark-load -t')

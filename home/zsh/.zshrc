@@ -1,3 +1,8 @@
+# for clipboard sharing with host
+if type vmware-user 1>/dev/null; then
+  vmware-user --no-startup-d
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -112,11 +117,6 @@ z() {
 
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
-fi
-
-# for clipboard sharing with host
-if type vmware-user 1>/dev/null; then
-  vmware-user --no-startup-d
 fi
 
 # echo executing vmtoolsd 
