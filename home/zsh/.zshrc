@@ -188,9 +188,10 @@ if type htop 1>/dev/null; then
   alias top="sudo htop" # alias top and fix high sierra bug
 fi
 if type exa 1>/dev/null; then
-  alias ll="exa -alFbgh"
+  alias l="exa -alFbgh"
+else
+  alias l="ls -CFh"
 fi
-alias l="ls -CFh"
 alias ka="k --namespace=argo "
 alias la="exa -albgh"
 alias lps="lpass show -x -G "
