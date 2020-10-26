@@ -152,7 +152,6 @@ func! myspacevim#before() abort
   abbr ennil if err != nil { return 
   abbr enil if err == nil { 
 
-
   " close buffer with \bd or :Bclose
   :call InstallBclose()
 endf
@@ -198,6 +197,7 @@ func! myspacevim#after() abort
   \|   call fzf#vim#buffer_tags(<q-args>, <bang>0)
   \| endif
 
+  nmap <C-p> :FZF<CR>
   au FileType go nmap <leader>t :FzfTags<CR>
   " au FileType go nmap <leader>t :GoDeclsDir<cr>
 endf
