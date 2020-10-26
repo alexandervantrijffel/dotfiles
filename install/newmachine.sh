@@ -102,18 +102,18 @@ echo ""
 echo "install go manually before continueing: https://golang.org/dl/"
 read blah
 
+sudo apt install ctags
 go get -u github.com/cespare/reflex
 go get -u github.com/golangci/golangci-lint
-go get gotest.tools/gotestsum
-go get github.com/stretchr/testify/assert
-
+go get -u gotest.tools/gotestsum
+go get -u github.com/stretchr/testify/assert
+go get -u github.com/jstemmer/gotags
 
 sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/nvim 0
 sudo update-alternatives --config editor
 
 echo "only on native:"
 echo "apt install feh pulseaudio shutter"
-
 
 echo "todo: set correct dpi in ~/.Xresources"
 echo "Xft.dpi:110" > ~/.Xresources
@@ -122,5 +122,7 @@ echo "todo install z script"
 
 echo "todo link .xsessionrc"
 
-  # grim screenshots for sway
+echo "only in vm"
+echo "sudo apt install open-vm-tools open-vm-tools-desktop -y"
+
   # sudo apt install wl-clipboard grim

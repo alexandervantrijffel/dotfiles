@@ -100,3 +100,6 @@
   name = "lang#csharp"
   highlight_types = 1
 
+[[layers]]
+name = 'fzf'
+enable = true

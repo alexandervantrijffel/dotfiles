@@ -62,7 +62,6 @@ func! myspacevim#before() abort
   " Update with :DeinUpdate or :SPUpdate
   " update / install others with :UpdateRemotePlugins
   let g:spacevim_custom_plugins = [
-            \ ['junegunn/fzf.vim', {'merged' : 0}],
             \ ['wsdjeg/dein-ui.vim', {'merged' : 0}],
             \ ['w0rp/ale', {'merged' : 0}],
             \ ['907th/vim-auto-save', {'merged' : 0}],
@@ -150,49 +149,60 @@ func! myspacevim#before() abort
   " show other . files
   let g:vimfiler_ignore_pattern = '^\%(\.git\|\.DS_Store\)$'
 
-      let g:tagbar_type_go = {
-      \ 'ctagstype' : 'go',
-      \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-      \ ],
-      \ 'sro' : '.',
-      \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-      \ },
-      \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-      \ },
-      \ 'ctagsbin'  : 'gotags',
-      \ 'ctagsargs' : '-sort -silent'
-    \ }
-
   abbr ennil if err != nil { return 
   abbr enil if err == nil { 
 
-  :call CustomMappings()
 
   " close buffer with \bd or :Bclose
   :call InstallBclose()
 endf
 
 func! myspacevim#after() abort
+  :call CustomMappings()
+
+  " This instructs deoplete to use omni completion for Go files.
+  call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+
+  let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+      \ 'p:package',
+      \ 'i:imports:1',
+      \ 'c:constants',
+      \ 'v:variables',
+      \ 't:types',
+      \ 'n:interfaces',
+      \ 'w:fields',
+      \ 'e:embedded',
+      \ 'm:methods',
+      \ 'r:constructor',
+      \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+      \ 't' : 'ctype',
+      \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+      \ 'ctype' : 't',
+      \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+  \ }
+
+  command! -bang -nargs=* BTags
+  \  if &filetype == 'go'
+  \|   call fzf#vim#buffer_tags(<q-args>, 'gotags -silent -sort '.shellescape(expand('%')), <bang>0)
+  \| else
+  \|   call fzf#vim#buffer_tags(<q-args>, <bang>0)
+  \| endif
+
+  au FileType go nmap <leader>t :FzfTags<CR>
+  " au FileType go nmap <leader>t :GoDeclsDir<cr>
 endf
 
 function CustomMappings()
-
-  nnoremap <C-p> :FZF<CR>
 
   nmap <leader>a :Ack 
 
@@ -201,14 +211,12 @@ function CustomMappings()
   " Run this for go:
   " go get -u github.com/sourcegraph/go-langserver
   au FileType go nmap <leader>r :GoRename<cr>
-  au FileType go nmap <leader>t :GoDeclsDir<cr>
   au FileType go nmap <leader>i :GoInfo<cr>
   au FileType go nmap <F12> :GoReferrers<cr>
 
   au FileType go nmap <A-f> :GoFmt<cr>:w<cr>:GoBuild<cr>
 
   au FileType go nmap gi :GoInfo<cr>
-  nnoremap <C-p> :FZF<CR>
   au FileType javascript nmap <A-f> :ALEFix<cr>:w<cr>
 
   " Run this for go:
