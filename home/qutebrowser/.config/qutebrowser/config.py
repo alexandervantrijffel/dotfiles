@@ -1008,7 +1008,7 @@ c.hints.find_implementation = 'javascript'
 ##   - number: Use numeric hints. (In this mode you can also type letters from the hinted element to filter and reduce the number of elements that are hinted.)
 ##   - letter: Use the characters in the `hints.chars` setting.
 ##   - word: Use hints words based on the html elements and the extra words.
-c.hints.mode = 'word'
+c.hints.mode = 'letter'
 
 ## Comma-separated list of regular expressions to use for 'next' links.
 ## Type: List of Regex

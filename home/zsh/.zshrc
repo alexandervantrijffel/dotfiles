@@ -192,6 +192,7 @@ if type exa 1>/dev/null; then
 else
   alias l="ls -CFh"
 fi
+unalias ll
 alias ka="k --namespace=argo "
 alias la="exa -albgh"
 alias lps="lpass show -x -G "
