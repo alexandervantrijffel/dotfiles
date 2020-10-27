@@ -43,7 +43,7 @@ HYPHEN_INSENSITIVE="true"
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
 zplug "zsh-users/zsh-history-substring-search", nice:10
 
-if ! zplug check --verbose; then
+if ! zplug check; then
   printf "Install? [y/N]: "
   if read -q; then
       echo; zplug install
@@ -51,7 +51,7 @@ if ! zplug check --verbose; then
       echo
   fi
 fi
-zplug load --verbose 
+zplug load
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -136,6 +136,7 @@ fi
 alias d="docker "
 alias du="du -h --max-depth=1 "
 alias dc="docker-compose "
+alias fdh="fd --hidden --no-ignore "
 if type feh 1>/dev/null; then
   # or use --zoom fill
   alias fehfg='nohup feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/bgsrcpics &'
@@ -234,3 +235,4 @@ alias gsw="git show "
 if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B Week %V")\n" | lolcat
 fi
+
