@@ -82,6 +82,7 @@ func! myspacevim#before() abort
             \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
             \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}], 
+            \ ['preservim/tagbar', {'merged' : 0}], 
             \ ]
 
             " \ ['peitalin/vim-jsx-typescript', {'merged' : 0}],
@@ -154,6 +155,7 @@ func! myspacevim#before() abort
 
   " close buffer with \bd or :Bclose
   :call InstallBclose()
+
 endf
 
 func! myspacevim#after() abort
@@ -200,6 +202,9 @@ func! myspacevim#after() abort
   nmap <C-p> :FZF<CR>
   au FileType go nmap <leader>t :FzfTags<CR>
   " au FileType go nmap <leader>t :GoDeclsDir<cr>
+  "
+  let g:tagbar_position = 'topleft vertical'
+  autocmd FileType go nested :call tagbar#autoopen(0)
 endf
 
 function CustomMappings()
