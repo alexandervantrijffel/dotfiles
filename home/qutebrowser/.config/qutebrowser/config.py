@@ -977,7 +977,7 @@ c.hints.auto_follow = 'always'
 
 ## Characters used for hint strings.
 ## Type: UniqueCharString
-c.hints.chars = 'abcdefghijklmnopqrstuvwxyz!@#$%^*()+{}:|?-=[];\\,./1234567890'
+c.hints.chars = 'abcdefghijklmnopqrstuvwxyz!@#$%^*()+{}:|?-=[];\\/1234567890'
 
 ## Dictionary file to be used by the word hints.
 ## Type: File
