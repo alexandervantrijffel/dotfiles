@@ -85,13 +85,17 @@ func! myspacevim#before() abort
             \ ['preservim/tagbar', {'merged' : 0}], 
             \ ]
 
+            " \ ['chengzeyi/fzf-preview.vim', {'merged' : 0}], 
+            " \ ['yuki-ycino/fzf-preview.vim', {'merged' : 0}], 
+            " \ ['neoclide/coc.nvim', {'merged' : 0}], 
+
             " \ ['peitalin/vim-jsx-typescript', {'merged' : 0}],
             " \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
             " \ ['yuezk/vim-js', {'merged' : 0}],
             " \ ['mxw/vim-jsx', {'merged' : 0}],
             " \ ['pangloss/vim-javascript', {'merged' : 0}],
 
-  " run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest, @typescript-eslint/eslint-plugin@latest, @typescript-eslint/parser@latest' for this
+  " run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest neovim' for this
   let g:ale_linters = {
             \   'javascript': ['standard'],
             \   'typescript': ['standard'],
@@ -191,13 +195,6 @@ func! myspacevim#after() abort
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
   \ }
-
-  command! -bang -nargs=* BTags
-  \  if &filetype == 'go'
-  \|   call fzf#vim#buffer_tags(<q-args>, 'gotags -silent -sort '.shellescape(expand('%')), <bang>0)
-  \| else
-  \|   call fzf#vim#buffer_tags(<q-args>, <bang>0)
-  \| endif
 
   nmap <C-p> :FZF<CR>
   au FileType go nmap <leader>t :FzfTags<CR>

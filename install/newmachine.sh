@@ -29,15 +29,6 @@ else
   sudo mv /usr/bin/dmenu /usr/bin/dmenu.org
   sudo ln -s $(which rofi) /usr/bin/dmenu
 
-  git clone --depth 1 https://github.com/junegunn/fzf.git /opt/.fzf 
-  /opt/.fzf/install 
-
-  sudo apt install zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-  chsh -s $(which zsh)
-
   # sudo apt-get build-dep shotwell
   # sudo apt-get install yelp-tools appstream-util libgcr-3-dev libgdata-dev libwebp-dev
 
@@ -63,11 +54,7 @@ echo "Replacing folder $FORTUNES"
 sudo rm -rf $FORTUNES
 sudo ln -s $DOTFILES/fortunes $FORTUNES
 
-yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier install import-js tldr
-
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier install import-js
 
 sudo ln -s $(pwd)/../sh/autotestgo.sh /usr/local/bin/autotestgo
 sudo ln -s $(pwd)/../sh/autorungo.sh /usr/local/bin/autorungo
@@ -117,8 +104,6 @@ echo "apt install feh pulseaudio shutter"
 
 echo "todo: set correct dpi in ~/.Xresources"
 echo "Xft.dpi:110" > ~/.Xresources
-
-echo "todo install z script"
 
 echo "todo link .xsessionrc"
 

@@ -13,7 +13,6 @@ ln -s $DOTFILES/home/.SpaceVim.d ~/.SpaceVim.d
 
 yarn global add neovim
 sudo pip install --upgrade pip
-sudo pip2 install --upgrade neovim
 sudo pip3 install --upgrade neovim
 
 echo 'export PATH="/usr/local/opt/gettext/bin:$PATH"' >> ~/.zshrc.local

@@ -1,3 +1,5 @@
+URxvt*font:    xft:Hack Nerd Font:style=Regular:size=11
+
 ! Fonts {{{
 Xft.antialias: true
 Xft.hinting:   true
