@@ -1877,14 +1877,15 @@ config.bind('<Escape>', 'leave-mode', mode='passthrough')
 # config.bind('n', 'prompt-accept no', mode='yesno')
 # config.bind('y', 'prompt-accept yes', mode='yesno')
 
-import dracula.draw
-
 # Load existing settings made via :set
 config.load_autoconfig()
 
+# <dracula>
+import dracula.draw
 dracula.draw.blood(c, {
     'spacing': {
         'vertical': 6,
         'horizontal': 8
     }
 })
+# </dracula>
