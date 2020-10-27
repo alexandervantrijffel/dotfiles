@@ -145,7 +145,9 @@ if [ -f ~/.fzf.zsh ]; then
   export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
   export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
 fi
-alias grep="grep -i"
+alias grep="fzf -q "
+
+
 if type htop 1>/dev/null; then
   alias top="sudo htop" # alias top and fix high sierra bug
 fi
@@ -240,4 +242,3 @@ alias gsw="git show "
 if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B Week %V")\n" | lolcat
 fi
-
