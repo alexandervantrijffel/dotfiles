@@ -10,7 +10,7 @@
   group_tab_toggle = <Primary><Alt>backslash
 [profiles]
   [[default]]
-    background_color = "#002b36"
+    background_color = "#282a36"
     background_darkness = 1.0
     background_type = transparent
     cursor_color = "#aaaaaa"
