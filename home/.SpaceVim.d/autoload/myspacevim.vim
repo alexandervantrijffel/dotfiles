@@ -55,7 +55,6 @@ func! myspacevim#before() abort
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
   augroup END
 
-
   let g:spacevim_automatic_update = 1
 
   " based on dein.vim plugin manager
@@ -126,11 +125,6 @@ func! myspacevim#before() abort
   " to install in case of errors
   " to update pull repo ~/.cache/vimfiles/repos/github.com/zxqfl/tabnine-vimu
 
-  " homebrew
-  set rtp+=/usr/local/opt/fzf 
-  " rest
-  set rtp+=~/.fzf
-
   " When the installation of ack.vim fails, run this command:
   " git clone --config transfer.fsckObjects=false https://github.com/mileszs/ack.vim.git ~/.cache/vimfiles/repos/github.com/mileszs/ack.vim
 
@@ -159,7 +153,6 @@ func! myspacevim#before() abort
 
   " close buffer with \bd or :Bclose
   :call InstallBclose()
-
 endf
 
 func! myspacevim#after() abort
@@ -364,13 +357,6 @@ function CustomMappings()
   nnoremap L :bp<cr>
 
 
-  " when deleting, yank to register e
-  " nnoremap d "ed
-  " when deleting, yank to register e
-  noremap x "ex
-  nmap <C-p>p "ep
-  nmap <C-p>P "eP
-
   " yank to clipboard
   vnoremap <C-c> "+y
   " copy line to clipboard
@@ -379,17 +365,22 @@ function CustomMappings()
   noremap yy "+yy
   vnoremap Y "+y$
 
-  " when changing text, do not yank to clipboard but to register c
-  nnoremap cw "ccw
-  nnoremap cW "ccW
-  nnoremap ce "cce
-  nnoremap cE "ccE
-  nnoremap c$ "cc$
-  nnoremap ct "cct
-  nnoremap cf "ccf
-  nnoremap C "cC
+  " when changing text, do not yank to clipboard but to register e
+  nnoremap cw "ecw
+  nnoremap cW "ecW
+  nnoremap ce "ece
+  nnoremap cE "ecE
+  nnoremap c$ "ec$
+  nnoremap ct "ect
+  nnoremap cf "ecf
+  nnoremap C "eC
 
-
+  " when deleting, yank to register e
+  " nnoremap d "ed
+  " when deleting, yank to register e
+  noremap x "ex
+  nmap <C-p>p "ep
+  nmap <C-p>P "eP
 endfunction
 
 function InstallBclose()
