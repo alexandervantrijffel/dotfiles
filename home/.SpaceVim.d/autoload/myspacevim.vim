@@ -61,15 +61,14 @@ func! myspacevim#before() abort
   " Update with :DeinUpdate or :SPUpdate
   " update / install others with :UpdateRemotePlugins
   let g:spacevim_custom_plugins = [
+            \ ['907th/vim-auto-save', {'merged' : 0}],
             \ ['wsdjeg/dein-ui.vim', {'merged' : 0}],
             \ ['w0rp/ale', {'merged' : 0}],
-            \ ['907th/vim-auto-save', {'merged' : 0}],
             \ ['Shougo/deoplete.nvim', {'merged' : 0}],
             \ ['fatih/vim-go', {'merged' : 0}],
             \ ['zchee/deoplete-go', {'merged' : 0}],
             \ ['jodosha/vim-godebug', {'merged' : 0}],
             \ ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
-            \ ['majutsushi/tagbar', {'merged' : 0}],
             \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['tpope/vim-fugitive', {'merged' : 0}],
@@ -81,9 +80,9 @@ func! myspacevim#before() abort
             \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
             \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}], 
-            \ ['preservim/tagbar', {'merged' : 0}], 
             \ ]
 
+            " \ ['preservim/tagbar', {'merged' : 0}], 
             " \ ['chengzeyi/fzf-preview.vim', {'merged' : 0}], 
             " \ ['yuki-ycino/fzf-preview.vim', {'merged' : 0}], 
             " \ ['neoclide/coc.nvim', {'merged' : 0}], 
@@ -161,40 +160,41 @@ func! myspacevim#after() abort
   " This instructs deoplete to use omni completion for Go files.
   call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
-  let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-      \ 'p:package',
-      \ 'i:imports:1',
-      \ 'c:constants',
-      \ 'v:variables',
-      \ 't:types',
-      \ 'n:interfaces',
-      \ 'w:fields',
-      \ 'e:embedded',
-      \ 'm:methods',
-      \ 'r:constructor',
-      \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-      \ 't' : 'ctype',
-      \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-      \ 'ctype' : 't',
-      \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-  \ }
+  " let g:tagbar_type_go = {
+  "   \ 'ctagstype' : 'go',
+  "   \ 'kinds'     : [
+  "     \ 'p:package',
+  "     \ 'i:imports:1',
+  "     \ 'c:constants',
+  "     \ 'v:variables',
+  "     \ 't:types',
+  "     \ 'n:interfaces',
+  "     \ 'w:fields',
+  "     \ 'e:embedded',
+  "     \ 'm:methods',
+  "     \ 'r:constructor',
+  "     \ 'f:functions'
+  "   \ ],
+  "   \ 'sro' : '.',
+  "   \ 'kind2scope' : {
+  "     \ 't' : 'ctype',
+  "     \ 'n' : 'ntype'
+  "   \ },
+  "   \ 'scope2kind' : {
+  "     \ 'ctype' : 't',
+  "     \ 'ntype' : 'n'
+  "   \ },
+  "   \ 'ctagsbin'  : 'gotags',
+  "   \ 'ctagsargs' : '-sort -silent'
+  " \ }
+  
+  " let g:tagbar_position = 'topleft vertical'
+  " autocmd FileType go nested :call tagbar#autoopen(0)
 
   nmap <C-p> :FZF<CR>
   au FileType go nmap <leader>t :FzfTags<CR>
   " au FileType go nmap <leader>t :GoDeclsDir<cr>
   "
-  let g:tagbar_position = 'topleft vertical'
-  autocmd FileType go nested :call tagbar#autoopen(0)
 endf
 
 function CustomMappings()
