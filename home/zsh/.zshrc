@@ -53,6 +53,7 @@ if ! zplug check; then
 fi
 zplug load
 
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -139,56 +140,6 @@ fi
 # export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-if type ag 1>/dev/null; then
-alias ag='ag --hidden --all-types --ignore-case --one-device --pager "less -R" '
-fi
-if type batcat 1>/dev/null; then
-  alias cat='batcat -p '
-fi
-alias d="docker "
-alias du="du -h --max-depth=1 "
-alias dc="docker-compose "
-alias fdh="fd --hidden --no-ignore "
-if type feh 1>/dev/null; then
-  # or use --zoom fill
-  alias fehfg='nohup feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/bgsrcpics &'
-fi
-if [ -f ~/.fzf.zsh ]; then
-  source ~/.fzf.zsh
-  alias preview="fzf --preview 'bat --color \"always\" {}'"
-  # add support for ctrl+o to open selected file in VS Code
-  export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
-  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
-fi
-alias grep="fzf -q "
-
-
-if type htop 1>/dev/null; then
-  alias top="sudo htop" # alias top and fix high sierra bug
-fi
-alias ka="k --namespace=argo "
-if type exa 1>/dev/null; then
-  alias l="exa -alFbgh"
-else
-  alias l="ls -CFh"
-fi
-alias la="exa -albgh"
-unalias ll
-alias lps="lpass show -x -G "
-if ! type pbcopy 1>/dev/null; then
-  alias pbcopy='xclip -selection clipboard'
-  alias pbpaste='xclip -selection clipboard -o'
-fi
-if type prettyping 1>/dev/null; then
-  alias ping='prettyping'
-fi
-alias psg="ps -a | grep $1"
-alias sudo="sudo -E "
-alias _="sudo "
-alias tl="tig log"
-alias ts="tig status"
-alias yrs="yarn run start &"
-alias pwd="pwd -L"
 
 # my life is complete now
 bindkey 'jj' vi-cmd-mode
@@ -219,7 +170,6 @@ source ~/.zplug/repos/junegunn/fzf/shell/completion.zsh
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# scm_breeze
 # https://github.com/scmbreeze/scm_breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
@@ -254,6 +204,9 @@ alias gss="git stash save "
 alias gsa="git stash apply "
 alias gsw="git show "
 
+unalias ll
+
 if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B Week %V")\n" | lolcat
 fi
+

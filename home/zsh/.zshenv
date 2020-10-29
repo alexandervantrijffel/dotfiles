@@ -6,8 +6,6 @@ if [ -d "/opt/node/bin" ]; then
   export PATH="$PATH:/opt/node/bin"
 fi
 
-
-
 if type nvim 1>/dev/null; then
   EDITOR=nvim
   VISUAL=nvim
@@ -16,3 +14,55 @@ else
   VISUAL=vi
 fi
 
+
+# aliases are here in .zshenv so that they are also available
+# in the vim command line
+if type ag 1>/dev/null; then
+alias ag='ag --hidden --all-types --ignore-case --one-device --pager "less -R" '
+fi
+if type batcat 1>/dev/null; then
+  alias cat='batcat -p '
+fi
+alias d="docker "
+alias du="du -h --max-depth=1 "
+alias dc="docker-compose "
+alias fdh="fd --hidden --no-ignore "
+if type feh 1>/dev/null; then
+  # or use --zoom fill
+  alias fehfg='nohup feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/bgsrcpics &'
+fi
+if [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+  alias preview="fzf --preview 'bat --color \"always\" {}'"
+  # add support for ctrl+o to open selected file in VS Code
+  export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
+fi
+alias grep="fzf -q "
+
+
+if type htop 1>/dev/null; then
+  alias top="sudo htop" # alias top and fix high sierra bug
+fi
+alias ka="k --namespace=argo "
+if type exa 1>/dev/null; then
+  alias l="exa -alFbgh"
+else
+  alias l="ls -CFh"
+fi
+alias la="exa -albgh"
+alias lps="lpass show -x -G "
+if ! type pbcopy 1>/dev/null; then
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+fi
+if type prettyping 1>/dev/null; then
+  alias ping='prettyping'
+fi
+alias psg="ps -a | grep $1"
+alias sudo="sudo -E "
+alias _="sudo "
+alias tl="tig log"
+alias ts="tig status"
+alias yrs="yarn run start &"
+alias pwd="pwd -L"
