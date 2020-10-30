@@ -58,8 +58,5 @@
 	autosetuprebase = always
 [mergetool "fugitive"]
 	cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
-# [mergetool "vimdiff"]
-# 	keepBackup = false
-#   cmd = nvim -f -c \"Gvdiff\" \"$MERGED\"
 [rerere]
 	enabled = true
