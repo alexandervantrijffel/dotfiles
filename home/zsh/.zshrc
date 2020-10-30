@@ -20,7 +20,6 @@ zplug "plugins/git", from:oh-my-zsh, nice:10
 zplug "plugins/golang", from:oh-my-zsh, nice:10
 zplug "plugins/httpie", from:oh-my-zsh
 zplug "plugins/rsync", from:oh-my-zsh
-zplug "plugins/shrink-path", from:oh-my-zsh
 zplug "plugins/ssh-agent", from:oh-my-zsh
 zplug "plugins/kubectl", from:oh-my-zsh, defer:2
 zplug "bonnefoa/kubectl-fzf", defer:3
@@ -51,8 +50,7 @@ if ! zplug check; then
       echo
   fi
 fi
-zplug load
-
+zplug load # --verbose
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -210,4 +208,3 @@ unalias ll
 if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B Week %V")\n" | lolcat
 fi
-

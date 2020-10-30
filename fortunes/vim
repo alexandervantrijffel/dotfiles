@@ -1,16 +1,23 @@
-VIM Multi replace by selecting the text to replace in visual mode, press CTRL+R for replace command. Press CTRL+R 0 in colon command mode to paste from register 0.
+VIM Multi replace by selecting the text to replace in visual mode
+Press CTRL+R for replace command. Press CTRL+R 0 in colon command mode to paste from register 0.
 %
-VIM Multi replace by searching for the full text to replace, enter cgn, repeat the . dot command multiple times to apply to multiple search results. Jump to next search result with gn, previous with gN. dgn for delete search result.
+VIM Multi replace by searching for the full text to replace,
+enter cgn, repeat the . dot command multiple times to apply to multiple search results.
+Jump to next search result with gn, previous with gN. dgn for delete search result.
 %
 VIM g; jump to last edited line       25G jump to linenumber 25
 %
-VIM ysMOTION" insert quotes around motion, ex ysaw", cs'" change surrounding quotes, ds delete surrounding punctuation mark
+VIM ysMOTION" insert quotes around motion,
+Example ysaw", cs'" change surrounding quotes, ds delete surrounding punctuation mark
 %
 VIM caw delete word under cursor and enter insert mode
 %
 VIM s substitute char and enter insert mode. S substitute line, enter insert mode
 %
-VIM F back find      T back till     ; repeat t/T/f/F     , reverse t/T/f/F
+VIM F back find
+T back till
+; repeat t/T/f/F
+, reverse t/T/f/F
 %
 VIM ~ toggle case of selection or cursor
 %
@@ -20,11 +27,13 @@ VIM ( ) begin / end of sentence     { } begin / end of paragraph
 %
 VIM H screen top     M screen middle     L screen bottom
 %
-VIM in filetree s v - open file in split vertical edit     s g - open file in split horizontally edit
+spaceVIM <space>w= balance windows
+<space>w+ toggle window layout
 %
-spaceVIM <space>w= balance windows     <space>w+ toggle window layout
-%
-VIM <leader><leader>s quick jump to character in document, <leader><leader>w jump to word, <leader><leader>b jump backwards to word <leader><leader>e jump to word end (with vim-easymotion)
+VIM <leader><leader>s quick jump to character in document,
+<leader><leader>w jump to word,
+<leader><leader>b jump backwards to word
+<leader><leader>e jump to word end (with vim-easymotion)
 %
 VIM create new file and start editing immediately with w filepath
 %
@@ -32,7 +41,9 @@ VIM GoInfo show definition of go method OR <C-K> show Go type definition
 %
 VIM In insert mode, CTRL+W for delete last word, CTRL+h for delete last character
 %
-VIM merge conflicts with vim diff run git mergetool, :diffg LO , :diffg RE , :diffg BA , ]c next conflict , [c previous conflict https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool
+VIM merge conflicts with vim diff run git mergetool,
+:diffg LO , :diffg RE , :diffg BA ,
+]c next conflict , [c previous conflict https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool
 %
 VIM :0Glog to view history of current file. :copen to open earlier version of file. :G for git status, stage/unstage/ignore file. :Gblame (with vim-fugitive)
 %
@@ -47,5 +58,7 @@ VIM <C-g> show full path to current file
 VIM 25 enter jump 25 lines down
 %
 VIM vimfiler file tree r rename file, N new file, K new directory, mm move file, dd delete file
+s v - open file in split vertical edit
+s g - open file in split horizontally edit
 %
 VIM % goto matching ( { ^
