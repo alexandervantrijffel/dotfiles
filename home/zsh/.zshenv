@@ -39,7 +39,6 @@ if [ -f ~/.fzf.zsh ]; then
   export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
   export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
 fi
-alias grep="fzf -q "
 alias fq="fzf -q "
 
 if type htop 1>/dev/null; then

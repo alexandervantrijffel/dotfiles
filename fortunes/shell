@@ -17,3 +17,5 @@ CTRL-T find file (with fzf)
 list open network ports with processes: sudo ss -t -p 
 %
 pstree hierarchical tree of processes
+%
+sudoedit for editing protected files
