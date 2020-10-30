@@ -128,7 +128,7 @@ func! myspacevim#before() abort
   " git clone --config transfer.fsckObjects=false https://github.com/mileszs/ack.vim.git ~/.cache/vimfiles/repos/github.com/mileszs/ack.vim
 
   if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
+    let g:ackprg = 'ag --vimgrep --hidden -p ~/.gitignore '
   endif
 
   let g:go_fmt_command = "goimports"
