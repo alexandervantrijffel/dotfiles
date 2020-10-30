@@ -24,6 +24,7 @@ if type batcat 1>/dev/null; then
   alias cat='batcat -p '
 fi
 alias d="docker "
+alias df="pydf"
 alias du="du -h --max-depth=1 "
 alias dc="docker-compose "
 alias fdh="fd --hidden --no-ignore "
@@ -39,7 +40,7 @@ if [ -f ~/.fzf.zsh ]; then
   export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
 fi
 alias grep="fzf -q "
-
+alias fq="fzf -q "
 
 if type htop 1>/dev/null; then
   alias top="sudo htop" # alias top and fix high sierra bug
