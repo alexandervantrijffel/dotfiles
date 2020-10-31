@@ -199,7 +199,6 @@ func! myspacevim#after() abort
 endf
 
 function CustomMappings()
-
   nmap <leader>a :Ack 
 
   au FileType javascript nmap <A-f> :ALEFix<cr>:w<cr>

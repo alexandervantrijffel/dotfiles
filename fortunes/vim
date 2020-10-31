@@ -39,8 +39,6 @@ VIM create new file and start editing immediately with w filepath
 %
 VIM GoInfo show definition of go method OR <C-K> show Go type definition
 %
-VIM In insert mode, CTRL+W for delete last word, CTRL+h for delete last character
-%
 VIM merge conflicts with vim diff run git mergetool,
 :diffg LO , :diffg RE , :diffg BA ,
 ]c next conflict , [c previous conflict https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool
@@ -62,3 +60,5 @@ s v - open file in split vertical edit
 s g - open file in split horizontally edit
 %
 VIM % goto matching ( { ^
+%
+:lcd %:p:h set working directory of current window to the path of the opened file (%)
