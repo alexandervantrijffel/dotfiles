@@ -6,32 +6,33 @@ source ~/.zplug/init.zsh
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh", nice:-1
 # zplug "b4b4r07/enhancd", , use:init.sh
 # show aliases hints if abbrevations are available for typed commands
-zplug "denilsonsa/prettyping", as:command, use:"prettyping"
-zplug "djui/alias-tips"
+zplug "denilsonsa/prettyping", as:command, use:"prettyping", defer:3
+zplug "djui/alias-tips", defer:3
 zplug "g-plane/zsh-yarn-autocompletions"
 zplug "junegunn/fzf", as:command, hook-build:"./install --bin", use:"bin/{fzf-tmux,fzf}"
 #zplug "ndbroadbent/scm_breeze", hook-build:"$ZPLUG_HOME/repos/ndbroadbent/scm_breeze/install.sh"
 # alternative for exa, doesn't work
 # zplug "Peltoche/lsd", as:command
 zplug "plugins/cp", from:oh-my-zsh
-zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/docker-compose", from:oh-my-zsh
+zplug "plugins/docker", from:oh-my-zsh, defer:3
+zplug "plugins/docker-compose", from:oh-my-zsh, defer:3
 zplug "plugins/git", from:oh-my-zsh, nice:10
-zplug "plugins/golang", from:oh-my-zsh, nice:10
-zplug "plugins/httpie", from:oh-my-zsh
-zplug "plugins/rsync", from:oh-my-zsh
+zplug "plugins/golang", from:oh-my-zsh, nice:10, defer:3
+zplug "plugins/httpie", from:oh-my-zsh, defer:3
+zplug "plugins/rsync", from:oh-my-zsh, defer:3
 zplug "plugins/ssh-agent", from:oh-my-zsh
 zplug "plugins/kubectl", from:oh-my-zsh, defer:2
 zplug "bonnefoa/kubectl-fzf", defer:3
-zplug "plugins/zsh_reload", from:oh-my-zsh
+zplug "plugins/zsh_reload", from:oh-my-zsh, defer:3
 zplug "romkatv/powerlevel10k", as:theme, depth:1
 # zplug "raylee/tldr", as:command, use:"tldr"
 zplug "rupa/z", use:z.sh
 # export _Z_DATA=$ZPLUG_REPOS/rupa/z/data
-zplug "sharkdp/bat", as:command, from:gh-r, rename-to:bat
-zplug "stedolan/jq", as:command, from:gh-r
-zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd
-zplug "so-fancy/diff-so-fancy", as:command
+# zplug "sharkdp/bat", as:command, from:gh-r, rename-to:bat
+zplug "softmoth/zsh-vim-mode", defer:3
+zplug "stedolan/jq", as:command, from:gh-r, defer: 3
+zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer: 3
+zplug "so-fancy/diff-so-fancy", as:command, defer: 3
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions", use:src
 # display red dots whilst waiting for completion.
