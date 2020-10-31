@@ -157,7 +157,6 @@ fi
 
 (( ! ${+functions[p10k]} )) || p10k finalize
 
-
 # fzf
 source ~/.zplug/repos/junegunn/fzf/shell/key-bindings.zsh
 source ~/.zplug/repos/junegunn/fzf/shell/completion.zsh
@@ -171,6 +170,7 @@ alias .v="cd $DOTFILES && nvim"
 
 alias be.="z ps-737migration-be"
 alias be.v="z ps-737migration-be && nvim"
+alias be.w="z ps-737migration-be && cd workspace"
 
 alias fe.="z ps-licenseadmin-fe"
 alias fe.v="z ps-licenseadmin-fe && nvim"
