@@ -168,6 +168,12 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias .="cd $DOTFILES"
 alias .v="cd $DOTFILES && nvim"
 
+alias be.="z ps-737migration-be"
+alias be.v="z ps-737migration-be && nvim"
+
+alias fe.="z ps-licenseadmin-fe"
+alias fe.v="z ps-licenseadmin-fe && nvim"
+
 # https://github.com/scmbreeze/scm_breeze
 # [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
