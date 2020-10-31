@@ -10,7 +10,7 @@ zplug "denilsonsa/prettyping", as:command, use:"prettyping"
 zplug "djui/alias-tips"
 zplug "g-plane/zsh-yarn-autocompletions"
 zplug "junegunn/fzf", as:command, hook-build:"./install --bin", use:"bin/{fzf-tmux,fzf}"
-zplug "ndbroadbent/scm_breeze", hook-build:"$ZPLUG_HOME/repos/ndbroadbent/scm_breeze/install.sh"
+#zplug "ndbroadbent/scm_breeze", hook-build:"$ZPLUG_HOME/repos/ndbroadbent/scm_breeze/install.sh"
 # alternative for exa, doesn't work
 # zplug "Peltoche/lsd", as:command
 zplug "plugins/cp", from:oh-my-zsh
@@ -34,7 +34,7 @@ zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd
 zplug "so-fancy/diff-so-fancy", as:command
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions", use:src
-# Uncomment the following line to display red dots whilst waiting for completion.
+# display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 # hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -169,9 +169,13 @@ alias ag='ag -p ~/.gitignore --hidden '
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# https://github.com/scmbreeze/scm_breeze
-[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+alias .="cd $DOTFILES"
+alias .v="cd $DOTFILES && nvim"
 
+# https://github.com/scmbreeze/scm_breeze
+# [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+
+alias gaa="git add --all ."
 alias gap="git add . -p && git status"
 alias gba="git branch -a "
 alias gc="git checkout "
