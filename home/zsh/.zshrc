@@ -135,10 +135,6 @@ if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi
 
-# export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
-
 # my life is complete now
 bindkey 'jj' vi-cmd-mode
 
@@ -172,43 +168,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias .="cd $DOTFILES"
 alias .v="cd $DOTFILES && nvim"
 
-# https://github.com/scmbreeze/scm_breeze
-# [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
-
-alias gaa="git add --all ."
-alias gap="git add . -p && git status"
-alias gba="git branch -a "
-alias gc="git checkout "
-alias gc-="git checkout -"
-alias gca="git commit --amend --no-edit "
-alias gcb="git checkout -b "
-alias gcp="git cherry-pick "
-alias gcm="git commit -m  "
-alias gclean="git checkout -- . && git clean -fd ."
-alias gd="git diff --word-diff -w "
-alias gds="gd --staged --word-diff | git apply --cached --ignore-whitespace --ignore-space-change --unidiff-zero -"
-alias gds="git diff --staged --word-diff -w"
-alias gl="git log --max-count=500 --stat --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
-alias gls="git log --max-count=500 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
-alias glp="git log -p "
-alias gma="git merge --abort "
-alias gmc="git merge --continue "
-alias gmnc="git merge --no-commit --no-ff "
-alias gfa="git fetch --all"
-alias gp="git push"
-alias gpu="git push -u origin \$(git branch | grep \* | cut -d ' ' -f2)"
-alias gpf='echo no gpf please'
-alias gpforce="git push --force"
-alias gpff="git pull --ff-only"
-alias gra="git rebase --abort "
-alias grm="git rebase master "
-alias grc="git rebase --continue "
-alias gss="git stash save "
-alias gsa="git stash apply "
-alias gsw="git show "
 
 unalias ll
 
 if type fortune 1>/dev/null; then
-  fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B Week %V")\n" 
+  fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B %R Week %V")\n" 
 fi
