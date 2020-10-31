@@ -1,2 +1,2 @@
-#!/bin/bash
-/data/dev/github.com/qutebrowser-latest/.venv/bin/python3 -m qutebrowser "$@"
+#!/bin/sh
+/opt/fromgit/qutebrowser-latest/.venv/bin/python3 -m qutebrowser "$@"
