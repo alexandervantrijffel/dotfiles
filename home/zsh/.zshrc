@@ -206,5 +206,5 @@ alias gsw="git show "
 unalias ll
 
 if type fortune 1>/dev/null; then
-  fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B Week %V")\n" | lolcat
+  fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B Week %V")\n" 
 fi
