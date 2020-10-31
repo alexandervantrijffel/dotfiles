@@ -37,16 +37,12 @@
 [[layers]]
   name = "colorscheme"
 
-[[custom_plugins]]
-  name = "alexandervantrijffel/vim-material"
-  merged = 0
-
-[[custom_plugins]]
-  name = "mhartington/oceanic-next"
-  merged = 0
+# [[custom_plugins]]
+#   name = "alexandervantrijffel/vim-material"
+#   merged = 0
 
 # [[custom_plugins]]
-#   name = "ntpeters/base16-materialtheme-scheme"
+#   name = "mhartington/oceanic-next"
 #   merged = 0
 
 [[layers]]

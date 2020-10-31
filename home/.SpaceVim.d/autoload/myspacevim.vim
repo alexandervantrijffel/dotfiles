@@ -24,11 +24,11 @@ func! myspacevim#before() abort
   let g:auto_save_silent = 1
 
   " update with :OmniSharpInstall
-  let g:OmniSharp_server_stdio = 1
-  autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
-  set completeopt+=preview
-  autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-  autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+  " let g:OmniSharp_server_stdio = 1
+  " autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+  " set completeopt+=preview
+  " autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+  " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
   " autocomplete
   let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
@@ -62,25 +62,25 @@ func! myspacevim#before() abort
   " update / install others with :UpdateRemotePlugins
   let g:spacevim_custom_plugins = [
             \ ['907th/vim-auto-save', {'merged' : 0}],
-            \ ['wsdjeg/dein-ui.vim', {'merged' : 0}],
             \ ['w0rp/ale', {'merged' : 0}],
-            \ ['Shougo/deoplete.nvim', {'merged' : 0}],
             \ ['fatih/vim-go', {'merged' : 0}],
-            \ ['zchee/deoplete-go', {'merged' : 0}],
-            \ ['jodosha/vim-godebug', {'merged' : 0}],
+            \ ['Shougo/deoplete.nvim', {'merged' : 0}],
+            \ ['deoplete-plugins/deoplete-go', {'merged' : 0}],
             \ ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
             \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['tpope/vim-fugitive', {'merged' : 0}],
             \ ['tpope/vim-commentary', {'merged' : 0}],
             \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
-            \ ['prabirshrestha/asyncomplete.vim', {'merged' : 0}],
-            \ ['yami-beta/asyncomplete-omni.vim', {'merged' : 0}],
             \ ['chrisbra/Colorizer', {'merged' : 0}],
-            \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
             \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}], 
             \ ]
+
+            " \ ['prabirshrestha/asyncomplete.vim', {'merged' : 0}],
+            " \ ['yami-beta/asyncomplete-omni.vim', {'merged' : 0}],
+            " \ ['wsdjeg/dein-ui.vim', {'merged' : 0}],
+            " \ ['jodosha/vim-godebug', {'merged' : 0}],
 
             " \ ['preservim/tagbar', {'merged' : 0}], 
             " \ ['chengzeyi/fzf-preview.vim', {'merged' : 0}], 
