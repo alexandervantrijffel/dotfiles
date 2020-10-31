@@ -39,7 +39,7 @@ set $alt Mod1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator 
+bindsym $mod+Return exec terminator
 
 bindsym $mod+Shift+e exec --no-startup-id i3-msg exec /opt/fromgit/rofimoji/picker/rofimoji.py
 

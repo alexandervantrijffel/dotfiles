@@ -148,8 +148,10 @@ func! myspacevim#before() abort
   " show other . files
   let g:vimfiler_ignore_pattern = '^\%(\.git\|\.DS_Store\)$'
 
-  abbr ennil if err != nil { return 
-  abbr enil if err == nil { 
+  abbr ennil if err != nil {  
+  abbr enil if err == nil {  
+
+  :call SetSpacevimWindowJkl()
 
   " close buffer with \bd or :Bclose
   :call InstallBclose()
@@ -381,6 +383,58 @@ function CustomMappings()
   noremap x "ex
   nmap <C-p>p "ep
   nmap <C-p>P "eP
+endfunction
+
+function SetSpacevimWindowJkl()
+  call SpaceVim#mapping#space#def('nnoremap', ['w', 'j'], 'wincmd h',
+        \ ['window-left',
+        \ [
+        \ '[SPC w j] is to jump to the left window',
+        \ '',
+        \ 'Definition: ' . s:file . ':' . s:lnum,
+        \ ]
+        \ ]
+        \ , 1)
+  let s:lnum = expand('<slnum>') + s:funcbeginline
+  call SpaceVim#mapping#space#def('nnoremap', ['w', 'k'], 'wincmd j',
+        \ ['window-down',
+        \ [
+        \ '[SPC w k] is to jump to the window below current windows',
+        \ '',
+        \ 'Definition: ' . s:file . ':' . s:lnum,
+        \ ]
+        \ ]
+        \ , 1)
+  let s:lnum = expand('<slnum>') + s:funcbeginline
+  call SpaceVim#mapping#space#def('nnoremap', ['w', 'x'], 'wincmd x',
+        \ ['window-switch-placement',
+        \ [
+        \ '[SPC w x] is to jump to exchange current window with next one.',
+        \ '',
+        \ 'Definition: ' . s:file . ':' . s:lnum,
+        \ ]
+        \ ]
+        \ , 1)
+  let s:lnum = expand('<slnum>') + s:funcbeginline
+  call SpaceVim#mapping#space#def('nnoremap', ['w', 'l'], 'wincmd k',
+        \ ['window-up',
+        \ [
+        \ '[SPC w l] is to jump to the window above current windows',
+        \ '',
+        \ 'Definition: ' . s:file . ':' . s:lnum,
+        \ ]
+        \ ]
+        \ , 1)
+  let s:lnum = expand('<slnum>') + s:funcbeginline
+  call SpaceVim#mapping#space#def('nnoremap', ['w', ';'], 'wincmd l',
+        \ ['window-right',
+        \ [
+        \ '[SPC w ;] is to jump to the right window',
+        \ '',
+        \ 'Definition: ' . s:file . ':' . s:lnum,
+        \ ]
+        \ ]
+        \ , 1)
 endfunction
 
 function InstallBclose()
