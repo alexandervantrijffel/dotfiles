@@ -362,7 +362,6 @@ function CustomMappings()
   nnoremap K :bn<cr>
   nnoremap L :bp<cr>
 
-
   " yank to clipboard
   vnoremap <C-c> "+y
   " copy line to clipboard
