@@ -75,6 +75,11 @@ func! myspacevim#before() abort
             \ ['chrisbra/Colorizer', {'merged' : 0}],
             \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
             \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}], 
+            \ ['yuezk/vim-js', {'merged' : 0}],
+            \ ['pangloss/vim-javascript', {'merged' : 0}],
+            \ ['peitalin/vim-jsx-typescript', {'merged' : 0}],
+            \ ['mxw/vim-jsx', {'merged' : 0}],
+            \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
             \ ]
 
             " \ ['prabirshrestha/asyncomplete.vim', {'merged' : 0}],
@@ -87,11 +92,6 @@ func! myspacevim#before() abort
             " \ ['yuki-ycino/fzf-preview.vim', {'merged' : 0}], 
             " \ ['neoclide/coc.nvim', {'merged' : 0}], 
 
-            " \ ['peitalin/vim-jsx-typescript', {'merged' : 0}],
-            " \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
-            " \ ['yuezk/vim-js', {'merged' : 0}],
-            " \ ['mxw/vim-jsx', {'merged' : 0}],
-            " \ ['pangloss/vim-javascript', {'merged' : 0}],
 
   " run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest neovim' for this
   let g:ale_linters = {
@@ -99,8 +99,9 @@ func! myspacevim#before() abort
             \   'typescript': ['standard'],
             \   'typescriptreact': ['standard'],
             \   'go': ['golangci-lint'],
-            \   'cs': ['OmniSharp'],
             \}
+
+  " \   'cs': ['OmniSharp'],
   " \   'go': ['gopls'],
   let g:ale_fixers = {
             \    'javascript': ['prettier-standard'],
