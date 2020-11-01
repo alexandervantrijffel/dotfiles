@@ -43,6 +43,7 @@ if [ -f ~/.fzf.zsh ]; then
 fi
 alias fq="fzf -q "
 
+
 if type htop 1>/dev/null; then
   alias top="sudo htop" # alias top and fix high sierra bug
 fi

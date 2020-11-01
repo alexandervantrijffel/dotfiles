@@ -3,7 +3,7 @@
 
 source ~/.zplug/init.zsh
 
-zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh", nice:-1
+zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 # zplug "b4b4r07/enhancd", , use:init.sh
 # show aliases hints if abbrevations are available for typed commands
 zplug "denilsonsa/prettyping", as:command, use:"prettyping", defer:3
@@ -16,8 +16,8 @@ zplug "junegunn/fzf", as:command, hook-build:"./install --bin", use:"bin/{fzf-tm
 zplug "plugins/cp", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh, defer:3
 zplug "plugins/docker-compose", from:oh-my-zsh, defer:3
-zplug "plugins/git", from:oh-my-zsh, nice:10
-zplug "plugins/golang", from:oh-my-zsh, nice:10, defer:3
+zplug "plugins/git", from:oh-my-zsh, defer:3
+zplug "plugins/golang", from:oh-my-zsh, defer:3
 zplug "plugins/httpie", from:oh-my-zsh, defer:3
 zplug "plugins/rsync", from:oh-my-zsh, defer:3
 zplug "plugins/ssh-agent", from:oh-my-zsh
@@ -26,22 +26,22 @@ zplug "bonnefoa/kubectl-fzf", defer:3
 zplug "plugins/zsh_reload", from:oh-my-zsh, defer:3
 zplug "romkatv/powerlevel10k", as:theme, depth:1
 # zplug "raylee/tldr", as:command, use:"tldr"
-zplug "rupa/z", use:z.sh
+zplug "rupa/z", use:z.sh, defer:3
 # export _Z_DATA=$ZPLUG_REPOS/rupa/z/data
 # zplug "sharkdp/bat", as:command, from:gh-r, rename-to:bat
 zplug "softmoth/zsh-vim-mode", defer:3
-zplug "stedolan/jq", as:command, from:gh-r, defer: 3
-zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer: 3
-zplug "so-fancy/diff-so-fancy", as:command, defer: 3
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-completions", use:src
+zplug "stedolan/jq", as:command, from:gh-r, defer:3
+zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer:3
+zplug "so-fancy/diff-so-fancy", as:command, defer:3
+zplug "zsh-users/zsh-autosuggestions", defer:3
+zplug "zsh-users/zsh-completions", use:src, defer:3
 # display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 # hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
-zplug "zsh-users/zsh-history-substring-search", nice:10
+zplug "zsh-users/zsh-syntax-highlighting", defer:3
+zplug "zsh-users/zsh-history-substring-search", defer:3
 
 if ! zplug check; then
   printf "Install? [y/N]: "
@@ -164,6 +164,9 @@ source ~/.zplug/repos/junegunn/fzf/shell/completion.zsh
 alias ag='ag -p ~/.gitignore --hidden '
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# use fzf for completion anywhere after pressing TAB
+source /opt/fromgit/fzf-tab/fzf-tab.plugin.zsh
 
 alias .="cd $DOTFILES"
 alias .v="cd $DOTFILES && nvim"
