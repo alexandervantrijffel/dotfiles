@@ -74,7 +74,6 @@ bindkey "^F" forward-word
 # make sure the autosuggestions color differs from the solarized dark background color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
-
 if [ "$(uname)" = "Darwin" ]; then
   VSCODE='/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
   if [ -d "$VSCODE" ]; then
@@ -90,8 +89,6 @@ else
   alias open='xdg-open'
   alias python=python3
   
-  . z
-
   # caps lock = control key
   # re-run this when plugging in another keyboard
   setxkbmap -option ctrl:nocaps

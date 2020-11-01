@@ -26,3 +26,5 @@ find . -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$(pwd)/{} pul
 
 cd ~/.SpaceVim
 git pull
+
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt` /usr/local/bin/kubectl
