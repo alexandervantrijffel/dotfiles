@@ -60,13 +60,15 @@ func! myspacevim#before() abort
   " based on dein.vim plugin manager
   " Update with :DeinUpdate or :SPUpdate
   " update / install others with :UpdateRemotePlugins
+  "
+  " neovim/nvim-lspconfig needs neovim >= 0.5.5
+  "
   let g:spacevim_custom_plugins = [
             \ ['907th/vim-auto-save', {'merged' : 0}],
-            \ ['w0rp/ale', {'merged' : 0}],
+            \ ['dense-analysis/ale', {'merged' : 0}],
             \ ['fatih/vim-go', {'merged' : 0}],
             \ ['Shougo/deoplete.nvim', {'merged' : 0}],
             \ ['deoplete-plugins/deoplete-go', {'merged' : 0}],
-            \ ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
             \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['tpope/vim-fugitive', {'merged' : 0}],
@@ -81,6 +83,8 @@ func! myspacevim#before() abort
             \ ['mxw/vim-jsx', {'merged' : 0}],
             \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
             \ ]
+            " \ ['Shougo/deoplete-lsp', {'merged' : 0}],
+            " ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
 
             " \ ['prabirshrestha/asyncomplete.vim', {'merged' : 0}],
             " \ ['yami-beta/asyncomplete-omni.vim', {'merged' : 0}],
@@ -98,15 +102,14 @@ func! myspacevim#before() abort
             \   'javascript': ['standard'],
             \   'typescript': ['standard'],
             \   'typescriptreact': ['standard'],
-            \   'go': ['golangci-lint'],
+            \   'go': ['go build' , 'golangci-lint'],
             \}
 
-  " \   'cs': ['OmniSharp'],
-  " \   'go': ['gopls'],
   let g:ale_fixers = {
             \    'javascript': ['prettier-standard'],
             \    'typescript': ['prettier-standard'],
             \    'typescriptreact': ['prettier-standard'] }
+  " \   'cs': ['OmniSharp'],
   let g:ale_list_window_size = 10
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
   let g:ale_completion_enabled = 1
