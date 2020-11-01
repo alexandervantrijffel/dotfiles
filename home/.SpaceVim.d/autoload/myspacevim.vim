@@ -155,10 +155,10 @@ func! myspacevim#before() abort
   abbr ennil if err != nil {  
   abbr enil if err == nil {  
 
-  :call SetSpacevimWindowJkl()
-
   " close buffer with \bd or :Bclose
   :call InstallBclose()
+
+  :call SetSpacevimWindowJkl()
 endf
 
 func! myspacevim#after() abort
@@ -390,6 +390,8 @@ function CustomMappings()
 endfunction
 
 function SetSpacevimWindowJkl()
+  let s:funcbeginline =  expand('<slnum>') + 1
+  let s:lnum = expand('<slnum>') + s:funcbeginline
   call SpaceVim#mapping#space#def('nnoremap', ['w', 'j'], 'wincmd h',
         \ ['window-left',
         \ [
