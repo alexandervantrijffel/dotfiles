@@ -42,6 +42,7 @@ COMPLETION_WAITING_DOTS="true"
 HYPHEN_INSENSITIVE="true"
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "zsh-users/zsh-history-substring-search", defer:3
+zplug "pjvds/zsh-cwd"
 
 if ! zplug check; then
   printf "Install? [y/N]: "
@@ -215,3 +216,6 @@ unalias ll
 if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B %R Week %V")\n" 
 fi
+
+# cd into working directory
+cwd
