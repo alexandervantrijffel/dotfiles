@@ -175,6 +175,9 @@ alias be.w="z ps-737migration-be && cd workspace"
 alias fe.="z ps-licenseadmin-fe"
 alias fe.v="z ps-licenseadmin-fe && nvim"
 
+alias zetl="z etlapi"
+alias zdfe="z frontend"
+
 # https://github.com/scmbreeze/scm_breeze
 # [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
