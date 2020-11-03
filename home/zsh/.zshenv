@@ -6,13 +6,8 @@ if [ -d "/opt/node/bin" ]; then
   export PATH="$PATH:/opt/node/bin"
 fi
 
-if type nvim 1>/dev/null; then
-  EDITOR=nvim
-  VISUAL=nvim
-else
-  EDITOR=vi
-  VISUAL=vi
-fi
+export EDITOR=nvim
+export VISUAL=nvim
 
 export LC_ALL=en_US.UTF-8
 export LC_TIME=en_GB
@@ -67,7 +62,7 @@ alias rm="rm -rf "
 alias sudo="sudo -E "
 alias _="sudo "
 
-alias t="terminator --working-directory=$(pwd)"
+alias t="terminator --working-directory=\$(pwd)"
 alias tl="tig log"
 alias ts="tig status"
 alias yrs="yarn run start &"
