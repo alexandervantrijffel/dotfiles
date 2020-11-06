@@ -33,7 +33,7 @@ func! myspacevim#before() abort
   " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
   " autocomplete
-  let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js"
+  let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.ts"
 
   au CursorHold * checktime    
 
