@@ -169,12 +169,12 @@ source /opt/fromgit/fzf-tab/fzf-tab.plugin.zsh
 alias .="cd $DOTFILES"
 alias .v="cd $DOTFILES && nvim"
 
-alias be.="z ps-737migration-be"
-alias be.v="z ps-737migration-be && nvim"
-alias be.w="z ps-737migration-be && cd workspace"
+alias zfbe="z ps-737migration-be"
+alias zfbev="z ps-737migration-be && nvim"
+alias zfbew="z ps-737migration-be && cd workspace"
 
-alias fe.="z ps-licenseadmin-fe"
-alias fe.v="z ps-licenseadmin-fe && nvim"
+alias zffe="z ps-licenseadmin-fe"
+alias zffev="z ps-licenseadmin-fe && nvim"
 
 alias zdetl="z etlapi"
 alias zdfe="z frontend"
