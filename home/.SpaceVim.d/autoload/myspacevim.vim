@@ -6,6 +6,8 @@ func! myspacevim#before() abort
 
   " this is necessary for the material theme to show correctly
   let g:spacevim_enable_guicolors = 1
+  let g:spacevim_disabled_plugins = ['vim-startify']
+  au VimEnter * call OnVimEnter()
 
   set wrap
   set ignorecase
@@ -159,6 +161,7 @@ func! myspacevim#before() abort
   :call InstallBclose()
 
   :call SetSpacevimWindowJkl()
+
 endf
 
 func! myspacevim#after() abort
@@ -167,42 +170,17 @@ func! myspacevim#after() abort
   " This instructs deoplete to use omni completion for Go files.
   call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
-  " let g:tagbar_type_go = {
-  "   \ 'ctagstype' : 'go',
-  "   \ 'kinds'     : [
-  "     \ 'p:package',
-  "     \ 'i:imports:1',
-  "     \ 'c:constants',
-  "     \ 'v:variables',
-  "     \ 't:types',
-  "     \ 'n:interfaces',
-  "     \ 'w:fields',
-  "     \ 'e:embedded',
-  "     \ 'm:methods',
-  "     \ 'r:constructor',
-  "     \ 'f:functions'
-  "   \ ],
-  "   \ 'sro' : '.',
-  "   \ 'kind2scope' : {
-  "     \ 't' : 'ctype',
-  "     \ 'n' : 'ntype'
-  "   \ },
-  "   \ 'scope2kind' : {
-  "     \ 'ctype' : 't',
-  "     \ 'ntype' : 'n'
-  "   \ },
-  "   \ 'ctagsbin'  : 'gotags',
-  "   \ 'ctagsargs' : '-sort -silent'
-  " \ }
-  
   " let g:tagbar_position = 'topleft vertical'
   " autocmd FileType go nested :call tagbar#autoopen(0)
 
-  nmap <C-p> :FZF<CR>
-  au FileType go nmap <leader>t :FzfTags<CR>
-  " au FileType go nmap <leader>t :GoDeclsDir<cr>
-  "
 endf
+
+function OnVimEnter()
+    if @% == ""
+        " No filename for current buffer
+        :FzfFiles
+    endif
+endfunction
 
 function CustomMappings()
   nmap <leader>a :Ack 
@@ -386,6 +364,9 @@ function CustomMappings()
   noremap x "ex
   nmap <C-p>p "ep
   nmap <C-p>P "eP
+
+  nmap <C-p> :FZF<CR>
+  au FileType go nmap <leader>t :FzfTags<CR>
 endfunction
 
 function SetSpacevimWindowJkl()
