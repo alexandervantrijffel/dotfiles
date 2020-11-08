@@ -182,8 +182,9 @@ alias zdfe="z frontend"
 # https://github.com/scmbreeze/scm_breeze
 # [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
+alias gb="git branch | grep \* | cut -d ' ' -f2"
+
 alias gaa="git add --all ."
-alias gap="git add . -p && git status"
 alias gba="git branch -a "
 alias gc-="git checkout -"
 alias gca="git commit --amend --no-edit "
@@ -203,18 +204,22 @@ alias gmc="git merge --continue "
 alias gmnc="git merge --no-commit --no-ff "
 alias gfa="git fetch --all"
 alias gp="git push"
-alias gpu="git push -u origin \$(git branch | grep \* | cut -d ' ' -f2)"
+alias gpu="git push -u origin \$(gb)"
 alias gpf='echo no gpf please'
 alias gp!="git push --force"
 alias gpff="git pull --ff-only"
 alias gra="git rebase --abort "
 alias grm="git rebase master "
 alias grc="git rebase --continue "
+alias gs="git fetch origin \$(gb) && git status"
+alias gap="git add . -p && gs"
 alias gss="git stash save "
 alias gsa="git stash apply "
 alias gsw="git show "
 
 unalias ll
+
+alias ts="git fetch origin \$(gb) && tig status"
 
 if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B %R Week %V")\n" 
