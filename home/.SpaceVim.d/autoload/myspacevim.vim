@@ -117,7 +117,7 @@ func! myspacevim#before() abort
   let g:ale_completion_enabled = 1
   let g:ale_lint_on_save = 1
   let g:ale_fix_on_save = 1
-  let g:ale_go_golangci_lint_options = '-E goimports -D typecheck'
+  let g:ale_go_golangci_lint_options = '-E goimports -D typecheck --fix --fast'
 
   " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries
@@ -138,6 +138,9 @@ func! myspacevim#before() abort
   endif
 
   let g:go_fmt_command = "goimports"
+  let g:go_fmt_options = {
+    \ 'goimports': '-w',
+    \ }
   let g:go_fmt_autosave = 0
   let g:go_info_mode='gopls'
   let g:go_auto_type_info = 1
@@ -160,8 +163,6 @@ func! myspacevim#before() abort
   " close buffer with \bd or :Bclose
   :call InstallBclose()
 
-  :call SetSpacevimWindowJkl()
-
 endf
 
 func! myspacevim#after() abort
@@ -173,6 +174,7 @@ func! myspacevim#after() abort
   " let g:tagbar_position = 'topleft vertical'
   " autocmd FileType go nested :call tagbar#autoopen(0)
 
+  :call SetSpacevimWindowJkl()
 endf
 
 function OnVimEnter()
@@ -185,29 +187,14 @@ endfunction
 function CustomMappings()
   nmap <leader>a :Ack 
 
-  au FileType javascript nmap <A-f> :ALEFix<cr>:w<cr>
+  au FileType javascript nmap <A-f> :ALEFix<cr>
 
   " Run this for go:
   " go get -u github.com/sourcegraph/go-langserver
   au FileType go nmap <leader>r :GoRename<cr>
-  au FileType go nmap <leader>i :GoInfo<cr>
   au FileType go nmap <F12> :GoReferrers<cr>
-
-  au FileType go nmap <A-f> :GoFmt<cr>:w<cr>:GoBuild<cr>
-
-  au FileType go nmap gi :GoInfo<cr>
-  au FileType javascript nmap <A-f> :ALEFix<cr>:w<cr>
-
-  " Run this for go:
-  " go get -u github.com/sourcegraph/go-langserver
-  au FileType go nmap <leader>r :GoRename<cr>
-  au FileType go nmap <leader>t :GoDeclsDir<cr>
-  au FileType go nmap <leader>i :GoInfo<cr>
-  au FileType go nmap <leader><F12> :GoReferrers<cr>
-
-  au FileType go nmap <A-f> :GoFmt<cr>:w<cr>:GoBuild<cr>
-
-  au FileType go nmap gi :GoInfo<cr>
+  au FileType go nmap <leader>t :FzfTags<cr>
+  au FileType go nmap <A-f> :GoFmt<cr>:GoBuild<cr>
 
   " move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
   inoremap <A-$> <C-o>$
@@ -366,7 +353,6 @@ function CustomMappings()
   nmap <C-p>P "eP
 
   nmap <C-p> :FZF<CR>
-  au FileType go nmap <leader>t :FzfTags<CR>
 endfunction
 
 function SetSpacevimWindowJkl()
@@ -386,16 +372,6 @@ function SetSpacevimWindowJkl()
         \ ['window-down',
         \ [
         \ '[SPC w k] is to jump to the window below current windows',
-        \ '',
-        \ 'Definition: ' . s:file . ':' . s:lnum,
-        \ ]
-        \ ]
-        \ , 1)
-  let s:lnum = expand('<slnum>') + s:funcbeginline
-  call SpaceVim#mapping#space#def('nnoremap', ['w', 'x'], 'wincmd x',
-        \ ['window-switch-placement',
-        \ [
-        \ '[SPC w x] is to jump to exchange current window with next one.',
         \ '',
         \ 'Definition: ' . s:file . ':' . s:lnum,
         \ ]

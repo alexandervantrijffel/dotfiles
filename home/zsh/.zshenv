@@ -64,7 +64,6 @@ alias _="sudo "
 
 alias t="terminator --working-directory=\$(pwd)"
 alias tl="tig log"
-alias ts="tig status"
 alias yrs="yarn run start &"
 alias pwd="pwd -L"
 
