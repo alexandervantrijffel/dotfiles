@@ -175,9 +175,11 @@ alias zfbew="z ps-737migration-be && cd workspace"
 
 alias zffe="z ps-licenseadmin-fe"
 alias zffev="z ps-licenseadmin-fe && nvim"
+alias zffey="z ps-licenseadmin-fe && yrs"
 
 alias zdetl="z etlapi"
 alias zdfe="z frontend"
+alias zdfey="z frontend && yrs"
 
 # https://github.com/scmbreeze/scm_breeze
 # [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
@@ -189,7 +191,7 @@ alias gba="git branch -a "
 alias gc-="git checkout -"
 alias gca="git commit --amend --no-edit "
 alias gcb="git checkout -b "
-alias gcom="gco master "
+alias gcom="gco master && gpff && gs"
 alias gcp="git cherry-pick "
 alias gcm="git commit -v -m  "
 alias gclean="git checkout -- . && git clean -fd ."

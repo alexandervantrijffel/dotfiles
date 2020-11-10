@@ -6,11 +6,16 @@ if [ -d "/opt/node/bin" ]; then
   export PATH="$PATH:/opt/node/bin"
 fi
 
-export EDITOR=nvim
-export VISUAL=nvim
+if type nvim 1>/dev/null; then
+  alias v="nvim"
+else
+  alias v="vi"
+fi
+
+export EDITOR=v
+export VISUAL=v
 
 export LC_ALL=en_US.UTF-8
-export LC_TIME=en_GB
 
 # aliases are here in .zshenv so that they are also available
 # in the vim command line
