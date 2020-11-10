@@ -4,6 +4,8 @@
 source ~/.zplug/init.zsh
 
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
+# use fzf for completion anywhere after pressing TAB
+zplug "aloxaf/fzf-tab", defer:3
 # zplug "b4b4r07/enhancd", , use:init.sh
 # show aliases hints if abbrevations are available for typed commands
 zplug "denilsonsa/prettyping", as:command, use:"prettyping", defer:3
@@ -163,8 +165,6 @@ alias ag='ag -p ~/.gitignore --hidden '
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# use fzf for completion anywhere after pressing TAB
-source /opt/fromgit/fzf-tab/fzf-tab.plugin.zsh
 
 alias .="cd $DOTFILES"
 alias .v="cd $DOTFILES && nvim"
