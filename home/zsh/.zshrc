@@ -94,7 +94,7 @@ else
   
   # caps lock = control key
   # re-run this when plugging in another keyboard
-  setxkbmap -option ctrl:nocaps
+  type setxkbmap && setxkbmap -option ctrl:nocaps
 
   # fix rider showing on Wayland
   export _JAVA_AWT_WM_NONREPARENTING=1
@@ -167,14 +167,14 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 
 alias .="cd $DOTFILES"
-alias .v="cd $DOTFILES && nvim"
+alias .v="cd $DOTFILES && v"
 
 alias zfbe="z ps-737migration-be"
-alias zfbev="z ps-737migration-be && nvim"
+alias zfbev="z ps-737migration-be && v"
 alias zfbew="z ps-737migration-be && cd workspace"
 
 alias zffe="z ps-licenseadmin-fe"
-alias zffev="z ps-licenseadmin-fe && nvim"
+alias zffev="z ps-licenseadmin-fe && v"
 alias zffey="z ps-licenseadmin-fe && yrs"
 
 alias zdetl="z etlapi"
