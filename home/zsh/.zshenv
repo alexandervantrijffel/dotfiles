@@ -7,7 +7,7 @@ if [ -d "/opt/node/bin" ]; then
 fi
 
 if type nvim 1>/dev/null; then
-  alias v="nvim"
+  alias v="$(which nvim)"
 else
   alias v="vi"
 fi
@@ -72,3 +72,4 @@ alias tl="tig log"
 alias yrs="yarn run start &"
 alias pwd="pwd -L"
 
+alias nvim="echo Be a bit concise please. And stay positive. Carpe diem!"
