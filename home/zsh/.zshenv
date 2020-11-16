@@ -72,4 +72,4 @@ alias tl="tig log"
 alias yrs="yarn run start &"
 alias pwd="pwd -L"
 
-alias nvim="echo Be a bit concise please. And stay positive. Carpe diem!"
+alias nvim="echo Be a bit concise please. And stay positive. Carpe diem! && return 1"
