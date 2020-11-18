@@ -26,7 +26,9 @@ if type batcat 1>/dev/null; then
   alias cat='batcat -p '
 fi
 alias d="docker "
-alias df="pydf"
+if type pydf 1>/dev/null; then
+  alias df="pydf"
+fi
 alias du="du -h --max-depth=1 "
 alias dc="docker-compose "
 alias fdh="fd --hidden --no-ignore "
