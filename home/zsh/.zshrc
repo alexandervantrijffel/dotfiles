@@ -179,6 +179,7 @@ alias zffey="z ps-licenseadmin-fe && yrs"
 
 alias zdetl="z etlapi"
 alias zdfe="z frontend"
+alias zdfev="z frontend && v"
 alias zdfey="z frontend && yrs"
 
 # https://github.com/scmbreeze/scm_breeze
