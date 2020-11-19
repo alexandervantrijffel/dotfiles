@@ -1,4 +1,5 @@
 #!/bin/zsh
+tldr -u
 source $ZPLUG_HOME/init.zsh
 source ~/.zshrc
 zplug update

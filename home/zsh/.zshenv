@@ -20,32 +20,26 @@ export LC_ALL=en_US.UTF-8
 # aliases are here in .zshenv so that they are also available
 # in the vim command line
 if type ag 1>/dev/null; then
-alias ag='ag --hidden --all-types --ignore-case --one-device --pager "less -R" '
+  alias ag='ag --hidden --all-types --ignore-case --one-device --pager "less -R" '
 fi
 if type batcat 1>/dev/null; then
   alias cat='batcat -p '
 fi
-alias d="docker "
+if type docker 1>/dev/null; then
+  alias d="docker "
+fi
 if type pydf 1>/dev/null; then
   alias df="pydf"
 fi
 alias du="du -h --max-depth=1 "
-alias dc="docker-compose "
+if type docker-compose 1>/dev/null; then
+  alias dc="docker-compose "
+fi
 alias fdh="fd --hidden --no-ignore "
 if type feh 1>/dev/null; then
   # or use --zoom fill
   alias fehfg='nohup feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/bgsrcpics &'
 fi
-if [ -f ~/.fzf.zsh ]; then
-  source ~/.fzf.zsh
-  alias preview="fzf --preview 'bat --color \"always\" {}'"
-  # add support for ctrl+o to open selected file in VS Code
-  export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
-  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git --ignore node_modules -g ""'
-fi
-alias fq="fzf -q "
-
-
 if type htop 1>/dev/null; then
   alias top="sudo htop" # alias top and fix high sierra bug
 fi
@@ -64,6 +58,7 @@ fi
 if type prettyping 1>/dev/null; then
   alias ping='prettyping'
 fi
+alias pass="date +%s | sha256sum | base64 | head -c 24 | tee /dev/tty | pbcopy"
 alias psg="ps -a | grep $1"
 alias rm="rm -rf "
 alias sudo="sudo -E "
