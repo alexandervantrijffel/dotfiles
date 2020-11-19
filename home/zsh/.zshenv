@@ -51,6 +51,8 @@ else
 fi
 alias la="exa -albgh"
 alias lps="lpass show -x -G "
+alias md5sum=$'md5sum | awk -F \' \' \'{print $1}\' | tee /dev/tty | pbcopy'
+alias nvim="echo Be a bit concise please. And stay positive. Carpe diem! && return 1"
 if ! type pbcopy 1>/dev/null; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
@@ -60,13 +62,10 @@ if type prettyping 1>/dev/null; then
 fi
 alias pass="date +%s | sha256sum | base64 | head -c 24 | tee /dev/tty | pbcopy"
 alias psg="ps -a | grep $1"
+alias pwd="pwd -L"
 alias rm="rm -rf "
 alias sudo="sudo -E "
 alias _="sudo "
-
 alias t="terminator --working-directory=\$(pwd)"
 alias tl="tig log"
 alias yrs="yarn run start &"
-alias pwd="pwd -L"
-
-alias nvim="echo Be a bit concise please. And stay positive. Carpe diem! && return 1"
