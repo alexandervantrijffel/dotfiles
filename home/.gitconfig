@@ -29,8 +29,6 @@
   email = lexmail@gmail.com
 [status]
   showUntrackedFiles = all
-[credential "https://gitlab.com"]
-	avtnl = avtnl
 [credential]
 	helper = store
 	canFallBackToInsecureStore = true

@@ -2,7 +2,6 @@
 
 THISDIR=$(cd `dirname $0` && pwd)
 DOTFILES="$(dirname "$THISDIR")"
-echo "DOTFILES is $DOTFILES"
 
 if [ "$(uname)" = "Darwin" ]; then
   # no last login message on mac

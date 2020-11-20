@@ -1,2 +1,4 @@
 Host *
   ForwardAgent yes
+  AddKeysToAgent yes
+  SendEnv LANG LC_*

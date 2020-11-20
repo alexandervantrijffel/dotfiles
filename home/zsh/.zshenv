@@ -17,6 +17,8 @@ export VISUAL=v
 
 export LC_ALL=en_US.UTF-8
 
+export CGO_ENABLED=1
+
 # aliases are here in .zshenv so that they are also available
 # in the vim command line
 if type ag 1>/dev/null; then
