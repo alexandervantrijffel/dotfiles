@@ -139,6 +139,11 @@ fi
 # my life is complete now
 bindkey 'jj' vi-cmd-mode
 
+# life is even completer now
+exit_zsh() { exit }
+zle -N exit_zsh
+bindkey 'qq' exit_zsh
+
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
