@@ -209,6 +209,7 @@ function CustomMappings()
   " no esc
   inoremap jj <esc>
   inoremap <C-c> <esc>uu
+  noremap qq :q<esc>
   noremap <C-q> :q<esc>
   inoremap  <esc> <NOP>
 
