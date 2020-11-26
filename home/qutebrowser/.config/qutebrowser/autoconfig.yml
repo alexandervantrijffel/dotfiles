@@ -6,13 +6,13 @@
 
 config_version: 2
 settings:
-  content.geolocation:
-    https://lastnoted.com: true
   colors.webpage.bg:
     global: '#282a36'
   colors.webpage.darkmode.enabled:
     global: true
   content.geolocation:
     https://lastnoted.com: true
+  content.javascript.can_access_clipboard:
+    global: true
   zoom.default:
     global: 100%
