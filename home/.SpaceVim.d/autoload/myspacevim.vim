@@ -1,4 +1,6 @@
 func! myspacevim#before() abort
+
+  set tabstop=2
   " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
 " https://github.com/alexandervantrijffel/vim-material
 
@@ -48,6 +50,8 @@ func! myspacevim#before() abort
  
   " keep n lines below and above the cursor
   set scroll=5
+
+  set tabstop=2
 
   set number relativenumber
   " set absolute numbers in insert mode
@@ -106,6 +110,7 @@ func! myspacevim#before() abort
             \   'typescriptreact': ['standard'],
             \   'go': ['go build' , 'golangci-lint'],
             \}
+  let g:ale_go_golangci_lint_options = '-E goimports -D typecheck --fix --fast'
 
   let g:ale_fixers = {
             \    'javascript': ['prettier-standard'],
@@ -117,7 +122,6 @@ func! myspacevim#before() abort
   let g:ale_completion_enabled = 1
   let g:ale_lint_on_save = 1
   let g:ale_fix_on_save = 1
-  let g:ale_go_golangci_lint_options = '-E goimports -D typecheck --fix --fast'
 
   " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries

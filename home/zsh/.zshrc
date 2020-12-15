@@ -209,6 +209,7 @@ alias gls="git log --max-count=500 --decorate --graph --color --pretty=format:'%
 alias glp="git log -p "
 alias gma="git merge --abort "
 alias gmc="git merge --continue "
+alias gmm="git merge master "
 alias gmnc="git merge --no-commit --no-ff "
 alias gfa="git fetch --all"
 alias gp="git push"
