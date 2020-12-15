@@ -54,7 +54,6 @@ fi
 alias la="exa -albgh"
 alias lps="lpass show -x -G "
 alias md5sum=$'md5sum | awk -F \' \' \'{print $1}\' | tee /dev/tty | pbcopy'
-alias nvim="echo Be a bit concise please. And stay positive. Carpe diem! && return 1"
 if ! type pbcopy 1>/dev/null; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
