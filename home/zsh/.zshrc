@@ -234,5 +234,9 @@ if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B %R Week %V")\n" 
 fi
 
+# Press v in normal mode for editing the command line in the default editor
+autoload edit-command-line; zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 # cd into working directory
 cwd
