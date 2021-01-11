@@ -31,18 +31,18 @@ zplug "romkatv/powerlevel10k", as:theme, depth:1
 zplug "rupa/z", use:z.sh, defer:3
 # export _Z_DATA=$ZPLUG_REPOS/rupa/z/data
 # zplug "sharkdp/bat", as:command, from:gh-r, rename-to:bat
-zplug "softmoth/zsh-vim-mode", defer:3
 zplug "stedolan/jq", as:command, from:gh-r, defer:3
 zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer:3
 zplug "so-fancy/diff-so-fancy", as:command, defer:3
 zplug "zsh-users/zsh-autosuggestions", defer:3
+zplug "zsh-users/zsh-syntax-highlighting", defer:3
+zplug "softmoth/zsh-vim-mode", defer:3
 zplug "zsh-users/zsh-completions", use:src, defer:3
 # display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 # hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
-zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "pjvds/zsh-cwd"
 

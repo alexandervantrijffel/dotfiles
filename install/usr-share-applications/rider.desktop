@@ -8,7 +8,7 @@ Exec=env _JAVA_AWT_WM_NONREPARENTING=1 rider
 Terminal=false
 X-MultipleArgs=false
 Type=Application
-Icon=/opt/rider-2019.2.2/rider.png
+Icon=
 Categories=IDE
 MimeType=
 StartupNotify=true
