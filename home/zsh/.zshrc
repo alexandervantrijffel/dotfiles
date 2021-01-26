@@ -4,40 +4,39 @@
 source ~/.zplug/init.zsh
 
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
-# use fzf for completion anywhere after pressing TAB
-zplug "aloxaf/fzf-tab", defer:3
 # zplug "b4b4r07/enhancd", , use:init.sh
 # show aliases hints if abbrevations are available for typed commands
 zplug "denilsonsa/prettyping", as:command, use:"prettyping", defer:3
 zplug "djui/alias-tips", defer:3
 zplug "g-plane/zsh-yarn-autocompletions"
-zplug "junegunn/fzf", as:command, hook-build:"./install --bin", use:"bin/{fzf-tmux,fzf}"
 #zplug "ndbroadbent/scm_breeze", hook-build:"$ZPLUG_HOME/repos/ndbroadbent/scm_breeze/install.sh"
 # alternative for exa, doesn't work
 # zplug "Peltoche/lsd", as:command
 zplug "plugins/cp", from:oh-my-zsh
-zplug "plugins/docker", from:oh-my-zsh, defer:3
-zplug "plugins/docker-compose", from:oh-my-zsh, defer:3
-zplug "plugins/git", from:oh-my-zsh, defer:3
-zplug "plugins/golang", from:oh-my-zsh, defer:3
 zplug "plugins/httpie", from:oh-my-zsh, defer:3
 zplug "plugins/rsync", from:oh-my-zsh, defer:3
 zplug "plugins/ssh-agent", from:oh-my-zsh
 zplug "plugins/kubectl", from:oh-my-zsh, defer:2
 zplug "bonnefoa/kubectl-fzf", defer:3
 zplug "plugins/zsh_reload", from:oh-my-zsh, defer:3
-zplug "romkatv/powerlevel10k", as:theme, depth:1
 # zplug "raylee/tldr", as:command, use:"tldr"
-zplug "rupa/z", use:z.sh, defer:3
-# export _Z_DATA=$ZPLUG_REPOS/rupa/z/data
 # zplug "sharkdp/bat", as:command, from:gh-r, rename-to:bat
 zplug "stedolan/jq", as:command, from:gh-r, defer:3
 zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer:3
 zplug "so-fancy/diff-so-fancy", as:command, defer:3
 zplug "zsh-users/zsh-autosuggestions", defer:3
+
+# make sure the autosuggestions color differs from the solarized dark background color
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
+
+# execute auto suggestion with CTRL E
+bindkey "^E" autosuggest-execute
+
+bindkey "^F" forward-word
+
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
-zplug "jeffreytse/zsh-vi-mode", defer:3
 zplug "zsh-users/zsh-completions", use:src, defer:3
+zplug "jeffreytse/zsh-vi-mode", defer:3
 # display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 # hyphen-insensitive completion. Case
@@ -46,42 +45,12 @@ HYPHEN_INSENSITIVE="true"
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "pjvds/zsh-cwd"
 
-if ! zplug check; then
-  printf "Install? [y/N]: "
-  if read -q; then
-      echo; zplug install
-  else
-      echo
-  fi
-fi
-zplug load # --verbose
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 stty start undef  # disable C-s stopping receiving keyboard signals.
 stty stop undef
 setopt MENU_COMPLETE  # select first menu option automatically
 setopt NO_NOMATCH  # stop zsh from catching ^ chars.
 setopt PROMPT_SUBST  # prompt substitution
 setopt AUTO_CONTINUE
-
-set -o vi
-
-# execute auto suggestion with CTRL E
-bindkey "^E" autosuggest-execute
-
-bindkey "^F" forward-word
-
-# make sure the autosuggestions color differs from the solarized dark background color
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
-
-if type feh 1>/dev/null; then
-  feh --slideshow-delay 1800 --bg-tile $HOME/Pictures/backgrounds -z -r -D1800
-  # // --bg-fill or --bg-scale?
-fi
-alias open='xdg-open'
-alias python=python3
 
 # caps lock = control key
 # re-run this when plugging in another keyboard
@@ -90,14 +59,9 @@ type setxkbmap && setxkbmap -option ctrl:nocaps
 # fix rider showing on Wayland
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-# fix for qutebrowser
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
-
-if [ -f /usr/local/bin/scale125 ]; then 
-  /usr/local/bin/scale125
-fi
-
 set clipboard=unnamedplus
+
+
 
 # after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
@@ -122,9 +86,9 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
-if [ -f ~/.zshrc.local ]; then
-  source ~/.zshrc.local
-fi
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HIST_STAMPS="yyyy-mm-dd"
+
 
 # my life is complete now
 
@@ -139,91 +103,34 @@ exit_zsh() { exit }
 zle -N exit_zsh
 bindkey '^q' exit_zsh
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="mm/dd/yyyy"
+bindkey -M vicmd '^v' edit-command-line
+
 # for clipboard sharing with host
 if type vmware-user 1>/dev/null; then
   vmware-user --no-startup-d
 fi
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [ -f ~/.zshrc.local ]; then
+  # sets $DOTFILES
+  source ~/.zshrc.local
 fi
 
-(( ! ${+functions[p10k]} )) || p10k finalize
-
-# fzf
-source ~/.zplug/repos/junegunn/fzf/shell/key-bindings.zsh
-source ~/.zplug/repos/junegunn/fzf/shell/completion.zsh
-
-alias ag='ag -p ~/.gitignore --hidden '
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
+for f in $DOTFILES/home/**/init.zsh; do 
+  source "$f"
+done
 
 alias .="cd $DOTFILES"
 alias .v="cd $DOTFILES && v"
 
-alias zfbe="z ps-737migration-be"
-alias zfbev="z ps-737migration-be && v"
-alias zfbew="z ps-737migration-be && cd workspace"
-
-alias zffe="z ps-licenseadmin-fe"
-alias zffev="z ps-licenseadmin-fe && v"
-alias zffey="z ps-licenseadmin-fe && yrs"
-
-alias zdetl="z etlapi"
-alias zdfe="z frontend"
-alias zdfev="z frontend && v"
-alias zdfey="z frontend && yrs"
-
-# https://github.com/scmbreeze/scm_breeze
-# [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
-
-alias gb="git branch | grep \* | cut -d ' ' -f2"
-
-alias gaa="git add --all ."
-alias gba="git branch -a "
-alias gc-="git checkout -"
-alias gca="git commit --amend --no-edit "
-alias gcb="git checkout -b "
-alias gcom="gco master && gpff && gs"
-alias gcp="git cherry-pick "
-alias gcm="git commit -v -m  "
-alias gclean="git checkout -- . && git clean -fd ."
-alias gd="git diff --word-diff -w "
-alias gds="gd --staged --word-diff | git apply --cached --ignore-whitespace --ignore-space-change --unidiff-zero -"
-alias gds="git diff --staged --word-diff -w"
-alias gl="git log --max-count=500 --stat --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
-alias gls="git log --max-count=500 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
-alias glp="git log -p "
-alias gma="git merge --abort "
-alias gmc="git merge --continue "
-alias gmm="git merge master "
-alias gmnc="git merge --no-commit --no-ff "
-alias gfa="git fetch --all"
-alias gp="git push"
-alias gpu="git push -u origin \$(gb)"
-alias gpf='echo no gpf please'
-alias gp!="git push --force"
-alias gpff="git pull --ff-only"
-alias gra="git rebase --abort "
-alias grm="git rebase master "
-alias grc="git rebase --continue "
-alias gs="git fetch origin \$(gb) && git status"
-alias gap="git add . -p && gs"
-alias gss="git stash save "
-alias gsa="git stash apply "
-alias gsw="git show "
-
-unalias ll
-
-alias ts="git fetch origin \$(gb) && tig status"
+if ! zplug check; then
+  printf "Run zplug install? [y/N]: "
+  if read -q; then
+      echo; zplug install
+  else
+      echo
+  fi
+fi
+zplug load # --verbose
 
 if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B %R Week %V")\n" 
@@ -231,7 +138,6 @@ fi
 
 # Press ^v in normal mode for editing the command line in the default editor
 autoload edit-command-line; zle -N edit-command-line
-bindkey -M vicmd '^v' edit-command-line
 
 # cd into working directory
 cwd
