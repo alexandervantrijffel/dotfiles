@@ -36,7 +36,7 @@ zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer:3
 zplug "so-fancy/diff-so-fancy", as:command, defer:3
 zplug "zsh-users/zsh-autosuggestions", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
-zplug "softmoth/zsh-vim-mode", defer:3
+zplug "jeffreytse/zsh-vi-mode", defer:3
 zplug "zsh-users/zsh-completions", use:src, defer:3
 # display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -66,7 +66,6 @@ setopt NO_NOMATCH  # stop zsh from catching ^ chars.
 setopt PROMPT_SUBST  # prompt substitution
 setopt AUTO_CONTINUE
 
-
 set -o vi
 
 # execute auto suggestion with CTRL E
@@ -77,34 +76,25 @@ bindkey "^F" forward-word
 # make sure the autosuggestions color differs from the solarized dark background color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
-if [ "$(uname)" = "Darwin" ]; then
-  VSCODE='/Applications/Visual Studio Code.app/Contents/Resources/app/bin'
-  if [ -d "$VSCODE" ]; then
-    export PATH="$PATH:$VSCODE"
-  fi
+if type feh 1>/dev/null; then
+  feh --slideshow-delay 1800 --bg-tile $HOME/Pictures/backgrounds -z -r -D1800
+  # // --bg-fill or --bg-scale?
+fi
+alias open='xdg-open'
+alias python=python3
 
-  bindkey -v
-else
-  if type feh 1>/dev/null; then
-    feh --slideshow-delay 1800 --bg-tile $HOME/Pictures/backgrounds -z -r -D1800
-    # // --bg-fill or --bg-scale?
-  fi
-  alias open='xdg-open'
-  alias python=python3
-  
-  # caps lock = control key
-  # re-run this when plugging in another keyboard
-  type setxkbmap && setxkbmap -option ctrl:nocaps
+# caps lock = control key
+# re-run this when plugging in another keyboard
+type setxkbmap && setxkbmap -option ctrl:nocaps
 
-  # fix rider showing on Wayland
-  export _JAVA_AWT_WM_NONREPARENTING=1
- 
-  # fix for qutebrowser
-  export QT_AUTO_SCREEN_SCALE_FACTOR=1
+# fix rider showing on Wayland
+export _JAVA_AWT_WM_NONREPARENTING=1
 
-  if [ -f /usr/local/bin/scale125 ]; then 
-    /usr/local/bin/scale125
-  fi
+# fix for qutebrowser
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+
+if [ -f /usr/local/bin/scale125 ]; then 
+  /usr/local/bin/scale125
 fi
 
 set clipboard=unnamedplus
@@ -137,12 +127,17 @@ if [ -f ~/.zshrc.local ]; then
 fi
 
 # my life is complete now
-bindkey 'jj' vi-cmd-mode
+
+# for jeffreytse/zsh-vi-mode
+export ZVM_VI_ESCAPE_BINDKEY=jj
+
+# for softmoth/zsh-vim-mode
+# bindkey 'jj' vi-cmd-mode
 
 # life is even completer now
 exit_zsh() { exit }
 zle -N exit_zsh
-bindkey 'qq' exit_zsh
+bindkey '^q' exit_zsh
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -234,9 +229,9 @@ if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B %R Week %V")\n" 
 fi
 
-# Press v in normal mode for editing the command line in the default editor
+# Press ^v in normal mode for editing the command line in the default editor
 autoload edit-command-line; zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
+bindkey -M vicmd '^v' edit-command-line
 
 # cd into working directory
 cwd
