@@ -143,5 +143,7 @@ for f in $DOTFILES/home/**/postinit.zsh; do
   source "$f"
 done
 
+unalias ll
+
 # cd into working directory
 cwd

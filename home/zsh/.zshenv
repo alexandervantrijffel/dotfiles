@@ -32,7 +32,7 @@ else
   alias l="ls -CFh"
 fi
 alias la="exa -albgh"
-unalias ll
+
 alias lps="lpass show -x -G "
 alias md5sum=$'md5sum | awk -F \' \' \'{print $1}\' | tee /dev/tty | pbcopy'
 alias open='xdg-open'
