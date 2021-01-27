@@ -26,9 +26,6 @@ zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer:3
 zplug "so-fancy/diff-so-fancy", as:command, defer:3
 zplug "zsh-users/zsh-autosuggestions", defer:3
 
-# make sure the autosuggestions color differs from the solarized dark background color
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
-
 # execute auto suggestion with CTRL E
 bindkey "^E" autosuggest-execute
 
@@ -145,6 +142,8 @@ bindkey '^q' exit_zsh
 
 bindkey -M vicmd '^v' edit-command-line
 
+# make sure the autosuggestions color differs from the solarized dark background color
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
 # cd into working directory
 cwd
