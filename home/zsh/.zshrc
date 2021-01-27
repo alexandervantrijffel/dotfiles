@@ -139,5 +139,9 @@ fi
 # Press ^v in normal mode for editing the command line in the default editor
 autoload edit-command-line; zle -N edit-command-line
 
+for f in $DOTFILES/home/**/postinit.zsh; do 
+  source "$f"
+done
+
 # cd into working directory
 cwd
