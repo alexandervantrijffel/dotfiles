@@ -90,21 +90,6 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 HIST_STAMPS="yyyy-mm-dd"
 
 
-# my life is complete now
-
-# for jeffreytse/zsh-vi-mode
-export ZVM_VI_ESCAPE_BINDKEY=jj
-
-# for softmoth/zsh-vim-mode
-# bindkey 'jj' vi-cmd-mode
-
-# life is even completer now
-exit_zsh() { exit }
-zle -N exit_zsh
-bindkey '^q' exit_zsh
-
-bindkey -M vicmd '^v' edit-command-line
-
 # for clipboard sharing with host
 if type vmware-user 1>/dev/null; then
   vmware-user --no-startup-d
@@ -144,6 +129,22 @@ for f in $DOTFILES/home/**/postinit.zsh; do
 done
 
 unalias ll
+
+# my life is complete now
+
+# for jeffreytse/zsh-vi-mode
+export ZVM_VI_ESCAPE_BINDKEY=jj
+
+# for softmoth/zsh-vim-mode
+# bindkey 'jj' vi-cmd-mode
+
+# life is even completer now
+exit_zsh() { exit }
+zle -N exit_zsh
+bindkey '^q' exit_zsh
+
+bindkey -M vicmd '^v' edit-command-line
+
 
 # cd into working directory
 cwd

@@ -1,6 +1,8 @@
 alias gaa="git add --all ."
 alias gb="git branch | grep \* | cut -d ' ' -f2"
 alias gba="git branch -a "
+# list remote branches by last commit date
+alias gbl='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r'
 alias gc-="git checkout -"
 alias gca="git commit --amend --no-edit "
 alias gcb="git checkout -b "
