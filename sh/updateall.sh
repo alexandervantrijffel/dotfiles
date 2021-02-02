@@ -6,9 +6,6 @@ zplug update
 zplug clean
 zplug clear
 
-# echo updating go packages
-go get -u all
-
 echo updating yarn packages
 yarn global upgrade
 
@@ -29,3 +26,7 @@ cd ~/.SpaceVim
 git pull
 
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt` /usr/local/bin/kubectl
+
+# echo updating go packages
+go get -u all
+
