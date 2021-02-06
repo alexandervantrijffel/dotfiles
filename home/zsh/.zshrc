@@ -58,7 +58,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 set clipboard=unnamedplus
 
-
+rm -f ~/.zcompdump*
 
 # after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
