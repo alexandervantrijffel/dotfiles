@@ -25,8 +25,5 @@ find . -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$(pwd)/{} pul
 cd ~/.SpaceVim
 git pull
 
-curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt` /usr/local/bin/kubectl
-
-# echo updating go packages
-go get -u all
-
+{ cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" }
+sudo chmod +x /usr/local/bin/kubectl
