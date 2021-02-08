@@ -105,19 +105,19 @@ func! myspacevim#before() abort
 
   " run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest neovim' for this
   let g:ale_linters = {
-            \   'javascript': ['standard'],
-            \   'typescript': ['standard'],
-            \   'typescriptreact': ['standard'],
+            \   'javascript': [''],
+            \   'typescript': [''],
+            \   'typescriptreact': [''],
             \   'go': ['go build' , 'golangci-lint'],
-            \   'json': ['standard']
+            \   'json': ['']
             \}
   let g:ale_go_golangci_lint_options = '-E goimports -D typecheck --fix --fast'
 
   let g:ale_fixers = {
-            \    'javascript': ['prettier-standard'],
-            \    'typescript': ['prettier-standard'],
-            \    'typescriptreact': ['prettier-standard'],
-            \    'json': ['prettier-standard']
+            \    'javascript': ['prettier', 'eslint'],
+            \    'typescript': ['prettier', 'eslint'],
+            \    'typescriptreact': ['prettier', 'eslint'],
+            \    'json': ['prettier', 'eslint']
             \}
   " \   'cs': ['OmniSharp'],
   let g:ale_list_window_size = 10

@@ -53,7 +53,7 @@ echo "Replacing folder $FORTUNES"
 sudo rm -rf $FORTUNES
 sudo ln -s $DOTFILES/fortunes $FORTUNES
 
-yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier install import-js
+yarn global add prettier eslint import-js neovim ts-node typescript
 
 sudo ln -s $(pwd)/../sh/autotestgo.sh /usr/local/bin/autotestgo
 sudo ln -s $(pwd)/../sh/autorungo.sh /usr/local/bin/autorungo
