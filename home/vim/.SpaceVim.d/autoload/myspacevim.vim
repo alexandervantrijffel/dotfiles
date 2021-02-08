@@ -109,13 +109,16 @@ func! myspacevim#before() abort
             \   'typescript': ['standard'],
             \   'typescriptreact': ['standard'],
             \   'go': ['go build' , 'golangci-lint'],
+            \   'json': ['standard']
             \}
   let g:ale_go_golangci_lint_options = '-E goimports -D typecheck --fix --fast'
 
   let g:ale_fixers = {
             \    'javascript': ['prettier-standard'],
             \    'typescript': ['prettier-standard'],
-            \    'typescriptreact': ['prettier-standard'] }
+            \    'typescriptreact': ['prettier-standard'],
+            \    'json': ['prettier-standard']
+            \}
   " \   'cs': ['OmniSharp'],
   let g:ale_list_window_size = 10
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
