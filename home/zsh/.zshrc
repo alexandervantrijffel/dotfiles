@@ -1,3 +1,5 @@
+source ~/.zshrc.local
+
 # install zplug if required
 ! [[ -d $HOME/.zplug ]] && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 
@@ -82,18 +84,15 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="yyyy-mm-dd"
 
-
 # for clipboard sharing with host
 if type vmware-user 1>/dev/null; then
   vmware-user --no-startup-d
 fi
 
-if [ -f ~/.zshrc.local ]; then
-  # sets $DOTFILES
-  source ~/.zshrc.local
-fi
+echo "ZE DOTFILES ARE $DOTFILES"
 
 for f in $DOTFILES/home/**/init.zsh; do 
+  echo "executing $f"
   source "$f"
 done
 
