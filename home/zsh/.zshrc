@@ -33,7 +33,6 @@ bindkey "^F" forward-word
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "zsh-users/zsh-completions", use:src, defer:3
-zplug "jeffreytse/zsh-vi-mode", defer:3
 # display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 # hyphen-insensitive completion. Case
@@ -62,9 +61,6 @@ rm -f ~/.zcompdump*
 
 # after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
-
-bindkey '^l' history-search-backward
-bindkey '^k' history-search-forward
 
 export HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=10000000

@@ -1,3 +1,5 @@
+zplug "jeffreytse/zsh-vi-mode", defer:3
+
 if type nvim 1>/dev/null; then
   alias v="$(which nvim)"
   export EDITOR=nvim
