@@ -118,29 +118,12 @@ if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B %R Week %V")\n" 
 fi
 
-# Press ^v in normal mode for editing the command line in the default editor
-autoload edit-command-line; zle -N edit-command-line
-
 for f in $DOTFILES/home/**/postinit.zsh; do 
   source "$f"
 done
 
 unalias ll
 
-# my life is complete now
-
-# for jeffreytse/zsh-vi-mode
-export ZVM_VI_ESCAPE_BINDKEY=jj
-
-# for softmoth/zsh-vim-mode
-# bindkey 'jj' vi-cmd-mode
-
-# life is even completer now
-exit_zsh() { exit }
-zle -N exit_zsh
-bindkey '^q' exit_zsh
-
-bindkey -M vicmd '^v' edit-command-line
 
 # make sure the autosuggestions color differs from the solarized dark background color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
