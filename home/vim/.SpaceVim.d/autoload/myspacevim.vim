@@ -1,5 +1,4 @@
 func! myspacevim#before() abort
-
   set tabstop=2
   " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
 " https://github.com/alexandervantrijffel/vim-material
@@ -88,6 +87,7 @@ func! myspacevim#before() abort
             \ ['peitalin/vim-jsx-typescript', {'merged' : 0}],
             \ ['mxw/vim-jsx', {'merged' : 0}],
             \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
+            \ ['miyakogi/conoline.vim', {'merged' : 0}],
             \ ]
             " \ ['Shougo/deoplete-lsp', {'merged' : 0}],
             " ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
