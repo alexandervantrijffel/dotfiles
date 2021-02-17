@@ -1,5 +1,7 @@
 func! myspacevim#before() abort
+  source $DOTFILES/home/vim/plugins.vim
   source $DOTFILES/home/vim/coc.vim
+  source $DOTFILES/home/vim/abbr.vim
 
   set tabstop=2
   " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
@@ -9,7 +11,6 @@ func! myspacevim#before() abort
 
   " this is necessary for the material theme to show correctly
   let g:spacevim_enable_guicolors = 1
-  let g:spacevim_disabled_plugins = ['vim-startify','Shougo/deoplete.nvim']
   au VimEnter * call OnVimEnter()
 
   set wrap
@@ -27,13 +28,6 @@ func! myspacevim#before() abort
   let g:auto_save_no_updatetime = 1
   let g:auto_save_in_insert_mode = 0
   let g:auto_save_silent = 1
-
-  " update with :OmniSharpInstall
-  " let g:OmniSharp_server_stdio = 1
-  " autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
-  " set completeopt+=preview
-  " autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-  " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
   " autocomplete
   let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.ts"
@@ -63,51 +57,6 @@ func! myspacevim#before() abort
   augroup END
 
   let g:spacevim_automatic_update = 1
-
-  " based on dein.vim plugin manager
-  " Update with :DeinUpdate or :SPUpdate
-  " update / install others with :UpdateRemotePlugins
-  "
-  " neovim/nvim-lspconfig needs neovim >= 0.5.5
-  "
-  "
-         "   \ ['Shougo/deoplete.nvim', {'merged' : 0}],
-         "   \ ['deoplete-plugins/deoplete-go', {'merged' : 0}],
-         "   \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
-  let g:spacevim_custom_plugins = [
-            \ ['907th/vim-auto-save', {'merged' : 0}],
-            \ ['dense-analysis/ale', {'merged' : 0}],
-            \ ['fatih/vim-go', {'merged' : 0}],
-            \ ['mileszs/ack.vim', {'merged' : 0}],
-            \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
-            \ ['tpope/vim-fugitive', {'merged' : 0}],
-            \ ['tpope/vim-commentary', {'merged' : 0}],
-            \ ['chrisbra/Colorizer', {'merged' : 0}],
-            \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
-            \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}], 
-            \ ['yuezk/vim-js', {'merged' : 0}],
-            \ ['pangloss/vim-javascript', {'merged' : 0}],
-            \ ['peitalin/vim-jsx-typescript', {'merged' : 0}],
-            \ ['mxw/vim-jsx', {'merged' : 0}],
-            \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
-            \ ['miyakogi/conoline.vim', {'merged' : 0}],
-            \ ['neoclide/coc.nvim', {'merged' : 0}],
-            \ ['antoinemadec/coc-fzf', {'merged' : 0}],
-            \ ['junegunn/fzf.vim', {'merged' : 0}],
-            \ ]
-            " \ ['Shougo/deoplete-lsp', {'merged' : 0}],
-            " ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
-
-            " \ ['prabirshrestha/asyncomplete.vim', {'merged' : 0}],
-            " \ ['yami-beta/asyncomplete-omni.vim', {'merged' : 0}],
-            " \ ['wsdjeg/dein-ui.vim', {'merged' : 0}],
-            " \ ['jodosha/vim-godebug', {'merged' : 0}],
-
-            " \ ['preservim/tagbar', {'merged' : 0}], 
-            " \ ['chengzeyi/fzf-preview.vim', {'merged' : 0}], 
-            " \ ['yuki-ycino/fzf-preview.vim', {'merged' : 0}], 
-            " \ ['neoclide/coc.nvim', {'merged' : 0}], 
-
 
   " run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest neovim' for this
   let g:ale_linters = {
@@ -139,10 +88,6 @@ func! myspacevim#before() abort
   "
   " :SPUpdate spacevim
   
-  " for deoplete-tabnine run install.sh in $HOME/.cache/. .... tbodt/deoplete-tabnine 
-  " to install in case of errors
-  " to update pull repo ~/.cache/vimfiles/repos/github.com/zxqfl/tabnine-vimu
-
   " When the installation of ack.vim fails, run this command:
   " git clone --config transfer.fsckObjects=false https://github.com/mileszs/ack.vim.git ~/.cache/vimfiles/repos/github.com/mileszs/ack.vim
 
@@ -158,20 +103,25 @@ func! myspacevim#before() abort
   let g:go_info_mode='gopls'
   let g:go_auto_type_info = 1
 
-  let g:deoplete#enable_at_startup = 0
-  " autocomplete
-  let g:deoplete#sources#go#pointer = 1
-  let g:deoplete#sources#go#builtin_objects = 1
-  let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-  let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-  set completeopt+=noselect
-
   " Override default ignore pattern in file tree to still
   " show other . files
   let g:vimfiler_ignore_pattern = '^\%(\.git\|\.DS_Store\)$'
 
-  abbr ennil if err != nil {  
-  abbr enil if err == nil {  
+  " autocomplete with deoplete
+  let g:deoplete#enable_at_startup = 0
+  " let g:deoplete#sources#go#pointer = 1
+  " let g:deoplete#sources#go#builtin_objects = 1
+  " let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+  " let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+  set completeopt+=noselect
+
+  " update with :OmniSharpInstall
+  " let g:OmniSharp_server_stdio = 1
+  " autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+  " set completeopt+=preview
+  " autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+  " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+  let g:spacevim_disabled_plugins = ['vim-startify','Shougo/deoplete.nvim']
 
   " close buffer with \bd or :Bclose
   :call InstallBclose()
@@ -182,7 +132,7 @@ func! myspacevim#after() abort
   source $DOTFILES/home/vim/keymap.vim
 
   " This instructs deoplete to use omni completion for Go files.
-  call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+  " call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
   " let g:tagbar_position = 'topleft vertical'
   " autocmd FileType go nested :call tagbar#autoopen(0)

@@ -8,4 +8,7 @@ let g:coc_global_extensions = [
   \ 'coc-highlight',
   \ 'coc-actions',
   \ 'coc-tsserver',
+  \ 'coc-tabnine',
   \ ]
+
+" type TabNine::config_dir in vim to view the config dir of tabnine 
