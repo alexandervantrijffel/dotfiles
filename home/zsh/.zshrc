@@ -92,7 +92,6 @@ fi
 echo "ZE DOTFILES ARE $DOTFILES"
 
 for f in $DOTFILES/home/**/init.zsh; do 
-  echo "executing $f"
   source "$f"
 done
 
