@@ -1,4 +1,6 @@
 func! myspacevim#before() abort
+  source $DOTFILES/home/vim/coc.vim
+
   set tabstop=2
   " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
 " https://github.com/alexandervantrijffel/vim-material
@@ -7,7 +9,7 @@ func! myspacevim#before() abort
 
   " this is necessary for the material theme to show correctly
   let g:spacevim_enable_guicolors = 1
-  let g:spacevim_disabled_plugins = ['vim-startify']
+  let g:spacevim_disabled_plugins = ['vim-startify','Shougo/deoplete.nvim']
   au VimEnter * call OnVimEnter()
 
   set wrap
@@ -68,17 +70,18 @@ func! myspacevim#before() abort
   "
   " neovim/nvim-lspconfig needs neovim >= 0.5.5
   "
+  "
+         "   \ ['Shougo/deoplete.nvim', {'merged' : 0}],
+         "   \ ['deoplete-plugins/deoplete-go', {'merged' : 0}],
+         "   \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
   let g:spacevim_custom_plugins = [
             \ ['907th/vim-auto-save', {'merged' : 0}],
             \ ['dense-analysis/ale', {'merged' : 0}],
             \ ['fatih/vim-go', {'merged' : 0}],
-            \ ['Shougo/deoplete.nvim', {'merged' : 0}],
-            \ ['deoplete-plugins/deoplete-go', {'merged' : 0}],
             \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['tpope/vim-fugitive', {'merged' : 0}],
             \ ['tpope/vim-commentary', {'merged' : 0}],
-            \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
             \ ['chrisbra/Colorizer', {'merged' : 0}],
             \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
             \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}], 
@@ -88,6 +91,9 @@ func! myspacevim#before() abort
             \ ['mxw/vim-jsx', {'merged' : 0}],
             \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
             \ ['miyakogi/conoline.vim', {'merged' : 0}],
+            \ ['neoclide/coc.nvim', {'merged' : 0}],
+            \ ['antoinemadec/coc-fzf', {'merged' : 0}],
+            \ ['junegunn/fzf.vim', {'merged' : 0}],
             \ ]
             " \ ['Shougo/deoplete-lsp', {'merged' : 0}],
             " ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
@@ -152,7 +158,7 @@ func! myspacevim#before() abort
   let g:go_info_mode='gopls'
   let g:go_auto_type_info = 1
 
-  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#enable_at_startup = 0
   " autocomplete
   let g:deoplete#sources#go#pointer = 1
   let g:deoplete#sources#go#builtin_objects = 1

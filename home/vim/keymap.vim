@@ -4,10 +4,18 @@
 
   " Run this for go:
   " go get -u github.com/sourcegraph/go-langserver
-  au FileType go nmap <leader>r :GoRename<cr>
   au FileType go nmap <F12> :GoReferrers<cr>
-  au FileType go nmap <leader>t :FzfTags<cr>
   au FileType go nmap <A-f> :GoFmt<cr>:GoBuild<cr>
+
+  au FileType go nmap <leader>r :GoRename<cr>
+  noremap <silent><nowait> <leader>T :<C-u>CocFzfList outline<cr>
+  noremap <silent><nowait> <leader>t :<C-u>CocFzfList symbols<CR>
+    " au FileType go nmap <leader>t :FzfTags<cr>
+  nnoremap <silent><leader>x :<C-u>call CocAction('jumpReferences')<CR>
+  nnoremap <silent><nowait> <leader>j  :call CocAction('diagnosticNext')<CR>
+  nnoremap <silent><nowait> <leader>k  :call CocAction('diagnosticPrevious')<CR>
+  noremap <silent><nowait> <leader>e :CocCommand explorer --preset floating<CR>
+  let g:hardtime_ignore_buffer_patterns = [ ".*coc.*" ]
 
   " move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
   inoremap <A-$> <C-o>$
@@ -167,3 +175,4 @@
   nmap <C-p>P "eP
 
   nmap <C-p> :FZF<CR>
+
