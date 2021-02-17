@@ -131,12 +131,6 @@ endf
 func! myspacevim#after() abort
   source $DOTFILES/home/vim/keymap.vim
 
-  " This instructs deoplete to use omni completion for Go files.
-  " call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
-
-  " let g:tagbar_position = 'topleft vertical'
-  " autocmd FileType go nested :call tagbar#autoopen(0)
-
   :call SetSpacevimWindowJkl()
 endf
 
