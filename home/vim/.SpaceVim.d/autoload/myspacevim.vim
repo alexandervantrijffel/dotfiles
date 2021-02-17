@@ -63,7 +63,7 @@ func! myspacevim#before() abort
             \   'javascript': [''],
             \   'typescript': [''],
             \   'typescriptreact': [''],
-            \   'go': ['go build' , 'golangci-lint'],
+            \   'go': ['gofmt', 'golangci-lint'],
             \   'json': ['']
             \}
   let g:ale_go_golangci_lint_options = '-E goimports -D typecheck --fix --fast'
@@ -77,7 +77,7 @@ func! myspacevim#before() abort
   " \   'cs': ['OmniSharp'],
   let g:ale_list_window_size = 10
   let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
-  let g:ale_completion_enabled = 1
+  let g:ale_completion_enabled = 0 " use coc for completion
   let g:ale_lint_on_save = 1
   let g:ale_fix_on_save = 1
 
@@ -100,6 +100,7 @@ func! myspacevim#before() abort
     \ 'goimports': '-w',
     \ }
   let g:go_fmt_autosave = 0
+  " let g:go_def_mode='gopls'
   let g:go_info_mode='gopls'
   let g:go_auto_type_info = 1
 
@@ -137,7 +138,7 @@ endf
 function OnVimEnter()
     if @% == ""
         " No filename for current buffer
-        :FzfFiles
+        :FZF
     endif
 endfunction
 

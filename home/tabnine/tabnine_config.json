@@ -2,7 +2,7 @@
   "version": "2.1.20",
   "hide_promotional_message": false,
   "beta_enabled": "No",
-  "ignore_all_lsp": true,
+  "ignore_all_lsp": false,
   "creation_time": "2019-11-13T21:37:35.706165617Z",
   "guuid": null,
   "semantic_status": {},

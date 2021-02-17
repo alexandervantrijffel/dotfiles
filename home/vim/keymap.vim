@@ -1,11 +1,10 @@
-  nmap <leader>a :Ack
+  nmap <leader>a :Ack 
 
   au FileType javascript nmap <A-f> :ALEFix<cr>
 
-  " Run this for go:
-  " go get -u github.com/sourcegraph/go-langserver
   au FileType go nmap <F12> :GoReferrers<cr>
   au FileType go nmap <A-f> :GoFmt<cr>:GoBuild<cr>
+  " au FileType go nmap <A-f> :call CocAction('runCommand', 'editor.action.organizeImport')<cr>:GoFmt<cr>:GoBuild<cr>
 
   au FileType go nmap <leader>r :GoRename<cr>
   noremap <silent><nowait> <leader>T :<C-u>CocFzfList outline<cr>
@@ -30,7 +29,6 @@
   " no esc
   inoremap jj <esc>
   inoremap <C-c> <esc>uu
-  noremap qq :q<esc>
   noremap <C-q> :q<esc>
   inoremap  <esc> <NOP>
 

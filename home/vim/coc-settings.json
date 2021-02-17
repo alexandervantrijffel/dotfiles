@@ -5,5 +5,22 @@
   "explorer.icon.enableNerdfont": true,
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
   "coc.preferences.hoverTarget": "float",
-  "codeLens.enable": true
+  "codeLens.enable": true,
+  "typescript.referencesCodeLens.enable": true,
+  "diagnostic.errorSign": "⤬",
+  "diagnostic.warningSign": "❕",
+  "diagnostic.infoSign": "💡",
+  "tabnine.priority": 100,
+  "tabnine.shortcut": "TN",
+  "diagnostic.checkCurrentLine": false,
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    }
+  }
 }
