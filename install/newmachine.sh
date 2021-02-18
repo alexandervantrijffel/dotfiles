@@ -94,6 +94,7 @@ go get -u github.com/golangci/golangci-lint
 go get -u gotest.tools/gotestsum
 go get -u github.com/stretchr/testify/assert
 go get -u github.com/jstemmer/gotags
+go get -u github.com/maruel/panicparse/v2/cmd/pp
 
 sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/nvim 0
 sudo update-alternatives --config editor
