@@ -4,18 +4,12 @@ fi
 
 # sets $DOTFILES
 source ~/.zshrc.local
-export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
-
-export PATH="$PATH:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$GOROOT/bin"
 
 if [ -d "/opt/node/bin" ]; then
   export PATH="$PATH:/opt/node/bin"
 fi
 
 export LC_ALL=en_US.UTF-8
-
-export CGO_ENABLED=1
 
 # aliases are here in .zshenv so that they are also available
 # in the vim command line
@@ -100,4 +94,9 @@ alias gss="git stash save "
 alias gsa="git stash apply "
 alias gsw="git show "
 alias ts="git fetch origin \$(gb) && tig status"
+
+
+for f in $DOTFILES/home/**/env.zsh; do 
+  source "$f"
+done
 
