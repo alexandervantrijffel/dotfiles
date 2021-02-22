@@ -53,6 +53,14 @@ alias _="sudo "
 alias t="terminator --working-directory=\$(pwd)"
 alias yrs="yarn run start &"
 
+export ANDROID_SDK=$HOME/Android/Sdk
+export ANDROID_HOME=$ANDROID_SDK
+export ANDROID_SDK_ROOT=$ANDROID_SDK
+export ANDROID_AVD_HOME=$HOME/.android/avd
+
+unset JAVA_HOME
+export JAVA_HOME=/usr/lib/jvm/java-1.14.0-openjdk-amd64
+
 for f in $DOTFILES/home/**/env.zsh; do 
   source "$f"
 done
