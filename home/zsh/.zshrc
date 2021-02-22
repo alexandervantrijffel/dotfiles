@@ -89,8 +89,6 @@ if type vmware-user 1>/dev/null; then
   vmware-user --no-startup-d
 fi
 
-echo "ZE DOTFILES ARE $DOTFILES"
-
 for f in $DOTFILES/home/**/init.zsh; do 
   source "$f"
 done
@@ -117,10 +115,6 @@ for f in $DOTFILES/home/**/postinit.zsh; do
 done
 
 unalias ll
-
-
-# make sure the autosuggestions color differs from the solarized dark background color
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
 # cd into working directory
 cwd

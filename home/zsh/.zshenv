@@ -5,9 +5,8 @@ fi
 # sets $DOTFILES
 source ~/.zshrc.local
 
-if [ -d "/opt/node/bin" ]; then
-  export PATH="$PATH:/opt/node/bin"
-fi
+# make sure the autosuggestions color differs from the solarized dark background color
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
 export LC_ALL=en_US.UTF-8
 
@@ -52,49 +51,7 @@ alias rm="rm -rf "
 alias sudo="sudo -E "
 alias _="sudo "
 alias t="terminator --working-directory=\$(pwd)"
-alias tl="tig log"
 alias yrs="yarn run start &"
-
-
-
-
-
-alias gaa="git add --all ."
-alias gb="git branch | grep \* | cut -d ' ' -f2"
-alias gba="git branch -a "
-alias gc-="git checkout -"
-alias gca="git commit --amend --no-edit "
-alias gcb="git checkout -b "
-alias gcom="gco master && gpff && gs"
-alias gcp="git cherry-pick "
-alias gcm="git commit -v -m  "
-alias gclean="git checkout -- . && git clean -fd ."
-alias gd="git diff --word-diff -w "
-alias gds="gd --staged --word-diff | git apply --cached --ignore-whitespace --ignore-space-change --unidiff-zero -"
-alias gds="git diff --staged --word-diff -w"
-alias gl="git log --max-count=500 --stat --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
-alias gls="git log --max-count=500 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
-alias glp="git log -p "
-alias gma="git merge --abort "
-alias gmc="git merge --continue "
-alias gmm="git merge master "
-alias gmnc="git merge --no-commit --no-ff "
-alias gfa="git fetch --all"
-alias gp="git push"
-alias gpu="git push -u origin \$(gb)"
-alias gpf='echo no gpf please'
-alias gp!="git push --force"
-alias gpff="git pull --ff-only"
-alias gra="git rebase --abort "
-alias grm="git rebase master "
-alias grc="git rebase --continue "
-alias gs="git fetch origin \$(gb) && git status"
-alias gap="git add . -p && gs"
-alias gss="git stash save "
-alias gsa="git stash apply "
-alias gsw="git show "
-alias ts="git fetch origin \$(gb) && tig status"
-
 
 for f in $DOTFILES/home/**/env.zsh; do 
   source "$f"
