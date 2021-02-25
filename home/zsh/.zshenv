@@ -1,3 +1,4 @@
+
 if [ ! -f ~/.zshrc.local ]; then
   echo "!!! please add ~/.zshrc.local and set $DOTFILES !!!\n\n"
 fi

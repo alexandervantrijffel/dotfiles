@@ -21,3 +21,5 @@ $mod+Shift+e rofimoji
 t for new terminal in same directory. Start with :!t in vim
 %
 $mod+shift+e emoji
+%
+ALT-C select and open subdirectory with fzf

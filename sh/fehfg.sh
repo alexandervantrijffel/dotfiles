@@ -1,3 +1,3 @@
-feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/bgsrcpics > /dev/null 2>&1
+feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/backgrounds
 # or --zoom max
 # or --zoom fill

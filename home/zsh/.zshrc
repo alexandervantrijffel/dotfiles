@@ -19,27 +19,25 @@ zplug "plugins/ssh-agent", from:oh-my-zsh
 zplug "plugins/kubectl", from:oh-my-zsh, defer:2
 zplug "bonnefoa/kubectl-fzf", defer:3
 zplug "plugins/zsh_reload", from:oh-my-zsh, defer:3
-# zplug "raylee/tldr", as:command, use:"tldr"
-# zplug "sharkdp/bat", as:command, from:gh-r, rename-to:bat
 zplug "stedolan/jq", as:command, from:gh-r, defer:3
 zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer:3
 zplug "so-fancy/diff-so-fancy", as:command, defer:3
 zplug "zsh-users/zsh-autosuggestions", defer:3
+zplug "g-plane/zsh-yarn-autocompletions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:3
+zplug "zsh-users/zsh-completions", use:src, defer:3
+zplug "zsh-users/zsh-history-substring-search", defer:3
+zplug "pjvds/zsh-cwd"
 
 # execute auto suggestion with CTRL E
 bindkey "^E" autosuggest-execute
-
 bindkey "^F" forward-word
 
-zplug "zsh-users/zsh-syntax-highlighting", defer:3
-zplug "zsh-users/zsh-completions", use:src, defer:3
 # display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 # hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
-zplug "zsh-users/zsh-history-substring-search", defer:3
-zplug "pjvds/zsh-cwd"
 
 stty start undef  # disable C-s stopping receiving keyboard signals.
 stty stop undef
@@ -48,12 +46,12 @@ setopt NO_NOMATCH  # stop zsh from catching ^ chars.
 setopt PROMPT_SUBST  # prompt substitution
 setopt AUTO_CONTINUE
 
-# caps lock = control key
-# re-run this when plugging in another keyboard
-type setxkbmap && setxkbmap -option ctrl:nocaps
+# # caps lock = control key
+# # re-run this when plugging in another keyboard
+# type setxkbmap && setxkbmap -option ctrl:nocaps
 
-# fix rider showing on Wayland
-export _JAVA_AWT_WM_NONREPARENTING=1
+# # fix rider showing on Wayland
+# export _JAVA_AWT_WM_NONREPARENTING=1
 
 set clipboard=unnamedplus
 
@@ -62,24 +60,24 @@ rm -f ~/.zcompdump*
 # after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
 
-export HISTCONTROL=ignoreboth:erasedups
+# export HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=10000000
 SAVEHIST=10000000
-setopt BANG_HIST                 # Treat the '!' character specially during expansion.
-setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
-setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
-setopt SHARE_HISTORY             # Share history between all sessions.
-setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
-setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
-setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
-setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
-setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
-setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
-setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
-setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
-setopt HIST_BEEP                 # Beep when accessing nonexistent history.
+# setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+# setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+# setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+# setopt SHARE_HISTORY             # Share history between all sessions.
+# setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+# setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+# setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+# setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+# setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+# setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+# setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+# setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
+# setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="yyyy-mm-dd"
 
 # for clipboard sharing with host
@@ -131,3 +129,6 @@ fi
 
 # cd into working directory
 cwd
+
+
+
