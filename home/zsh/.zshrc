@@ -6,14 +6,12 @@ source ~/.zshrc.local
 source ~/.zplug/init.zsh
 
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
-# zplug "b4b4r07/enhancd", , use:init.sh
-# show aliases hints if abbrevations are available for typed commands
 zplug "denilsonsa/prettyping", as:command, use:"prettyping", defer:3
+# show aliases hints if abbrevations are available for typed commands
 zplug "djui/alias-tips", defer:3
-zplug "g-plane/zsh-yarn-autocompletions"
 #zplug "ndbroadbent/scm_breeze", hook-build:"$ZPLUG_HOME/repos/ndbroadbent/scm_breeze/install.sh"
-# alternative for exa, doesn't work
-# zplug "Peltoche/lsd", as:command
+# alternative for exa
+zplug "Peltoche/lsd", as:command, from:gh-r, rename-to:lsd
 zplug "plugins/cp", from:oh-my-zsh
 zplug "plugins/httpie", from:oh-my-zsh, defer:3
 zplug "plugins/rsync", from:oh-my-zsh, defer:3
@@ -115,6 +113,17 @@ for f in $DOTFILES/home/**/postinit.zsh; do
 done
 
 unalias ll
+
+if type lsd 1>/dev/null; then
+  alias l="lsd -la"
+else 
+  if type exa 1>/dev/null; then
+    alias la="exa -albgh"
+    alias l="exa -alFbgh"
+  else
+    alias l="ls -CFh"
+  fi
+fi
 
 # cd into working directory
 cwd

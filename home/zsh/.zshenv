@@ -18,6 +18,7 @@ fi
 if type batcat 1>/dev/null; then
   alias cat='batcat -p '
 fi
+
 if type pydf 1>/dev/null; then
   alias df="pydf"
 fi
@@ -26,13 +27,6 @@ alias fdh="fd --hidden --no-ignore "
 if type htop 1>/dev/null; then
   alias top="sudo htop" # alias top and fix high sierra bug
 fi
-if type exa 1>/dev/null; then
-  alias l="exa -alFbgh"
-else
-  alias l="ls -CFh"
-fi
-alias la="exa -albgh"
-
 alias lps="lpass show -x -G "
 alias md5sum=$'md5sum | awk -F \' \' \'{print $1}\' | tee /dev/tty | pbcopy'
 alias open='xdg-open'
@@ -66,4 +60,3 @@ export JAVA_HOME=/usr/lib/jvm/java-1.14.0-openjdk-amd64
 for f in $DOTFILES/home/**/env.zsh; do 
   source "$f"
 done
-
