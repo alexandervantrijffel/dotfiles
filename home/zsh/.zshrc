@@ -114,6 +114,10 @@ done
 
 unalias ll
 
+if type prettyping 1>/dev/null; then
+  alias ping=prettyping
+fi
+
 if type lsd 1>/dev/null; then
   alias l="lsd -la"
 else 
