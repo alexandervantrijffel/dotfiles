@@ -1,3 +1,6 @@
+## powerlevel10k doesn't play well with fzf CTRL+R and TAB completion with fzf
+## therefore it's disabled
+
 zplug "romkatv/powerlevel10k", as:theme, depth:1
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -11,4 +14,3 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
