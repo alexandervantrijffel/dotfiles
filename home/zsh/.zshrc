@@ -60,7 +60,7 @@ rm -f ~/.zcompdump*
 # after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
 
-# export HISTCONTROL=ignoreboth:erasedups
+export HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=10000000
 SAVEHIST=10000000
 # setopt BANG_HIST                 # Treat the '!' character specially during expansion.

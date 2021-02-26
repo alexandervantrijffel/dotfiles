@@ -1,5 +1,4 @@
-zplug "rupa/z", use:z.sh, defer:3
-# export _Z_DATA=$ZPLUG_REPOS/rupa/z/data
+zplug "rupa/z", use:"*.sh", hook-build:"touch ${HOME}/.z", defer:2
 
 alias zfbe="z ps-737migration-be"
 alias zfbev="z ps-737migration-be && v"
