@@ -15,7 +15,7 @@ zplug "Peltoche/lsd", as:command, from:gh-r, rename-to:lsd
 zplug "plugins/cp", from:oh-my-zsh
 zplug "plugins/httpie", from:oh-my-zsh, defer:3
 zplug "plugins/rsync", from:oh-my-zsh, defer:3
-zplug "plugins/ssh-agent", from:oh-my-zsh
+zplug "plugins/ssh-agent", from:oh-my-zsh, defer:3
 zplug "plugins/kubectl", from:oh-my-zsh, defer:2
 zplug "bonnefoa/kubectl-fzf", defer:3
 zplug "plugins/zsh_reload", from:oh-my-zsh, defer:3
@@ -85,22 +85,8 @@ if type vmware-user 1>/dev/null; then
   vmware-user --no-startup-d
 fi
 
-for f in $DOTFILES/home/**/init.zsh; do 
-  source "$f"
-done
-
 alias .="cd $DOTFILES"
 alias .v="cd $DOTFILES && v"
-
-if ! zplug check; then
-  printf "Run zplug install? [y/N]: "
-  if read -q; then
-      echo; zplug install
-  else
-      echo
-  fi
-fi
-zplug load # --verbose
 
 if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B %R Week %V")\n" 
@@ -110,7 +96,6 @@ for f in $DOTFILES/home/**/postinit.zsh; do
   source "$f"
 done
 
-unalias ll
 
 if type prettyping 1>/dev/null; then
   alias ping=prettyping
@@ -127,8 +112,21 @@ else
   fi
 fi
 
+for f in $DOTFILES/home/**/init.zsh; do 
+  source "$f"
+done
+
+if ! zplug check; then
+  printf "Run zplug install? [y/N]: "
+  if read -q; then
+      echo; zplug install
+  else
+      echo
+  fi
+fi
+zplug load # --verbose
+
+unalias ll
+
 # cd into working directory
 cwd
-
-
-
