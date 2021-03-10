@@ -92,11 +92,6 @@ if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B %R Week %V")\n" 
 fi
 
-for f in $DOTFILES/home/**/postinit.zsh; do 
-  source "$f"
-done
-
-
 if type prettyping 1>/dev/null; then
   alias ping=prettyping
 fi
@@ -125,6 +120,10 @@ if ! zplug check; then
   fi
 fi
 zplug load # --verbose
+
+for f in $DOTFILES/home/**/postinit.zsh; do 
+  source "$f"
+done
 
 unalias ll
 
