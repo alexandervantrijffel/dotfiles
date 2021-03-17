@@ -67,12 +67,13 @@
   " Move line up/down
   
   " Normal mode
-  nnoremap <C-k> :m .+1<CR>==
+  jnnoremap <C-k> :m .+1<CR>==
   nnoremap <C-l> :m .-2<CR>==
 
   " Insert mode
-  inoremap <C-k> <ESC>:m .+1<CR>==gi
-  inoremap <C-l> <ESC>:m .-2<CR>==gi
+  " (C-k is for digraph) for instance C-k j3 for ϵ
+  " inoremap <C-k> <ESC>:m .+1<CR>==gi
+  " inoremap <C-l> <ESC>:m .-2<CR>==gi
 
   " Visual mode
   vnoremap <C-k> :m '>+1<CR>gv=gv

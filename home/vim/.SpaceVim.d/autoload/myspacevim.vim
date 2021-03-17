@@ -22,8 +22,6 @@ func! myspacevim#before() abort
   set nomodeline
   set noswapfile
   set hlsearch
-  " show symbols
-  " set list
 
   " autosave
   let g:auto_save = 1

@@ -62,3 +62,5 @@ s g - open file in split horizontally edit
 VIM % goto matching ( { ^
 %
 :lcd %:p:h set working directory of current window to the path of the opened file (%)
+%
+VIM CTRL+k j3 in insert mode for ϵ (this is digraph). :dig for all characters
