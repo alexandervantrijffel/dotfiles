@@ -22,6 +22,7 @@ func! myspacevim#before() abort
   set nomodeline
   set noswapfile
   set hlsearch
+  set clipboard+=unnamed,unnamedplus
 
   " autosave
   let g:auto_save = 1
@@ -34,7 +35,6 @@ func! myspacevim#before() abort
 
   au CursorHold * checktime    
 
-  set clipboard+=unnamed,unnamedplus
   let g:indentLine_setConceal = 0 
 
   " highlight search results
@@ -116,12 +116,6 @@ func! myspacevim#before() abort
   " let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
   set completeopt+=noselect
 
-  " update with :OmniSharpInstall
-  " let g:OmniSharp_server_stdio = 1
-  " autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
-  " set completeopt+=preview
-  " autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-  " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
   let g:spacevim_disabled_plugins = ['vim-startify','Shougo/deoplete.nvim']
 
   " close buffer with \bd or :Bclose
