@@ -170,12 +170,16 @@ nmap <C-p>P "eP
 nmap <C-p> :FZF<CR>
 
 " Remap keys for gotos
+" nmap <silent> gd :call CocAction('jumpDefinition', 'tab drop')<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 nmap <leader>rn <Plug>(coc-rename)
+
+vmap <leader>f  <Plug>(coc-format)
+nmap <leader>f  <Plug>(coc-format)
 
 " Show all diagnostics
 nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<cr>
@@ -191,4 +195,3 @@ nnoremap <leader>k :bn<cr>
 nnoremap <leader>l :bp<cr>
 nnoremap K :bn<cr>
 nnoremap L :bp<cr>
-
