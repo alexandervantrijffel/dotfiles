@@ -58,26 +58,21 @@
   " based on dein.vim plugin manager
   " Update with :DeinUpdate
   " update / install others with :UpdateRemotePlugins
+  "
+
   let g:spacevim_custom_plugins = [
             \ ['junegunn/fzf.vim', {'merged' : 0}],
             \ ['tpope/vim-fugitive', {'merged' : 0}],
             \ ['wsdjeg/dein-ui.vim', {'merged' : 0}],
             \ ['pangloss/vim-javascript', {'merged' : 0}],
             \ ['mxw/vim-jsx', {'merged' : 0}],
-            \ ['w0rp/ale', {'merged' : 0}],
             \ ['907th/vim-auto-save', {'merged' : 0}],
-            \ ['fatih/vim-go', {'merged' : 0}],
-            \ ['jodosha/vim-godebug', {'merged' : 0}],
-            \ ['Shougo/deoplete.nvim', {'merged' : 0}],
-            \ ['zchee/deoplete-go', {'merged' : 0}],
-            \ ['mdempsky/gocode', {'merged' : 0, 'rtp': 'nvim/', 'do': '~/.cache/vimfiles/repos/github.com/mdempsky/gocode/nvim/symlink.sh'}],
             \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['tpope/vim-fugitive', {'merged' : 0}],
             \ ['tpope/vim-commentary', {'merged' : 0}],
-            \ ['alvan/vim-closetag', {'merged' : 0}],
-            \ ['tbodt/deoplete-tabnine', {'merged' : 0}],
             \ ]
+
   " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries
   " or :GoUpdate
