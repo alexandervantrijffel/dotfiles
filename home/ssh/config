@@ -4,3 +4,8 @@ Host *
   # instead of allowing this for all hosts,
   # connect with ssh -A when needed
   # ForwardAgent yes
+Host analytics.prosim-ar.com
+	User lexremote
+	Port 1935
+	Ciphers aes256-ctr
+	ForwardAgent yes
