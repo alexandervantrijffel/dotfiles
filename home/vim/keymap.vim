@@ -181,6 +181,9 @@ nmap <leader>rn <Plug>(coc-rename)
 vmap <leader>f  <Plug>(coc-format)
 nmap <leader>f  <Plug>(coc-format)
 
+" Fix autofix problem of current line
+nmap <leader>qf  <Plug>(coc-fix-current)
+
 " Show all diagnostics
 nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<cr>
 " Show commands

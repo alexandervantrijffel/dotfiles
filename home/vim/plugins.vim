@@ -2,9 +2,10 @@
   " Update with :DeinUpdate or :SPUpdate
   " update / install others with :UpdateRemotePlugins
   "
+  "
+  "o
   let g:spacevim_custom_plugins = [
             \ ['907th/vim-auto-save', {'merged' : 0}],
-            \ ['dense-analysis/ale', {'merged' : 0}],
             \ ['mileszs/ack.vim', {'merged' : 0}],
             \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
             \ ['tpope/vim-fugitive', {'merged' : 0}],

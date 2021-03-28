@@ -58,28 +58,7 @@ func! myspacevim#before() abort
 
   let g:spacevim_automatic_update = 1
 
-  " run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest neovim' for this
-  let g:ale_linters = {
-            \   'javascript': [''],
-            \   'typescript': [''],
-            \   'typescriptreact': [''],
-            \   'go': ['gofmt', 'golangci-lint'],
-            \   'json': ['']
-            \}
-  let g:ale_go_golangci_lint_options = '-E goimports -D typecheck --fix --fast'
-
-  let g:ale_fixers = {
-            \    'javascript': ['prettier', 'eslint'],
-            \    'typescript': ['prettier', 'eslint'],
-            \    'typescriptreact': ['prettier', 'eslint'],
-            \    'json': ['prettier', 'eslint']
-            \}
-  " \   'cs': ['OmniSharp'],
-  let g:ale_list_window_size = 10
-  let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
-  let g:ale_completion_enabled = 0 " use coc for completion
-  let g:ale_lint_on_save = 1
-  let g:ale_fix_on_save = 1
+  " run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest neovim'
 
   " run 'pip3 install pynvim' for vim
   " and :GoInstallBinaries
