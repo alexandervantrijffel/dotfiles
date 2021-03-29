@@ -20,7 +20,6 @@ func! myspacevim#before() abort
   set hlsearch
   set clipboard+=unnamed,unnamedplus
 
-  " autosave
   let g:auto_save = 1
   let g:auto_save_no_updatetime = 1
   let g:auto_save_in_insert_mode = 0
@@ -80,13 +79,10 @@ func! myspacevim#before() abort
   " show other . files
   let g:vimfiler_ignore_pattern = '^\%(\.git\|\.DS_Store\)$'
 
-  " autocomplete with deoplete
-  let g:deoplete#enable_at_startup = 0
-  " let g:deoplete#sources#go#pointer = 1
-  " let g:deoplete#sources#go#builtin_objects = 1
-  " let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-  " let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
   set completeopt+=noselect
+
+  map m <Plug>Sneak_,
+  map , <Plug>Sneak_;
 
   " :SPUpdate spacevim
   "
@@ -171,6 +167,7 @@ function InstallBclose()
   let loaded_bclose = 1
   if !exists('bclose_multiple')
     let g:bclose_multiple = 1
+
   endif
 
   " Display an error message.
