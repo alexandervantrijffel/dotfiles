@@ -37,14 +37,6 @@
 [[layers]]
   name = "colorscheme"
 
-# [[custom_plugins]]
-#   name = "alexandervantrijffel/vim-material"
-#   merged = 0
-
-# [[custom_plugins]]
-#   name = "mhartington/oceanic-next"
-#   merged = 0
-
 [[layers]]
   name = 'autocomplete'
   auto-completion-return-key-behavior = "complete"
@@ -86,15 +78,11 @@
   go_addtags_transform = "camelcase"
   go_metalinter_autosave = 0
   # disabled golint because of obnoxious 'should have comment or be unexported' warning
-  # use ale with gometalinter instead
+  # use coc instead
   go_metalinter_autosave_enabled = ['']
   go_metalinter_enabled = ['']
   # go_metalinter_command = "gometalinter --exclude=\"\\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\""
   go_def_mode = 'godef'
-
-[[layers]]
-  name = "lang#csharp"
-  highlight_types = 1
 
 [[layers]]
 name = 'fzf'

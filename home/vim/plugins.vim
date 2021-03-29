@@ -2,8 +2,6 @@
   " Update with :DeinUpdate or :SPUpdate
   " update / install others with :UpdateRemotePlugins
   "
-  "
-  "o
   let g:spacevim_custom_plugins = [
             \ ['907th/vim-auto-save', {'merged' : 0}],
             \ ['mileszs/ack.vim', {'merged' : 0}],
@@ -24,6 +22,3 @@
             \ ['antoinemadec/coc-fzf', {'merged' : 0}],
             \ ['junegunn/fzf.vim', {'merged' : 0}],
             \ ]
-
-            " installed through coc
-            " \ ['codota/tabnine-vim', {'merged' : 0}],

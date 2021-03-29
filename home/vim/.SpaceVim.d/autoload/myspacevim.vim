@@ -4,13 +4,9 @@ func! myspacevim#before() abort
   source $DOTFILES/home/vim/abbr.vim
 
   set tabstop=2
-  " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
-" https://github.com/alexandervantrijffel/vim-material
 
   let g:mapleader = "'"
 
-  " this is necessary for the material theme to show correctly
-  let g:spacevim_enable_guicolors = 1
   au VimEnter * call OnVimEnter()
 
   set wrap
@@ -56,7 +52,6 @@ func! myspacevim#before() abort
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
   augroup END
 
-  let g:spacevim_automatic_update = 1
 
   " run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest neovim'
 
@@ -65,8 +60,6 @@ func! myspacevim#before() abort
   " or :GoUpdate
   " or later :GoUpdateBinaries
   "
-  " :SPUpdate spacevim
-  
   " When the installation of ack.vim fails, run this command:
   " git clone --config transfer.fsckObjects=false https://github.com/mileszs/ack.vim.git ~/.cache/vimfiles/repos/github.com/mileszs/ack.vim
 
@@ -95,7 +88,17 @@ func! myspacevim#before() abort
   " let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
   set completeopt+=noselect
 
-  let g:spacevim_disabled_plugins = ['vim-startify','Shougo/deoplete.nvim']
+  " :SPUpdate spacevim
+  "
+  " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
+" https://github.com/alexandervantrijffel/vim-material
+"
+  " this is necessary for the material theme to show correctly
+  let g:spacevim_enable_guicolors = 1
+
+  let g:spacevim_automatic_update = 1
+
+  let g:spacevim_disabled_plugins = ['vim-startify', 'deoplete.nvim', 'deoplete-dictionary', 'deoplete-go', 'deoplete-ternjs', 'gruvbox', 'onedark.vim', 'neomake', 'neoinclude.vim', 'neoformat', 'neomru.vim', 'neopairs.vim', 'neoyank.vim', 'neosnippet-snippets', 'neosnippet.vim', 'nord-vim', 'molokai', 'open-browser.vim', 'echodoc.vim', 'NeoSolarized', 'conoline.vim', 'delimitMate', 'deol.nvim', 'editorconfig-vim', 'jellybeans.vim', 'neco-syntax', 'palenight.vim', 'vim-grepper', 'vim-jplus', 'vim-mundo', 'vim-snippets', 'tern_for_vim', 'srcery-vim', 'vim-flow', 'tabular', 'tagbar', 'tagbar-makefile.vim', 'tagbar-proto.vim', 'wildfire.vim', 'vim-table-mode', 'vim-emoji', 'vim-hybrid', 'vimshell.vim', 'vim-expand-region', 'vim-textobj-entire', 'vim-textobj-indent', 'vim-textobj-line', 'vim-textobj-user', 'splitjoin.vim']
 
   " close buffer with \bd or :Bclose
   :call InstallBclose()
