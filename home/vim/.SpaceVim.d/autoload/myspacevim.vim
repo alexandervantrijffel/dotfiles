@@ -81,9 +81,6 @@ func! myspacevim#before() abort
 
   set completeopt+=noselect
 
-  map m <Plug>Sneak_,
-  map , <Plug>Sneak_;
-
   " :SPUpdate spacevim
   "
   " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
@@ -94,7 +91,7 @@ func! myspacevim#before() abort
 
   let g:spacevim_automatic_update = 1
 
-  let g:spacevim_disabled_plugins = ['vim-startify', 'deoplete.nvim', 'deoplete-dictionary', 'deoplete-go', 'deoplete-ternjs', 'gruvbox', 'onedark.vim', 'neomake', 'neoinclude.vim', 'neoformat', 'neomru.vim', 'neopairs.vim', 'neoyank.vim', 'neosnippet-snippets', 'neosnippet.vim', 'nord-vim', 'molokai', 'open-browser.vim', 'echodoc.vim', 'NeoSolarized', 'conoline.vim', 'delimitMate', 'deol.nvim', 'editorconfig-vim', 'jellybeans.vim', 'neco-syntax', 'palenight.vim', 'vim-grepper', 'vim-mundo', 'vim-snippets', 'tern_for_vim', 'srcery-vim', 'vim-flow', 'tabular', 'tagbar', 'tagbar-makefile.vim', 'tagbar-proto.vim', 'wildfire.vim', 'vim-table-mode', 'vim-emoji', 'vim-hybrid', 'vimshell.vim', 'vim-expand-region', 'vim-textobj-entire', 'vim-textobj-indent', 'vim-textobj-line', 'vim-textobj-user', 'splitjoin.vim']
+  let g:spacevim_disabled_plugins = ['vim-startify', 'deoplete.nvim', 'deoplete-dictionary', 'deoplete-go', 'deoplete-ternjs', 'gruvbox', 'onedark.vim', 'neomake', 'neoinclude.vim', 'neoformat', 'neomru.vim', 'neopairs.vim', 'neoyank.vim', 'neosnippet-snippets', 'neosnippet.vim', 'nord-vim', 'molokai', 'open-browser.vim', 'echodoc.vim', 'NeoSolarized', 'conoline.vim', 'deol.nvim', 'editorconfig-vim', 'jellybeans.vim', 'neco-syntax', 'palenight.vim', 'vim-grepper', 'vim-mundo', 'vim-snippets', 'tern_for_vim', 'srcery-vim', 'vim-flow', 'tabular', 'tagbar', 'tagbar-makefile.vim', 'tagbar-proto.vim', 'wildfire.vim', 'vim-table-mode', 'vim-emoji', 'vim-hybrid', 'vimshell.vim', 'vim-expand-region', 'vim-textobj-entire', 'vim-textobj-indent', 'vim-textobj-line', 'vim-textobj-user', 'splitjoin.vim']
 
   " useful: vim-jplus
 
