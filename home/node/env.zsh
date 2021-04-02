@@ -1,0 +1,7 @@
+alias yb='yarn build'
+alias yi='yarn install'
+alias yggql='yarn run generate:graphql:types'
+alias ygjson='yarn run generate:json:types'
+alias ys='yarn serve'
+alias yt='yarn test -- --watch'
+alias ytc='yarn test:component'
