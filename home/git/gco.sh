@@ -6,6 +6,6 @@ function gco {
   if [ -n "$nospaces" ]; then 
     noremotes=$(echo "$nospaces" | sed "s/remotes\///gI")
     echo "checkout branch $noremotes"
-    git checkout $noremotes
+    git checkout $noremotes "$@"
   fi
 }
