@@ -7,7 +7,7 @@ alias gc-="git checkout -"
 alias gca="git commit --amend --no-edit "
 alias gcb="git checkout -b "
 alias gcom="gco master && gpff && gs"
-alias gcop="gco-p "
+alias gcop="gco -p "
 alias gcp="git cherry-pick "
 alias gcm="git commit -v -m  "
 alias gclean="git checkout -- . && git clean -fd ."
@@ -37,3 +37,6 @@ alias gss="git stash save "
 alias gsa="git stash apply "
 alias gsw="git show "
 alias ts="git fetch origin \$(gb) && tig status"
+
+
+source ${0:a:h}/gco.sh
