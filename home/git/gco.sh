@@ -16,8 +16,10 @@ function gco {
   local selectedbranch=$(git branch -a | fzf)
   local nospaces="$(echo -e "$selectedbranch" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
   if [ -n "$nospaces" ]; then 
-    local noremotes=$(echo "$nospaces" | sed "s/remotes\///gI")
-    echo "checkout branch $noremotes"
-    git checkout $noremotes "$@"
+    local filtered=$(echo "$nospaces" | sed "s/remotes\///gI")
+    # remove current branch flag '* '
+    filtered=$(echo $filtered | sed "s/^\* //")
+    echo "checkout branch $filtered"
+    git checkout $filtered "$@"
   fi
 }
