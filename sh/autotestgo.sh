@@ -1,4 +1,4 @@
-#! /bin/sh -
+#!/bin/sh -
 
 if ! type golangci-lint 1>/dev/null; then
   echo "missing golangci-lint"

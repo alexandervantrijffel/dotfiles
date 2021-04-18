@@ -1,10 +1,22 @@
 unalias gco 2> /dev/null
 function gco {
-  local selectedbranch
-  selectedbranch=$(git branch -a | fzf)
-  nospaces="$(echo -e "$selectedbranch" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+  local branches=$(git branch -a)
+  # if arg 1 is provided and it is a branch
+  [[ $1 = *[![:space:]]* ]] && if [[ $branches =~ $1 ]];then
+    echo "checkout branch $1"
+    git checkout $1
+    return $?
+  fi
+
+  if ! type fzf 1>/dev/null; then
+    echo "fzf is required"
+    exit 127
+  fi
+
+  local selectedbranch=$(git branch -a | fzf)
+  local nospaces="$(echo -e "$selectedbranch" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
   if [ -n "$nospaces" ]; then 
-    noremotes=$(echo "$nospaces" | sed "s/remotes\///gI")
+    local noremotes=$(echo "$nospaces" | sed "s/remotes\///gI")
     echo "checkout branch $noremotes"
     git checkout $noremotes "$@"
   fi
