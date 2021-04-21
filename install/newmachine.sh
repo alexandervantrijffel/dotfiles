@@ -24,7 +24,7 @@ else
 
   # i3 extensions
   sudo apt i3-gaps-wm install rofi alsa-utils i3blocks -y 
-  ln -s $DOTFILES/home/.config/i3/ $HOME/.i3/
+  ln -s $DOTFILES/.config/i3/ $HOME/.i3/
   sudo mv /usr/bin/dmenu /usr/bin/dmenu.org
   sudo ln -s $(which rofi) /usr/bin/dmenu
 
@@ -43,7 +43,7 @@ else
   # install teiler as described at https://carnager.github.io/teiler/
 fi
 
-lnav -i $(pwd)/home/.lnav/formats/*.json
+lnav -i $(pwd)/.lnav/formats/*.json
 
 FORTUNES="/usr/share/games/fortunes"
 if [ ! -d $FORTUNES ]; then

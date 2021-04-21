@@ -1,7 +1,7 @@
 func! myspacevim#before() abort
-  source $DOTFILES/home/vim/plugins.vim
-  source $DOTFILES/home/vim/coc.vim
-  source $DOTFILES/home/vim/abbr.vim
+  source $DOTFILES/plugins.vim
+  source $DOTFILES/coc.vim
+  source $DOTFILES/abbr.vim
 
   set tabstop=2
 
@@ -10,6 +10,7 @@ func! myspacevim#before() abort
   au VimEnter * call OnVimEnter()
 
   set wrap
+  " set noignorecase
   set ignorecase
   set autoindent
   set smartcase
@@ -102,7 +103,7 @@ func! myspacevim#before() abort
 endf
 
 func! myspacevim#after() abort
-  source $DOTFILES/home/vim/keymap.vim
+  source $DOTFILES/vim/keymap.vim
 
   :call SetSpacevimWindowJkl()
 endf

@@ -9,7 +9,7 @@ ln -s ~/.vim ~/.SpaceVim
 
 THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 DOTFILES="$(dirname "$THISDIR")"
-ln -s $DOTFILES/home/.SpaceVim.d ~/.SpaceVim.d
+ln -s $DOTFILES/.SpaceVim.d ~/.SpaceVim.d
 
 yarn global add neovim
 sudo pip install --upgrade pip

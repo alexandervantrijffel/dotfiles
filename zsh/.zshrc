@@ -107,7 +107,12 @@ else
   fi
 fi
 
-for f in $DOTFILES/home/**/init.zsh; do 
+for f in $DOTFILES/**/init.zsh; do 
+  source "$f"
+done
+
+# deprecated
+for f in $DOTFILES/**/init.zsh; do 
   source "$f"
 done
 
@@ -121,7 +126,12 @@ if ! zplug check; then
 fi
 zplug load # --verbose
 
-for f in $DOTFILES/home/**/postinit.zsh; do 
+for f in $DOTFILES/**/postinit.zsh; do 
+  source "$f"
+done
+
+# deprecated
+for f in $DOTFILES/**/postinit.zsh; do 
   source "$f"
 done
 
