@@ -116,6 +116,7 @@ function OnVimEnter()
 endfunction
 
 function SetSpacevimWindowJkl()
+  let s:file = expand('<sfile>:~')
   let s:funcbeginline =  expand('<slnum>') + 1
   let s:lnum = expand('<slnum>') + s:funcbeginline
   call SpaceVim#mapping#space#def('nnoremap', ['w', 'j'], 'wincmd h',
