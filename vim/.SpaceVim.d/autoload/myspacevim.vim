@@ -1,7 +1,7 @@
 func! myspacevim#before() abort
-  source $DOTFILES/plugins.vim
-  source $DOTFILES/coc.vim
-  source $DOTFILES/abbr.vim
+  source $DOTFILES/vim/plugins.vim
+  source $DOTFILES/vim/coc.vim
+  source $DOTFILES/vim/abbr.vim
 
   set tabstop=2
 
