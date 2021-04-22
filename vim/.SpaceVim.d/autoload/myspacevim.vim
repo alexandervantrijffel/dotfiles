@@ -92,10 +92,12 @@ func! myspacevim#before() abort
 
   let g:spacevim_automatic_update = 1
 
-  let g:spacevim_disabled_plugins = [ 'deoplete.nvim', 'deoplete-dictionary', 'deoplete-go', 'deoplete-ternjs', 'gruvbox', 'onedark.vim', 'neomake', 'neoinclude.vim', 'neoformat', 'neomru.vim', 'neopairs.vim',  'nord-vim', 'molokai', 'open-browser.vim', 'echodoc.vim', 'NeoSolarized', 'conoline.vim', 'deol.nvim', 'editorconfig-vim', 'jellybeans.vim', 'neco-syntax', 'palenight.vim', 'vim-grepper', 'vim-mundo', 'vim-snippets', 'tern_for_vim', 'srcery-vim', 'vim-flow', 'tabular', 'tagbar', 'tagbar-makefile.vim', 'tagbar-proto.vim', 'wildfire.vim', 'vim-table-mode', 'vim-emoji', 'vim-hybrid', 'vimshell.vim', 'vim-expand-region', 'vim-textobj-entire', 'vim-textobj-indent', 'vim-textobj-line', 'vim-textobj-user', 'splitjoin.vim']
+  let g:spacevim_disabled_plugins = ['deoplete.nvim', 'deoplete-dictionary', 'deoplete-go', 'deoplete-ternjs', 'gruvbox', 'onedark.vim', 'neomake', 'neoinclude.vim',  'neomru.vim', 'neopairs.vim',  'nord-vim', 'molokai', 'open-browser.vim', 'echodoc.vim', 'neoinclude.vim',  'neomru.vim', 'neopairs.vim',  'nord-vim', 'molokai', 'open-browser.vim', 'echodoc.vim', 'NeoSolarized', 'conoline.vim', 'deol.nvim', 'editorconfig-vim', 'jellybeans.vim', 'neco-syntax', 'palenight.vim', 'vim-grepper', 'vim-mundo', 'vim-snippets', 'tern_for_vim', 'srcery-vim', 'vim-flow', 'tabular', 'tagbar', 'tagbar-makefile.vim', 'tagbar-proto.vim', 'wildfire.vim', 'vim-table-mode', 'vim-emoji', 'vim-hybrid', 'vimshell.vim', 'vim-expand-region', 'vim-textobj-entire', 'vim-textobj-indent', 'vim-textobj-line', 'vim-textobj-user', 'splitjoin.vim', 'vim-import-js']
 
   " useful: vim-jplus (join lines)
   " 'neosnippet-snippets', 'neosnippet.vim', 'neoyank.vim',
+  " Required to prevent format error with coc
+  " neoformat,
 
   " close buffer with \bd or :Bclose
   :call InstallBclose()
