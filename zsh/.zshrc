@@ -24,7 +24,7 @@ zplug "stedolan/jq", as:command, from:gh-r, defer:3
 zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer:3
 zplug "so-fancy/diff-so-fancy", as:command, defer:3
 zplug "zsh-users/zsh-autosuggestions", defer:3
-zplug "g-plane/zsh-yarn-autocompletions"
+zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "zdharma/fast-syntax-highlighting", defer:3
 zplug "zsh-users/zsh-completions", use:src, defer:3

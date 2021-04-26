@@ -1,3 +1,4 @@
+alias y="yarn"
 alias yb='yarn build'
 alias yi='yarn install'
 alias yggql='yarn run generate:graphql:types'
