@@ -27,6 +27,7 @@ alias gpu="git push -u origin \$(gb)"
 alias gpf='echo no gpf please'
 alias gp!="git push --force"
 alias gpff="git pull --ff-only"
+alias gr.="git reset ."
 alias gra="git rebase --abort"
 alias grm="git rebase master"
 alias grum="git fetch --all && git rebase upstream/master"
