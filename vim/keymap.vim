@@ -1,12 +1,13 @@
+" default mappings
+" <C-g> show full path to current buffer
+
 nmap <leader>a :Ack 
 
-au FileType javascript nmap <A-f> :ALEFix<cr>
-
-au FileType go nmap <F12> :GoReferrers<cr>
 au FileType go nmap <A-f> :GoFmt<cr>:GoBuild<cr>
 " au FileType go nmap <A-f> :call CocAction('runCommand', 'editor.action.organizeImport')<cr>:GoFmt<cr>:GoBuild<cr>
 
 au FileType go nmap <leader>r :GoRename<cr>
+
 noremap <silent><nowait> <leader>T :<C-u>CocFzfList outline<cr>
 noremap <silent><nowait> <leader>t :<C-u>CocFzfList symbols<CR>
   " au FileType go nmap <leader>t :FzfTags<cr>
@@ -169,6 +170,16 @@ nmap <C-p>P "eP
 
 nmap <C-p> :FZF<CR>
 
+" previous/next tab
+nnoremap <leader>k :bn<cr>
+nnoremap <leader>l :bp<cr>
+" prevent that vim-go overwrites our K mapping
+let g:go_doc_keywordprg_enabled = 0
+nnoremap K :bn<cr>
+nnoremap L :bp<cr>
+
+" /********* Coc **********\
+
 " Remap keys for gotos
 " nmap <silent> gd :call CocAction('jumpDefinition', 'tab drop')<CR>
 nmap <silent> gd <Plug>(coc-definition)
@@ -176,13 +187,19 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Use sd or <A-d> to show documentation in preview window.
+" (K by default)
+inoremap <A-d> <Esc>:call <SID>show_documentation()<CR>
+nmap <A-d> <Esc>:call <SID>show_documentation()<CR>
+nmap sd :call <SID>show_documentation()<CR>
+
 nmap <leader>rn <Plug>(coc-rename)
 
-vmap <leader>f  <Plug>(coc-format)
-nmap <leader>f  <Plug>(coc-format)
+vmap <leader>f <Plug>(coc-format)
+nmap <leader>f <Plug>(coc-format)
 
 " Fix autofix problem of current line
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>qf <Plug>(coc-fix-current)
 
 " Show all diagnostics
 nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<cr>
@@ -193,8 +210,46 @@ nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " Resume latest coc list
 nnoremap <silent> <space>r  :<C-u>CocListResume<CR>
 
-" previous/next tab
-nnoremap <leader>k :bn<cr>
-nnoremap <leader>l :bp<cr>
-nnoremap K :bn<cr>
-nnoremap L :bp<cr>
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap <C-f> and <C-b> for scroll float windows/popups.
+if has('nvim-0.4.0') || has('patch-8.2.0750')
+  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+endif
