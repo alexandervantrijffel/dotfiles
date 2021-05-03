@@ -85,7 +85,7 @@ if type vmware-user 1>/dev/null; then
   vmware-user --no-startup-d
 fi
 
-alias .="cd $DOTFILES"
+alias .d="cd $DOTFILES"
 alias .v="cd $DOTFILES && v"
 
 if type fortune 1>/dev/null; then
