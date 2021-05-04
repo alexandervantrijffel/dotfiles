@@ -147,8 +147,6 @@ noremap ca` /{<cr>ca`
 vnoremap <C-c> "+y
 " copy line to clipboard
 nnoremap <C-c> "+yy
-vnoremap yy "+yy
-noremap yy "+yy
 vnoremap Y "+y$
 
 " when changing text, do not yank to clipboard but to register e
