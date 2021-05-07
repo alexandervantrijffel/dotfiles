@@ -1,0 +1,5 @@
+alias ta="terraform apply"
+alias td="terraform destroy"
+alias ti="terraform init"
+alias tp="terraform plan"
+alias tv="terraform validate"
