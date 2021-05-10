@@ -31,6 +31,13 @@
       "initializationOptions": {
         "usePlaceholders": true
       }
+    },
+    // dependency:
+    // yarn add global graphql-language-service-cli
+    "graphql": {
+      "command": "graphql-lsp",
+      "args": ["server", "-m", "stream"],
+      "filetypes": ["typescript", "typescriptreact", "graphql"]
     }
   },
   "diagnostic-languageserver.filetypes": {
