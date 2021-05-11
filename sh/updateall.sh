@@ -8,6 +8,7 @@ zplug clear
 
 echo updating yarn packages
 yarn global upgrade
+yarn set version latest
 
 echo updating python packages
 sudo pip3 install --upgrade pip
