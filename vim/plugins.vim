@@ -21,4 +21,5 @@ let g:spacevim_custom_plugins = [
           \ ['neoclide/coc.nvim', {'merged' : 0}],
           \ ['antoinemadec/coc-fzf', {'merged' : 0}],
           \ ['junegunn/fzf.vim', {'merged' : 0}],
+          \ ['brooth/far.vim', {'merged' : 0}],
           \ ]
