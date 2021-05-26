@@ -12,14 +12,12 @@ let g:spacevim_custom_plugins = [
           \ ['chrisbra/Colorizer', {'merged' : 0}],
           \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
           \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}], 
-          "\ ['yuezk/vim-js', {'merged' : 0}],
-          "\ ['pangloss/vim-javascript', {'merged' : 0}],
-          "\ ['peitalin/vim-jsx-typescript', {'merged' : 0}],
-          "\ ['mxw/vim-jsx', {'merged' : 0}],
-          "\ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
           \ ['miyakogi/conoline.vim', {'merged' : 0}],
           \ ['neoclide/coc.nvim', {'merged' : 0}],
           \ ['antoinemadec/coc-fzf', {'merged' : 0}],
           \ ['junegunn/fzf.vim', {'merged' : 0}],
           \ ['brooth/far.vim', {'merged' : 0}],
           \ ]
+
+" yats: typescript syntax
+" far: search and replace
