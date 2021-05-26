@@ -1,5 +1,6 @@
 #!/bin/zsh
 tldr -u
+
 source $ZPLUG_HOME/init.zsh
 source ~/.zshrc
 zplug update
@@ -20,11 +21,9 @@ sudo apt update
 sudo apt upgrade -y
 
 echo updating git repositories
-cd /opt/fromgit
-find . -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$(pwd)/{} pull origin master \;
+{ cd /opt/fromgit && find . -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$(pwd)/{} pull origin master \; }
 
-cd ~/.SpaceVim
-git pull
+{ cd ~/.SpaceVim && git pull }
 
 { cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" }
 sudo chmod +x /usr/local/bin/kubectl
