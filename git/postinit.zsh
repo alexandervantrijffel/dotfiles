@@ -39,6 +39,3 @@ alias gss="git stash save"
 alias gsa="git stash apply"
 alias gsw="git show "
 alias ts="git fetch origin \$(gb) && tig status"
-
-
-source ${0:a:h}/gco.sh
