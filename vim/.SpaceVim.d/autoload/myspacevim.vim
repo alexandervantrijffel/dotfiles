@@ -125,6 +125,7 @@ func! myspacevim#after() abort
   source $DOTFILES/vim/keymap.vim
 
   :call SetSpacevimWindowJkl()
+
 endf
 
 function OnVimEnter()

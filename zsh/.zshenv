@@ -55,6 +55,8 @@ export ANDROID_AVD_HOME=$HOME/.android/avd
 unset JAVA_HOME
 export JAVA_HOME=/usr/lib/jvm/java-1.14.0-openjdk-amd64
 
+export PATH="$PATH:$HOME/.local/bin"
+
 for f in $DOTFILES/**/env.zsh; do 
   source "$f"
 done

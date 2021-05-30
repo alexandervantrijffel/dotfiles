@@ -15,3 +15,5 @@ alias ytw='yarn test:watch'
 alias ytc='yarn test:component'
 alias yu='yarn unlink'
 alias yo='yarn outdated'
+
+export PATH="$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
