@@ -36,7 +36,6 @@ func! myspacevim#before() abort
     set signcolumn=yes
   endif
 
-
   let g:auto_save = 1
   let g:auto_save_no_updatetime = 1
   let g:auto_save_in_insert_mode = 0

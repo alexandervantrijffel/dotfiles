@@ -17,7 +17,13 @@ let g:spacevim_custom_plugins = [
           \ ['antoinemadec/coc-fzf', {'merged' : 0}],
           \ ['junegunn/fzf.vim', {'merged' : 0}],
           \ ['brooth/far.vim', {'merged' : 0}],
+          \ ['airblade/vim-rooter', {'merged' : 0}],
           \ ]
 
 " yats: typescript syntax
 " far: search and replace
+"
+" no need for this one with vim-rooter
+    " jump to dir of current file
+    " set autochdir&
+    " set autochdir!
