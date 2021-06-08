@@ -1,6 +1,7 @@
 [user]
 	name = Alexander van Trijffel
-	email = lexmail@gmail.com
+	email = 994409+alexandervantrijffel@users.noreply.github.com
+	signingkey = DF0DA9476C414F47
 [log]
 	decorate = true
 	abbrevCommit = true
@@ -64,3 +65,5 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[commit]
+	gpgsign = true
