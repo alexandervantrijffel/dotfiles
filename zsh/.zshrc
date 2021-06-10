@@ -1,3 +1,6 @@
+export GDK_SCALE=0.5
+export GDK_DPI_SCALE=2
+
 source ~/.zshrc.local
 
 # install zplug if required
