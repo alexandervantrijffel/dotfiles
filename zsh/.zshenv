@@ -60,3 +60,4 @@ export PATH="$PATH:$HOME/.local/bin"
 for f in $DOTFILES/**/env.zsh; do 
   source "$f"
 done
+
