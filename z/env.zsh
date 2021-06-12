@@ -9,6 +9,7 @@ alias zffev="z ps-licenseadmin-fe && v"
 alias zffey="z ps-licenseadmin-fe && yrs"
 
 alias zg="z grandvisionhq"
+alias zgh="z dev/github.com"
 
 alias zss="z search-service"
 alias zssv="z search-service && v"

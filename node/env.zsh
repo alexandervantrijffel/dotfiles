@@ -1,5 +1,5 @@
 alias y='yarn'
-alias ya='yarn audit'
+alias ya='yarn add'
 alias yah='yarn audit --groups dependencies --level high'
 alias yb='yarn build'
 alias ybw='yarn build:watch'
