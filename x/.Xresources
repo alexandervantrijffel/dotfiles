@@ -5,11 +5,9 @@ Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
 Xft.hintstyle: hintfull
-# on desktop:
-# Xft.dpi:       110
-Xft.dpi:       192
+Xft.dpi:       110
+# Xft.dpi:       192
 ! }}}
 
-rofi.dpi: 192
-# on desktop:
-# rofi.dpi: 110
+rofi.dpi: 110
+#rofi.dpi: 92
