@@ -18,10 +18,13 @@ let g:spacevim_custom_plugins = [
           \ ['junegunn/fzf.vim', {'merged' : 0}],
           \ ['brooth/far.vim', {'merged' : 0}],
           \ ['airblade/vim-rooter', {'merged' : 0}],
+          \ ['yuezk/vim-js', {'merged' : 0}],
+          \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
           \ ]
 
 " yats: typescript syntax
 " far: search and replace
+" vim-js && vim-jsx-pretty: required for commenting jsx/tsx
 "
 " no need for this one with vim-rooter
     " jump to dir of current file
