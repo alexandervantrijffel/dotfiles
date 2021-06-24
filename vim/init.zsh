@@ -39,3 +39,5 @@ bindkey -M viins '^q' exit_zsh
 
 # this is required to prevent that zsh-vim-mode overwrites CTRL-R of fzf and tab of fzf-tab
 export VIM_MODE_NO_DEFAULT_BINDINGS=true
+
+mkdir -p $HOME/.vimundo/

@@ -36,6 +36,11 @@ func! myspacevim#before() abort
     set signcolumn=yes
   endif
 
+  " for undo support
+  set hidden 
+  set undofile
+  set undodir=$HOME/.vimundo/
+
   let g:auto_save = 1
   let g:auto_save_no_updatetime = 1
   let g:auto_save_in_insert_mode = 0
