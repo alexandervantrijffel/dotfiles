@@ -11,6 +11,7 @@ settings:
   colors.webpage.darkmode.enabled:
     global: true
   content.geolocation:
+    http://localhost:3000: true
     https://lastnoted.com: true
   content.javascript.can_access_clipboard:
     global: true
