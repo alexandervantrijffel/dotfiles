@@ -15,4 +15,5 @@ alias zgh="z dev/github.com"
 alias zss="z search-service"
 alias zssv="z search-service && v"
 alias zssy="z search-service && yarn serve"
+alias zsb="z service-base"
 
