@@ -20,7 +20,7 @@
   "diagnostic.errorSign": "⤬",
   "diagnostic.warningSign": "❕",
   "diagnostic.infoSign": "💡",
-  "tabnine.priority": 100,
+  "tabnine.priority": 10,
   "tabnine.shortcut": "TN",
   "diagnostic.checkCurrentLine": false,
   "languageserver": {
