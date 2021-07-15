@@ -19,3 +19,6 @@ zplug "junegunn/fzf",\
 
 # use fzf for completion anywhere after pressing TAB
 zplug "aloxaf/fzf-tab", defer:3
+
+# use CTRL+U to pop fzf widget to select a parent directory
+zplug "pjvds/zsh-fzf-up"
