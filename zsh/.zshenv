@@ -1,9 +1,5 @@
-if [ ! -f ~/.zshrc.local ]; then
-  echo "!!! please add ~/.zshrc.local and set $DOTFILES !!!\n\n"
-fi
-
-# sets $DOTFILES
-source ~/.zshrc.local
+FILENAME=${0:A:h}
+DOTFILES=$(readlink -e "$HOME/.zshrc" | xargs dirname | xargs dirname)
 
 # make sure the autosuggestions color differs from the solarized dark background color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
@@ -55,9 +51,9 @@ export ANDROID_AVD_HOME=$HOME/.android/avd
 unset JAVA_HOME
 export JAVA_HOME=/usr/lib/jvm/java-1.14.0-openjdk-amd64
 
-export PATH="$PATH:$HOME/.local/bin"
+[ -d  "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
+[ -d  "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
 
 for f in $DOTFILES/**/env.zsh; do 
   source "$f"
 done
-

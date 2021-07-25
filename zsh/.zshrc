@@ -1,7 +1,15 @@
+if ! [ -f $HOME/.zshenv ];then 
+  echo Installing ~/.zshenv
+  DOTFILES=$(readlink -e "$HOME/.zshrc" | xargs dirname | xargs dirname)
+  ln -s $DOTFILES/zsh/.zshenv $HOME/
+  source $HOME/.zshenv
+fi
+
 export GDK_SCALE=0.5
 export GDK_DPI_SCALE=2
 
-source ~/.zshrc.local
+[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
+
 
 # install zplug if required
 ! [[ -d $HOME/.zplug ]] && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
@@ -9,7 +17,7 @@ source ~/.zshrc.local
 source ~/.zplug/init.zsh
 
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
-zplug "aloxaf/fzf-tab"
+zplug "aloxaf/fzf-tab", from:github
 zplug "denilsonsa/prettyping", as:command, use:"prettyping", defer:3
 # show aliases hints if abbrevations are available for typed commands
 zplug "djui/alias-tips", defer:3
