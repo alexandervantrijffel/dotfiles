@@ -3,7 +3,10 @@ zplug "softmoth/zsh-vim-mode"
 if type nvim 1>/dev/null; then
   alias v="$(which nvim)"
   export EDITOR=nvim
-  export VISUAL=nvim
+  export VISUAL=nvim+  
+  if [ -d $HOME/.SpaceVim ]; then
+      [[ -d $HOME/.SpaceVim.d ]] || ln -s ${0:A:h}/.SpaceVim.d $HOME/
+  fi
 else
   alias v="vi"
   export EDITOR=vi
