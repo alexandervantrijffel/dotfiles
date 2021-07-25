@@ -14,7 +14,9 @@ fi
 if type batcat 1>/dev/null; then
   alias cat='batcat -p '
 fi
-
+if type bat 1>/dev/null; then
+  alias cat='bat -p '
+fi
 if type pydf 1>/dev/null; then
   alias df="pydf"
 fi
