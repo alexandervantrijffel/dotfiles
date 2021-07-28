@@ -17,7 +17,6 @@ export GDK_DPI_SCALE=2
 source ~/.zplug/init.zsh
 
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
-zplug "aloxaf/fzf-tab", from:github
 zplug "denilsonsa/prettyping", as:command, use:"prettyping", defer:3
 # show aliases hints if abbrevations are available for typed commands
 zplug "djui/alias-tips", defer:3
@@ -41,6 +40,8 @@ zplug "zdharma/fast-syntax-highlighting", defer:3
 zplug "zsh-users/zsh-completions", use:src, defer:3
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "pjvds/zsh-cwd"
+# should be loaded after other completions https://github.com/Aloxaf/fzf-tab/issues/137
+zplug "aloxaf/fzf-tab"
 
 # execute auto suggestion with CTRL E
 bindkey "^E" autosuggest-execute
