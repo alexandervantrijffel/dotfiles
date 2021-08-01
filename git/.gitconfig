@@ -1,7 +1,7 @@
 [user]
 	name = Alexander van Trijffel
 	email = alexander@structura.ws
-	signingkey = DF0DA9476C414F47
+	signingkey = 6DA187A7C48AE7C7
 [log]
 	decorate = true
 	abbrevCommit = true
