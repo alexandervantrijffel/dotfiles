@@ -56,6 +56,8 @@
   auto_fix = true
   enable_flow_syntax = true
 
+# syntax highlighting
+# also coc-graphql is dependent on this
 [[layers]]
   name = 'lang#graphql'
 

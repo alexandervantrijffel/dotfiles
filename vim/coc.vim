@@ -4,6 +4,7 @@ let g:coc_global_extensions = [
   \ 'coc-eslint',
   \ 'coc-explorer',
   \ 'coc-go',
+  \ 'coc-graphql',
   \ 'coc-json',
   \ 'coc-phpls', 
   \ 'coc-prettier', 
