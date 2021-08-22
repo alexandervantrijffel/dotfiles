@@ -9,7 +9,6 @@ func! myspacevim#before() abort
 
   au VimEnter * call OnVimEnter()
 
-  set wrap
   set ignorecase
   set autoindent
   set smartcase
@@ -123,6 +122,10 @@ func! myspacevim#before() abort
   " close buffer with \bd or :Bclose
   :call InstallBclose()
 
+  set wrap
+  setlocal wrap
+  " autowrap
+  set fo+=t
 endf
 
 func! myspacevim#after() abort
@@ -133,10 +136,11 @@ func! myspacevim#after() abort
 endf
 
 function OnVimEnter()
-    if @% == ""
-        " No filename for current buffer
-        :FZF
-    endif
+  if @% == ""
+    " No filename for current buffer
+    :FZF
+  endif
+
 endfunction
 
 function SetSpacevimWindowJkl()
