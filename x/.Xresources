@@ -5,9 +5,21 @@ Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
 Xft.hintstyle: hintfull
-Xft.dpi:       110
-# Xft.dpi:       192
+Xft.dpi:       192
 ! }}}
 
-rofi.dpi: 110
-#rofi.dpi: 92
+rofi.dpi: 192
+
+
+# URxvt*font:    xft:Hack Nerd Font:style=Regular:size=11
+# 
+# ! Fonts {{{
+# Xft.antialias: true
+# Xft.hinting:   true
+# Xft.rgba:      rgb
+# Xft.hintstyle: hintfull
+# Xft.dpi:       110
+# ! }}}
+# 
+# rofi.dpi: 110
+# 
