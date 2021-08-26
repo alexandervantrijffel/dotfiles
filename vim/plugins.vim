@@ -8,7 +8,6 @@ let g:spacevim_custom_plugins = [
           \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
           \ ['tpope/vim-fugitive', {'merged' : 0}],
           \ ['tpope/vim-commentary', {'merged' : 0}],
-          \ ['tpope/vim-sleuth', {'merged' : 0}],
           \ ['chrisbra/Colorizer', {'merged' : 0}],
           \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
           \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}], 
@@ -22,6 +21,10 @@ let g:spacevim_custom_plugins = [
           \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
           \ ]
 
+
+" \ ['nathanaelkane/vim-indent-guides', {'merged' : 0}],
+" let g:indent_guides_enable_on_vim_startup = 1
+"
 " yats: typescript syntax
 " far: search and replace
 " vim-js && vim-jsx-pretty: required for commenting jsx/tsx
@@ -30,3 +33,5 @@ let g:spacevim_custom_plugins = [
     " jump to dir of current file
     " set autochdir&
     " set autochdir!
+
+  let g:spacevim_disabled_plugins = ['deoplete.nvim', 'deoplete-dictionary', 'deoplete-go', 'deoplete-ternjs', 'gruvbox', 'onedark.vim', 'neomake', 'neoinclude.vim',  'neomru.vim', 'neopairs.vim',  'nord-vim', 'molokai', 'open-browser.vim', 'echodoc.vim', 'neoinclude.vim',  'neomru.vim', 'neopairs.vim',  'nord-vim', 'molokai', 'open-browser.vim', 'echodoc.vim', 'NeoSolarized', 'conoline.vim', 'deol.nvim', 'editorconfig-vim', 'jellybeans.vim', 'neco-syntax', 'palenight.vim', 'vim-grepper',  'vim-snippets', 'tern_for_vim', 'srcery-vim', 'vim-flow', 'tabular', 'tagbar', 'tagbar-makefile.vim', 'tagbar-proto.vim', 'wildfire.vim', 'vim-table-mode', 'vim-emoji', 'vim-hybrid', 'vimshell.vim', 'vim-expand-region', 'vim-textobj-entire', 'vim-textobj-indent', 'vim-textobj-line', 'vim-textobj-user', 'splitjoin.vim',  'vim-mundo', 'vim-import-js', 'delimitmate', 'vim-smoothie', 'vim-matchup', 'vim-one', 'vim-sleuth', 'typescript-vim', 'vim-choosewin', 'vim-jsdoc', 'vim-easyoperator-line', 'indent-blankline.nvim']

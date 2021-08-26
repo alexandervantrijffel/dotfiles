@@ -180,6 +180,8 @@
     "**/database/migrations/**",
     "**/storage/framework/views/**",
     "_ide_helper.php",
-    "_ide_helper_models"
+    "_ide_helper_models",
+    "**/.build/**",
+    "**/dist/**"
   ]
 }
