@@ -3,15 +3,28 @@ func! myspacevim#before() abort
   source $DOTFILES/vim/coc.vim
   source $DOTFILES/vim/abbr.vim
 
-  set tabstop=2
-
   let g:mapleader = "'"
 
   au VimEnter * call OnVimEnter()
 
-  set ignorecase
+  set expandtab
+  set tabstop=2 
+  set shiftwidth=2 
+  set softtabstop=2
   set autoindent
+  set nosmarttab
+
+  set nolist
+  " let g:indentLine_setConceal = 0 
+  
+  set wrap
+  setlocal wrap
+  " autowrap
+  set fo+=t
+
+  set ignorecase
   set smartcase
+
   set splitright
   " prevent arbitrary code execution https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
   set nomodeline
@@ -45,12 +58,7 @@ func! myspacevim#before() abort
   let g:auto_save_in_insert_mode = 0
   let g:auto_save_silent = 1
 
-  " autocomplete
-  let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.ts"
-
   au CursorHold * checktime    
-
-  let g:indentLine_setConceal = 0 
 
   " highlight search results
   set incsearch
@@ -60,8 +68,6 @@ func! myspacevim#before() abort
  
   " keep n lines below and above the cursor
   set scroll=5
-
-  set tabstop=2
 
   set number relativenumber
   " set absolute numbers in insert mode
@@ -99,6 +105,9 @@ func! myspacevim#before() abort
   " show other . files
   let g:vimfiler_ignore_pattern = '^\%(\.git\|\.DS_Store\)$'
 
+  " autocomplete
+  let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.ts"
+
   set completeopt+=noselect
 
   " :SPUpdate spacevim
@@ -111,20 +120,18 @@ func! myspacevim#before() abort
 
   let g:spacevim_automatic_update = 1
 
-  let g:spacevim_disabled_plugins = ['deoplete.nvim', 'deoplete-dictionary', 'deoplete-go', 'deoplete-ternjs', 'gruvbox', 'onedark.vim', 'neomake', 'neoinclude.vim',  'neomru.vim', 'neopairs.vim',  'nord-vim', 'molokai', 'open-browser.vim', 'echodoc.vim', 'neoinclude.vim',  'neomru.vim', 'neopairs.vim',  'nord-vim', 'molokai', 'open-browser.vim', 'echodoc.vim', 'NeoSolarized', 'conoline.vim', 'deol.nvim', 'editorconfig-vim', 'jellybeans.vim', 'neco-syntax', 'palenight.vim', 'vim-grepper',  'vim-snippets', 'tern_for_vim', 'srcery-vim', 'vim-flow', 'tabular', 'tagbar', 'tagbar-makefile.vim', 'tagbar-proto.vim', 'wildfire.vim', 'vim-table-mode', 'vim-emoji', 'vim-hybrid', 'vimshell.vim', 'vim-expand-region', 'vim-textobj-entire', 'vim-textobj-indent', 'vim-textobj-line', 'vim-textobj-user', 'splitjoin.vim', 'vim-import-js', 'vim-mundo']
 
+  " run `yarn global add import-js` for vim-import-js 
+  "
   " useful: vim-jplus (join lines)
   " 'neosnippet-snippets', 'neosnippet.vim', 'neoyank.vim',
+  "
   " Required to prevent format error with coc
   " neoformat,
 
   " close buffer with \bd or :Bclose
   :call InstallBclose()
 
-  set wrap
-  setlocal wrap
-  " autowrap
-  set fo+=t
 endf
 
 func! myspacevim#after() abort
@@ -198,8 +205,6 @@ function InstallBclose()
     let g:bclose_multiple = 1
 
   endif
-
-  " Display an error message.
   function! s:Warn(msg)
     echohl ErrorMsg
     echomsg a:msg

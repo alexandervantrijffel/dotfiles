@@ -26,10 +26,9 @@
   bootstrap_after = "myspacevim#after"
   vimcompatible = true
   filemanager = "defx"
-  enable_tabline_filetype_icon = true
   enable_statusline_display_mode = false
   enable_guicolors = true
-  enable_tabline_filetype_icon = true
+# enable_tabline_filetype_icon = true
   enable_vimfiler_welcome = false
   enable_vimfiler_filetypeicon = true
   enable_vimfiler_gitstatus = true
@@ -54,7 +53,7 @@
 [[layers]]
   name = 'lang#javascript'
   auto_fix = true
-  enable_flow_syntax = true
+  enable_flow_syntax = false
 
 # syntax highlighting
 # also coc-graphql is dependent on this
