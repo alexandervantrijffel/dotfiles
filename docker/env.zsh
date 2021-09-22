@@ -1,6 +1,7 @@
 if type docker 1>/dev/null; then
   alias d="docker"
   alias db="docker build"
+  alias dlf="docker logs -f"
   alias dps="docker ps"
   alias dr="docker run"
   alias ds="docker stop"
