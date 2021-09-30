@@ -1,12 +1,13 @@
+"   re-enable this when needed
+"   \ 'coc-phpls', 
+
 let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-diagnostic',
   \ 'coc-eslint',
   \ 'coc-explorer',
   \ 'coc-go',
-  \ 'coc-graphql',
   \ 'coc-json',
-  \ 'coc-phpls', 
   \ 'coc-prettier', 
   \ 'coc-highlight',
   \ 'coc-actions',
