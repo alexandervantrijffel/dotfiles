@@ -28,7 +28,7 @@ inotifywait -r -m -e CREATE --format "%w" --exclude "nopkg|\.git" $DIR | while r
   if ls ${directory}*.go > /dev/null
   then
      echo "Executing golangci-lint"
-     golangci-lint run -E goimports -E dupl -E megacheck -E unconvert "${directory}/"
+     golangci-lint run -E goimports -E dupl -E megacheck -E unconvert ${directory}
      RESULT=$?
      if [ $RESULT -eq 0 ]; then
        echo "Running tests of package ${directory#./}"
