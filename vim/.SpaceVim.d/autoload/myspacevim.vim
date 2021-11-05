@@ -121,6 +121,7 @@ func! myspacevim#before() abort
   let g:spacevim_automatic_update = 1
 
   autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
+  autocmd FileType python noremap <buffer> <A-f> :call Autopep8()<CR>
 
   " run `yarn global add import-js` for vim-import-js 
   "

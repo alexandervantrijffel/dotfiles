@@ -32,7 +32,6 @@ if ! type pbcopy 1>/dev/null; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 fi
-alias python=python3
 if type prettyping 1>/dev/null; then
   alias ping='prettyping'
 fi

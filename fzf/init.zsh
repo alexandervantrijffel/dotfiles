@@ -10,7 +10,7 @@ zplug "junegunn/fzf-bin",\
         # export FZF_DEFAULT_OPTS='--ansi --height 40% --reverse --no-border --multi'
         export FZF_DEFAULT_OPTS='--ansi --multi --height 80%'
         # export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-        export FZF_DEFAULT_COMMAND='fd --type file --hidden --follow --no-ignore --exclude .git --exclude node_modules --exclude dist --exclude coverage --exclude test-reports --exclude .build --exclude build --exclude .serverless'
+        export FZF_DEFAULT_COMMAND='fd --type file --hidden --follow --no-ignore --exclude .git --exclude node_modules --exclude dist --exclude coverage --exclude test-reports --exclude .build --exclude build --exclude .serverless --exclude .venv --exclude .pytest_cache --exclude __pycache__ --exclude pygreet.egg-info'
 # use fzf for completion anywhere after pressing TAB
         export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 zplug "junegunn/fzf",\
