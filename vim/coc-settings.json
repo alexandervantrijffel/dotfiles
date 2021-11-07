@@ -13,7 +13,8 @@
     "typescript",
     "typescriptreact",
     "json",
-    "graphql"
+    "graphql",
+    "python"
   ],
   "codeLens.enable": true,
   "typescript.referencesCodeLens.enable": true,
@@ -42,8 +43,6 @@
   },
   "diagnostic-languageserver.filetypes": {
     "php": ["phpcs"]
-  },
-  "diagnostic-languageserver.linters": {
     "phpcs": {
       "command": "./vendor/bin/phpcs",
       "debounce": 300,
@@ -80,6 +79,8 @@
       "doesWriteToFile": true
     }
   },
+  "python.formatting.provider":"black",
+  "python.formatting.blackPath":"~/.local/bin/black",
   "intelephense.files.maxSize": 3000000,
   "intelephense.stubs": [
     "apache",
