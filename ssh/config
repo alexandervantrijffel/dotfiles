@@ -1,9 +1,9 @@
 Host *
   AddKeysToAgent yes
-  SendEnv LANG LC_*
+  ForwardAgent yes
+  # SendEnv LANG LC_*
   # instead of allowing this for all hosts,
   # connect with ssh -A when needed
-  # ForwardAgent yes
 Host analytics.prosim-ar.com
 	User lexremote
 	Port 1935
