@@ -8,3 +8,4 @@ alias zffey="z ps-licenseadmin-fe && yrs"
 
 alias zga="z alexandervantrijffel"
 alias zgh="z dev/github.com"
+alias zgl="z dev/gitlab.com"
