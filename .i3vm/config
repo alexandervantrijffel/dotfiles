@@ -381,7 +381,7 @@ mode "$mode_gaps_left" {
 bindsym $mod+Shift+f workspace 1:main; exec --no-startup-id i3-msg exec $(which qutebrowser)
 bindsym $mod+Shift+Control+f exec --no-startup-id i3-msg exec $(which qutebrowser)
 
-exec --no-startup-id i3-msg "workspace 1:main; exec $(which qutebrowser)"
+exec --no-startup-id i3-msg "workspace 1:main; exec $(which firefox)"
 exec --no-startup-id i3-msg "workspace 1:main; exec terminator"
 
 # switch to previous workspace
