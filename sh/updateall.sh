@@ -20,6 +20,9 @@ echo apt update and upgrade
 sudo apt update
 sudo apt upgrade -y
 
+echo snap refresh
+sudo snap refresh
+
 echo updating git repositories
 { cd /opt/fromgit && find . -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$(pwd)/{} pull origin master \; }
 
