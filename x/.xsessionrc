@@ -50,11 +50,6 @@ fi
 #         "libinput Natural Scrolling Enabled" 1 &
 # fi
 
-# start redshift
-if [ -f /usr/bin/redshift ]; then
-    redshift &
-fi
-
 # start Gnome keyring
 if [ -f /usr/bin/gnome-keyring-daemon ]; then
   dbus-update-activation-environment --systemd DISPLAY
