@@ -6,3 +6,6 @@ nohup.out
 qutebrowser/.config/qutebrowser/dracula
 qutebrowser/hintsdictionary
 .netrwhist
+node_modules
+.git
+env.bak
