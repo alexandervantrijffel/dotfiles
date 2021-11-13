@@ -29,7 +29,6 @@ zplug "plugins/rsync", from:oh-my-zsh, defer:3
 zplug "plugins/ssh-agent", from:oh-my-zsh, defer:3
 zplug "plugins/kubectl", from:oh-my-zsh, defer:2
 zplug "bonnefoa/kubectl-fzf", defer:3
-zplug "plugins/zsh_reload", from:oh-my-zsh, defer:3
 zplug "stedolan/jq", as:command, from:gh-r, defer:3
 zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer:3
 zplug "so-fancy/diff-so-fancy", as:command, defer:3
