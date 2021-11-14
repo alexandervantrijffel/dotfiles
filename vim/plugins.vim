@@ -19,9 +19,10 @@ let g:spacevim_custom_plugins = [
           \ ['airblade/vim-rooter', {'merged' : 0}],
           \ ['yuezk/vim-js', {'merged' : 0}],
           \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
-          \ ['tell-k/vim-autopep8', {'merged' : 0}],
+          \ ['alexandervantrijffel/vim-material', {'merged' : 0}],
           \ ]
 
+  " \ ['tell-k/vim-autopep8', {'merged' : 0}],
 
 " \ ['nathanaelkane/vim-indent-guides', {'merged' : 0}],
 " let g:indent_guides_enable_on_vim_startup = 1

@@ -13,9 +13,8 @@
   # layer
   # colorscheme = "NeoSolarized"
   # colorscheme = "base16-materialtheme-scheme"
-  # colorscheme = "materialalexandervantrijffel"
-  colorscheme = "material"
   # colorscheme = "OceanicNext"
+  colorscheme = "material"
   colorscheme_bg = "dark"
   # Disable statusline separator, if you want to use other value, please
   # install nerd fonts
@@ -28,7 +27,7 @@
   filemanager = "defx"
   enable_statusline_display_mode = false
   enable_guicolors = true
-# enable_tabline_filetype_icon = true
+  # enable_tabline_filetype_icon = true
   enable_vimfiler_welcome = false
   enable_vimfiler_filetypeicon = true
   enable_vimfiler_gitstatus = true
