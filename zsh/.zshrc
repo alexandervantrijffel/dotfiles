@@ -39,8 +39,6 @@ zplug "zdharma-continuum/fast-syntax-highlighting", defer:3
 zplug "zsh-users/zsh-completions", use:src, defer:3
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "pjvds/zsh-cwd"
-# should be loaded after other completions https://github.com/Aloxaf/fzf-tab/issues/137
-zplug "aloxaf/fzf-tab"
 
 # execute auto suggestion with CTRL E
 bindkey "^E" autosuggest-execute
