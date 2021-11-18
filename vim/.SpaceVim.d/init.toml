@@ -8,18 +8,12 @@
 
 # All SpaceVim option below [option] section
 [options]
-  # set spacevim theme. by default colorscheme layer is not loaded,
-  # if you want to use more colorscheme, please load the colorscheme
-  # layer
-  # colorscheme = "NeoSolarized"
-  # colorscheme = "base16-materialtheme-scheme"
-  # colorscheme = "OceanicNext"
   colorscheme = "material"
   colorscheme_bg = "dark"
   # Disable statusline separator, if you want to use other value, please
   # install nerd fonts
-  statusline_separator = "arrow"
-  statusline_inactive_separator = "arrow"
+  # statusline_separator = "arrow"
+  # statusline_inactive_separator = "arrow"
   buffer_index_type = 4
   bootstrap_before = "myspacevim#before"
   bootstrap_after = "myspacevim#after"
