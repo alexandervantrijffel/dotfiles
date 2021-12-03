@@ -24,6 +24,7 @@
   "tabnine.priority": 10,
   "tabnine.shortcut": "TN",
   "diagnostic.checkCurrentLine": false,
+  "todo_graphql_dependency_manual_install": "yarn add global graphql-language-service-cli",
   "languageserver": {
     "golang": {
       "command": "gopls",
@@ -33,8 +34,6 @@
         "usePlaceholders": true
       }
     },
-    // dependency:
-    // yarn add global graphql-language-service-cli
     "graphql": {
       "command": "graphql-lsp",
       "args": ["server", "-m", "stream"],
@@ -42,7 +41,7 @@
     }
   },
   "diagnostic-languageserver.filetypes": {
-    "php": ["phpcs"]
+    "php": ["phpcs"],
     "phpcs": {
       "command": "./vendor/bin/phpcs",
       "debounce": 300,
@@ -79,8 +78,9 @@
       "doesWriteToFile": true
     }
   },
-  "python.formatting.provider":"black",
-  "python.formatting.blackPath":"~/.local/bin/black",
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "~/.local/bin/black",
+  "python.formatting.blackArgs": ["--line-length", "120"],
   "intelephense.files.maxSize": 3000000,
   "intelephense.stubs": [
     "apache",
