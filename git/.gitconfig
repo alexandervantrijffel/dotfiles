@@ -30,6 +30,7 @@
   email = alexander@structura.ws
 [status]
   showUntrackedFiles = all
+	submoduleSummary = true
 [credential]
 	helper = store
 	canFallBackToInsecureStore = true
