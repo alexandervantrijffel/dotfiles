@@ -1,6 +1,6 @@
 #!/bin/zsh
-function togglexdpi {
-  DIR=${0:a:h}
+DIR=$(dirname ${0:A}) 
+togglexdpi() {
   SYMLINKFILE=${DIR}/.Xresources
 
   CURTARGET=$(readlink ${SYMLINKFILE})

@@ -9,3 +9,4 @@ qutebrowser/hintsdictionary
 node_modules
 .git
 env.bak
+x/.Xresources
