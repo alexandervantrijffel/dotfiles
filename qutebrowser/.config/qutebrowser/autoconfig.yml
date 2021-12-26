@@ -6,6 +6,9 @@
 
 config_version: 2
 settings:
+  aliases:
+    global:
+      l: open http://localhost:3000
   colors.webpage.bg:
     global: '#282a36'
   colors.webpage.darkmode.enabled:
