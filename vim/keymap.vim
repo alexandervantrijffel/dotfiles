@@ -17,6 +17,10 @@ nnoremap <silent><nowait> <leader>k  :call CocAction('diagnosticPrevious')<CR>
 noremap <silent><nowait> <leader>e :CocCommand explorer --preset floating<CR>
 let g:hardtime_ignore_buffer_patterns = [ ".*coc.*" ]
 
+let g:autopep8_max_line_length=120
+autocmd FileType python noremap <buffer> <A-f> :call Autopep8()<CR>
+" noremap <A-f> :CocCommand python.runLinting<CR>
+
 " move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
 inoremap <A-$> <C-o>$
 inoremap <A-^> <C-o>^

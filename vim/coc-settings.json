@@ -78,9 +78,16 @@
       "doesWriteToFile": true
     }
   },
-  "python.formatting.provider": "black",
+  "python.formatting.provider": "autopep8",
+  "python.formatting.autopep8Path": "~/.pyenv/shims/autopep8",
+  "python.formatting.autopep8Args": ["--max-line-length", "120"],
+  //"python.formatting.provider": "black",
   "python.formatting.blackPath": "~/.local/bin/black",
-  "python.formatting.blackArgs": ["--line-length", "120"],
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "120",
+    "--skip-string-normalization"
+  ],
   "intelephense.files.maxSize": 3000000,
   "intelephense.stubs": [
     "apache",
