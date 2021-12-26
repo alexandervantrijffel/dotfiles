@@ -1,9 +1,0 @@
-gsettings set org.gnome.mutter experimental-features "['x11-randr-fractional-scaling']"
-# gsettings set org.gnome.desktop.interface scaling-factor 2
-xrandr --output Virtual1 --auto --scale 0.5x0.5
-#
-# including setting resolution
-# xrandr --output Virtual1 --auto --mode 6016x2538 -s 6016x2538 --scale 0.5x0.5
-# xrandr --output Virtual1 --auto --mode 5120x2160 -s 5120x2160 
-# --scale 0.9x0.9
-
