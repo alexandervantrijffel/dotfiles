@@ -5,5 +5,5 @@ if type feh 1>/dev/null; then
   # or use --zoom fill
   
   # foreground window
-  alias fehfg='nohup feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/fehbackgrounds &'
+  alias fehfg='nohup feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/fehbackgrounds > /tmp/feh.nohup.out.${RANDOM} &'
 fi
