@@ -32,9 +32,6 @@ if ! type pbcopy 1>/dev/null; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
 fi
-if type prettyping 1>/dev/null; then
-  alias ping='prettyping'
-fi
 alias pass="date +%s | sha256sum | base64 | head -c 24 | tee /dev/tty | pbcopy"
 alias psg="ps -a | grep $1"
 alias pwd="pwd -L"

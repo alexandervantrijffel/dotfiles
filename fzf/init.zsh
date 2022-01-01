@@ -6,7 +6,6 @@ zplug "junegunn/fzf-bin",\
         source $ZPLUG_REPOS/junegunn/fzf/shell/key-bindings.zsh
         source $ZPLUG_REPOS/junegunn/fzf/shell/completion.zsh
         """
-        #export FZF_DEFAULT_COMMAND='fd --hidden --type file --no-ignore --exclude "/.git/" --exclude "/dist" --exclude "/test-reports" --exclude "/coverage"'
         # export FZF_DEFAULT_OPTS='--ansi --height 40% --reverse --no-border --multi'
         export FZF_DEFAULT_OPTS='--ansi --multi --height 80%'
         # export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

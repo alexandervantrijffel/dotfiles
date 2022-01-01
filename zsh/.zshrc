@@ -102,18 +102,7 @@ if type fortune 1>/dev/null; then
 fi
 
 if type prettyping 1>/dev/null; then
-  alias ping=prettyping
-fi
-
-if type lsd 1>/dev/null; then
-  alias l="lsd -la"
-else 
-  if type exa 1>/dev/null; then
-    alias la="exa -albgh"
-    alias l="exa -alFbgh"
-  else
-    alias l="ls -CFh"
-  fi
+  alias ping='prettyping'
 fi
 
 for f in $DOTFILES/**/init.zsh; do 
@@ -139,17 +128,22 @@ for f in $DOTFILES/**/postinit.zsh; do
   source "$f"
 done
 
-# deprecated
-for f in $DOTFILES/**/postinit.zsh; do 
-  source "$f"
-done
-
-unalias ll
 
 # have to place here at the end because grep is aliassed by ohmyzsh
 alias grep="grep -iF --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
 
+unalias ll || true
+unalias l || true
+if type lsd 1>/dev/null; then
+  alias l="lsd -la"
+else 
+  if type exa 1>/dev/null; then
+    alias la="exa -albgh"
+    alias l="exa -alFbgh"
+  else
+    alias l="ls -CFh"
+  fi
+fi
+
 # cd into working directory
 cwd
-
-
