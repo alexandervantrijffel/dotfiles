@@ -1,0 +1,3 @@
+color = true
+context = 2
+ignore = ["dir1", "dir2"]
