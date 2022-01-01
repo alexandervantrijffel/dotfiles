@@ -10,7 +10,6 @@ export GDK_DPI_SCALE=2
 
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
-
 # install zplug if required
 ! [[ -d $HOME/.zplug ]] && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 
@@ -94,9 +93,6 @@ if type vmware-user 1>/dev/null; then
   vmware-user --no-startup-d
 fi
 
-alias .d="cd $DOTFILES"
-alias .v="cd $DOTFILES && v"
-
 if type fortune 1>/dev/null; then
   fortune | cowsay -f meow | xargs -0 echo -e "     $(date "+ %A %e %B %R Week %V")\n" 
 fi
@@ -127,7 +123,6 @@ zplug load # --verbose
 for f in $DOTFILES/**/postinit.zsh; do 
   source "$f"
 done
-
 
 # have to place here at the end because grep is aliassed by ohmyzsh
 alias grep="grep -iF --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"

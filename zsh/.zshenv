@@ -8,6 +8,10 @@ export LC_ALL=en_US.UTF-8
 
 # aliases are here in .zshenv so that they are also available
 # in the vim command line
+
+alias .d="cd $DOTFILES"
+alias .v="cd $DOTFILES && v"
+
 if type ag 1>/dev/null; then
   alias ag='ag -p ~/.gitignore --hidden --all-types --ignore-case --one-device --pager "less -R" '
 fi
