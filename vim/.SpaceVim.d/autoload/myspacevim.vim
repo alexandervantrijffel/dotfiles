@@ -119,6 +119,10 @@ func! myspacevim#before() abort
 
   let g:rg_highlight = 'true'
   let g:rg_command = 'rg --vimgrep --hidden --smart-case --follow'
+
+  " jump to existing window if possible
+  let g:fzf_buffers_jump = 1
+
   " run `yarn global add import-js` for vim-import-js 
   "
   " useful: vim-jplus (join lines)

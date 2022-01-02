@@ -171,7 +171,10 @@ nnoremap C "eC
 " when deleting, yank to register e
 noremap x "ex
 
-nnoremap <C-p> :FZF<CR>
+nnoremap <C-p> :Files<cr>
+
+nnoremap <leader>bb :Buffers<cr>
+nnoremap <leader>bl :Lines<cr>
 
 " previous/next tab
 nnoremap <leader>k :bn<cr>
