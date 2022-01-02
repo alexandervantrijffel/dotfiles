@@ -140,14 +140,12 @@ func! myspacevim#after() abort
   source $DOTFILES/vim/keymap.vim
 
   :call SetSpacevimWindowJkl()
-
-  :Files
-
 endf
 
 function OnVimEnter()
   if @% == ""
     " No filename for current buffer
+    :Files
   endif
 
 endfunction
