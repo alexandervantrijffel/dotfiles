@@ -92,11 +92,6 @@ func! myspacevim#before() abort
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
   augroup END
 
-
-  if executable('ag')
-    let g:ackprg = 'ag --vimgrep --hidden -p ~/.gitignore '
-  endif
-
   let g:go_fmt_command = "goimports"
   let g:go_fmt_options = {
     \ 'goimports': '-w',
@@ -122,6 +117,8 @@ func! myspacevim#before() abort
 
   autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
 
+  let g:rg_highlight = 'true'
+  let g:rg_command = 'rg --vimgrep --hidden --smart-case --follow'
   " run `yarn global add import-js` for vim-import-js 
   "
   " useful: vim-jplus (join lines)

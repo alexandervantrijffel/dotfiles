@@ -1,10 +1,9 @@
 " based on dein.vim plugin manager
 " Update with :DeinUpdate or :SPUpdate
 " update / install others with :UpdateRemotePlugins
-"
+" update fzf with :fzf#install()
 let g:spacevim_custom_plugins = [
           \ ['907th/vim-auto-save', {'merged' : 0}],
-          \ ['mileszs/ack.vim', {'merged' : 0}],
           \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
           \ ['tpope/vim-fugitive', {'merged' : 0}],
           \ ['tpope/vim-commentary', {'merged' : 0}],
@@ -21,9 +20,8 @@ let g:spacevim_custom_plugins = [
           \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
           \ ['alexandervantrijffel/vim-material', {'merged' : 0}],
           \ ['tell-k/vim-autopep8', {'merged' : 0}],
+          \ ['jremmen/vim-ripgrep', {'merged' : 0}]
           \ ]
-
-  
 
 " \ ['nathanaelkane/vim-indent-guides', {'merged' : 0}],
 " let g:indent_guides_enable_on_vim_startup = 1

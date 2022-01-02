@@ -1,7 +1,10 @@
 " default mappings
 " <C-g> show full path to current buffer
 
-nmap <leader>a :Ack 
+nnoremap <leader>a :RgFzf<cr>
+nnoremap <leader>g :Rg<cr>
+
+command!      -bang -nargs=* RgFzf                        call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --follow -- ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
 
 au FileType go nmap <A-f> :GoFmt<cr>:GoBuild<cr>
 " au FileType go nmap <A-f> :call CocAction('runCommand', 'editor.action.organizeImport')<cr>:GoFmt<cr>:GoBuild<cr>
