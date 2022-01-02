@@ -7,10 +7,7 @@ let g:spacevim_custom_plugins = [
           \ ['airblade/vim-gitgutter.git', {'merged' : 0}],
           \ ['tpope/vim-fugitive', {'merged' : 0}],
           \ ['tpope/vim-commentary', {'merged' : 0}],
-          \ ['chrisbra/Colorizer', {'merged' : 0}],
           \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
-          \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}], 
-          \ ['miyakogi/conoline.vim', {'merged' : 0}],
           \ ['neoclide/coc.nvim', {'merged' : 0}],
           \ ['antoinemadec/coc-fzf', {'merged' : 0}],
           \ ['junegunn/fzf.vim', {'merged' : 0}],
@@ -18,10 +15,14 @@ let g:spacevim_custom_plugins = [
           \ ['airblade/vim-rooter', {'merged' : 0}],
           \ ['yuezk/vim-js', {'merged' : 0}],
           \ ['maxmellon/vim-jsx-pretty', {'merged' : 0}],
+          \ ['HerringtonDarkholme/yats.vim', {'merged' : 0}], 
           \ ['alexandervantrijffel/vim-material', {'merged' : 0}],
+          \ ['chrisbra/Colorizer', {'merged' : 0}],
           \ ['tell-k/vim-autopep8', {'merged' : 0}],
           \ ['jremmen/vim-ripgrep', {'merged' : 0}]
           \ ]
+
+" vim-ripgrep can be removed when accustomized to multi select in fzf
 
 " \ ['nathanaelkane/vim-indent-guides', {'merged' : 0}],
 " let g:indent_guides_enable_on_vim_startup = 1

@@ -1,5 +1,10 @@
+" to practice:
+" :Far and :Far (interactive) - find and replace in multiple files
+
 " default mappings
 " <C-g> show full path to current buffer
+
+
 
 nnoremap <leader>a :RgFzf<cr>
 nnoremap <leader>g :Rg<cr>
