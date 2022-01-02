@@ -141,7 +141,7 @@ func! myspacevim#after() abort
 
   :call SetSpacevimWindowJkl()
 
-  :FZF
+  :Files
 
 endf
 
