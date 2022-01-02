@@ -1,2 +1,4 @@
 #!/bin/zsh
-source ${0:a:h}/touchp.sh
+thisfolder=${0:a:h}
+source $thisfolder/touchp.sh
+source $thisfolder/whatismyip.sh

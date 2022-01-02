@@ -6,7 +6,7 @@ zplug "junegunn/fzf-bin",\
         source $ZPLUG_REPOS/junegunn/fzf/shell/key-bindings.zsh
         source $ZPLUG_REPOS/junegunn/fzf/shell/completion.zsh
         """
-        export FZF_DEFAULT_OPTS='--ansi --multi --height 80%'
+        export FZF_DEFAULT_OPTS='--ansi --height 80%'
         
         # used by ctrl+p in vim and when running fzf without arguments
         export FZF_DEFAULT_COMMAND='fd --type file --hidden --follow --no-ignore --exclude .git --exclude node_modules --exclude dist --exclude coverage --exclude test-reports --exclude .build --exclude build --exclude .serverless --exclude .venv --exclude .pytest_cache --exclude __pycache__ --exclude pygreet.egg-info --exclude .nox --exclude .cache'
