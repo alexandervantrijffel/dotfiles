@@ -167,10 +167,8 @@ nnoremap C "eC
 " nnoremap d "ed
 " when deleting, yank to register e
 noremap x "ex
-nmap <C-p>p "ep
-nmap <C-p>P "eP
 
-nmap <C-p> :FZF<CR>
+nnoremap <C-p> :FZF<CR>
 
 " previous/next tab
 nnoremap <leader>k :bn<cr>
@@ -197,8 +195,8 @@ nmap sd :call <SID>show_documentation()<CR>
 
 nmap <leader>rn <Plug>(coc-rename)
 
-vmap <leader>f <Plug>(coc-format)
-nmap <leader>f <Plug>(coc-format)
+" vmap <leader>f <Plug>(coc-format)
+" nmap <leader>f <Plug>(coc-format)
 
 " Fix autofix problem of current line
 nmap <leader>qf <Plug>(coc-fix-current)

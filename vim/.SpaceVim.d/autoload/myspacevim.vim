@@ -1,4 +1,20 @@
 func! myspacevim#before() abort
+  " Updates and installation
+  " :SPUpdate spacevim
+ "
+  " Update treesitter parsers
+  " :TSUpdate
+  " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
+  " https://github.com/alexandervantrijffel/vim-material
+
+  " run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest neovim'
+
+  " run 'pip3 install pynvim' for vim
+  " and :GoInstallBinaries
+  " or :GoUpdate
+  " or later :GoUpdateBinaries
+  "
+
   source $DOTFILES/vim/plugins.vim
   source $DOTFILES/vim/coc.vim
   source $DOTFILES/vim/abbr.vim
@@ -22,8 +38,7 @@ func! myspacevim#before() abort
   " autowrap
   set fo+=t
 
-  set ignorecase
-  set smartcase
+  set ignorecase smartcase
 
   set splitright
   " prevent arbitrary code execution https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
@@ -78,16 +93,6 @@ func! myspacevim#before() abort
   augroup END
 
 
-  " run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest neovim'
-
-  " run 'pip3 install pynvim' for vim
-  " and :GoInstallBinaries
-  " or :GoUpdate
-  " or later :GoUpdateBinaries
-  "
-  " When the installation of ack.vim fails, run this command:
-  " git clone --config transfer.fsckObjects=false https://github.com/mileszs/ack.vim.git ~/.cache/vimfiles/repos/github.com/mileszs/ack.vim
-
   if executable('ag')
     let g:ackprg = 'ag --vimgrep --hidden -p ~/.gitignore '
   endif
@@ -110,11 +115,6 @@ func! myspacevim#before() abort
 
   set completeopt+=noselect
 
-  " :SPUpdate spacevim
-  "
-  " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
-" https://github.com/alexandervantrijffel/vim-material
-"
   " this is necessary for the material theme to show correctly
   let g:spacevim_enable_guicolors = 1
 
@@ -140,12 +140,13 @@ func! myspacevim#after() abort
 
   :call SetSpacevimWindowJkl()
 
+  :FZF
+
 endf
 
 function OnVimEnter()
   if @% == ""
     " No filename for current buffer
-    :FZF
   endif
 
 endfunction

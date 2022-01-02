@@ -12,6 +12,7 @@ zplug "junegunn/fzf-bin",\
         export FZF_DEFAULT_COMMAND='fd --type file --hidden --follow --no-ignore --exclude .git --exclude node_modules --exclude dist --exclude coverage --exclude test-reports --exclude .build --exclude build --exclude .serverless --exclude .venv --exclude .pytest_cache --exclude __pycache__ --exclude pygreet.egg-info --exclude .nox --exclude .cache'
         
         export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+        export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type directory"
 
 # make sure python is available. Check `zplug --log` in case of errors
 zplug "junegunn/fzf",\
