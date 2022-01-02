@@ -5,7 +5,7 @@ zplug 'BurntSushi/ripgrep', from:gh-r, as:command, rename-to:"rg"
 rgp() {
   outfile=$(mktemp)
   script --flush --quiet --return $outfile --command "rg \"$@\""
-  rgp_exec $outfile "$@"
+  rgp_exec $outfile --column "$@"
 }
 
 # ripgrep with preview, include files from .gitignore and .ignore
@@ -22,7 +22,7 @@ rgp_exec() {
   
   if (( $count == 0 )); then 
     echo Nothing found
-  elif (( $count > 4)); then 
+  elif (( $count > 40)); then 
     rg_previewonenter $2 "$3"
   fi
 
@@ -30,7 +30,6 @@ rgp_exec() {
 }
 
 rg_previewonenter() {
-  echo 1 is ${1[@]} , 2 is "$2"
  out=$(rg \
 	--column \
 	--line-number \
@@ -38,7 +37,7 @@ rg_previewonenter() {
 	--no-heading \
 	--fixed-strings \
   $1 \
-  "$@" \
+  "$2" \
 	| awk -F  ":" '/1/ {start = $2<5 ? 0 : $2 - 5; end = $2 + 5; print $1 " " $2 " " start ":" end}' \
 	| fzf --preview 'bat --wrap character --color always {1} --highlight-line {2} --line-range {3}' \
     --preview-window wrap)
