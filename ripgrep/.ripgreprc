@@ -1,5 +1,9 @@
-# Don't let ripgrep vomit really long lines to my terminal, and show a preview.
+# Don't let ripgrep vomit really long lines to my terminal, and show a preview of the line
 --max-columns=150
 --max-columns-preview
+
+--follow
+
+--hidden
 
 --smart-case
