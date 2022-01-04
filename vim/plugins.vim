@@ -10,6 +10,7 @@ let g:spacevim_custom_plugins = [
           \ ['yuttie/comfortable-motion.vim', {'merged' : 0}],
           \ ['neoclide/coc.nvim', {'merged' : 0}],
           \ ['antoinemadec/coc-fzf', {'merged' : 0}],
+          \ ['junegunn/fzf', {'merged' : 0}],
           \ ['junegunn/fzf.vim', {'merged' : 0}],
           \ ['brooth/far.vim', {'merged' : 0}],
           \ ['airblade/vim-rooter', {'merged' : 0}],
