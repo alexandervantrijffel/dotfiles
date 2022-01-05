@@ -16,7 +16,7 @@ else
   curl -o- -L https://yarnpkg.com/install.sh | bash
   sudo apt update && sudo apt install pip yarn python3-pip bat -y
   pip3 install --user --upgrade pynvim     
-  sudo apt install htop fortune lnav terminator silversearcher-ag -y
+  sudo apt install htop fortune lnav terminator -ag -y
   sudo apt install fonts-powerline tig cowsay fortune fd-find -y
   sudo apt install inotify-tools -y
   sudo apt install maim xclip xdotool -y
