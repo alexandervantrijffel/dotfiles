@@ -1,4 +1,3 @@
-alias y='yarn'
 alias ya='yarn add -E'
 alias yad='yarn add -E --dev'
 alias yah='yarn audit --groups dependencies --level high'
