@@ -12,3 +12,5 @@ alias zgl="z dev/gitlab.com"
 
 alias ztsb="z trainservicebus"
 alias tsbv="z trainservicebus && v"
+
+alias iosv="z ios && v"

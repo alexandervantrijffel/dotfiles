@@ -24,7 +24,7 @@ let g:spacevim_custom_plugins = [
 
 " coc-fzf has a dependency to pynvim
 " install with: pip3 install --upgrade pynvim
-
+"
 " yats: typescript syntax
 " far: search and replace
 " vim-js && vim-jsx-pretty: required for commenting jsx/tsx
