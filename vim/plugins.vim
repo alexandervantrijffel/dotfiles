@@ -20,6 +20,7 @@ let g:spacevim_custom_plugins = [
           \ ['alexandervantrijffel/vim-material', {'merged' : 0}],
           \ ['chrisbra/Colorizer', {'merged' : 0}],
           \ ['tell-k/vim-autopep8', {'merged' : 0}],
+          \ ['tomlion/vim-solidity', {'merged' : 0}],
           \ ]
 
 " coc-fzf has a dependency to pynvim
