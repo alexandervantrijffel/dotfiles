@@ -21,4 +21,4 @@ alias ytc='yarn test:component'
 alias yu='yarn unlink'
 alias yo='yarn outdated'
 
-export PATH="$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin"
+export PATH="$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/home/lex/.fly/bin"
