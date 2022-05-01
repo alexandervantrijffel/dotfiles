@@ -33,11 +33,6 @@ func! myspacevim#before() abort
   set nolist
   " let g:indentLine_setConceal = 0 
   
-  set wrap
-  setlocal wrap
-  " autowrap
-  set fo+=t
-
   set ignorecase smartcase
 
   set splitright
@@ -114,6 +109,7 @@ func! myspacevim#before() abort
   let g:spacevim_enable_guicolors = 1
 
   let g:spacevim_automatic_update = 1
+  let g:spacevim_wrap_line = 1
 
   autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
 
