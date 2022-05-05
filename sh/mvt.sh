@@ -1,5 +1,4 @@
 #!/bin/sh
 mvt() {
-  mv "$(dirname "$1")" /tmp
-source $thisfolder/whatismyip.sh
+  mv "$1" /tmp
 }
