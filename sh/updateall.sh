@@ -24,8 +24,11 @@ echo apt update and upgrade
 sudo apt update
 sudo apt upgrade -y
 
-echo snap refresh
+echo snap refresh and clear cache
 sudo snap refresh
+sudo rm /var/lib/snapd/cache/*
+# 2 is the minimum
+sudo snap set system refresh.retain=2
 
 echo updating git repositories
 { cd /opt/fromgit && find . -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$(pwd)/{} pull origin master \; }
