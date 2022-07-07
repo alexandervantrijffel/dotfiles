@@ -140,5 +140,9 @@ else
   fi
 fi
 
+if type duf 1>/dev/null; then
+  alias df="duf"
+fi
+
 # cd into working directory
 cwd
