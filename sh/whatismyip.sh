@@ -1,5 +1,5 @@
 whatismyip() {
-  dig +short myip.opendns.com @resolver1.opendns.com
+  dig +short myip.opendns.com @resolver1.opendns.com | tee /dev/tty | pbcopy
 }
 # curl icanhazip.com | tac | xclip -selection clipboard
 # alternatives:
