@@ -29,6 +29,7 @@ func! myspacevim#before() abort
   set softtabstop=2
   set autoindent
   set nosmarttab
+  
 
   set nolist
   " let g:indentLine_setConceal = 0 
@@ -116,8 +117,15 @@ func! myspacevim#before() abort
   let g:rg_highlight = 'true'
   let g:rg_command = 'rg --vimgrep --hidden --smart-case --follow'
 
+
+  " fzf.vim
+
   " jump to existing window if possible
   let g:fzf_buffers_jump = 1
+  set termguicolors
+  " the preview window of fzf uses bat so we have to configure bat theme here
+  let $BAT_THEME='Monokai Extended Origin'
+
 
   " run `yarn global add import-js` for vim-import-js 
   "

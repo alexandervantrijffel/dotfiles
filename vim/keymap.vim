@@ -4,8 +4,6 @@
 " default mappings
 " <C-g> show full path to current buffer
 
-
-
 nnoremap <leader>a :RgFzf<cr>
 nnoremap <leader>g :Rg<cr>
 
@@ -178,8 +176,8 @@ nnoremap C "eC
 " when deleting, yank to register e
 noremap x "ex
 
+" fzf.vim
 nnoremap <C-p> :Files<cr>
-
 nnoremap <leader>bb :Buffers<cr>
 nnoremap <leader>bl :Lines<cr>
 

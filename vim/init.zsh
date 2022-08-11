@@ -7,6 +7,7 @@ if type nvim 1>/dev/null; then
   if [ -d $HOME/.SpaceVim ]; then
       [[ -d $HOME/.SpaceVim.d ]] || ln -s ${0:A:h}/.SpaceVim.d $HOME/
   fi
+  export COLORTERM="truecolor"
 else
   alias v="vi"
   export EDITOR=vi
@@ -44,3 +45,5 @@ bindkey -M viins '^q' exit_zsh
 export VIM_MODE_NO_DEFAULT_BINDINGS=true
 
 mkdir -p $HOME/.vimundo/
+
+
