@@ -30,12 +30,6 @@
   name = "colorscheme"
 
 [[layers]]
-  name = 'autocomplete'
-  enable = true
-  auto-completion-return-key-behavior = "complete"
-  auto-completion-tab-key-behavior = "smart"
-
-[[layers]]
   name = 'shell'
   default_position = 'top'
   default_height = 30
