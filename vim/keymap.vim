@@ -161,6 +161,11 @@ vnoremap <C-c> "+y
 nnoremap <C-c> "+yy
 vnoremap Y "+y$
 
+" when pasting in visual mode, do not put the visual selection in the
+" clipboard; keep the clipboard as is
+xnoremap <expr> p 'pgv"'.v:register.'y`>'
+xnoremap <expr> P 'Pgv"'.v:register.'y`>'
+
 " when changing text, do not yank to clipboard but to register e
 nnoremap cw "ecw
 nnoremap cW "ecW
