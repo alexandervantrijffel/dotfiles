@@ -16,9 +16,9 @@ npm cache clean --force
 
 echo updating python packages
 sudo python3 -m pip install --upgrade pip
-sudo -H pip install --upgrade pip setuptools wheel
-sudo -H pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo -H python3 -m pip install -U
-sudo -H pip cache purge
+pip install --upgrade pip setuptools wheel
+pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo -H python3 -m pip install -U
+pip cache purge
 
 echo apt update and upgrade
 sudo apt update

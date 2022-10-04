@@ -8,7 +8,6 @@ let g:coc_global_extensions = [
   \ 'coc-explorer',
   \ 'coc-go',
   \ 'coc-json',
-  \ 'coc-pyright',
   \ 'coc-prettier', 
   \ 'coc-highlight',
   \ 'coc-actions',

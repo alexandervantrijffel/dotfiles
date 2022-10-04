@@ -2,8 +2,6 @@ func! myspacevim#before() abort
   " Updates and installation
   " :SPUpdate spacevim
  "
-  " Update treesitter parsers
-  " :TSUpdate
   " manual step for a new machine: update colors in ~/.cache/vimfiles/repos/github.com/SpaceVim/vim-material/colors/material.vim with contens from:
   " https://github.com/alexandervantrijffel/vim-material
 
