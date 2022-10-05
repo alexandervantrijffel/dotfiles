@@ -25,8 +25,8 @@ nnoremap <silent><nowait> <leader>k  :call CocAction('diagnosticPrevious')<CR>
 noremap <silent><nowait> <leader>e :CocCommand explorer --preset floating<CR>
 let g:hardtime_ignore_buffer_patterns = [ ".*coc.*" ]
 
-let g:autopep8_max_line_length=120
-autocmd FileType python noremap <buffer> <A-f> :call Autopep8()<CR>
+" let g:autopep8_max_line_length=120
+" autocmd FileType python noremap <buffer> <A-f> :call Autopep8()<CR>
 " noremap <A-f> :CocCommand python.runLinting<CR>
 
 " move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
@@ -202,6 +202,19 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
 
 " Use sd or <A-d> to show documentation in preview window.
 " (K by default)

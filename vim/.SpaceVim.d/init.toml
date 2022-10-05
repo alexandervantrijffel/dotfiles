@@ -27,14 +27,6 @@
   enable_vimfiler_gitstatus = true
 
 [[layers]]
-  name = "colorscheme"
-
-[[layers]]
-  name = 'shell'
-  default_position = 'top'
-  default_height = 30
-
-[[layers]]
   name = "lang#typescript"
 
 [[layers]]
@@ -72,3 +64,11 @@
   go_metalinter_enabled = ['']
   # go_metalinter_command = "gometalinter --exclude=\"\\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\""
   go_def_mode = 'godef'
+
+[[layers]]
+  name = "autocomplete"
+  enable = false
+
+[[layers]]
+  name = "colorscheme"
+  enable = false

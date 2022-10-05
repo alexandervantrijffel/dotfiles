@@ -1,10 +1,8 @@
 {
-  "suggest.enablePreview": true,
   "suggest.enablePreselect": true,
   "suggest.noselect": false,
   "explorer.icon.enableNerdfont": true,
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-  "coc.preferences.hoverTarget": "float",
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
     "markdown",
@@ -24,7 +22,6 @@
   "tabnine.priority": 10,
   "tabnine.shortcut": "TN",
   "diagnostic.checkCurrentLine": false,
-  "todo_graphql_dependency_manual_install": "yarn add global graphql-language-service-cli",
   "languageserver": {
     "golang": {
       "command": "gopls",
