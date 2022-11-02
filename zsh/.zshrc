@@ -132,7 +132,7 @@ else
     alias la="exa -albgh"
     alias l="exa -alFbgh"
   else
-    alias l="ls -CFh"
+    alias l="ls -laFh"
   fi
 fi
 
