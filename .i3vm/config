@@ -39,7 +39,7 @@ set $alt Mod1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec alacritty
 
 bindsym $mod+Shift+e exec --no-startup-id i3-msg exec /opt/fromgit/rofimoji/picker/rofimoji.py
 
@@ -63,10 +63,10 @@ bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+$left move left
@@ -75,10 +75,10 @@ bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+# bindsym $mod+Shift+Left move left
+# bindsym $mod+Shift+Down move down
+# bindsym $mod+Shift+Up move up
+# bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+b split h
@@ -90,9 +90,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
+# bindsym $mod+ layout stacking
+# bindsym $mod+ layout tabbed
+# bindsym $mod+ layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -101,17 +101,17 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+s move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+bindsym $mod+s scratchpad show
 
 # switch to workspace
 bindsym $mod+1 workspace 1:main
@@ -223,7 +223,6 @@ bar {
   bindsym button3 nop
   bindsym button4 nop
   bindsym button5 nop
-  # auto hide doesn't work inside terminator
   mode hide
   hidden_state hide
   modifier $mod
@@ -381,13 +380,14 @@ mode "$mode_gaps_left" {
 bindsym $mod+Shift+f workspace 1:main; exec --no-startup-id i3-msg exec $(which qutebrowser)
 bindsym $mod+Shift+Control+f exec --no-startup-id i3-msg exec $(which qutebrowser)
 
-exec --no-startup-id i3-msg "workspace 1:main; exec $(which firefox)"
-exec --no-startup-id i3-msg "workspace 1:main; exec terminator"
+exec --no-startup-id i3-msg "workspace 5; exec firefox"
+exec --no-startup-id i3-msg "workspace 5; exec sleep 2 && alacritty"
+# exec --no-startup-id i3-msg "workspace 1:main; exec alacritty"
 
 # switch to previous workspace
-bindsym $mod+less workspace prev
-bindsym $mod+Shift+less move container to workspace prev
+bindsym $mod+w workspace prev
+bindsym $mod+Shift+w move container to workspace prev
 
 # switch to next workspace
-bindsym $mod+greater workspace next
-bindsym $mod+Shift+greater move container to workspace next
+bindsym $mod+e workspace next
+bindsym $mod+Shift+e move container to workspace next

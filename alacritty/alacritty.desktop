@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=alacritty
+Comment=fast, rust based terminal
+TryExec=alacritty
+Exec=alacritty
+Icon=alacritty
+Type=Application
+Categories=GNOME;GTK;Utility;TerminalEmulator;System;
+StartupNotify=true
+X-Ubuntu-Gettext-Domain=alacritty
+X-Ayatana-Desktop-Shortcuts=NewWindow;
+Keywords=terminal;shell;prompt;command;commandline;
+[NewWindow Shortcut Group]
+Name=Open a New Window
+Exec=alacritty
+TargetEnvironment=Unity
