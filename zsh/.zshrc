@@ -39,10 +39,6 @@ zplug "zsh-users/zsh-completions", use:src, defer:3
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "pjvds/zsh-cwd"
 
-# execute auto suggestion with CTRL E
-bindkey "^E" autosuggest-execute
-bindkey "^F" forward-word
-
 # display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 # hyphen-insensitive completion. Case
@@ -143,6 +139,10 @@ fi
 if type duf 1>/dev/null; then
   alias df="duf"
 fi
+
+# execute auto suggestion with CTRL E
+bindkey "^E" autosuggest-execute
+bindkey "^F" forward-word
 
 # cd into working directory
 cwd
