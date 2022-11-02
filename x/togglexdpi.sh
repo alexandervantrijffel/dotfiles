@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/zsh
 DIR=$(dirname ${0:A}) 
 togglexdpi() {
   SYMLINKFILE=${DIR}/.Xresources
