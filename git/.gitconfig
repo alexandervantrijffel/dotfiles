@@ -68,3 +68,5 @@
 	smudge = git-lfs smudge -- %f
 [commit]
 	gpgsign = true
+[gpg]
+  program = /usr/bin/gpg
