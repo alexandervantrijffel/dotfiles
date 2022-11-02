@@ -385,9 +385,9 @@ exec --no-startup-id i3-msg "workspace 5; exec sleep 2 && alacritty"
 # exec --no-startup-id i3-msg "workspace 1:main; exec alacritty"
 
 # switch to previous workspace
-bindsym $mod+w workspace prev
-bindsym $mod+Shift+w move container to workspace prev
+bindsym $mod+` workspace prev
+bindsym $mod+Shift+` move container to workspace prev
 
 # switch to next workspace
-bindsym $mod+e workspace next
-bindsym $mod+Shift+e move container to workspace next
+# bindsym $mod+e workspace next
+# bindsym $mod+Shift+e move container to workspace next
