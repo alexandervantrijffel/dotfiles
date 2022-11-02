@@ -60,4 +60,6 @@ export JAVA_HOME=/usr/lib/jvm/java-1.14.0-openjdk-amd64
 for f in $DOTFILES/**/env.zsh; do 
   source "$f"
 done
-. "$HOME/.cargo/env"
+
+
+[ -e "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
