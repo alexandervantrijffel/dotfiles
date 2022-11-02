@@ -65,6 +65,9 @@
   # go_metalinter_command = "gometalinter --exclude=\"\\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\\b\""
   go_def_mode = 'godef'
 
+
+# disabling this might break typescript && html autocomplete
+# enabling it breaks coc autocomplete selection :(
 [[layers]]
   name = "autocomplete"
   enable = false
