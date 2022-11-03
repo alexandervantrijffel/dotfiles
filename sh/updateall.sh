@@ -1,6 +1,8 @@
 #!/bin/zsh
 tldr -u
 
+go clean -modcache
+
 source $ZPLUG_HOME/init.zsh
 source ~/.zshrc
 zplug update
