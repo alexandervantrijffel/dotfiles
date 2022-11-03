@@ -381,8 +381,7 @@ bindsym $mod+Shift+f workspace 1:main; exec --no-startup-id i3-msg exec $(which 
 bindsym $mod+Shift+Control+f exec --no-startup-id i3-msg exec $(which qutebrowser)
 
 exec --no-startup-id i3-msg "workspace 5; exec firefox"
-exec --no-startup-id i3-msg "workspace 5; exec sleep 4 && alacritty"
-# exec --no-startup-id i3-msg "workspace 1:main; exec alacritty"
+exec --no-startup-id i3-msg "workspace 1:main; exec alacritty"
 
 # switch to previous workspace
 bindsym $mod+` workspace prev

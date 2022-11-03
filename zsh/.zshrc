@@ -52,9 +52,9 @@ setopt NO_NOMATCH  # stop zsh from catching ^ chars.
 setopt PROMPT_SUBST  # prompt substitution
 setopt AUTO_CONTINUE
 
-# # caps lock = control key
-# # re-run this when plugging in another keyboard
-# type setxkbmap && setxkbmap -option ctrl:nocaps
+ # caps lock = control key
+ # re-run this when plugging in another keyboard
+ type setxkbmap && setxkbmap -option ctrl:nocaps
 
 # # fix rider showing on Wayland
 # export _JAVA_AWT_WM_NONREPARENTING=1
@@ -97,11 +97,6 @@ if type prettyping 1>/dev/null; then
   alias ping='prettyping'
 fi
 
-for f in $DOTFILES/**/init.zsh; do 
-  source "$f"
-done
-
-# deprecated
 for f in $DOTFILES/**/init.zsh; do 
   source "$f"
 done
