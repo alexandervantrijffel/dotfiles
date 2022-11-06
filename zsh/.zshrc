@@ -141,3 +141,5 @@ bindkey "^F" forward-word
 
 # cd into working directory
 cwd
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
