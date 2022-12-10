@@ -2,6 +2,7 @@
 tldr -u
 
 go clean -modcache
+go get -u all
 
 source $ZPLUG_HOME/init.zsh
 source ~/.zshrc
