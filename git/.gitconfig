@@ -70,3 +70,5 @@
 	gpgsign = true
 [gpg]
   program = /usr/bin/gpg
+[alias]
+	all = "!f() { ls -R -d */.git | xargs -I{} bash -c \"echo {} && git -C {}/../ $1\"; }; f"
