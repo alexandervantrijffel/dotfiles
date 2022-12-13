@@ -46,4 +46,3 @@ export VIM_MODE_NO_DEFAULT_BINDINGS=true
 
 mkdir -p $HOME/.vimundo/
 
-

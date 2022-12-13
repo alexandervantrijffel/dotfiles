@@ -36,6 +36,13 @@ sudo snap set system refresh.retain=2
 echo updating git repositories
 { cd /opt/fromgit && find . -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$(pwd)/{} pull origin master \; }
 
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+DIR="$(dirname "$(which nvim)")"
+echo dir $DIR
+sudo mv ${DIR}/nvim ${DIR}/nvim.prev
+sudo mv nvim.appimage ${DIR}/nvim
+
 { cd ~/.SpaceVim && git pull }
 
 { cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" }
