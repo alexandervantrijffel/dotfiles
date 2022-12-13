@@ -34,6 +34,9 @@ inotifywait -r -m -e CREATE --format "%w" --exclude "nopkg|\.git" $DIR | while r
        echo "Running tests of package ${directory#./}"
        # go test -v -tags=integration $directory
        gotestsum --format dots "${directory}" 2>&1 | pp
+
+       # or use:
+       # gotestsum --watch
      fi
   fi
 done
