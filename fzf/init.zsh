@@ -1,4 +1,4 @@
-zplug "junegunn/fzf-bin",\
+zplug "junegunn/fzf",\
     as:command,\
     from:gh-r,\
     rename-to:"fzf",\
@@ -20,7 +20,7 @@ zplug "junegunn/fzf",\
     as:command,\
     use:bin/{fzf,fzf-tmux},\
     hook-build:"./install --bin",\
-    on:"junegunn/fzf-bin"
+    on:"junegunn/fzf"
 
 # use fzf for completion anywhere after pressing TAB
 zplug "aloxaf/fzf-tab", defer:3
