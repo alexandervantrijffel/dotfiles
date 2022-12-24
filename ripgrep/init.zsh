@@ -39,7 +39,7 @@ rg_previewonenter() {
   $1 \
   "$2" \
 	| awk -F  ":" '/1/ {start = $2<5 ? 0 : $2 - 5; end = $2 + 5; print $1 " " $2 " " start ":" end " " $4}' \
-	| fzf --preview 'bat --wrap character --color always {1} --highlight-line {2} ' \
+	| fzf --preview 'bat -p --wrap character --color always {1} --highlight-line {2} ' \
     --preview-window wrap)
         
   read -r filename line <<< "${out}"
@@ -59,7 +59,7 @@ rg_previewonctrlo() {
     | awk -F  ":" '/1/ {start = $2<5 ? 0 : $2 - 5; end = $2 + 5; print $1 " " $2 " " $3 " " start ":" end " " $4}' \
     | fzf \
       --bind "ctrl-o:execute(${EDITOR:-vim} \"+call cursor({2},{3})\" {1})+cancel" \
-          --preview 'bat --wrap character --color always {1} --highlight-line {2}' \
+          --preview 'bat -p --wrap character --color always {1} --highlight-line {2}' \
           --preview-window wrap
 }
 
