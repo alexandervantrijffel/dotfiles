@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 DIR=$(dirname ${0:A}) 
 togglexdpi() {
-  SYMLINKFILE=/home/$(whoami)/.Xresources
+  SYMLINKFILE=${HOME}/.Xresources
 
   CURTARGET=$(readlink ${SYMLINKFILE})
 
