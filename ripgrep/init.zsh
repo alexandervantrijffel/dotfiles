@@ -1,5 +1,9 @@
 #!/bin/zsh
-zplug 'BurntSushi/ripgrep', from:gh-r, as:command, rename-to:"rg"
+ARCH=$(dpkg --print-architecture)
+if [[ "$ARCH" != *"arm64"* ]]; then 
+  zplug 'BurntSushi/ripgrep', from:gh-r, as:command, rename-to:"rg"
+fi
+
 
 # ripgrep with preview
 rgp() {

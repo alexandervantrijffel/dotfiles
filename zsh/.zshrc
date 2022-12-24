@@ -20,16 +20,24 @@ zplug "denilsonsa/prettyping", as:command, use:"prettyping", defer:3
 # show aliases hints if abbrevations are available for typed commands
 zplug "djui/alias-tips", defer:3
 #zplug "ndbroadbent/scm_breeze", hook-build:"$ZPLUG_HOME/repos/ndbroadbent/scm_breeze/install.sh"
-# alternative for exa
-zplug "Peltoche/lsd", as:command, from:gh-r, rename-to:lsd
+#
+
+ARCH=$(dpkg --print-architecture)
+if [[ "$ARCH" != *"arm64"* ]]; then 
+#  # these plugs are not supported with aarch64
+#  #
+#  # alternative for exa
+ zplug "Peltoche/lsd", as:command, from:gh-r, rename-to:lsd
+ zplug "stedolan/jq", as:command, from:gh-r, defer:3
+ zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer:3
+fi
+
 zplug "plugins/cp", from:oh-my-zsh
 zplug "plugins/httpie", from:oh-my-zsh, defer:3
 zplug "plugins/rsync", from:oh-my-zsh, defer:3
 zplug "plugins/ssh-agent", from:oh-my-zsh, defer:3
 zplug "plugins/kubectl", from:oh-my-zsh, defer:2
 zplug "bonnefoa/kubectl-fzf", defer:3
-zplug "stedolan/jq", as:command, from:gh-r, defer:3
-zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer:3
 zplug "so-fancy/diff-so-fancy", as:command, defer:3
 zplug "zsh-users/zsh-autosuggestions", defer:3
 zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
