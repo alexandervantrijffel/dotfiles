@@ -1,3 +1,4 @@
+#!/bin/zsh
 alias ya='yarn add -E'
 alias yad='yarn add -E --dev'
 alias yah='yarn audit --groups dependencies --level high'
@@ -5,7 +6,6 @@ alias yb='yarn build'
 alias ybw='yarn build:watch'
 alias ybs='yarn build:spec'
 alias yd='yarn deploy'
-alias yi='yarn install'
 alias yga='yarn global add'
 alias ygl='yarn global list'
 alias ygr='yarn global remove'
@@ -22,3 +22,6 @@ alias yu='yarn unlink'
 alias yo='yarn outdated'
 
 export PATH="$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/home/lex/.fly/bin"
+
+
+source ${0:a:h}/functions.sh
