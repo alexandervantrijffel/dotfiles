@@ -5,8 +5,9 @@ Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
 Xft.hintstyle: hintfull
-# Xft.dpi:     192
-Xft.dpi:       172
+Xft.dpi: 162
 ! }}}
 
-rofi.dpi: 192
+# for i3
+Xft.dpi: 162
+rofi.dpi: 162
