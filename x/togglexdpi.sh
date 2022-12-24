@@ -5,7 +5,6 @@ togglexdpi() {
 
   CURTARGET=$(readlink ${SYMLINKFILE})
 
-  echo here we go $CURTARGET
   rm -f ${SYMLINKFILE}
   # # defaults to lodpi if .Xresources file does not exit
   if [[ $CURTARGET =~ "hidpi" ]]; then
