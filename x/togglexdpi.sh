@@ -1,11 +1,12 @@
 #!/usr/bin/zsh
 DIR=$(dirname ${0:A}) 
 togglexdpi() {
-  SYMLINKFILE=${DIR}/.Xresources
+  SYMLINKFILE=/home/$(whoami)/.Xresources
 
   CURTARGET=$(readlink ${SYMLINKFILE})
 
-  rm ${SYMLINKFILE}
+  echo here we go $CURTARGET
+  rm -f ${SYMLINKFILE}
   # # defaults to lodpi if .Xresources file does not exit
   if [[ $CURTARGET =~ "hidpi" ]]; then
     ln -s $DIR/.Xresources.lodpi ${SYMLINKFILE} 
