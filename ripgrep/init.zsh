@@ -62,3 +62,5 @@ rg_previewonctrlo() {
           --preview 'bat --wrap character --color always {1} --highlight-line {2}' \
           --preview-window wrap
 }
+
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
