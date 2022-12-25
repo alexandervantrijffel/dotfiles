@@ -16,7 +16,14 @@ if type nvim 1>/dev/null; then
   export COLORTERM="truecolor"
 
 
-  [ ! -d "$HOME/.SpaceVim" ] && curl -sLf https://spacevim.org/install.sh | bash
+  if [[ ! -d "$HOME/.SpaceVim" ]]; then 
+    curl -sLf https://spacevim.org/install.sh | bash
+    echo start nvim in a new terminal, run :SPupdate, and continue here
+    read blah
+    (cd $HOME/.cache/vimfiles/repos/github.com/neoclide/coc.nvim; yarn install)
+    (cd $HOME/.cache/vimfiles/repos/github.com/neoclide/coc.nvim; yarn build)
+
+  fi
 else
   alias v="vi"
   export EDITOR=vi
@@ -56,7 +63,7 @@ export VIM_MODE_NO_DEFAULT_BINDINGS=true
 mkdir -p $HOME/.vimundo/
 
 TSMOD=$HOME/.config/nvim/lua/tsserver
-[ ! -f $TSMOD ] && mkdir -pv $TSMOD && ln -s $THISDIR/tsserver/init.lua $TSMOD/init.lua
+[ ! -f $TSMOD/init.lua ] && mkdir -pv $TSMOD && ln -s $THISDIR/tsserver/init.lua $TSMOD/init.lua
 
 COCSET=$HOME/.SpaceVim/coc-settings.json
 [ ! -f $COCSET ] && ln -s $THISDIR/coc-settings.json $COCSET

@@ -49,7 +49,7 @@ bindsym $mod+Shift+w kill
 # start rofi (a program launcher)
 bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi | xargs swaymsg exec --"
 bindsym $mod+Shift+d exec --no-startup-id rofi -show window
-bindsym Mod1+Tab exec --no-startup-id rofi -show window
+# bindsym Mod1+Tab exec --no-startup-id rofi -show window
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
