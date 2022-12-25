@@ -61,5 +61,7 @@ for f in $DOTFILES/**/env.zsh; do
   source "$f"
 done
 
+source /etc/profile
+
 
 [ -e "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"

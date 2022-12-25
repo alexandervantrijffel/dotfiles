@@ -11,9 +11,12 @@ export GDK_DPI_SCALE=2
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
 # install zplug if required
-! [[ -d $HOME/.zplug ]] && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+export ZPLUG_HOME=/opt/fromgit/zplug
+sudo mkdir -pv /opt/fromgit
+! [[ -d $ZPLUG_HOME ]] && curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| sudo zsh
 
-source ~/.zplug/init.zsh
+sudo chown -R $(whoami):$(whoami) /opt/fromgit 
+source $ZPLUG_HOME/init.zsh
 
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 zplug "denilsonsa/prettyping", as:command, use:"prettyping", defer:3
@@ -151,3 +154,4 @@ bindkey "^F" forward-word
 cwd
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
