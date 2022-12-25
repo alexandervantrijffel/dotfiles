@@ -4,7 +4,7 @@
 " \ 'coc-phpls', 
 "
 
-"  "todo_graphql_dependency_manual_install": "yarn add global graphql-language-service-cli",
+" todo_graphql_dependency_manual_install: yarn add global graphql-language-service-cli
 
 
 let g:coc_global_extensions = [
@@ -18,8 +18,9 @@ let g:coc_global_extensions = [
   \ 'coc-highlight',
   \ 'coc-actions',
   \ 'coc-tsserver',
-  \ 'coc-tabnine'
   \ ]
+
+  " \ 'coc-tabnine'
 
 " type TabNine::config_dir in vim to view the config dir of tabnine 
 " coc-settings config is at
