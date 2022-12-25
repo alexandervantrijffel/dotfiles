@@ -10,4 +10,4 @@ Xft.dpi: 162
 
 # for i3
 Xft.dpi: 162
-rofi.dpi: 162
+rofi.dpi: 142
