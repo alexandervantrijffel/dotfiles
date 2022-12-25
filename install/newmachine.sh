@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 THISDIR=$(cd `dirname $0` && pwd)
 DOTFILES="$(dirname "$THISDIR")"
 
@@ -7,40 +9,11 @@ if [ "$(uname)" = "Darwin" ]; then
   # no last login message on mac
   touch ~/.hushlogin
 
-  brew install ack fortune cowsay lolcat yarn python exa lnav z
+  brew install ack fortune cowsay lolcat python exa lnav z
 else
-  # i3 gaps
-  sudo add-apt-repository ppa:kgilmer/speed-ricer
-  sudo apt update && sudo apt install curl apt-transport-https
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  curl -o- -L https://yarnpkg.com/install.sh | bash
-  sudo apt update && sudo apt install pip yarn python3-pip bat -y
-  pip3 install --user --upgrade pynvim     
-  sudo apt install htop fortune lnav terminator -ag -y
-  sudo apt install fonts-powerline tig cowsay fortune fd-find -y
-  sudo apt install inotify-tools -y
-  sudo apt install maim xclip xdotool -y
-  cp $THISDIR/meow /usr/share/cowsay/cows/
-
-  # i3 extensions
-  sudo apt i3-gaps-wm install rofi alsa-utils i3blocks -y 
-  ln -s $DOTFILES/.config/i3/ $HOME/.i3/
-  sudo mv /usr/bin/dmenu /usr/bin/dmenu.org
-  sudo ln -s $(which rofi) /usr/bin/dmenu
-
-  # sudo apt-get build-dep shotwell
-  # sudo apt-get install yelp-tools appstream-util libgcr-3-dev libgdata-dev libwebp-dev
-
-  # todo install exa manually
-
-  # teiler
-  # sudo apt install xininfo ffmpeg xclip maim slop -y
-  # sudo git clone https://github.com/carnager/teiler.git /opt/teiler
-  # sudo ln -s /opt/teiler/teiler /usr/local/bin/
-  # sudo ln -s /opt/teiler/teiler_helper /usr/local/bin/
-  # mkdir -pv ~/.config/teiler/profiles/mp4-pulse
-
-  # install teiler as described at https://carnager.github.io/teiler/
+  source "$THISDIR/newmachine_apt.sh"
+  echo todo install dmenu and i3-gaps for i3
+  read blah
 fi
 
 lnav -i $(pwd)/.lnav/formats/*.json
@@ -53,6 +26,17 @@ echo "Replacing folder $FORTUNES"
 sudo rm -rf $FORTUNES
 sudo ln -s $DOTFILES/fortunes $FORTUNES
 
+sudo mkdir -pv /usr/local/nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | NVM_DIR=/usr/local/nvm sudo bash
+sudo ln -s $DOTFILES/node/nvmprofile.sh /etc/profile.d/
+
+sudo nvm install node
+
+sudo npm install -g npm typescript typescript-language-server bash-language-server
+
+# yarn
+sudo corepack enable
+sudo corepack prepare yarn@stable --activate
 yarn global add prettier eslint import-js neovim ts-node typescript
 
 sudo ln -s $(pwd)/../sh/autotestgo.sh /usr/local/bin/autotestgo
@@ -76,7 +60,6 @@ git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
-sudo apt autoremove -y
 
 echo "Setup bluetooth as described in https://github.com/ev3dev/ev3dev.github.io/pull/24/files/50787e9fae767f4a8e5e1748c5bb70b40eb9f259"
 echo "and https://wiki.debian.org/BluetoothUser/a2dp"
@@ -88,7 +71,6 @@ echo ""
 echo "install go manually before continueing: https://golang.org/dl/"
 read blah
 
-sudo apt install ctags
 go get -u github.com/cespare/reflex
 go get -u github.com/golangci/golangci-lint
 go get -u gotest.tools/gotestsum
@@ -96,7 +78,7 @@ go get -u github.com/stretchr/testify/assert
 go get -u github.com/jstemmer/gotags
 go get -u github.com/maruel/panicparse/v2/cmd/pp
 
-sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/nvim 0
+sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/nvim
 sudo update-alternatives --config editor
 
 echo "only on native:"
