@@ -5,33 +5,11 @@ if ! [ -f $HOME/.zshenv ];then
   source $HOME/.zshenv
 fi
 
-export GDK_SCALE=0.5
-export GDK_DPI_SCALE=2
-
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
 source $DOTFILES/zplug/preinit.zsh
 
-# display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
-# hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
-
-setopt MENU_COMPLETE  # select first menu option automatically
-setopt NO_NOMATCH  # stop zsh from catching ^ chars.
-setopt PROMPT_SUBST  # prompt substitution
-setopt AUTO_CONTINUE
-
-# # fix rider showing on Wayland
-# export _JAVA_AWT_WM_NONREPARENTING=1
-
 rm -f ~/.zcompdump*
-
-# for clipboard sharing with host
-if type vmware-user 1>/dev/null; then
-  vmware-user --no-startup-d
-fi
 
 if type prettyping 1>/dev/null; then
   alias ping='prettyping'

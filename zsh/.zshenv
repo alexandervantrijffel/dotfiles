@@ -4,6 +4,20 @@ DOTFILES=$(readlink -e "$HOME/.zshrc" | xargs dirname | xargs dirname)
 # make sure the autosuggestions color differs from the solarized dark background color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
+# display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+# hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="true"
+
+setopt MENU_COMPLETE  # select first menu option automatically
+setopt NO_NOMATCH  # stop zsh from catching ^ chars.
+setopt PROMPT_SUBST  # prompt substitution
+setopt AUTO_CONTINUE
+
+# # fix rider showing on Wayland
+# export _JAVA_AWT_WM_NONREPARENTING=1
+
 export LC_ALL=en_US.UTF-8
 
 # aliases are here in .zshenv so that they are also available
@@ -12,21 +26,14 @@ export LC_ALL=en_US.UTF-8
 alias .d="cd $DOTFILES"
 alias .v="cd $DOTFILES && v"
 
-if type ag 1>/dev/null; then
-  alias ag='ag -p ~/.gitignore --hidden --all-types --ignore-case --one-device --pager "less -R" '
-fi
 if type batcat 1>/dev/null; then
   alias cat='batcat -p '
 fi
 if type bat 1>/dev/null; then
   alias cat='bat -p '
 fi
-if type pydf 1>/dev/null; then
-  alias df="pydf"
-fi
 alias du="du -h --max-depth=1 "
 alias dus="du | sort -h"
-alias fdh="fd --hidden --no-ignore "
 if type htop 1>/dev/null; then
   alias top="sudo htop" # alias top and fix high sierra bug
 fi
@@ -43,8 +50,6 @@ alias pwd="pwd -L"
 alias rm="rm -rf "
 alias sudo="sudo -E "
 alias _="sudo "
-alias t="terminator --working-directory=\$(pwd)"
-alias yrs="yarn run start &"
 
 export ANDROID_SDK=$HOME/Android/Sdk
 export ANDROID_HOME=$ANDROID_SDK
@@ -61,7 +66,9 @@ for f in $DOTFILES/**/env.zsh; do
   source "$f"
 done
 
-source /etc/profile
+export GDK_SCALE=0.5
+export GDK_DPI_SCALE=2
 
+source /etc/profile
 
 [ -e "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"

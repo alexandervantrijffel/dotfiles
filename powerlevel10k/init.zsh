@@ -1,4 +1,6 @@
+#!bin/zsh
 
+THISDIR=${0:a:h}
 zplug "romkatv/powerlevel10k", as:theme, depth:1
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -9,6 +11,9 @@ zplug "romkatv/powerlevel10k", as:theme, depth:1
 # fi
 
 (( ! ${+functions[p10k]} )) || p10k finalize
+
+
+[[ ! -f ~/.p10k.zsh ]] && ln -s $THISDIR/.p10k.zsh ~/.p10k.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
