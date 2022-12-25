@@ -1,8 +1,5 @@
 { 
   "eslint.packageManager": "yarn",
-  "eslint.nodePath": ".yarn/sdks",
-  "workspace.workspaceFolderCheckCwd": false,
-  "tsserver.tsdk": ".yarn/sdks/typescript/lib",
   "suggest.enablePreselect": true,
   "suggest.noselect": false,
   "explorer.icon.enableNerdfont": true,

@@ -27,6 +27,8 @@ let g:spacevim_custom_plugins = [
           \ ['github/copilot.vim', {'merged' : 0}],
           \ ]
 
+autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+
 " coc-fzf has a dependency to pynvim
 " install with: pip3 install --upgrade pynvim
 "

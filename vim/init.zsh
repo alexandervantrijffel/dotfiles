@@ -49,5 +49,9 @@ export VIM_MODE_NO_DEFAULT_BINDINGS=true
 
 mkdir -p $HOME/.vimundo/
 
-TSMOD=$HOME/.config/nvim/lua/tsserver
+TSMOD=$HOME/.config/nvim/lua/tsserver/init.lua
 [ ! -f $TSMOD ] && mkdir -pv $TSMOD && ln -s $THISDIR/tsserver/init.lua $TSMOD/init.lua
+
+COCSET=$HOME/.SpaceVim/coc-settings.json
+[ ! -f $COCSET ] && ln -s $THISDIR/coc-settings.json $COCSET
+
