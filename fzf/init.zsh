@@ -1,6 +1,6 @@
 zplug "junegunn/fzf", \
   use:"shell/*.zsh", \
-  hook-build: "rm -f $ZPLUG_HOME/bin/fzf && $ZPLUG_REPOS/junegunn/fzf/install --bin && ln -s bin/fzf $ZPLUG_HOME/bin", \
+  hook-build: "rm -f $ZPLUG_HOME/bin/fzf && $ZPLUG_REPOS/junegunn/fzf/install --bin && ln -s bin/fzf $ZPLUG_HOME/bin"
 
 # make sure python is available. Check `zplug --log` in case of errors
 
