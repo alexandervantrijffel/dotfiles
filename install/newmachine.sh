@@ -34,12 +34,15 @@ sudo nvm install node
 
 sudo npm install -g npm typescript typescript-language-server bash-language-server
 
-# yarn
+# latest yarn 3 or higher
 sudo corepack enable
-sudo corepack prepare yarn@2 --activate
+sudo corepack prepare yarn@stable --activate
+
+# yarn v2
+npm install -g yarn@berry
 
 sudo mkdir -pv /usr/local/share/.config/yarn
-sudo chmod 777 -R /usr/local/share/.config/yarn
+sudo chmod 777 -R /usr/local/share/.cache
 
 sudo npm install -g global add prettier eslint import-js neovim ts-node typescript typescript-language-server
 

@@ -21,7 +21,9 @@ alias ytc='yarn test:component'
 alias yu='yarn unlink'
 alias yo='yarn outdated'
 
-export PATH="$PATH:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/home/lex/.fly/bin"
+YARN_ENABLE_GLOBAL_CACHE=1
+export YARN_CACHE_FOLDER=/usr/local/share/.cache/yarn/cache
+export YARN_PNP_UNPLUGGED_FOLDER=/usr/local/share/.cache/yarn/unplugged
 
 
 source ${0:a:h}/functions.sh

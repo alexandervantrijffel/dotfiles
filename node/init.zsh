@@ -10,4 +10,3 @@ export NVM_DIR="$HOME/.nvm"
 
 [ ! -f $HOME/.yarnrc ] && ln -s $THISDIR/.yarnrc.yml $HOME/.yarnrc
 
-export YARN_CACHE_FOLDER=/usr/local/share/.config/yarn/global
