@@ -5,6 +5,9 @@ THISDIR=${0:a:h}
 zplug "softmoth/zsh-vim-mode"
 
 
+if ! type nvim 1>/dev/null; then
+  sudo apt install neovim
+fi
 
 if type nvim 1>/dev/null; then
   alias v="$(which nvim)"
@@ -15,14 +18,11 @@ if type nvim 1>/dev/null; then
   fi
   export COLORTERM="truecolor"
 
-
   if [[ ! -d "$HOME/.SpaceVim" ]]; then 
     curl -sLf https://spacevim.org/install.sh | bash
     echo start nvim in a new terminal, run :SPupdate, and continue here
     read blah
-    (cd $HOME/.cache/vimfiles/repos/github.com/neoclide/coc.nvim; yarn install)
-    (cd $HOME/.cache/vimfiles/repos/github.com/neoclide/coc.nvim; yarn build)
-
+    (cd $HOME/.cache/vimfiles/repos/github.com/neoclide/coc.nvim; yarn install && yarn build)
   fi
 else
   alias v="vi"

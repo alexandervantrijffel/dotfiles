@@ -15,7 +15,6 @@ func! myspacevim#before() abort
   "
   " run :UpdateRemotePlugins for tssserver
 
-  source $DOTFILES/vim/bclose.vim
   source $DOTFILES/vim/plugins.vim
   source $DOTFILES/vim/coc.vim
   source $DOTFILES/vim/abbr.vim
@@ -142,6 +141,7 @@ func! myspacevim#after() abort
   source $DOTFILES/vim/keymap.vim
 
   source $DOTFILES/vim/setjkl.vim
+  source $DOTFILES/vim/bclose.vim
 endf
 
 function OnVimEnter()

@@ -58,7 +58,7 @@ export JAVA_HOME=/usr/lib/jvm/java-1.14.0-openjdk-amd64
 [ -d  "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
 
 for f in $DOTFILES/**/env.zsh; do 
-  source "$f"
+  source "$f" 1> /dev/null &
 done
 
 source /etc/profile
