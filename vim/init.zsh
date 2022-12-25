@@ -1,7 +1,10 @@
 #!/bin/zsh
 THISDIR=${0:a:h}
+
 #
 zplug "softmoth/zsh-vim-mode"
+
+
 
 if type nvim 1>/dev/null; then
   alias v="$(which nvim)"
@@ -11,6 +14,9 @@ if type nvim 1>/dev/null; then
       [[ -d $HOME/.SpaceVim.d ]] || ln -s ${0:A:h}/.SpaceVim.d $HOME/
   fi
   export COLORTERM="truecolor"
+
+
+  [ ! -d "$HOME/.SpaceVim" ] && curl -sLf https://spacevim.org/install.sh | bash
 else
   alias v="vi"
   export EDITOR=vi
@@ -49,7 +55,7 @@ export VIM_MODE_NO_DEFAULT_BINDINGS=true
 
 mkdir -p $HOME/.vimundo/
 
-TSMOD=$HOME/.config/nvim/lua/tsserver/init.lua
+TSMOD=$HOME/.config/nvim/lua/tsserver
 [ ! -f $TSMOD ] && mkdir -pv $TSMOD && ln -s $THISDIR/tsserver/init.lua $TSMOD/init.lua
 
 COCSET=$HOME/.SpaceVim/coc-settings.json
