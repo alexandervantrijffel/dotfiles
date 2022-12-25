@@ -37,7 +37,7 @@ VIM <leader><leader>s quick jump to character in document,
 %
 VIM create new file and start editing immediately with w filepath
 %
-VIM GoInfo show definition of go method OR <C-K> show Go type definition
+VIM GoInfo show definition of go method OR <C-K> show Go type definition or K to show type information with Typescript
 %
 VIM merge conflicts with vim diff run git mergetool,
 :diffg LO , :diffg RE , :diffg BA ,
