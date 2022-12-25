@@ -1,6 +1,7 @@
 if type feh 1>/dev/null; then
   # background for i3
-  feh --slideshow-delay 1800 --bg-tile $HOME/Pictures/backgrounds -z -r -D1800
+  [ -d $HOME/Pictures/backgrounds ] &&   feh --slideshow-delay 1800 --bg-tile $HOME/Pictures/backgrounds -z -r -D1800
+
   # --bg-fill or --bg-scale?
   # or use --zoom fill
   
