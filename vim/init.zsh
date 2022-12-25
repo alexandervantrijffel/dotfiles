@@ -1,3 +1,6 @@
+#!/bin/zsh
+THISDIR=${0:a:h}
+#
 zplug "softmoth/zsh-vim-mode"
 
 if type nvim 1>/dev/null; then
@@ -46,3 +49,5 @@ export VIM_MODE_NO_DEFAULT_BINDINGS=true
 
 mkdir -p $HOME/.vimundo/
 
+TSMOD=$HOME/.config/nvim/lua/tsserver
+[ ! -f $TSMOD ] && mkdir -pv $TSMOD && ln -s $THISDIR/tsserver/init.lua $TSMOD/init.lua

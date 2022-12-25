@@ -27,9 +27,6 @@
   enable_vimfiler_gitstatus = true
 
 [[layers]]
-  name = "lang#typescript"
-
-[[layers]]
   name = 'lang#javascript'
   auto_fix = true
   enable_flow_syntax = false
