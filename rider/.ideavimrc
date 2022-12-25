@@ -79,10 +79,6 @@
   " to install in case of errors
   " to update pull repo ~/.cache/vimfiles/repos/github.com/zxqfl/tabnine-vimu
 
-  " homebrew
-  set rtp+=/usr/local/opt/fzf 
-  " rest
-  set rtp+=~/.fzf
 
   nnoremap <C-p> :FZF<CR>
 
