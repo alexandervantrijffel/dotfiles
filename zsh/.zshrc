@@ -23,7 +23,6 @@ setopt NO_NOMATCH  # stop zsh from catching ^ chars.
 setopt PROMPT_SUBST  # prompt substitution
 setopt AUTO_CONTINUE
 
-
 # # fix rider showing on Wayland
 # export _JAVA_AWT_WM_NONREPARENTING=1
 
@@ -54,17 +53,11 @@ fi
 zplug load # --verbose
 
 for f in $DOTFILES/**/postinit.zsh; do 
-  source "$f" &
+  source "$f"
 done
 
 # have to place here at the end because grep is aliassed by ohmyzsh
 alias grep="grep -iF --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
-
-if type duf 1>/dev/null; then
-  alias df="duf"
-else
-  sudo apt install duf
-fi
 
 # cd into working directory
 cwd

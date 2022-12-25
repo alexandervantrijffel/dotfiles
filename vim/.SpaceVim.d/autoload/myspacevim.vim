@@ -134,7 +134,12 @@ func! myspacevim#before() abort
   "
   " Required to prevent format error with coc
   " neoformat,
-
+  "
+augroup SHADA
+    autocmd!
+    autocmd CursorHold,TextYankPost,FocusGained,FocusLost *
+                \ if exists(':rshada') | rshada | wshada | endif
+augroup END
 endf
 
 func! myspacevim#after() abort
