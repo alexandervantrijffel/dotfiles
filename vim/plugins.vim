@@ -29,11 +29,7 @@ let g:spacevim_custom_plugins = [
 
 " coc-fzf has a dependency to pynvim
 " install with: pip3 install --upgrade pynvim
-"
-" yats: typescript syntax
-" far: search and replacevim-js && vim-jsx-pretty
-" vim-js && vim-jsx-pretty: required for commenting jsx/tsx
-"
+
 " no need for this one with vim-rooter
     " jump to dir of current file
     " set autochdir&

@@ -65,7 +65,7 @@ setopt AUTO_CONTINUE
 
  # caps lock = control key
  # re-run this when plugging in another keyboard
- type setxkbmap && setxkbmap -option ctrl:nocaps
+ type setxkbmap > /dev/null 2>&1 && setxkbmap -option ctrl:nocaps
 
 # # fix rider showing on Wayland
 # export _JAVA_AWT_WM_NONREPARENTING=1

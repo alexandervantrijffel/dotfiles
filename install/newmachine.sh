@@ -36,8 +36,12 @@ sudo npm install -g npm typescript typescript-language-server bash-language-serv
 
 # yarn
 sudo corepack enable
-sudo corepack prepare yarn@stable --activate
-yarn global add prettier eslint import-js neovim ts-node typescript
+sudo corepack prepare yarn@2 --activate
+
+sudo mkdir -pv /usr/local/share/.config/yarn
+sudo chmod 777 -R /usr/local/share/.config/yarn
+
+sudo npm install -g global add prettier eslint import-js neovim ts-node typescript typescript-language-server
 
 sudo ln -s $(pwd)/../sh/autotestgo.sh /usr/local/bin/autotestgo
 sudo ln -s $(pwd)/../sh/autorungo.sh /usr/local/bin/autorungo
