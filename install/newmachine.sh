@@ -38,8 +38,8 @@ sudo npm install -g npm typescript typescript-language-server bash-language-serv
 sudo corepack enable
 sudo corepack prepare yarn@stable --activate
 
-# yarn v2
-npm install -g yarn@berry
+# yarn v2https://support.apple.com/kb/SP825?locale=en_US
+# npm install -g yarn@berry
 
 sudo mkdir -pv /usr/local/share/.config/yarn
 sudo chmod 777 -R /usr/local/share/.cache
