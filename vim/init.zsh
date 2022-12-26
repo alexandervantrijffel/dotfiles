@@ -68,3 +68,4 @@ TSMOD=$HOME/.config/nvim/lua/tsserver
 COCSET=$HOME/.SpaceVim/coc-settings.json
 [ ! -f $COCSET ] && ln -s $THISDIR/coc-settings.json $COCSET
 
+source $THISDIR/touchp.sh
