@@ -32,8 +32,6 @@ fi
 if type bat 1>/dev/null; then
   alias cat='bat -p '
 fi
-alias du="du -h --max-depth=1 "
-alias dus="du | sort -h"
 if type htop 1>/dev/null; then
   alias top="sudo htop" # alias top and fix high sierra bug
 fi

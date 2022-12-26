@@ -10,6 +10,6 @@ Xft.dpi: 162
 
 # for i3
 Xft.dpi: 162
-rofi.dpi: 142
+rofi.dpi: 122
 
 # macbook air M1 2020 has 227 ppi
