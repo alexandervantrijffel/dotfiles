@@ -1,7 +1,12 @@
 #!/bin/zsh
-ARCH=$(dpkg --print-architecture)
-if [[ "$ARCH" != *"arm64"* ]]; then 
-  zplug 'BurntSushi/ripgrep', from:gh-r, as:command, rename-to:"rg"
+#
+! type rg 1>/dev/null && sudo apt-get install ripgrep
+
+if ! type rg 1>/dev/null; then
+  ARCH=$(dpkg --print-architecture)
+  if [[ "$ARCH" != *"arm64"* ]]; then 
+    zplug 'BurntSushi/ripgrep', from:gh-r, as:command, rename-to:"rg"
+  fi
 fi
 
 
