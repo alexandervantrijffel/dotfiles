@@ -36,6 +36,3 @@ done
 
 # have to place here at the end because grep is aliassed by ohmyzsh
 alias grep="grep -i --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
-
-# cd into working directory
-cwd

@@ -28,4 +28,4 @@ zplug "zsh-users/zsh-completions", use:src, defer:3
 # zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "zdharma-continuum/fast-syntax-highlighting", defer:3
 zplug "zsh-users/zsh-history-substring-search", defer:3
-zplug "pjvds/zsh-cwd"
+zplug "pjvds/zsh-cwd", hook-load:"cwd"

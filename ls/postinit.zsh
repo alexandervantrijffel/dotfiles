@@ -1,5 +1,5 @@
-unalias ll || true
-unalias l || true
+unalias ll 2>/dev/null || true
+unalias l  2>/dev/null || true
 if type lsd 1>/dev/null; then
     alias l="lsd -la"
   else 
