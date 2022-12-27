@@ -3,8 +3,10 @@ export ZPLUG_HOME=/opt/fromgit/zplug
 sudo mkdir -pv /opt/fromgit
 if ! [[ -d $ZPLUG_HOME ]]; then
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| sudo zsh
-  sudo chown -R $(whoami):$(whoami) /opt/fromgit/zplug 
+  ME=$(logname)
+  sudo chown -R ${ME}:${ME} /opt/fromgit/zplug 
 fi
+
 
 source $ZPLUG_HOME/init.zsh
 
