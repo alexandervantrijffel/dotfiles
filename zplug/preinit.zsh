@@ -7,7 +7,6 @@ if ! [[ -d $ZPLUG_HOME ]]; then
   sudo chown -R ${ME}:${ME} /opt/fromgit/zplug 
 fi
 
-
 source $ZPLUG_HOME/init.zsh
 
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
@@ -15,7 +14,6 @@ zplug "denilsonsa/prettyping", as:command, use:"prettyping", defer:3
 # show aliases hints if abbrevations are available for typed commands
 zplug "djui/alias-tips", defer:3
 #zplug "ndbroadbent/scm_breeze", hook-build:"$ZPLUG_HOME/repos/ndbroadbent/scm_breeze/install.sh"
-#
 
 zplug "plugins/cp", from:oh-my-zsh
 zplug "plugins/httpie", from:oh-my-zsh, defer:3
