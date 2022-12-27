@@ -10,8 +10,6 @@ VIM g; jump to last edited line       25G jump to linenumber 25
 VIM ysMOTION" insert quotes around motion,
 Example ysaw", cs'" change surrounding quotes, ds delete surrounding punctuation mark
 %
-VIM caw delete word under cursor and enter insert mode
-%
 VIM s substitute char and enter insert mode. S substitute line, enter insert mode
 %
 VIM F back find
