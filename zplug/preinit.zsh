@@ -15,16 +15,6 @@ zplug "djui/alias-tips", defer:3
 #zplug "ndbroadbent/scm_breeze", hook-build:"$ZPLUG_HOME/repos/ndbroadbent/scm_breeze/install.sh"
 #
 
-ARCH=$(dpkg --print-architecture)
-if [[ "$ARCH" != *"arm64"* ]]; then 
-#  # these plugs are not supported with aarch64
-#  #
-#  # alternative for exa
- zplug "Peltoche/lsd", as:command, from:gh-r, rename-to:lsd
- zplug "stedolan/jq", as:command, from:gh-r, defer:3
- zplug "sharkdp/fd", as:command, from:gh-r, rename-to:fd, defer:3
-fi
-
 zplug "plugins/cp", from:oh-my-zsh
 zplug "plugins/httpie", from:oh-my-zsh, defer:3
 zplug "plugins/rsync", from:oh-my-zsh, defer:3

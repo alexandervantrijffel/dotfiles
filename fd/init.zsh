@@ -1,7 +1,6 @@
 #!/bin/zsh
 if ! type fd 1>/dev/null; then
-    if ! type fdfind; then sudo apt install fd-find; fi
+    ! type fdfind && sudo apt install fd-find
 
-    ! type fd 1>/dev/null &&  sudo ln -s $(which fdfind) /usr/bin/fd
-    else
+    ! type fd 1>/dev/null && sudo ln -s $(which fdfind) /usr/bin/fd
 fi
