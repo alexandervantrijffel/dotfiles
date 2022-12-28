@@ -8,4 +8,4 @@ else
     alias du="du -h --max-depth=1 "
 fi
 
-alias dus="du | sort -h"
+type duf 1>/dev/null && alias dus="du | sort -h"
