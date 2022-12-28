@@ -15,5 +15,7 @@ bindkey "^F" forward-word
 stty start undef  # disable C-s stopping receiving keyboard signals.
 stty stop undef
 
-[ ! -e ~/.xModmap ] && ln -s $THISDIR/.Xmodmap ~/.xModmap
-xmodmap ~/.xModmap
+if type xmodmap > /dev/null 2>&1; then
+    xmodmap $THISDIR/.xModmap
+fi
+[ -e ~/.xModmap ] && rm ~/.xModmap
