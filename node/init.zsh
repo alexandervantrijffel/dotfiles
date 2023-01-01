@@ -1,6 +1,8 @@
 #!/bin/zsh
 THISDIR=${0:a:h}
 
+zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
+
 # NPM_TOKEN is set in ~/.zshrc.local
 # export NPM_TOKEN=$(cat ~/.npmrc | sed 's/.*authToken=\(.*\)/\1/')
 

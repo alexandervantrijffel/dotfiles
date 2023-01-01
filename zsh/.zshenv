@@ -70,3 +70,7 @@ export GDK_DPI_SCALE=2
 source /etc/profile
 
 [ -e "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
+alias grep="grep -i --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
+
+

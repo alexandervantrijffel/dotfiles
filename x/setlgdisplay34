@@ -1,7 +1,7 @@
 # for amd64 vm
-xrandr --output Virtual1 --auto --mode 5120x1440 -s 5120x1440 --scale 1.1x1.1
+xrandr --output Virtual1 --auto --mode 5120x1440 -s 5120x1440 --scale 1x1
 
 # for aarch64 vm
-xrandr --output Virtual-1 --auto --mode 5120x1377 -s 5120x1377 --scale 1.1x1.1
+xrandr --output Virtual-1 --auto --mode 5120x1440 -s 5120x1440 --scale 1x1
 
 # pref 1774x1330
