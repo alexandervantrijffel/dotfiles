@@ -60,6 +60,10 @@ export JAVA_HOME=/usr/lib/jvm/java-1.14.0-openjdk-amd64
 [ -d  "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
 [ -d  "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
 
+# support for compdef (completions for zsh)
+autoload -Uz compinit
+compinit
+
 for f in $DOTFILES/**/env.zsh; do 
   source "$f"
 done
