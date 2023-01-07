@@ -1,10 +1,12 @@
 # install zplug if required
 export ZPLUG_HOME=/opt/fromgit/zplug
-sudo mkdir -pv /opt/fromgit
 if ! [[ -d $ZPLUG_HOME ]]; then
+  sudo mkdir -pv $ZPLUG_HOME
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| sudo zsh
   ME=$(logname)
-  sudo chown -R ${ME}:${ME} /opt/fromgit/zplug 
+  sudo chown -R root:${ME} $ZPLUG_HOME
+  sudo chmod -R 775 $ZPLUG_HOME/log
+  sudo chmod -R 775 $ZPLUG_HOME/cache
 fi
 
 source $ZPLUG_HOME/init.zsh
