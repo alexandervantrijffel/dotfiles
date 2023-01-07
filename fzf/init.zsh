@@ -4,9 +4,6 @@ zplug "junegunn/fzf", \
   use:"bin/{fzf,fzf-tmux}", \
   hook-load: """
 
-source $ZPLUG_REPOS/junegunn/fzf/shell/key-bindings.zsh
-source $ZPLUG_REPOS/junegunn/fzf/shell/completion.zsh
-
   """, \
   defer:3
 
@@ -24,3 +21,6 @@ zplug "aloxaf/fzf-tab", \
 source $ZPLUG_REPOS/aloxaf/fzf-tab/fzf-tab.plugin.zsh
   """, \
   defer:3
+
+source $ZPLUG_REPOS/junegunn/fzf/shell/key-bindings.zsh
+source $ZPLUG_REPOS/junegunn/fzf/shell/completion.zsh
