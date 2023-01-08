@@ -4,11 +4,11 @@ tldr -u
 go clean -modcache
 go get -u all
 
-source $ZPLUG_HOME/init.zsh
-source ~/.zshrc
-zplug update
-zplug clean
-zplug clear
+# source $ZPLUG_HOME/init.zsh
+# source ~/.zshrc
+# zplug update
+# zplug clean
+# zplug clear
 
 echo updating yarn packages
 yarn global upgrade
