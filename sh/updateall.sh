@@ -55,3 +55,4 @@ else
 fi
 sudo chmod +x /usr/local/bin/kubectl
 
+docker system prune -a -f
