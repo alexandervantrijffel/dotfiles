@@ -1,0 +1,7 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "files.associations": {
+    "**/azure-pipelines.*": "azure-pipelines"
+  }
+}
+
