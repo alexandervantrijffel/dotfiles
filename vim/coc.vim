@@ -18,6 +18,7 @@ let g:coc_global_extensions = [
   \ 'coc-highlight',
   \ 'coc-actions',
   \ 'coc-tsserver',
+  \ 'coc-yaml',
   \ ]
 
   " \ 'coc-tabnine'
