@@ -37,7 +37,7 @@
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
   augroup END
 
-  " run 'yarn global add standard prettier-standard babel-eslint eslint eslint-plugin-prettier' for this
+  " run 'npm install --global standard prettier-standard babel-eslint eslint eslint-plugin-prettier' for this
   let g:ale_linters = {
             \   'javascript': ['standard'],
             \   'go': ['golangci-lint'],

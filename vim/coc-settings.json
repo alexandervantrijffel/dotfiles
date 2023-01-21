@@ -1,5 +1,6 @@
-{ 
+{
   "eslint.packageManager": "yarn",
+  "suggest.enablePreview": true,
   "suggest.enablePreselect": true,
   "suggest.noselect": false,
   "explorer.icon.enableNerdfont": true,
@@ -14,7 +15,8 @@
     "typescriptreact",
     "json",
     "graphql",
-    "python"
+    "python",
+    "json"
   ],
   "codeLens.enable": true,
   "typescript.referencesCodeLens.enable": true,
