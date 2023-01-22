@@ -21,6 +21,9 @@ let g:coc_global_extensions = [
   \ 'coc-yaml',
   \ ]
 
+" coc-tsserver has a dependency on github.com/facebook/watchman for updating
+" imports on renamed files
+
   " \ 'coc-tabnine'
 
 " type TabNine::config_dir in vim to view the config dir of tabnine 
