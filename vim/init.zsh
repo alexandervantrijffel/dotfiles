@@ -52,6 +52,10 @@ bindkey 'jj' vi-cmd-mode
 exit_zsh() { exit }
 autoload exit_zsh; zle -N exit_zsh
 bindkey '^q' exit_zsh
+# repeat last command
+bindkey -s '^l' '!!^M^M'
+# vi editing mode
+bindkey -v 
 
 # for jeffreytse/zsh-vi-mode
 bindkey -M vicmd '^q' exit_zsh
