@@ -6,5 +6,5 @@ MY_DEFAULT_COMMAND_OPTS='--hidden --follow --no-ignore --exclude .git --exclude 
 export FZF_DEFAULT_COMMAND="fd --type file $MY_DEFAULT_COMMAND_OPTS"
 
 export FZF_CTRL_T_COMMAND="fd --type file $MY_DEFAULT_COMMAND_OPTS"
-export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type directory"
+export FZF_ALT_C_COMMAND="fd --type directory $MY_DEFAULT_COMMAND_OPTS"
 
