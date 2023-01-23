@@ -5,6 +5,6 @@ MY_DEFAULT_COMMAND_OPTS='--hidden --follow --no-ignore --exclude .git --exclude 
 # used by ctrl+p in vim and when running fzf without arguments
 export FZF_DEFAULT_COMMAND="fd --type file $MY_DEFAULT_COMMAND_OPTS"
 
-export FZF_CTRL_T_COMMAND="fd --type directory $MY_DEFAULT_COMMAND_OPTS"
+export FZF_CTRL_T_COMMAND="fd --type file $MY_DEFAULT_COMMAND_OPTS"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type directory"
 
