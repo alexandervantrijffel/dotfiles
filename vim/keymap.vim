@@ -11,6 +11,8 @@ nnoremap <leader>g :Rg<cr>
 " to show the file name in fzf preview, 
 command!      -bang -nargs=* RgFzf call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --follow -- ".shellescape(<q-args>), 1, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:60%'), <bang>0)
 
+au FileType python nmap <A-f> :call Autopep8()<CR>
+
 au FileType go nmap <A-f> :GoFmt<cr>:GoBuild<cr>
 " au FileType go nmap <A-f> :call CocAction('runCommand', 'editor.action.organizeImport')<cr>:GoFmt<cr>:GoBuild<cr>
 

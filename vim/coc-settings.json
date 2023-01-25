@@ -82,7 +82,7 @@
     "--ignore",
     "E402,W503"
   ],
-  //"python.formatting.provider": "black",
+  // "python.formatting.provider": "black",
   "python.formatting.blackPath": "~/.local/bin/black",
   "python.formatting.blackArgs": [
     "--line-length",

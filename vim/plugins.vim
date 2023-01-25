@@ -3,7 +3,6 @@
 " update / install others with :UpdateRemotePlugins
 " update fzf with :fzf#install()
 "
-"           \ ['tell-k/vim-autopep8', {'merged' : 0}],
 "           \ ['tomlion/vim-solidity', {'merged' : 0}],
 "
 let g:spacevim_custom_plugins = [
@@ -25,6 +24,7 @@ let g:spacevim_custom_plugins = [
           \ ['chrisbra/Colorizer', {'merged' : 0}],
           \ ['easymotion/vim-easymotion', {'merged' : 0}],
           \ ['github/copilot.vim', {'merged' : 0}],
+          \ ['tell-k/vim-autopep8', {'merged' : 0}],
           \ ]
 
 autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript

@@ -8,15 +8,16 @@
 
 
 let g:coc_global_extensions = [
+  \ 'coc-actions',
   \ 'coc-css',
   \ 'coc-diagnostic',
   \ 'coc-eslint',
   \ 'coc-explorer',
   \ 'coc-go',
+  \ 'coc-highlight',
   \ 'coc-json',
   \ 'coc-prettier', 
-  \ 'coc-highlight',
-  \ 'coc-actions',
+  \ 'coc-pyright', 
   \ 'coc-tsserver',
   \ 'coc-yaml',
   \ ]
