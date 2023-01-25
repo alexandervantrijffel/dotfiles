@@ -7,6 +7,11 @@
 --glob
 !git/*
 
+--glob
+!yarn.lock
+
+--glob
+!package-lock.json
 
 -C=2
 
