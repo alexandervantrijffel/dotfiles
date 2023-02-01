@@ -4,5 +4,5 @@ touchp() {
 }
 
 touchpv() {
-  mkdir -p "$(dirname "$1")" && touch "$1" && vi "$1"
+  mkdir -p "$(dirname "$1")" && touch "$1" && v "$1"
 }
