@@ -31,16 +31,6 @@ let g:hardtime_ignore_buffer_patterns = [ ".*coc.*" ]
 " autocmd FileType python noremap <buffer> <A-f> :call Autopep8()<CR>
 " noremap <A-f> :CocCommand python.runLinting<CR>
 
-" move cursor to the end of the line while in insert mode (ALT+SHIFT+4)
-inoremap <A-$> <C-o>$
-inoremap <A-^> <C-o>^
-inoremap <A-h> <Left>
-inoremap <A-j> <Esc>j
-inoremap <A-k> <Esc>k
-inoremap <A-l> <Right>
-inoremap <A-O> <C-O>O
-inoremap <A-o> <C-o>o
-
 " no esc
 inoremap jj <esc>
 inoremap <C-c> <esc>uu
@@ -216,3 +206,5 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
   vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
   vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
+
+noremap <C-l> <Plug>(copilot-next)
