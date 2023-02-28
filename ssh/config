@@ -1,4 +1,5 @@
 Host *
+  StrictHostKeyChecking no
   AddKeysToAgent yes
   ForwardAgent yes
   # SendEnv LANG LC_*
@@ -9,3 +10,4 @@ Host analytics.prosim-ar.com
 	Port 1935
 	Ciphers aes256-ctr
 	ForwardAgent yes
+
