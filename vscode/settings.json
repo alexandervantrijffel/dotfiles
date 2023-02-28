@@ -3,6 +3,7 @@
   "files.associations": {
     "**/azure-pipelines.*": "azure-pipelines"
   },
-  "redhat.telemetry.enabled": true
+  "redhat.telemetry.enabled": true,
+  "security.workspace.trust.untrustedFiles": "open"
 }
 
