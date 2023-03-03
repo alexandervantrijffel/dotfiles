@@ -10,6 +10,7 @@ togglexdpi() {
   if [[ $CURTARGET =~ "hidpi" ]]; then
     ln -s $DIR/.Xresources.lodpi ${SYMLINKFILE} 
     if [ $? -ne 0 ]; then return $?; fi
+    xrandr --output Virtual-1 --auto --mode 2880x1800 --pos 0x0 --rotate normal --dpi 110 --scale 1x1
     echo Changed to lodpi
   else
     ln -s $DIR/.Xresources.hidpi ${SYMLINKFILE} 
