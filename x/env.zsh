@@ -1,6 +1,12 @@
 #!/usr/bin/zsh
 
-CURPREF=$(cat $HOME/.Xresources-dpi-preference)
+PREFFILE=$HOME/.Xresources-dpi-preference
+if [ -s $PREFFILE ]; then
+  CURPREF=$(cat $PREFFILE)
+else
+  CURPREF=lodpi
+fi
+
 echo curpref is $CURPREF
 if [[ $CURPREF =~ "hidpi" ]]; then
   echo "setting hidpi"
