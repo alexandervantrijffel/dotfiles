@@ -1,11 +1,11 @@
 URxvt*font:    xft:Hack Nerd Font:style=Regular:size=11
+Xft.dpi: 110
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
 
-! Fonts {{{
-Xft.antialias: true
-Xft.hinting:   true
-Xft.rgba:      rgb
-Xft.hintstyle: hintfull
-Xft.dpi:       110
-! }}}
-
+! for i3
 rofi.dpi: 110

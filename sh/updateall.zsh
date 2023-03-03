@@ -35,7 +35,7 @@ sudo snap set system refresh.retain=2
 echo updating git repositories
 { cd /opt/fromgit && find . -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$(pwd)/{} pull origin master \; }
 
-if [[ "$ARCH" != *"arm64"* ]]; then 
+if [[ "$ARCH" =~ "arm64" ]]; then 
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
   chmod u+x nvim.appimage
   DIR="$(dirname "$(which nvim)")"
@@ -46,7 +46,7 @@ fi
 
 { cd ~/.SpaceVim && git pull }
 
-if [[ "$ARCH" != *"arm64"* ]]; then 
+if [[ "$ARCH" =~ "arm64" ]]; then 
   { cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" }
 else
   { cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl" }

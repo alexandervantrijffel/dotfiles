@@ -14,7 +14,7 @@ output Virtual-8
 off
 output Virtual-1
 crtc 0
-mode 2880x1800
+mode 3840x2400
 pos 0x0
 primary
-rate 60.00
+rate 59.97

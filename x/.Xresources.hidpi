@@ -1,14 +1,13 @@
 URxvt*font:    xft:Hack Nerd Font:style=Regular:size=11
-
-! Fonts {{{
-Xft.antialias: true
-Xft.hinting:   true
-Xft.rgba:      rgb
-Xft.hintstyle: hintfull
-Xft.dpi: 162
-! }}}
+Xft.dpi: 227
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
 
 ! for i3
-rofi.dpi: 122
+rofi.dpi: 227
 
 ! macbook air M1 2020 has 227 ppi
