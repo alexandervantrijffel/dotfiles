@@ -12,7 +12,6 @@ go get -u all
 
 echo updating yarn packages
 yarn global upgrade
-yarn set version latest
 yarn cache clean --all
 
 npm cache clean --force
