@@ -16,4 +16,6 @@ togglexdpi() {
     if [ $? -ne 0 ]; then return $?; fi
     echo Changed to hidpi
   fi
+  xrdb ~/.Xresources
+  i3-msg restart
 }
