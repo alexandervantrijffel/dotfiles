@@ -15,6 +15,7 @@ togglexdpi() {
   else
     ln -s $DIR/.Xresources.hidpi ${SYMLINKFILE} 
     if [ $? -ne 0 ]; then return $?; fi
+    xrandr --output Virtual-1 --auto --mode 5120x1440 --pos 0x0 --rotate normal --dpi 110 --scale 1x1
     echo Changed to hidpi
   fi
   xrdb ~/.Xresources
