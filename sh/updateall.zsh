@@ -55,3 +55,8 @@ fi
 sudo chmod +x /usr/local/bin/kubectl
 
 docker system prune -a -f
+
+if type notify-send 1>/dev/null; then
+  notify-send -i display "updateall.sh completed"
+fi 
+
