@@ -23,4 +23,14 @@ for f in $DOTFILES/**/env.zsh; do
   . "$f"
 done
 
-. /etc/profile
+
+# lightdm does not source .zprofile :(
+# use this fix for now
+if [[ ! -f "/tmp/.zprofiled" ]]; then
+  touch /tmp/.zprofiled
+  . /etc/profile
+  . $ZDOTDIR/.zprofile
+  for f in $DOTFILES/**/zprofile.zsh; do 
+    . "$f"
+  done
+fi

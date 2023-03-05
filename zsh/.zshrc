@@ -23,7 +23,6 @@ if ! zplug check; then
   fi
 fi
 
-
 zplug load # --verbose
 
 for f in $DOTFILES/**/postinit.zsh; do 
