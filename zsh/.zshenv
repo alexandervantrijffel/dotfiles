@@ -35,6 +35,7 @@ export JAVA_HOME=/usr/lib/jvm/java-1.14.0-openjdk-amd64
 
 # support for compdef (completions for zsh)
 autoload -Uz compinit
+compinit -d $HOME/.cache/.zcompdump-$HOST
 compinit -u
 
 for f in $DOTFILES/**/env.zsh; do 
