@@ -1,13 +1,4 @@
 Host *
   StrictHostKeyChecking no
   AddKeysToAgent yes
-  ForwardAgent yes
   # SendEnv LANG LC_*
-  # instead of allowing this for all hosts,
-  # connect with ssh -A when needed
-Host analytics.prosim-ar.com
-	User lexremote
-	Port 1935
-	Ciphers aes256-ctr
-	ForwardAgent yes
-
