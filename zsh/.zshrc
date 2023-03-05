@@ -2,8 +2,6 @@
 
 source $DOTFILES/zplug/preinit.zsh
 
-rm -f ~/.zcompdump*
-
 if type prettyping 1>/dev/null; then
   alias ping='prettyping'
 fi
@@ -20,6 +18,7 @@ if ! zplug check; then
       echo
   fi
 fi
+
 
 zplug load # --verbose
 
@@ -52,3 +51,4 @@ alias pwd="pwd -L"
 alias rm="rm -rf "
 alias sudo="sudo -E "
 alias _="sudo "
+
