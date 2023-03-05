@@ -1,4 +1,2 @@
 #!/bin/zsh
-thisfolder=${0:a:h}
-source $thisfolder/whatismyip.sh
-source $thisfolder/randompass.sh
+alias whatismyip='dig +short myip.opendns.com @resolver1.opendns.com | tee /dev/tty | pbcopy'
