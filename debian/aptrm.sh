@@ -1,5 +1,4 @@
 #!/bin/zsh
-
 function aptrm {
   toremove=$(apt list --installed | fzf)
   echo got arguments "$@"

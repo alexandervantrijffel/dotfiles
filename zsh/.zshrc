@@ -1,3 +1,7 @@
+#!/bin/zsh
+#
+# .zshrc : only sourced for login shells
+
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
 source $DOTFILES/zplug/preinit.zsh
@@ -65,3 +69,9 @@ setopt NO_NOMATCH  # stop zsh from catching ^ chars.
 setopt PROMPT_SUBST  # prompt substitution
 setopt AUTO_CONTINUE
 
+# after entering repeat command like !-2, press space to auto-expand the command
+bindkey ' ' magic-space
+
+# execute auto suggestion with CTRL E
+bindkey "^E" autosuggest-execute
+bindkey "^F" forward-word

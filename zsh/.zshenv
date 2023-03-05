@@ -1,8 +1,15 @@
+#!/bin/zsh
+#
+# order: 
+# .zshenv → .zprofile → .zshrc → .zlogin → .zlogout
+#
+# .zshenv: sourced both for interactive and non interactive shells 
+
 FILENAME=${0:A:h}
 DOTFILES=$(readlink -e "$HOME/.zshenv" | xargs dirname | xargs dirname)
-export ZDOTDIR="${DOTFILES}/zsh"
+ZDOTDIR="${DOTFILES}/zsh"
 
-export LC_ALL=en_US.UTF-8
+LC_ALL=en_US.UTF-8
 
 [ -d  "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
 [ -d  "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"

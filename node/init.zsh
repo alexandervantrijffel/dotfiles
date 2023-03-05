@@ -30,3 +30,5 @@ alias ytw='yarn test:watch'
 alias ytc='yarn test:component'
 alias yu='yarn unlink'
 alias yo='yarn outdated'
+
+source ${0:a:h}/functions.sh
