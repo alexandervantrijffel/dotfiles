@@ -1,1 +1,1 @@
-export GOPRIVATE=dev.azure.com
+GOPRIVATE=dev.azure.com

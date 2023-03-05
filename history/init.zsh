@@ -1,4 +1,4 @@
-export HISTCONTROL=ignoreboth:erasedups
+HISTCONTROL=ignoreboth:erasedups
 HISTSIZE=10000000
 SAVEHIST=10000000
 # setopt BANG_HIST                 # Treat the '!' character specially during expansion.

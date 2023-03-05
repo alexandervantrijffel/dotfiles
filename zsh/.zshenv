@@ -11,8 +11,8 @@ ZDOTDIR="${DOTFILES}/zsh"
 
 LC_ALL=en_US.UTF-8
 
-[ -d  "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
-[ -d  "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
+[ -d  "$HOME/bin" ] && PATH="$PATH:$HOME/bin"
+[ -d  "$HOME/.local/bin" ] && PATH="$PATH:$HOME/.local/bin"
 
 # support for compdef (completions for zsh)
 autoload -Uz compinit

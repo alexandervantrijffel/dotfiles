@@ -18,7 +18,7 @@ bindkey -M viins '^v' edit-command-line
 bindkey 'jj' vi-cmd-mode
 
 # for jeffreytse/zsh-vi-mode
-# export ZVM_VI_ESCAPE_BINDKEY=jj
+# ZVM_VI_ESCAPE_BINDKEY=jj
 
 # life is even completer now
 #
@@ -36,6 +36,6 @@ bindkey -M vicmd '^q' exit_zsh
 bindkey -M viins '^q' exit_zsh
 
 # this is required to prevent that zsh-vim-mode overwrites CTRL-R of fzf and tab of fzf-tab
-export VIM_MODE_NO_DEFAULT_BINDINGS=true
+VIM_MODE_NO_DEFAULT_BINDINGS=true
 
 source $THISDIR/touchp.sh
