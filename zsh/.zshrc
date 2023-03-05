@@ -52,3 +52,16 @@ alias rm="rm -rf "
 alias sudo="sudo -E "
 alias _="sudo "
 
+# display red dots whilst waiting for completion.
+export COMPLETION_WAITING_DOTS="true"
+# hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+export HYPHEN_INSENSITIVE="true"
+
+# make sure the autosuggestions color differs from the solarized dark background color
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
+setopt MENU_COMPLETE  # select first menu option automatically
+setopt NO_NOMATCH  # stop zsh from catching ^ chars.
+setopt PROMPT_SUBST  # prompt substitution
+setopt AUTO_CONTINUE
+
