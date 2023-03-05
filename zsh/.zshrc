@@ -4,14 +4,14 @@
 
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
-source $DOTFILES/zplug/preinit.zsh
+. $DOTFILES/zplug/preinit.zsh
 
 if type prettyping 1>/dev/null; then
   alias ping='prettyping'
 fi
 
 for f in $DOTFILES/**/init.zsh; do 
-  source "$f"
+  . "$f"
 done
 
 if ! zplug check; then
@@ -27,7 +27,7 @@ fi
 zplug load # --verbose
 
 for f in $DOTFILES/**/postinit.zsh; do 
-  source "$f"
+  . "$f"
 done
 
 alias .d="cd $DOTFILES"

@@ -38,4 +38,12 @@ bindkey -M viins '^q' exit_zsh
 # this is required to prevent that zsh-vim-mode overwrites CTRL-R of fzf and tab of fzf-tab
 VIM_MODE_NO_DEFAULT_BINDINGS=true
 
-source $THISDIR/touchp.sh
+if type nvim 1>/dev/null; then
+  alias v="$(which nvim)"
+else
+  alias v="vi"
+fi
+
+. $THISDIR/touchp.sh
+
+

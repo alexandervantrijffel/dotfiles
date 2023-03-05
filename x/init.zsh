@@ -1,5 +1,5 @@
 #!/bin/zsh
-source ${0:a:h}/togglexdpi.zsh
+. ${0:a:h}/togglexdpi.zsh
 
 func () {
   local PREFFILE=$HOME/.Xresources-dpi-preference

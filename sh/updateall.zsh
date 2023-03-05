@@ -6,8 +6,8 @@ tldr -u
 go clean -modcache
 go get -u all
 
-# source $ZPLUG_HOME/init.zsh
-# source ~/.zshrc
+# . $ZPLUG_HOME/init.zsh
+# . ~/.zshrc
 # zplug update
 # zplug clean
 # zplug clear

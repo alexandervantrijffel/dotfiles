@@ -20,7 +20,7 @@ compinit -d $HOME/.cache/.zcompdump-$HOST
 compinit -u
 
 for f in $DOTFILES/**/env.zsh; do 
-  source "$f"
+  . "$f"
 done
 
-source /etc/profile
+. /etc/profile

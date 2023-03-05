@@ -57,6 +57,11 @@ if [ -f /usr/bin/gnome-keyring-daemon ]; then
   export SSH_AUTH_SOCK
 fi
 
+# if [ -f /data/dev/github.com/alexandervantrijffel/dotfiles/zsh/.zprofile  ]; then
+#   echo "Sourcing /data/dev/github.com/alexandervantrijffel/dotfiles/zsh/.zprofile"
+#   . /data/dev/github.com/alexandervantrijffel/dotfiles/zsh/.zprofile
+# fi
+
 start i3 and keep it running
 if [ -f /usr/bin/i3 ]; then
      exec i3

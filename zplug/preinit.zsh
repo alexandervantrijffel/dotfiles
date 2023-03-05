@@ -9,7 +9,7 @@ if ! [[ -d $ZPLUG_HOME ]]; then
   sudo chmod -R 775 $ZPLUG_HOME/cache
 fi
 
-source $ZPLUG_HOME/init.zsh
+. $ZPLUG_HOME/init.zsh
 
 zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
 zplug "denilsonsa/prettyping", as:command, use:"prettyping", defer:3
