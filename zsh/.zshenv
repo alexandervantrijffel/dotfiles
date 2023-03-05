@@ -1,7 +1,6 @@
 FILENAME=${0:A:h}
 DOTFILES=$(readlink -e "$HOME/.zshenv" | xargs dirname | xargs dirname)
 export ZDOTDIR="${DOTFILES}/zsh"
-echo ZDOTDIR=$ZDOTDIR
 
 # make sure the autosuggestions color differs from the solarized dark background color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
