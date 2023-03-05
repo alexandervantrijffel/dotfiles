@@ -1,4 +1,6 @@
 #!/bin/zsh
+THISDIR=${0:a:h}
+
 tldr -u
 
 go clean -modcache
@@ -60,3 +62,4 @@ if type notify-send 1>/dev/null; then
   notify-send -i display "updateall.sh completed"
 fi 
 
+sh ${THISDIR}/deleteoldsnapversions.sh
