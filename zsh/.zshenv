@@ -22,35 +22,6 @@ setopt AUTO_CONTINUE
 
 export LC_ALL=en_US.UTF-8
 
-# aliases are here in .zshenv so that they are also available
-# in the vim command line
-
-alias .d="cd $DOTFILES"
-alias .v="cd $DOTFILES && v"
-
-if type batcat 1>/dev/null; then
-  alias cat='batcat -p '
-fi
-if type bat 1>/dev/null; then
-  alias cat='bat -p '
-fi
-if type htop 1>/dev/null; then
-  alias top="sudo htop" # alias top and fix high sierra bug
-fi
-alias lps="lpass show -x -G "
-alias md5sum=$'md5sum | awk -F \' \' \'{print $1}\' | tee /dev/tty | pbcopy'
-alias open='xdg-open'
-if ! type pbcopy 1>/dev/null; then
-  alias pbcopy='xclip -selection clipboard'
-  alias pbpaste='xclip -selection clipboard -o'
-fi
-alias pass="date +%s | sha256sum | base64 | head -c 24 | tee /dev/tty | pbcopy"
-alias psg="ps -a | grep $1"
-alias pwd="pwd -L"
-alias rm="rm -rf "
-alias sudo="sudo -E "
-alias _="sudo "
-
 export ANDROID_SDK=$HOME/Android/Sdk
 export ANDROID_HOME=$ANDROID_SDK
 export ANDROID_SDK_ROOT=$ANDROID_SDK
@@ -79,5 +50,4 @@ source /etc/profile
 [ -e "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 alias grep="grep -i --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
-
 
