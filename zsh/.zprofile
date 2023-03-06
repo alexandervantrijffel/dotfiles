@@ -12,4 +12,3 @@ fi
 for f in $DOTFILES/**/zprofile.zsh; do 
   . "$f"
 done
-

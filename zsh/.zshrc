@@ -1,6 +1,6 @@
 #!/bin/zsh
 #
-# .zshrc : only sourced for login shells
+# .zshrc : only sourced for interactive shells
 
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
