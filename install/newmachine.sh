@@ -12,7 +12,7 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install ack fortune cowsay lolcat python exa lnav z
 else
   source "$THISDIR/newmachine_apt.sh"
-  echo todo install dmenu and i3-gaps for i3
+  echo todo install i3-gaps for i3
   read blah
 fi
 
