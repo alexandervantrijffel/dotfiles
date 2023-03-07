@@ -72,4 +72,4 @@ rg_previewonctrlo() {
           --preview-window wrap
 }
 
-RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc

@@ -1,6 +1,6 @@
-HISTCONTROL=ignoreboth:erasedups
-HISTSIZE=10000000
-SAVEHIST=10000000
+export HISTCONTROL=ignoreboth:erasedups
+export HISTSIZE=10000000
+export SAVEHIST=10000000
 # setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 # setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
 # setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
@@ -16,4 +16,4 @@ SAVEHIST=10000000
 # setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 # # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="yyyy-mm-dd"
+export HIST_STAMPS="yyyy-mm-dd"

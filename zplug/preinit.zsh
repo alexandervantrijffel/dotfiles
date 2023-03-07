@@ -1,5 +1,5 @@
 # install zplug if required
-ZPLUG_HOME=/opt/fromgit/zplug
+export ZPLUG_HOME=/opt/fromgit/zplug
 if ! [[ -d $ZPLUG_HOME ]]; then
   sudo mkdir -pv $ZPLUG_HOME
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| sudo zsh
@@ -30,4 +30,3 @@ zplug "zsh-users/zsh-completions", use:src, defer:3
 zplug "zdharma-continuum/fast-syntax-highlighting", defer:3
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "pjvds/zsh-cwd", hook-load:"cwd"
-
