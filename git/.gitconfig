@@ -41,8 +41,6 @@
   # fix CRLF by replacing it with LF
   autocrlf = input
 	excludesFile = ~/.gitignore
-[pull]
-	rebase = true
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
