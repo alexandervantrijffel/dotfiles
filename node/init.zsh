@@ -10,6 +10,9 @@ if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
 elif [ -s "/usr/local/nvm/nvm.sh" ]; then
    . "/usr/local/nvm/nvm.sh"  # This loads nvm
    . "/usr/local/nvm/bash_completion"  # This loads nvm
+elif [ -s "$HOME/.nvm" ]; then
+ [ -s "$HOME/.nvm/nvm.sh" ] && \. "$HOME/.nvm/nvm.sh"  # This loads nvm
+ [ -s "$HOME/.nvm/bash_completion" ] && \. "$HOME/.nvm/bash_completion"  # This loads nvm bash_completion
 fi 
 
 alias ya='yarn add -E'
