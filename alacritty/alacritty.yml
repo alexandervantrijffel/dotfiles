@@ -111,6 +111,9 @@ window:
 
 # Font configuration
 font:
+  # Point size
+  size: 9.0
+
   # Normal (roman) font face
   normal:
     # Font family
@@ -123,7 +126,7 @@ font:
     # family: Monospace
     # style: Regular
     # style: Bold
-    style: Extra Bold
+    style: Bold
 
   # Bold font face
   #bold:
@@ -157,9 +160,6 @@ font:
 
     # The `style` can be specified to pick a specific face.
     #style: Bold Italic
-
-  # Point size
-  size: 10.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter

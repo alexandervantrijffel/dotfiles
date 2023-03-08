@@ -1,4 +1,4 @@
-URxvt*font:    xft:Hack Nerd Font:style=Regular:size=11
+URxvt*font:    xft:Roboto Nerd Font:style=Bold:size=11
 Xft.dpi: 110
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault

@@ -1,8 +1,8 @@
 if type nvim 1>/dev/null; then
-  EDITOR=nvim
-  VISUAL=nvim
-  COLORTERM="truecolor"
+  export EDITOR=nvim
+  export VISUAL=nvim
+  export COLORTERM="truecolor"
 else
-  EDITOR=vi
-  VISUAL=vi
+  export EDITOR=vi
+  export VISUAL=vi
 fi

@@ -1,4 +1,4 @@
-GOPATH="$HOME/go"
-GOROOT="/usr/local/go"
-PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
-CGO_ENABLED=1
+export GOPATH="$HOME/go"
+export GOROOT="/usr/local/go"
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+export CGO_ENABLED=1

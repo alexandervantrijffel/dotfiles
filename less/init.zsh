@@ -3,4 +3,4 @@
 # -i – searches within less are case-insensitive
 # -X – don’t clear the screen after using less
 # -j5 – put the result of searches on the fifth line of the screen where possible
-LESS="-RiXj5"
+export LESS="-RiXj5"
