@@ -74,3 +74,4 @@ bindkey ' ' magic-space
 # execute auto suggestion with CTRL E
 bindkey "^E" autosuggest-execute
 bindkey "^F" forward-word
+
