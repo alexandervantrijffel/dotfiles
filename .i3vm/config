@@ -160,8 +160,8 @@ bindsym $mod+Shift+u exec "i3-msg exec rm -f /tmp/screenshot-imgur.png; maim -s 
 # I3 exit menu
 mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
   bindsym l exec i3-msg exit
-  bindsym r exec systemctl reboot
-  bindsym s exec shutdown -h now
+  bindsym r exec reboot
+  bindsym s exec poweroff
   bindsym Escape mode "default"
   bindsym Return mode "default"
 }
