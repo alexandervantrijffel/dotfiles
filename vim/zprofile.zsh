@@ -1,4 +1,6 @@
 #!/bin/zsh
+THISDIR=${0:a:h}
+
 #
 if ! type nvim 1>/dev/null; then
   sudo apt install neovim
@@ -17,9 +19,14 @@ fi
 
 mkdir -p $HOME/.vimundo/
 
-TSMOD=$HOME/.config/nvim/lua/tsserver
-[ ! -f $TSMOD/init.lua ] && mkdir -pv $TSMOD && ln -s $THISDIR/tsserver/init.lua $TSMOD/init.lua
+TSMOD="$HOME/.config/nvim/lua/tsserver"
+if [[ ! -L "${TSMOD}/init.lua" ]]; then 
+  mkdir -p $TSMOD 
+  ln -s $THISDIR/tsserver/init.lua $TSMOD/init.lua
+fi
 
 COCSET=$HOME/.SpaceVim/coc-settings.json
-[ ! -f $COCSET ] && ln -s $THISDIR/coc-settings.json $COCSET
+if [[ ! -L $COCSET ]];then  
+  ln -s $THISDIR/coc-settings.json $COCSET
+fi
 
