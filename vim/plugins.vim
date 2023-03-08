@@ -1,9 +1,7 @@
 " based on dein.vim plugin manager
 " Update with :DeinUpdate or :SPUpdate
 " update / install others with :UpdateRemotePlugins
-" update fzf with :fzf#install()
 "
-"           \ ['tomlion/vim-solidity', {'merged' : 0}],
 "
 let g:spacevim_custom_plugins = [
           \ ['neoclide/coc.nvim', {'merged' : 0}],
@@ -31,10 +29,6 @@ autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 
 " coc-fzf has a dependency to pynvim
 " install with: pip3 install --upgrade pynvim
-"
-" yats: typescript syntax
-" far: search and replacevim-js && vim-jsx-pretty
-" vim-js && vim-jsx-pretty: required for commenting jsx/tsx
 "
 " no need for this one with vim-rooter
     " jump to dir of current file
