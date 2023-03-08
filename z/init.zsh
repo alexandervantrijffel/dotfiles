@@ -1,4 +1,9 @@
-zplug "rupa/z", use:"*.sh", hook-build:"touch ${HOME}/.z", defer:2
+if [[ $(lsb_release -a 2>/dev/null) =~ "Ubuntu" ]]; then 
+  zplug "rupa/z", use:"*.sh", hook-build:"touch ${HOME}/.z", defer:2
+else
+  # from packman package z
+  . /usr/share/z/z.sh
+fi
 
 alias zfbe="z ps-737migration-be"
 alias zfbev="z ps-737migration-be && v"
