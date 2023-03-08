@@ -9,7 +9,7 @@ stty start undef  # disable C-s stopping receiving keyboard signals.
 stty stop undef
 
 if type xmodmap > /dev/null 2>&1; then
-    xmodmap $THISDIR/.xModmap
+    xmodmap $THISDIR/.Xmodmap
 fi
 
-[ -e ~/.xModmap ] && rm ~/.xModmap
+[ -e ~/.Xmodmap ] && rm ~/.Xmodmap
