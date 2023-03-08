@@ -61,6 +61,7 @@ bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
+bindsym $alt+space focus right
 
 # alternatively, you can use the cursor keys:
 # bindsym $mod+Left focus left
