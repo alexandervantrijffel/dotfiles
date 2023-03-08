@@ -20,7 +20,8 @@ zplug "djui/alias-tips", defer:3
 zplug "plugins/cp", from:oh-my-zsh
 zplug "plugins/httpie", from:oh-my-zsh, defer:3
 zplug "plugins/rsync", from:oh-my-zsh, defer:3
-zplug "plugins/ssh-agent", from:oh-my-zsh, defer:3
+# not required with keychain
+# zplug "plugins/ssh-agent", from:oh-my-zsh, defer:3
 zplug "plugins/kubectl", from:oh-my-zsh, defer:2
 zplug "bonnefoa/kubectl-fzf", defer:3
 zplug "so-fancy/diff-so-fancy", as:command, defer:3

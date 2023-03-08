@@ -23,6 +23,8 @@ for f in $DOTFILES/**/env.zsh; do
   . "$f"
 done
 
+# zstyle ':completion:*' completer _expand _complete _ignored
+# zstyle :compinstall filename '/home/lex/.zshrc'
 
 # lightdm does not source .zprofile :(
 # use this fix for now
