@@ -32,10 +32,12 @@ let g:hardtime_ignore_buffer_patterns = [ ".*coc.*" ]
 " noremap <A-f> :CocCommand python.runLinting<CR>
 
 " no esc
-inoremap jj <esc>
+" inoremap jj <esc>
 inoremap <C-c> <esc>uu
-noremap <C-q> :q<esc>
+inoremap <C-q> <esc>
 inoremap  <esc> <NOP>
+" for the foot pedal
+noremap <C-q> :q<esc>
 
 " ,' Surround a word with 'single quotes'
 map ,' ysiw'
