@@ -7,8 +7,9 @@ zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 
 if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
    . "/usr/share/nvm/init-nvm.sh"  # This loads nvm
-elif [ -s "$HOME/.nvm" ]; then
-   . "$HOME/.nvm/init-nvm.sh"  # This loads nvm
+elif [ -s "/usr/local/nvm/nvm.sh" ]; then
+   . "/usr/local/nvm/nvm.sh"  # This loads nvm
+   . "/usr/local/nvm/bash_completion"  # This loads nvm
 fi 
 
 alias ya='yarn add -E'
