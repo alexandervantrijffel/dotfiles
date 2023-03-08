@@ -7,6 +7,6 @@ else
     alias la="exa -albgh"
     alias l="exa -alFbgh"
   else
-    alias l="ls -laFh"
+    alias l="ls -laFh --color=auto"
   fi
 fi
