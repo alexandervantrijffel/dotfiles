@@ -56,4 +56,11 @@ if type notify-send 1>/dev/null; then
   notify-send -i display "updateall.sh completed"
 fi 
 
-sh ${THISDIR}/deleteoldsnapversions.sh
+if [[ $(lsb_release -a 2>/dev/null) =~ "Ubuntu" ]]; then 
+  sh ${THISDIR}/deleteoldsnapversions.sh
+fi
+
+if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
+  source /opt/fromgit/zsh-snap/znap.zsh
+  znap pull
+fi
