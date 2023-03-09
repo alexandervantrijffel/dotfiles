@@ -6,12 +6,6 @@ tldr -u
 go clean -modcache
 go get -u all
 
-# . $ZPLUG_HOME/init.zsh
-# . ~/.zshrc
-# zplug update
-# zplug clean
-# zplug clear
-
 echo updating yarn packages
 yarn global upgrade
 yarn cache clean --all

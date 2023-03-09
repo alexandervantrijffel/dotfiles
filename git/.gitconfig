@@ -72,3 +72,7 @@
 	all = "!f() { ls -R -d */.git | xargs -I{} bash -c \"echo {} && git -C {}/../ $1\"; }; f"
 [pull]
 	rebase = true
+[maintenance]
+	repo = /opt/fromgit/yay
+	repo = /opt/fromgit/zsh-defer
+	repo = /opt/fromgit/zsh-snap

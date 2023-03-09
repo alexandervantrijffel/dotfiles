@@ -1,10 +1,14 @@
 #!/bin/zsh
-#
+
 # .zshrc : only sourced for interactive shells
+
+source /opt/fromgit/zsh-defer/zsh-defer.plugin.zsh
 
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
-. $DOTFILES/zplug/preinit.zsh
+for f in $DOTFILES/**/preinit.zsh; do 
+  . "$f"
+done
 
 if type prettyping 1>/dev/null; then
   alias ping='prettyping'
@@ -14,14 +18,14 @@ for f in $DOTFILES/**/init.zsh; do
   . "$f"
 done
 
-if ! zplug check; then
-  printf "Run zplug install? [y/N]: "
-  if read -q; then
-      echo; zplug install
-  else
-      echo
-  fi
-fi
+# if ! zplug check; then
+#   printf "Run zplug install? [y/N]: "
+#   if read -q; then
+#       echo; zplug install
+#   else
+#       echo
+#   fi
+# fi
 
 zplug load # --verbose
 
@@ -75,3 +79,5 @@ bindkey ' ' magic-space
 bindkey "^E" autosuggest-execute
 bindkey "^F" forward-word
 
+# finish profiling (started in .zshenv)
+# zprof > /tmp/zprof.dump

@@ -1,15 +1,22 @@
 #!/bin/zsh
-#
+
+##
 # order: 
 # .zshenv → .zprofile → .zshrc → .zlogin → .zlogout
 #
 # .zshenv: sourced both for interactive and non interactive shells 
 
-FILENAME=${0:A:h}
 export DOTFILES=$(readlink -e "$HOME/.zshenv" | xargs dirname | xargs dirname)
 export ZDOTDIR="${DOTFILES}/zsh"
 
 export LC_ALL=en_US.UTF-8
+
+# start profiling (finish in .zshrc)
+# zmodload zsh/zprof
+
+for f in $DOTFILES/**/preenv.zsh; do 
+  . "$f"
+done
 
 [ -d  "$HOME/bin" ] && PATH="$PATH:$HOME/bin"
 [ -d  "$HOME/.local/bin" ] && PATH="$PATH:$HOME/.local/bin"
