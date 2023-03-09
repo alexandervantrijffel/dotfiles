@@ -64,3 +64,5 @@ VIM % goto matching ( { ^
 VIM <C-k> j3 in insert mode for ϵ (this is digraph). :dig for all characters
 %
 VIM <C-l> next Copilot suggestion <A-l> next coc autocomplete suggestion
+%
+VIM gcc for commenting/uncommenting current line
