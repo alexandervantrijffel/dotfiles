@@ -122,11 +122,13 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: RobotoMono Nerd Font
+    family: Cousine
+    # family: RobotoMono Nerd Font
+    # family: Sauce Code Pro Nerd Font
     # family: Monospace
     # style: Regular
     # style: Bold
-    style: Bold
+    style: Normal
 
   # Bold font face
   #bold:
