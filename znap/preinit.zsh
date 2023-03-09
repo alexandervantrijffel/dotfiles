@@ -10,6 +10,12 @@ znap source ohmyzsh/ohmyzsh plugins/{cp,rsync,ssh-agent,kubectl,kubectx}
 
 if [[ $(lsb_release -a 2>/dev/null) =~ "Ubuntu" ]]; then 
   znap source onnefoa/kubectl-fzf shell/
+  znap source zsh-users/zsh-history-substring-search
+  znap source zsh-users/zsh-autosuggestions
+  znap source marlonrichert/zsh-autocomplete
+  znap source zsh-users/zsh-completions
+  ZSH_HIGHLIGHT_HIGHLIGHTERS=( main brackets )
+  znap source zsh-users/zsh-syntax-highlighting
   znap source zdharma-continuum/fast-syntax-highlighting
 fi
 
