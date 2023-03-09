@@ -18,6 +18,7 @@ gitalias () {
   alias gcop="gco -p"
   alias gcp="git cherry-pick"
   alias gcpc="git cherry-pick --continue"
+  alias gco="git checkout"
   alias gcm="git commit -S -v -m"
   alias gclean="git checkout -- . && git clean -fd ."
   alias gd="git diff --word-diff -w"
