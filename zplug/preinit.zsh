@@ -1,7 +1,7 @@
 # install zplug if required
 export ZPLUG_HOME=/opt/fromgit/zplug
-unset ZPLUG_LOG_LOAD_SUCCESS
-unset ZPLUG_LOG_LOAD_FAILURE
+export ZPLUG_LOG_LOAD_SUCCESS=false
+export ZPLUG_LOG_LOAD_FAILURE=false
 
 if ! [[ -d $ZPLUG_HOME ]]; then
   sudo mkdir -pv $ZPLUG_HOME
