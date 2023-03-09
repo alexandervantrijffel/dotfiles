@@ -1,3 +1,4 @@
+lalias () {
 unalias ll 2>/dev/null || true
 unalias l  2>/dev/null || true
 if type lsd 1>/dev/null; then
@@ -10,3 +11,5 @@ else
     alias l="ls -laFh --color=auto"
   fi
 fi
+}
+zsh-defer lalias

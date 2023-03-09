@@ -1,20 +1,20 @@
 #!/bin/zsh
-#
+
 # .zshrc : only sourced for interactive shells
+
+source /opt/fromgit/zsh-defer/zsh-defer.plugin.zsh
 
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
-. $DOTFILES/zplug/preinit.zsh
+for f in $DOTFILES/**/preinit.zsh; do 
+  . "$f"
+done
 
 if type prettyping 1>/dev/null; then
   alias ping='prettyping'
 fi
 
 for f in $DOTFILES/**/init.zsh; do 
-  . "$f"
-done
-
-for f in $DOTFILES/**/postinit.zsh; do 
   . "$f"
 done
 
@@ -63,3 +63,7 @@ bindkey ' ' magic-space
 # execute auto suggestion with CTRL E
 bindkey "^E" autosuggest-execute
 bindkey "^F" forward-word
+
+# finish profiling (started in .zshenv)
+# zprof > /tmp/zprof.dump
+

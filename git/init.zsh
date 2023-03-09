@@ -1,7 +1,55 @@
-zplug "plugins/git", from:oh-my-zsh, defer:3
-
 . ${0:a:h}/gittreepull.sh
 
 # https://github.com/scmbreeze/scm_breeze
 # [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
+gitalias () {
+  alias ga="git add"
+  alias gaa="git add --all ."
+  alias gb="git branch | grep \* | cut -d ' ' -f2"
+  alias gba="git branch -a"
+  # list remote branches by last commit date
+  alias gbl='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r'
+  alias gc-="git checkout -"
+  alias gca="git commit --amend --no-edit"
+  alias gcb="git checkout -b"
+  alias gcom="gco master && gpff && gs"
+  alias gcoma="gco main && gpff && gs"
+  alias gcop="gco -p"
+  alias gcp="git cherry-pick"
+  alias gcm="git commit -S -v -m"
+  alias gclean="git checkout -- . && git clean -fd ."
+  alias gd="git diff --word-diff -w"
+  alias gds="gd --staged --word-diff | git apply --cached --ignore-whitespace --ignore-space-change --unidiff-zero -"
+  alias gds="git diff --staged --word-diff -w"
+  alias gl="git log --max-count=500 --stat --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
+  alias gls="git log --max-count=500 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
+  alias glp="git log -p "
+  alias gma="git merge --abort"
+  alias gmc="git merge --continue"
+  alias gmm="git merge master"
+  alias gmma="git merge main"
+  alias gmnc="git merge --no-commit --no-ff"
+  alias gfa="git fetch --all --tags --prune"
+  alias gp="git push"
+  alias gpu="git push -u origin \$(gb)"
+  alias gpf='echo no gpf please'
+  alias gp!="git push --force"
+  alias gpff="git pull --recurse-submodules"
+  alias gr.="git reset ."
+  alias gra="git rebase --abort"
+  alias grm="git rebase master"
+  alias grma="git rebase main"
+  alias grum="git fetch --all && git rebase upstream/master"
+  alias grc="git rebase --continue"
+  alias gs="git status"
+  alias gsf="git fetch origin \$(gb) && git status"
+  alias ga.="git add ."
+  alias gap="git add . --patch && gs"
+  alias gsa="git stash apply"
+  alias gsl="git stash list"
+  alias gss="git stash save"
+  alias gsw="git show "
+  alias ts="git fetch origin \$(gb) && tig status"
+}
+zsh-defer gitalias

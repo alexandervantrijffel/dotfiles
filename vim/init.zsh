@@ -2,7 +2,7 @@
 THISDIR=${0:a:h}
 
 #
-zplug "softmoth/zsh-vim-mode"
+znap source "softmoth/zsh-vim-mode"
 
 # Press C-v in insert mode or normal/command mode for editing the command line in the default editor
 autoload edit-command-line; zle -N edit-command-line
@@ -38,6 +38,7 @@ bindkey -M viins '^q' exit_zsh
 # this is required to prevent that zsh-vim-mode overwrites CTRL-R of fzf and tab of fzf-tab
 export VIM_MODE_NO_DEFAULT_BINDINGS=true
 
+unset v
 if type nvim 1>/dev/null; then
   alias v="$(which nvim)"
 else

@@ -1,5 +1,4 @@
-zplug "plugins/docker", from:oh-my-zsh, defer:3
-zplug "plugins/docker-compose", from:oh-my-zsh, defer:3
+zsh-defer znap source ohmyzsh/ohmyzsh plugins/{docker,docker-compose}
 
 if type docker-compose 1>/dev/null; then
   alias dc="docker-compose "

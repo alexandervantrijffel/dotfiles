@@ -1,7 +1,7 @@
 #!bin/zsh
 
 THISDIR=${0:a:h}
-zplug "romkatv/powerlevel10k", as:theme, depth:1
+znap source romkatv/powerlevel10k
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]

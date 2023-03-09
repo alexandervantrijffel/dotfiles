@@ -1,11 +1,11 @@
 #!/bin/zsh
 #
-! type rg 1>/dev/null && sudo apt-get install ripgrep
 
 if ! type rg 1>/dev/null; then
+  # sudo apt-get install ripgrep
   ARCH=$(dpkg --print-architecture)
   if [[ "$ARCH" != *"arm64"* ]]; then 
-    zplug 'BurntSushi/ripgrep', from:gh-r, as:command, rename-to:"rg"
+    znap eval BurntSushi/ripgrep 'mv ripgrep rg'
   fi
 fi
 

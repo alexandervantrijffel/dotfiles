@@ -2,18 +2,16 @@
 
 zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 
+# znap source g-plane/zsh-yarn-autocompletions
+# znap eval g-plane/zsh-yarn-autocompletions "./zplug.zsh"
+
 # NPM_TOKEN is set in ~/.zshrc.local
 # NPM_TOKEN=$(cat ~/.npmrc | sed 's/.*authToken=\(.*\)/\1/')
-
-if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
-   . "/usr/share/nvm/init-nvm.sh"  # This loads nvm
-elif [ -s "/usr/local/nvm/nvm.sh" ]; then
-   . "/usr/local/nvm/nvm.sh"  # This loads nvm
-   . "/usr/local/nvm/bash_completion"  # This loads nvm
-elif [ -s "$HOME/.nvm" ]; then
- [ -s "$HOME/.nvm/nvm.sh" ] && \. "$HOME/.nvm/nvm.sh"  # This loads nvm
- [ -s "$HOME/.nvm/bash_completion" ] && \. "$HOME/.nvm/bash_completion"  # This loads nvm bash_completion
-fi 
+#
+export NVM_COMPLETION=true
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim')
+export NVM_LAZY_LOAD=false
+zsh-defer znap source "lukechilds/zsh-nvm"
 
 alias ya='yarn add -E'
 alias yad='yarn add -E --dev'
