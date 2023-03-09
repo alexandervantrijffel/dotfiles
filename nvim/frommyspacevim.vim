@@ -135,7 +135,6 @@ augroup SHADA
     autocmd CursorHold,TextYankPost,FocusGained,FocusLost *
                 \ if exists(':rshada') | rshada | wshada | endif
 augroup END
-endf
 
 function OnVimEnter()
   if @% == ""

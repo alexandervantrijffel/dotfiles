@@ -5,12 +5,6 @@ zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 # NPM_TOKEN is set in ~/.zshrc.local
 # NPM_TOKEN=$(cat ~/.npmrc | sed 's/.*authToken=\(.*\)/\1/')
 
-if [ -s "/usr/share/nvm/init-nvm.sh" ]; then
-   . "/usr/share/nvm/init-nvm.sh"  # This loads nvm
-elif [ -s "$HOME/.nvm" ]; then
-   . "$HOME/.nvm/init-nvm.sh"  # This loads nvm
-fi 
-
 alias ya='yarn add -E'
 alias yad='yarn add -E --dev'
 alias yah='yarn audit --groups dependencies --level high'
