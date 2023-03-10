@@ -22,3 +22,9 @@ if [ ! -d "/opt/fromgit/zsh-defer" ]; then
   mkdir -p /opt/fromgit/
   git clone --depth 1 https://github.com/romkatv/zsh-defer.git /opt/fromgit/zsh-defer
 fi
+
+if [[ ! $DISPLAY && $(tty) = /dev/tty1 ]]; then
+  if ! xset q &>/dev/null; then
+    exec startx
+  fi
+fi
