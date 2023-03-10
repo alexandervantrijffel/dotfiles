@@ -49,13 +49,15 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'HerringtonDarkholme/yats.vim'
 
 " Git wrapper
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " change working directory to project root
 " Plug 'airblade/vim-rooter'
 
 " Search and replace in multiple files
 " Plug 'brooth/far.vim'
+" :Far and :Far (interactive) - find and replace in multiple files
+
 
 " Plug 'tell-k/vim-autopep8'
 " Plug 'tomlion/vim-solidity'

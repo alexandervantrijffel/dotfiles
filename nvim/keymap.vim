@@ -2,11 +2,9 @@ source $HOME/.config/nvim/setjkl.vim
 
 let g:mapleader = "'"
 
-" to practice:
-" :Far and :Far (interactive) - find and replace in multiple files
-
 " default mappings
 " <C-g> show full path to current buffer
+" K show type info
 
 nnoremap <leader>a :RgFzf<cr>
 nnoremap <leader>g :Rg<cr>

@@ -1,5 +1,4 @@
 #!/bin/sh
-
 set -e
 
 THISDIR=$(cd `dirname $0` && pwd)

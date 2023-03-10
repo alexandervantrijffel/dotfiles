@@ -11,3 +11,5 @@ node_modules
 env.bak
 x/.Xresources
 zsh/.zcompdump*
+keyboard/init_*
+nvim/pack

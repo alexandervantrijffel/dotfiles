@@ -1,0 +1,1 @@
+/data/github.com/alexandervantrijffel/dotfiles/nvim/tsserver/init.lua

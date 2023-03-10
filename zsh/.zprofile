@@ -1,6 +1,11 @@
 #!/bin/zsh
+THISDIR=${0:a:h}
 
 # .zprofile: sourced in login shell
+
+if [ ! -L ~/.zshenv ]; then
+  ln -s $THISDIR/.zshenv ~/
+fi
 
 # support for compdef (completions for zsh)
 export ZSH_DISABLE_COMPFIX="true"
@@ -13,9 +18,7 @@ if [ -z "$ZSH_VERSION" ]; then
   exit 1
 fi
 
-# if [[ ! $DISPLAY && $(tty) = /dev/tty1 ]]; then
-#   exec startx
-# fi
-
-[ ! -d /opt/fromgit ] && mkdir -p /opt/fromgit/
-[ ! -d /opt/fromgit/zsh-defer ] && git clone --depth 1 https://github.com/romkatv/zsh-defer.git /opt/fromgit/zsh-defer
+if [ ! -d "/opt/fromgit/zsh-defer" ]; then
+  mkdir -p /opt/fromgit/
+  git clone --depth 1 https://github.com/romkatv/zsh-defer.git /opt/fromgit/zsh-defer
+fi
