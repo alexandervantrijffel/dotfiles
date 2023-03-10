@@ -209,4 +209,4 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
   vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
 
-noremap <C-l> <Plug>(copilot-next)
+noremap <C-;> <Plug>(copilot-next)

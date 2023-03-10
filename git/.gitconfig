@@ -56,7 +56,7 @@
 [branch]
 	autosetuprebase = always
 [mergetool "fugitive"]
-	cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
+	cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
 [rerere]
 	enabled = true
 [filter "lfs"]
