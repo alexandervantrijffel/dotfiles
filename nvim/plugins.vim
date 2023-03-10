@@ -58,7 +58,6 @@ Plug 'tpope/vim-fugitive'
 " Plug 'brooth/far.vim'
 " :Far and :Far (interactive) - find and replace in multiple files
 
-
 " Plug 'tell-k/vim-autopep8'
 " Plug 'tomlion/vim-solidity'
 
