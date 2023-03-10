@@ -1879,13 +1879,3 @@ config.bind('<Escape>', 'leave-mode', mode='passthrough')
 
 # Load existing settings made via :set
 config.load_autoconfig()
-
-# <dracula>
-import dracula.draw
-dracula.draw.blood(c, {
-    'spacing': {
-        'vertical': 6,
-        'horizontal': 8
-    }
-})
-# </dracula>

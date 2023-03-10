@@ -37,9 +37,13 @@ VIM create new file and start editing immediately with w filepath
 %
 VIM GoInfo show definition of go method OR <C-K> show Go type definition or K to show type information with Typescript
 %
-VIM merge conflicts with vim diff run git mergetool,
-:diffg LO , :diffg RE , :diffg BA ,
-]c next conflict , [c previous conflict https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool
+VIM merge conflicts with vim diff 
+run git mergetool,
+view buffer names and numbers with :ls
+:diffg 2 , :diffg 1 , :diffg 4
+]c next conflict , [c previous conflict 
+close with :wqa
+https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool
 %
 VIM :0Glog to view history of current file. :copen to open earlier version of file. :G for git status, stage/unstage/ignore file. :Gblame (with vim-fugitive)
 %

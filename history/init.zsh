@@ -1,6 +1,7 @@
 export HISTCONTROL=ignoreboth:erasedups
 export HISTSIZE=1000
 export SAVEHIST=10000000
+export HISTFILE=$HOME/.zsh_history
 
 # setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 # setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
