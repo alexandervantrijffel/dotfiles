@@ -10,8 +10,7 @@ Plug 'alexandervantrijffel/vim-material'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" coc-fzf has a dependency to pynvim
-" install with: pip3 install --upgrade pynvim
+
 Plug 'antoinemadec/coc-fzf'
 
 Plug 'easymotion/vim-easymotion'
@@ -63,3 +62,5 @@ Plug 'flazz/vim-colorschemes'
 " Plug 'tomlion/vim-solidity'
 
 call plug#end()
+
+source $HOME/.config/nvim/pluginconfig.vim

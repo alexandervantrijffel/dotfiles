@@ -4,8 +4,7 @@
 " \ 'coc-phpls', 
 "
 
-" todo_graphql_dependency_manual_install: yarn add global graphql-language-service-cli
-
+" graphql_dependency_manual_install: yarn add global graphql-language-service-cli
 
 let g:coc_global_extensions = [
   \ 'coc-actions',
@@ -22,9 +21,6 @@ let g:coc_global_extensions = [
   \ 'coc-yaml',
   \ ]
 
-" coc-tsserver has a dependency on github.com/facebook/watchman for updating
-" imports on renamed files
-
 " Customize colors of coc popup menus
 func! s:my_colors_setup() abort
     hi Pmenu guibg=#44475a gui=NONE
@@ -36,18 +32,6 @@ endfunc
 augroup colorscheme_coc_setup | au!
     au ColorScheme * call s:my_colors_setup()
 augroup END
-
-" " Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" " delays and poor user experience.
-set updatetime=300
-
-" " Always show the signcolumn, otherwise it would shift the text each time
-" " diagnostics appear/become resolved.
-set signcolumn=yes
 
 " " Use tab for trigger completion with characters ahead and navigate.
 " " NOTE: There's always complete item selected by default, you may want to enable
