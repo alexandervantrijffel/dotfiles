@@ -15,7 +15,8 @@ gitalias () {
   alias gbl='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r'
   alias gbD="git branch -D"
   alias gc-="git checkout -"
-  alias gca="git commit --amend --no-edit"
+  alias gca="git commit --amend"
+  alias gcan="git commit --amend --no-edit"
   alias gcb="git checkout -b"
   alias gcom="gco master && gpff && gs"
   alias gcoma="gco main && gpff && gs"
