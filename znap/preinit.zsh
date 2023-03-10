@@ -3,15 +3,17 @@ if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
     # show aliases hints if abbrevations are available for typed commands
   znap source djui/alias-tips
   znap source ohmyzsh/ohmyzsh lib/{clipboard,compfix,directories,functions,grep,history,key-bindings,misc,nvm}.zsh
-  znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
   znap source ohmyzsh/ohmyzsh plugins/{cp,rsync,ssh-agent,kubectl,kubectx}
   znap source zsh-users/zsh-autosuggestions
   znap source zsh-users/zsh-completions
-  znap eval denilsonsa/prettyping 'echo'
   znap source pjvds/zsh-cwd
+  znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
+  znap eval denilsonsa/prettyping 'echo'
   znap eval so-fancy/diff-so-fancy 'echo'
-  znap source zsh-users/zsh-history-substring-search
-  znap source zsh-users/zsh-syntax-highlighting
+  if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then 
+    znap source zsh-users/zsh-history-substring-search
+    znap source zsh-users/zsh-syntax-highlighting
+  fi
 fi 
 
 # Usage:
@@ -22,9 +24,6 @@ fi
 # diff-so-fancy --colors                   # View the commands to set the recommended colors
 # diff-so-fancy --set-defaults             # Configure git-diff to use diff-so-fancy and suggested colors
 
-# if [[ $(lsb_release -a 2>/dev/null) =~ "Ubuntu" ]]; then 
-#   zplug "plugins/ssh-agent", from:oh-my-zsh, defer:3
-# fi
 
 # these plugins are conflicting with aloxaf/fzf-tab
 # znap source marlonrichert/zsh-autocomplete
