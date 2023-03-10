@@ -12,5 +12,8 @@ luafile $HOME/.config/nvim/inittsserver.lua
 source $HOME/.config/nvim/keymap.vim
 source $HOME/.config/nvim/bclose.vim
 
-colorscheme slate
+" slate
+" list colorschemes:
+" :colorscheme <C-d>
+colorscheme material
 let g:rainbow_active = 1

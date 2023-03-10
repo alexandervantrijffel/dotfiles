@@ -51,6 +51,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 " Git wrapper
 Plug 'tpope/vim-fugitive'
 
+Plug 'flazz/vim-colorschemes'
 " change working directory to project root
 " Plug 'airblade/vim-rooter'
 
