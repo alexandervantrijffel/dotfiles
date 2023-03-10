@@ -4,12 +4,16 @@
 # [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
 gitalias () {
+  alias g="git"
   alias ga="git add"
+  alias ga.="git add ."
+  alias gap="git add . --patch && gs"
   alias gaa="git add --all ."
   alias gb="git branch | grep \* | cut -d ' ' -f2"
   alias gba="git branch -a"
   # list remote branches by last commit date
   alias gbl='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r'
+  alias gbD="git branch -D"
   alias gc-="git checkout -"
   alias gca="git commit --amend --no-edit"
   alias gcb="git checkout -b"
@@ -46,11 +50,10 @@ gitalias () {
   alias grc="git rebase --continue"
   alias gs="git status"
   alias gsf="git fetch origin \$(gb) && git status"
-  alias ga.="git add ."
-  alias gap="git add . --patch && gs"
   alias gsa="git stash apply"
   alias gsl="git stash list"
   alias gss="git stash save"
+  alias gst="git stash"
   alias gsw="git show "
   alias ts="git fetch origin \$(gb) && tig status"
 }
