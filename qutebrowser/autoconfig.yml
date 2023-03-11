@@ -9,14 +9,51 @@ settings:
   aliases:
     global:
       l: open http://localhost:3000
+  bindings.commands:
+    global:
+      normal:
+        d: scroll-page 0 0.5
+        u: scroll-page 0 -0.5
+        jj: mode-leave
+        j: scroll left
+        k: scroll down
+        l: scroll up
+        ;: scroll right
   colors.webpage.bg:
     global: '#282a36'
   colors.webpage.darkmode.enabled:
     global: true
+  completion.open_categories:
+    global:
+    - searchengines
+    - quickmarks
+    - bookmarks
+    - history
+    - filesystem
+  content.cookies.store:
+    global: true
   content.geolocation:
     http://localhost:3000: true
     https://lastnoted.com: true
+  content.headers.user_agent:
+    global: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
+      Chrome/111.0.0.0 Safari/537.36
   content.javascript.can_access_clipboard:
     global: true
+  hints.auto_follow:
+    global: always
+  hints.chars:
+    global: abcdefghjkmnopqrstuvwxyz234567890ABCDEFGHJKLMNOPQRSTUVWXYZ
+  hints.dictionary:
+    global: /data/dev/github.com/alexandervantrijffel/dotfiles/home/qutebrowser/hintsdictionary
+  qt.highdpi:
+    global: true
+  url.default_page:
+    global: https://google.com/
+  url.searchengines:
+    global:
+      DEFAULT: https://www.google.com/search?q={}`
+  url.start_pages:
+    global: https://google.com
   zoom.default:
     global: 100%

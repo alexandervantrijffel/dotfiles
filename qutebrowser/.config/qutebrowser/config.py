@@ -539,12 +539,12 @@
 ##   - no-3rdparty: Accept cookies from the same origin only. This is known to break some sites, such as GMail.
 ##   - no-unknown-3rdparty: Accept cookies from the same origin only, unless a cookie is already set for the domain. On QtWebEngine, this is the same as no-3rdparty.
 ##   - never: Don't accept cookies at all.
-c.content.cookies.accept = 'all'
+# c.content.cookies.accept = 'all'
 
 ## Store cookies. Note this option needs a restart with QtWebEngine on Qt
 ## < 5.9.
 ## Type: Bool
-c.content.cookies.store = True
+# c.content.cookies.store = True
 
 ## Default encoding to use for websites. The encoding must be a string
 ## describing an encoding such as _utf-8_, _iso-8859-1_, etc.
@@ -554,7 +554,7 @@ c.content.cookies.store = True
 ## Allow websites to share screen content. On Qt < 5.10, a dialog box is
 ## always displayed, even if this is set to "true".
 ## Type: BoolAsk
-## Valid values:
+## Valid values:https://www.google.com/search?q={}
 ##   - true
 ##   - false
 ##   - ask
