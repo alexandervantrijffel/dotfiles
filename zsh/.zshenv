@@ -11,6 +11,10 @@ export ZDOTDIR="${DOTFILES}/zsh"
 
 export LC_ALL=en_US.UTF-8
 
+if [[ ! -f "/tmp/.zprofiled" ]]; then
+  touch /tmp/.zprofiled
+fi
+
 # start profiling (finish in .zshrc)
 # zmodload zsh/zprof
 
@@ -30,11 +34,3 @@ done
 
 # lightdm does not source .zprofile :(
 # use this fix for now
-if [[ ! -f "/tmp/.zprofiled" ]]; then
-  touch /tmp/.zprofiled
-  . /etc/profile
-  . $ZDOTDIR/.zprofile
-  for f in $DOTFILES/**/zprofile.zsh; do 
-    . "$f"
-  done
-fi
