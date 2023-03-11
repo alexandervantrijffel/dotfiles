@@ -2,7 +2,7 @@
 . ${0:a:h}/togglexdpi.zsh
 
 func () {
-  local PREFFILE=$HOME/.Xresources-dpi-preference
+  local PREFFILE=$HOME/.config/X11/.Xresources-dpi-preference
   if [ -s $PREFFILE ]; then
     local CURPREF=$(cat $PREFFILE)
   else
