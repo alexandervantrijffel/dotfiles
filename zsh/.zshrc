@@ -33,13 +33,12 @@ for f in $DOTFILES/**/postinit.zsh; do
   . "$f"
 done
 
-alias .d="cd $DOTFILES"
-alias .v="cd $DOTFILES && v"
+alias .d="z $DOTFILES"
+alias .v="z $DOTFILES && v"
 
 if type batcat 1>/dev/null; then
   alias cat='batcat -p '
-fi
-if type bat 1>/dev/null; then
+elif type bat 1>/dev/null; then
   alias cat='bat -p '
 fi
 if type htop 1>/dev/null; then
