@@ -23,7 +23,7 @@ THISDIR=${0:a:h}
 
 mkdir -p $HOME/.vimundo/
 
-TSMOD="$HOME/.config/nvim/lua/tsserver"
+TSMOD="$XDG_CONFIG_HOME/nvim/lua/tsserver"
 if [[ ! -L "${TSMOD}/init.lua" ]]; then 
   mkdir -p $TSMOD 
   ln -s $THISDIR/tsserver/init.lua $TSMOD/init.lua

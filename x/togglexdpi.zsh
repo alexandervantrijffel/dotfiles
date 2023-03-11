@@ -2,7 +2,7 @@
 DIR=$(dirname ${0:A}) 
 togglexdpi() {
   SYMLINKFILE=${HOME}/.config/X11/.Xresources
-  PREFFILE=$HOME/.config/X11/.Xresources-dpi-preference
+  PREFFILE=$XDG_CONFIG_HOME/X11/.Xresources-dpi-preference
 
   CURTARGET=$(readlink ${SYMLINKFILE})
 

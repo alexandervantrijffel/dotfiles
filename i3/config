@@ -199,7 +199,7 @@ bindsym $mod+r mode "resize"
 # status_command i3status
 bar {
   # i3bar_command i3bar
-  status_command /usr/bin/i3blocks -c $HOME/.config/i3/i3blocks.conf
+  status_command /usr/bin/i3blocks -c $XDG_CONFIG_HOME/i3/i3blocks.conf
   position top
   # font pango:SauceCodePro Nerd Font
 # font pango:Roboto Nerd Font

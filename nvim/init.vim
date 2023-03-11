@@ -1,12 +1,12 @@
-source $HOME/.config/nvim/settings.vim
+source $XDG_CONFIG_HOME/nvim/settings.vim
 
-source $HOME/.config/nvim/plugins.vim
+source $XDG_CONFIG_HOME/nvim/plugins.vim
 
-luafile $HOME/.config/nvim/lualine.lua
+luafile $XDG_CONFIG_HOME/nvim/lualine.lua
 
-source $HOME/.config/nvim/abbr.vim
-source $HOME/.config/nvim/keymap.vim
-source $HOME/.config/nvim/bclose.vim
+source $XDG_CONFIG_HOME/nvim/abbr.vim
+source $XDG_CONFIG_HOME/nvim/keymap.vim
+source $XDG_CONFIG_HOME/nvim/bclose.vim
 
 " slate
 " list colorschemes:

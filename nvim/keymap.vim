@@ -1,4 +1,4 @@
-source $HOME/.config/nvim/setjkl.vim
+source $XDG_CONFIG_HOME/nvim/setjkl.vim
 
 let g:mapleader = "'"
 

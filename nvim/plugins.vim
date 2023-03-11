@@ -54,13 +54,12 @@ Plug 'flazz/vim-colorschemes'
 " change working directory to project root
 " Plug 'airblade/vim-rooter'
 
-" Search and replace in multiple files
-" Plug 'brooth/far.vim'
 " :Far and :Far (interactive) - find and replace in multiple files
+Plug 'brooth/far.vim'
 
 " Plug 'tell-k/vim-autopep8'
 " Plug 'tomlion/vim-solidity'
 
 call plug#end()
 
-source $HOME/.config/nvim/pluginconfig.vim
+source $XDG_CONFIG_HOME/nvim/pluginconfig.vim

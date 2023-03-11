@@ -1,7 +1,7 @@
-source $HOME/.config/nvim/coc.vim
-source $HOME/.config/nvim/go.vim
-source $HOME/.config/nvim/typescript.vim
-luafile $HOME/.config/nvim/inittsserver.lua
+source $XDG_CONFIG_HOME/nvim/coc.vim
+source $XDG_CONFIG_HOME/nvim/go.vim
+source $XDG_CONFIG_HOME/nvim/typescript.vim
+luafile $XDG_CONFIG_HOME/nvim/inittsserver.lua
 
 " jump to existing window if possible
 let g:fzf_buffers_jump = 1

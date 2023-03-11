@@ -4,7 +4,7 @@ curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim.appimag
 chmod u+x nvim.appimage
 mv ./nvim.appimage /usr/bin/nvim
 
-ln -s $HOME/.SpaceVim $HOME/.config/nvim
+ln -s $HOME/.SpaceVim $XDG_CONFIG_HOME/nvim
 ln -s ~/.vim ~/.SpaceVim
 
 THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"

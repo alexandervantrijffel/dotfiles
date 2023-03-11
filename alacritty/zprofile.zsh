@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 THISDIR=$(dirname ${0:A})
 
-TARGETFOLDER=$HOME/.config/alacritty
+TARGETFOLDER=$XDG_CONFIG_HOME/alacritty
 mkdir -pv $TARGETFOLDER
 
 [ ! -e /usr/share/applications/alacritty.desktop ] && sudo ln -s $CURDIR/alacritty.desktop /usr/share/applications/alacritty.desktop
