@@ -76,3 +76,5 @@
 	repo = /opt/fromgit/yay
 	repo = /opt/fromgit/zsh-defer
 	repo = /opt/fromgit/zsh-snap
+[safe]
+	directory = /opt/fromgit/zplug
