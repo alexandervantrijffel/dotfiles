@@ -1,5 +1,5 @@
 URxvt*font:    xft:Roboto Nerd Font:style=Bold:size=10
-Xft.dpi: 227
+Xft.dpi: 192
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull
@@ -8,6 +8,6 @@ Xft.antialias: 1
 Xft.rgba: rgb
 
 ! for i3 menu
-rofi.dpi: 170
+rofi.dpi: 140
 
 ! macbook air M1 2020 has 227 ppi
