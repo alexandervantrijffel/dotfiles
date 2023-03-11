@@ -25,6 +25,6 @@ else
   export GDK_DPI_SCALE=1.0
   xrandr --output Virtual-1 --auto --pos 0x0 --rotate normal --dpi 110 --primary --filter nearest --primary
 fi
+
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_ENABLE_HIGHDPI_SCALING=1
-xrdb merge ~/.config/X11/.Xresources
