@@ -1,2 +1,7 @@
-# fix for qutebrowser
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
+#!/bin/zsh
+THISDIR=${0:a:h}
+
+if [[ -d $HOME/.config/qutebrowser ]] && [[ ! -L $HOME/.config/qutebrowser/autoconfig.yml ]];then
+  echo linking 
+  ln -s $THISDIR/autoconfig.yml $HOME/.config/qutebrowser/
+fi
