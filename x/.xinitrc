@@ -1,9 +1,11 @@
 #!/bin/sh
 
 userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
-sysmodmap=/etc/X11/xinit/.Xmodmap
+
+export GDK_SCALE=2
+export GDK_DPI_SCALE=0.5
+export QT_SCALE_FACTOR=2
 
 # merge in defaults and keymaps
 
