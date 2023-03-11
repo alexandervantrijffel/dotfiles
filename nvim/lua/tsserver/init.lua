@@ -1,1 +1,2 @@
-/data/github.com/alexandervantrijffel/dotfiles/nvim/tsserver/init.lua
+-- to be placed in ~/.config/vim/lua/modules/tsserver/
+require'lspconfig'.tsserver.setup{}

@@ -46,8 +46,8 @@ settings:
     global: abcdefghjkmnopqrstuvwxyz234567890ABCDEFGHJKLMNOPQRSTUVWXYZ
   hints.dictionary:
     global: /data/dev/github.com/alexandervantrijffel/dotfiles/home/qutebrowser/hintsdictionary
-  qt.highdpi:
-    global: true
+  # qt.highdpi:
+  #   global: true
   url.default_page:
     global: https://google.com/
   url.searchengines:
