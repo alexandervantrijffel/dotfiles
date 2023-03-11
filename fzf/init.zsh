@@ -1,27 +1,13 @@
-zplug "junegunn/fzf", \
-  as:command, \
-  hook-build: "$ZPLUG_REPOS/junegunn/fzf/install --bin", \
-  use:"bin/{fzf,fzf-tmux}", \
-  hook-load: """
-source $ZPLUG_REPOS/junegunn/fzf/shell/key-bindings.zsh
-source $ZPLUG_REPOS/junegunn/fzf/shell/completion.zsh
-  """, \
-  defer:3
+znap source junegunn/fzf shell/{completion,key-bindings}.zsh
+znap install junegunn/fzf
 
-# znap eval junegunn/fzf "./install --no-fish --no-bash --bin"
-# znap source junegunn/fzf shell/{completion,key-bindings}.zsh
-# znap source junegunn/fzf bin/{fzf}
-# https://github.com/marlonrichert/zsh-snap/issues/224
+if ! type fzf 1>/dev/null; then
+  znap eval junegunn/fzf "./install --no-fish --no-bash --bin"
+  znap install junegunn/fzf
+fi
 
 # use fzf for completion anywhere after pressing TAB
-# zsh-defer znap source aloxaf/fzf-tab fzf-tab.plugin.zsh
-
-# use fzf for completion anywhere after pressing TAB
-zplug "aloxaf/fzf-tab", \
-  hook-load: """
-source $ZPLUG_REPOS/aloxaf/fzf-tab/fzf-tab.plugin.zsh
-  """, \
-  defer:3
+znap source aloxaf/fzf-tab fzf-tab.plugin.zsh
 
 export FZF_DEFAULT_OPTS="--bind 'ctrl-l:up,ctrl-k:down,ctrl-a:select-all,ctrl-d:preview-page-down,ctrl-u:preview-page-up' --cycle --ansi --height 80%"
 

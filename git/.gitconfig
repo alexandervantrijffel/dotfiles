@@ -86,7 +86,6 @@
 	repo = /opt/fromgit/powerlevel10k
 	repo = /opt/fromgit/prettyping
 	repo = /opt/fromgit/zoxide
-	repo = /opt/fromgit/zplug
 	repo = /opt/fromgit/zsh-autocomplete
 	repo = /opt/fromgit/zsh-autosuggestions
 	repo = /opt/fromgit/zsh-completions
@@ -95,5 +94,3 @@
 	repo = /opt/fromgit/zsh-nvm
 	repo = /opt/fromgit/zsh-syntax-highlighting
 	repo = /opt/fromgit/zsh-vim-mode
-[safe]
-	directory = /opt/fromgit/zplug

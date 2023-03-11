@@ -18,17 +18,6 @@ for f in $DOTFILES/**/init.zsh; do
   . "$f"
 done
 
-# if ! zplug check; then
-#   printf "Run zplug install? [y/N]: "
-#   if read -q; then
-#       echo; zplug install
-#   else
-#       echo
-#   fi
-# fi
-
-zplug load # --verbose
-
 for f in $DOTFILES/**/postinit.zsh; do 
   . "$f"
 done
