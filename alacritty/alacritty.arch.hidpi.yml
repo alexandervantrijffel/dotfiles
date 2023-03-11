@@ -112,7 +112,7 @@ window:
 # Font configuration
 font:
   # Point size
-  size: 10.0
+  size: 11.0
 
   # Normal (roman) font face
   normal:
@@ -122,8 +122,8 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Cousine
-    # family: RobotoMono Nerd Font
+    # family: Cousine
+    family: RobotoMono Nerd Font
     # family: Sauce Code Pro Nerd Font
     # family: Monospace
     # style: Regular

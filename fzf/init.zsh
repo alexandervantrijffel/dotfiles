@@ -8,9 +8,9 @@ source $ZPLUG_REPOS/junegunn/fzf/shell/completion.zsh
   """, \
   defer:3
 
-# znap source junegunn/fzf shell/{completion,key-bindings}.zsh
-# znap source junegunn/fzf bin/
 # znap eval junegunn/fzf "./install --no-fish --no-bash --bin"
+# znap source junegunn/fzf shell/{completion,key-bindings}.zsh
+# znap source junegunn/fzf bin/{fzf}
 # https://github.com/marlonrichert/zsh-snap/issues/224
 
 # use fzf for completion anywhere after pressing TAB
