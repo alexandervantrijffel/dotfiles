@@ -469,5 +469,6 @@ zeromq 4.3.4-2
 zimg 3.0.4-1
 zip 3.0-10
 zlib 1:1.2.13-2
+zoxide 0.9.0-1
 zsh 5.9-3
 zstd 1.5.4-1
