@@ -112,7 +112,7 @@ window:
 # Font configuration
 font:
   # Point size
-  size: 9.0
+  size: 10.0
 
   # Normal (roman) font face
   normal:
