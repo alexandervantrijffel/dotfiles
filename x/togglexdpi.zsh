@@ -29,6 +29,7 @@ togglexdpi() {
       echo hidpi activated
     fi 
   fi
-  xrdb $SYMLINKFILE
+  . $DOTFILES/alacritty/zprofile.zsh
+  . $DOTFILES/x/init.zsh
   i3-msg restart
 }

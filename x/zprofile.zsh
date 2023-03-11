@@ -6,3 +6,4 @@ if [ ! -d $HOME/.config/X11 ]; then
     . $THISDIR/togglexdpi.zsh
     togglexdpi
 fi
+

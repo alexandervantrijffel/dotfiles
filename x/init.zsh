@@ -1,14 +1,9 @@
 #!/bin/zsh
-. ${0:a:h}/togglexdpi.zsh
+THISDIR=${0:a:h}
+. ${THISDIR}/togglexdpi.zsh
+. ${THISDIR}/ishidpi.zsh
 
-PREFFILE=$HOME/.config/X11/.Xresources-dpi-preference
-if [ -s $PREFFILE ]; then
-  CURPREF=$(cat $PREFFILE)
-else
-  CURPREF=lodpi
-fi
-
-if [[ $CURPREF =~ "hidpi" ]]; then
+if ishidpi; then
   if type notify-send 1>/dev/null; then
     notify-send -i display "Activating hidpi"
   fi 
