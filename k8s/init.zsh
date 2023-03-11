@@ -3,6 +3,8 @@ export KUBECONFIG=$HOME/.kube/config
 
 type kubectl &>/dev/null && {
   source <(kubectl completion zsh)
+
+  # install go repos, or executables in a repo
   znap install ahmetb/kubectx
 
   alias k="kubectl"

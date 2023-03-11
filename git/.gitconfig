@@ -76,5 +76,24 @@
 	repo = /opt/fromgit/yay
 	repo = /opt/fromgit/zsh-defer
 	repo = /opt/fromgit/zsh-snap
+	repo = /opt/fromgit/alias-tips
+	repo = /opt/fromgit/diff-so-fancy
+	repo = /opt/fromgit/fast-syntax-highlighting
+	repo = /opt/fromgit/fzf
+	repo = /opt/fromgit/kubectx
+	repo = /opt/fromgit/LS_COLORS
+	repo = /opt/fromgit/ohmyzsh
+	repo = /opt/fromgit/powerlevel10k
+	repo = /opt/fromgit/prettyping
+	repo = /opt/fromgit/zoxide
+	repo = /opt/fromgit/zplug
+	repo = /opt/fromgit/zsh-autocomplete
+	repo = /opt/fromgit/zsh-autosuggestions
+	repo = /opt/fromgit/zsh-completions
+	repo = /opt/fromgit/zsh-cwd
+	repo = /opt/fromgit/zsh-history-substring-search
+	repo = /opt/fromgit/zsh-nvm
+	repo = /opt/fromgit/zsh-syntax-highlighting
+	repo = /opt/fromgit/zsh-vim-mode
 [safe]
 	directory = /opt/fromgit/zplug
