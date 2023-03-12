@@ -1,1 +1,1 @@
-export BROWSER=$(which chromium)
+export BROWSER=$(which qutebrowser)
