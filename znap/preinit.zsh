@@ -3,7 +3,7 @@ if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
     # show aliases hints if abbrevations are available for typed commands
   znap source djui/alias-tips
   znap source ohmyzsh/ohmyzsh lib/{clipboard,compfix,directories,functions,grep,history,key-bindings,misc,nvm}.zsh
-  local mods=(cp,docker,docker-compose,rsync,ssh-agent,kubectl,kubectx)
+  local mods=({cp,docker,docker-compose,rsync,ssh-agent,kubectl,kubectx})
   znap source ohmyzsh/ohmyzsh plugins/$^mods
   znap source zsh-users/zsh-autosuggestions
   znap source zsh-users/zsh-completions

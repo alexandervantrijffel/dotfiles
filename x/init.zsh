@@ -4,17 +4,17 @@ THISDIR=${0:a:h}
 . ${THISDIR}/ishidpi.zsh
 
 if ishidpi; then
-  if type notify-send 1>/dev/null; then
-    notify-send -i display "Activating hidpi"
-  fi 
+  # if type notify-send 1>/dev/null; then
+  #   echo "Activating hidpi"
+  # fi 
   export GDK_SCALE=2
   export GDK_DPI_SCALE=0.5
   export QT_SCALE_FACTOR=2
   xrandr --output Virtual-1 --auto --pos 0x0 --rotate normal --dpi 227 --primary --filter nearest --primary
 else
-  if type notify-send 1>/dev/null; then
-    notify-send -i display "Activating lodpi"
-  fi 
+  # if type notify-send 1>/dev/null; then
+  #   echo "Activating lodpi"
+  # fi 
   export QT_SCALE_FACTOR=1
   export GDK_SCALE=1
   export GDK_DPI_SCALE=1.0

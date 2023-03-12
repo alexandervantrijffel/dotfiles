@@ -94,3 +94,5 @@
 	repo = /opt/fromgit/zsh-nvm
 	repo = /opt/fromgit/zsh-syntax-highlighting
 	repo = /opt/fromgit/zsh-vim-mode
+	repo = /opt/fromgit/fzf-tab
+	repo = /opt/fromgit/prezto
