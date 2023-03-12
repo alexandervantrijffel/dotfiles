@@ -6,7 +6,7 @@ mkdir -pv $TARGETFOLDER
 
 [ ! -e /usr/share/applications/alacritty.desktop ] && sudo ln -s $CURDIR/alacritty.desktop /usr/share/applications/alacritty.desktop
 
-. ${DOTFILES}/x/ishidpi.zsh
+. ${DOTFILES}/x/functions/ishidpi
 
 if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then 
   if ishidpi; then
@@ -18,5 +18,3 @@ if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then
 else
   ln -sf $THISDIR/alacritty.yml $TARGETFOLDER/alacritty.yml
 fi
-
-
