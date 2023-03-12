@@ -1,5 +1,7 @@
 . ${0:a:h}/gittreepull.sh
 
+export GIT_CONFIG_GLOBAL=$XDG_CONFIG_HOME/git/config
+
 # https://github.com/scmbreeze/scm_breeze
 # [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
