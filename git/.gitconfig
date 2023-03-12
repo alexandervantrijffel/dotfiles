@@ -17,7 +17,7 @@
 [apply]
 	whitespace = nowarn
 [push]
-	default = simple
+	default = current
 	followTags = true
 [transfer]
 	fsckobjects = false
