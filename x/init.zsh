@@ -2,8 +2,8 @@
 THISDIR=${0:a:h}
 
 FPATH=${FPATH}:$THISDIR/functions
-autoload togglexdpi
-autoload ishidpi
+autoload -z togglexdpi
+autoload -z ishidpi
 
 if ishidpi; then
   # if type notify-send 1>/dev/null; then
