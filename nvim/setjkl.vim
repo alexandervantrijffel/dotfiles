@@ -11,11 +11,6 @@ noremap   <Down>  <NOP>
 noremap   <Right> <NOP>
 
 " " jump up/down row on screen instead of line in document
-" nmap j <Left>
-" nmap k gj
-" nmap l gk
-
-" " jump up/down row on screen instead of line in document
 noremap j <Left>
 noremap k gj
 noremap l gk

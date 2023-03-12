@@ -31,7 +31,7 @@ set shortmess+=c
 " for undo support
 set hidden 
 set undofile
-set undodir=$HOME/.cache/.vimundo/
+set undodir=$XDG_DATA_HOME/.vimundo
 set undolevels=10000
 set undoreload=10000
 

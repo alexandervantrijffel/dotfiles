@@ -6,8 +6,8 @@ let g:mapleader = "'"
 " <C-g> show full path to current buffer
 " K show type info
 
-nnoremap <leader>a :RgFzf<cr>
-nnoremap <leader>g :Rg<cr>
+nnoremap <leader>a :Rg<cr>
+nnoremap <leader>g :RgFzf<cr>
 
 " add --no-heading 
 " to show the file name in fzf preview, 
