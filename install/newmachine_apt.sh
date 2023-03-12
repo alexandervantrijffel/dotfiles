@@ -92,24 +92,6 @@ cp $THISDIR/meow /usr/share/cowsay/cows/
 # i3 extensions
 sudo apt i3-gaps-wm install rofi alsa-utils i3blocks -y 
 ln -s $DOTFILES/.config/i3/ $HOME/.i3/
-sudo mv /usr/bin/dmenu /usr/bin/dmenu.org
-sudo ln -s $(which rofi) /usr/bin/dmenu
-
-# sudo apt-get build-dep shotwell
-# sudo apt-get install yelp-tools appstream-util libgcr-3-dev libgdata-dev libwebp-dev
-
-# todo install exa manually
-
-# teiler
-# sudo apt install xininfo ffmpeg xclip maim slop -y
-# sudo git clone https://github.com/carnager/teiler.git /opt/teiler
-# sudo ln -s /opt/teiler/teiler /usr/local/bin/
-# sudo ln -s /opt/teiler/teiler_helper /usr/local/bin/
-# mkdir -pv ~/.config/teiler/profiles/mp4-pulse
-
-# install teiler as described at https://carnager.github.io/teiler/
-sudo mv /usr/bin/dmenu /usr/bin/dmenu.org
-sudo ln -s $(which rofi) /usr/bin/dmenu
 
 # sudo apt-get build-dep shotwell
 # sudo apt-get install yelp-tools appstream-util libgcr-3-dev libgdata-dev libwebp-dev
@@ -125,8 +107,17 @@ sudo ln -s $(which rofi) /usr/bin/dmenu
 
 # install teiler as described at https://carnager.github.io/teiler/
 
-curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash -
-sudo apt-get install -y nodejs
+# sudo apt-get build-dep shotwell
+# sudo apt-get install yelp-tools appstream-util libgcr-3-dev libgdata-dev libwebp-dev
+
+# teiler
+# sudo apt install xininfo ffmpeg xclip maim slop -y
+# sudo git clone https://github.com/carnager/teiler.git /opt/teiler
+# sudo ln -s /opt/teiler/teiler /usr/local/bin/
+# sudo ln -s /opt/teiler/teiler_helper /usr/local/bin/
+# mkdir -pv ~/.config/teiler/profiles/mp4-pulse
+
+# install teiler as described at https://carnager.github.io/teiler/
 
 sudo apt autoremove -y
 
