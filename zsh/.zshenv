@@ -22,20 +22,9 @@ for f in $DOTFILES/**/preenv.zsh; do
   . "$f"
 done
 
-[ -d  "$HOME/bin" ] && PATH="$PATH:$HOME/bin"
-[ -d  "$HOME/.local/bin" ] && PATH="$PATH:$HOME/.local/bin"
-
-# support for compdef (completions for zsh)
-autoload -Uz compinit
-compinit -d $HOME/.cache/.zcompdump-$HOST
-compinit -u
-
 for f in $DOTFILES/**/env.zsh; do 
   . "$f"
 done
 
-# zstyle ':completion:*' completer _expand _complete _ignored
-# zstyle :compinstall filename '/home/lex/.zshrc'
-
-# lightdm does not source .zprofile :(
-# use this fix for now
+[ -d  "$HOME/bin" ] && PATH="$PATH:$HOME/bin"
+[ -d  "$HOME/.local/bin" ] && PATH="$PATH:$HOME/.local/bin"
