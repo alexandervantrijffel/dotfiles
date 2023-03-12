@@ -32,9 +32,10 @@ Plug 'tpope/vim-commentary'
 " Change color of #123456 hexcodes in text
 Plug 'chrisbra/colorizer'
 
-" Bottom status bar
-Plug 'nvim-lualine/lualine.nvim'
+" Bottom status bar and top bar
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'romgrk/barbar.nvim'
 
 " Rainbow parentheses
 Plug 'luochen1990/rainbow'
@@ -56,6 +57,7 @@ Plug 'flazz/vim-colorschemes'
 
 " :Far and :Far (interactive) - find and replace in multiple files
 Plug 'brooth/far.vim'
+
 
 " Plug 'tell-k/vim-autopep8'
 " Plug 'tomlion/vim-solidity'
