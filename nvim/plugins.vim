@@ -17,7 +17,7 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'github/copilot.vim'
 
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install' }
 

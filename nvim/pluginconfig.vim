@@ -21,7 +21,30 @@ let g:rg_command = 'rg --vimgrep --hidden --smart-case --follow'
 
 " the preview window of fzf uses bat so we have to configure bat theme here
 let $BAT_THEME='Visual Studio Dark+'
+
+" :SignifyDiff
 "
+" :SignifyHunkUndo
+"
+" ]c next hunk
+" [c previous hunk
+"
+" ]C last hunk
+" ]C first hunk
+
+let g:signify_number_highlight = 1
+let g:signify_sign_add = '++'
+let g:signify_sign_change = '~~'
+
+autocmd User SignifyHunk call s:show_current_hunk()
+
+function! s:show_current_hunk() abort
+  let h = sy#util#get_hunk_stats()
+  if !empty(h)
+    echo printf('[Hunk %d/%d]', h.current_hunk, h.total_hunks)
+  endif
+endfunction
+
 " useful: vim-jplus (join lines)
 " 'neosnippet-snippets', 'neosnippet.vim', 'neoyank.vim',
 " Required to prevent format error with coc neoformat
@@ -37,5 +60,3 @@ let $BAT_THEME='Visual Studio Dark+'
 " run 'pip3 install pynvim' for vim
 "
 " run :UpdateRemotePlugins for tssserver
-
-
