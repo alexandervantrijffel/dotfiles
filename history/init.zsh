@@ -1,5 +1,5 @@
 export HISTCONTROL=ignoreboth:erasedups
-export HISTSIZE=1000
+export HISTSIZE=10000000
 export SAVEHIST=10000000
 export HISTFILE=$XDG_CONFIG_HOME/zsh/.zsh_history
 
