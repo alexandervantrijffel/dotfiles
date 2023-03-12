@@ -138,6 +138,11 @@ nnoremap <leader>bl :Lines<cr>
 " previous/next tab
 nnoremap <leader>k :bn<cr>
 nnoremap <leader>l :bp<cr>
+
+nnoremap <silent> <leader><leader>t    <Cmd>BufferPick<CR>
+nnoremap <silent> <leader><leader>o <Cmd>BufferOrderByDirectory<CR>
+
+
 " prevent that vim-go overwrites our K mapping
 let g:go_doc_keywordprg_enabled = 0
 nnoremap K :bn<cr>

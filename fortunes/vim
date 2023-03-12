@@ -25,8 +25,7 @@ VIM ( ) begin / end of sentence     { } begin / end of paragraph
 %
 VIM H screen top     M screen middle     L screen bottom
 %
-spaceVIM <space>w= balance windows
-<space>w+ toggle window layout
+VIM <C-w>= balance windows
 %
 VIM <leader><leader>s quick jump to character in document,
 <leader><leader>w jump to word,
@@ -47,15 +46,11 @@ https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool
 %
 VIM :0Glog to view history of current file. :copen to open earlier version of file. :G for git status, stage/unstage/ignore file. :Gblame (with vim-fugitive)
 %
-VIM CTRL+[x f]  autocomplete filename
-%
 VIM <space>fo open current file in file tree
 %
-VIM With split windows <space>1 left window <space2> right window
+VIM With split windows <A-j> left window <A-;> right window
 %
 VIM <C-g> show full path to current file
-%
-VIM 25 enter jump 25 lines down
 %
 VIM vimfiler file tree r rename file, N new file, K new directory, mm move file, dd delete file
 s v - open file in split vertical edit
@@ -70,3 +65,9 @@ VIM <C-k> j3 in insert mode for ϵ (this is digraph). :dig for all characters
 VIM <C-l> next Copilot suggestion <A-l> next coc autocomplete suggestion
 %
 VIM gcc for commenting/uncommenting current line
+%
+VIM <leader><leader>t easymotion for buffer tabs
+<leader><leader>o sort buffer tabs on name
+%
+VIM :SignifyDiff view diff panels
+:SignifyHunkUnfo 
