@@ -1,7 +1,9 @@
 #!/bin/zsh
 THISDIR=${0:a:h}
-. ${THISDIR}/togglexdpi.zsh
-. ${THISDIR}/ishidpi.zsh
+
+FPATH=${FPATH}:$THISDIR/functions
+autoload togglexdpi
+autoload ishidpi
 
 if ishidpi; then
   # if type notify-send 1>/dev/null; then

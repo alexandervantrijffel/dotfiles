@@ -10,12 +10,11 @@ if [ -f /etc/X11/xinit/.Xresources ]; then
   xrdb -merge /etc/X11/xinit/.Xresources
 fi
 
-if [ -f "$HOME/.config/X11/.Xresources" ]; then
-  xrdb -merge $HOME/.config/X11/.Xresources
+if [ -f "$XDG_CONFIG_HOME/X11/.Xresources" ]; then
+  xrdb -merge $XDG_CONFIG_HOME/X11/.Xresources
 fi
 
 
-# start some nice programs
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
   [ -x "$f" ] && . "$f"
