@@ -53,6 +53,7 @@ dosfstools 4.2-3
 double-conversion 3.2.1-1
 duf 0.8.1-2
 duktape 2.7.0-5
+dunst 1.9.1-1
 dust 0.8.4-1
 e2fsprogs 1.47.0-1
 efibootmgr 18-1
@@ -310,7 +311,6 @@ neovim 0.8.3-1
 netctl 1.28-2
 nettle 3.8.1-1
 networkmanager 1.42.4-1
-notification-daemon 3.20.0-4
 npth 1.6-3
 nspr 4.35-1
 nss 3.88-1
