@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/bin/zsh
 yi() {
   if [ ! -f "$PWD/package.json" ]; then
     echo No package.json found in current folder. aborting...

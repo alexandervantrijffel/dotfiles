@@ -19,6 +19,7 @@ settings:
         k: scroll down
         l: scroll up
         ;: scroll right
+        D: tab-close
   colors.webpage.bg:
     global: '#282a36'
   colors.webpage.darkmode.enabled:

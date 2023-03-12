@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/bin/zsh
 THISDIR=$(dirname ${0:A})
 
 TARGETFOLDER=$XDG_CONFIG_HOME/alacritty

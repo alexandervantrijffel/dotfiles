@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/bin/zsh
 
 if [[ $(xmodmap -pk | grep Caps) ]]; then
 	xmodmap -e "clear lock" #disable caps lock switch
