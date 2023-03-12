@@ -9,8 +9,8 @@ if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
   znap source zsh-users/zsh-completions
   znap source pjvds/zsh-cwd
   znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
-  znap eval denilsonsa/prettyping 'echo'
-  znap eval so-fancy/diff-so-fancy 'echo'
+  znap install denilsonsa/prettyping
+  znap install so-fancy/diff-so-fancy
   if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then 
     znap source zsh-users/zsh-history-substring-search
     znap source zsh-users/zsh-syntax-highlighting
