@@ -101,4 +101,4 @@ bindkey "^E" autosuggest-execute
 bindkey "^F" forward-word
 
 # finish profiling (started in .zshenv)
-zprof > /tmp/zprof.dump
+# zprof > /tmp/zprof.dump
