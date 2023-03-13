@@ -1,5 +1,4 @@
 #!/bin/zsh
-#
 
 if ! type rg 1>/dev/null; then
   # sudo apt-get install ripgrep

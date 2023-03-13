@@ -1,17 +1,24 @@
+source $XDG_CONFIG_HOME/nvim/coc.vim
 source $XDG_CONFIG_HOME/nvim/go.vim
 source $XDG_CONFIG_HOME/nvim/typescript.vim
+
+let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.95 } }
 
 " jump to existing window if possible
 let g:fzf_buffers_jump = 1
 
 function RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -C=0 --follow -- %s || true'
   let initial_command = printf(command_fmt, shellescape(a:query))
   let reload_command = printf(command_fmt, '{q}')
-  let spec = {'options': ['--disabled', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
-  let spec = fzf#vim#with_preview(spec, 'right', 'ctrl-/')
+  let spec = {'options': ['--disabled', '--query', shellescape(a:query), '--bind', 'change:reload:'.reload_command]}
+  let spec = fzf#vim#with_preview(spec, 'right,50%', 'ctrl-/')
   call fzf#vim#grep(initial_command, 1, spec, a:fullscreen)
 endfunction
+
+command!      -bang -nargs=* RgFzf call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --follow -- ".shellescape(<q-args>), 1, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:60%'), <bang>0)
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 " autocomplete
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.ts"

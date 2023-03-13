@@ -6,13 +6,6 @@ let g:mapleader = "'"
 " <C-g> show full path to current buffer
 " K show type info
 
-nnoremap <leader>a :Rg<cr>
-nnoremap <leader>g :RgFzf<cr>
-
-" add --no-heading 
-" to show the file name in fzf preview, 
-command!      -bang -nargs=* RgFzf call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --follow -- ".shellescape(<q-args>), 1, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:60%'), <bang>0)
-
 au FileType python nmap <A-f> :call Autopep8()<CR>
 
 au FileType go nmap <A-f> :GoFmt<cr>:GoBuild<cr>
@@ -141,3 +134,6 @@ nnoremap L :bp<cr>
 
 " copilot-next: <C-[>
 " copilot-prev: <C-[>
+
+" <C-/> to toggle preview window
+nnoremap <leader>a :RG<cr>
