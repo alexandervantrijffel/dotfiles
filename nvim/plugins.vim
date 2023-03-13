@@ -33,7 +33,7 @@ Plug 'yuttie/comfortable-motion.vim'
 " Comment out line
 Plug 'tpope/vim-commentary'
 
-" Change color of #123456 hexcodes in text
+" Change color of #986456 hexcodes in text
 Plug 'ap/vim-css-color'
 
 " Bottom status bar and top bar

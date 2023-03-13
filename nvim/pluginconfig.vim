@@ -42,8 +42,8 @@ let $BAT_THEME='Visual Studio Dark+'
 " ]C first hunk
 
 let g:signify_number_highlight = 1
-let g:signify_sign_add = '++'
-let g:signify_sign_change = emoji#for('sparkles')
+let g:signify_sign_add = emoji#for('heavy_plus_sign')
+let g:signify_sign_change = emoji#for('exclamation')
 let g:signify_sign_delete            = emoji#for('x')
 let g:signify_sign_delete_first_line = emoji#for('x') 
 
