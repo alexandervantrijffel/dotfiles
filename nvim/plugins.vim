@@ -39,8 +39,8 @@ Plug 'ap/vim-css-color'
 " Bottom status bar and top bar
 Plug 'nvim-tree/nvim-web-devicons'
 
-Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
+Plug 'nvim-lualine/lualine.nvim'
 
 " Plug 'romgrk/barbar.nvim'
 
@@ -69,5 +69,3 @@ Plug 'brooth/far.vim'
 " Plug 'tomlion/vim-solidity'
 
 call plug#end()
-
-source $XDG_CONFIG_HOME/nvim/pluginconfig.vim

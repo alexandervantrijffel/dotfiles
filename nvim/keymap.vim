@@ -20,15 +20,6 @@ au FileType go nmap <A-f> :GoFmt<cr>:GoBuild<cr>
 
 au FileType go nmap <leader>r :GoRename<cr>
 
-noremap <silent><nowait> <leader>T :<C-u>CocFzfList outline<cr>
-noremap <silent><nowait> <leader>t :<C-u>CocFzfList symbols<CR>
-  " au FileType go nmap <leader>t :FzfTags<cr>
-nnoremap <silent><leader>x :<C-u>call CocAction('jumpReferences')<CR>
-nnoremap <silent><nowait> <leader>j  :call CocAction('diagnosticNext')<CR>
-nnoremap <silent><nowait> <leader>k  :call CocAction('diagnosticPrevious')<CR>
-noremap <silent><nowait> <leader>e :CocCommand explorer --preset floating<CR>
-let g:hardtime_ignore_buffer_patterns = [ ".*coc.*" ]
-
 " let g:autopep8_max_line_length=120
 " autocmd FileType python noremap <buffer> <A-f> :call Autopep8()<CR>
 " noremap <A-f> :CocCommand python.runLinting<CR>
@@ -128,7 +119,7 @@ nnoremap C "eC
 " when deleting, yank to register e
 " nnoremap d "ed
 " when deleting, yank to register e
-noremap x "ex
+" noremap x "ex
 
 " fzf.vim
 nnoremap <C-p> :Files<cr>
@@ -139,6 +130,7 @@ nnoremap <leader>bl :Lines<cr>
 nnoremap <leader>k :bn<cr>
 nnoremap <leader>l :bp<cr>
 
+" 
 nnoremap <silent> <leader><leader>t    <Cmd>BufferPick<CR>
 nnoremap <silent> <leader><leader>o <Cmd>BufferOrderByDirectory<CR>
 
@@ -148,7 +140,5 @@ let g:go_doc_keywordprg_enabled = 0
 nnoremap K :bn<cr>
 nnoremap L :bp<cr>
 
-" /********* Coc **********\
-
-
-noremap <C-l> <Plug>(copilot-next)
+" copilot-next: <C-[>
+" copilot-prev: <C-[>

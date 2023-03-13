@@ -71,4 +71,5 @@ VIM <leader><leader>t easymotion for buffer tabs
 %
 VIM :SignifyDiff view diff panels
 :SignifyHunkUnfo 
-% VIM create/edit new file in the folder of the current file :e %:h/filename
+%
+VIM create/edit new file in the folder of the current file :e %:h/filename

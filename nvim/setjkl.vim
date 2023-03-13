@@ -29,14 +29,15 @@ vnoremap   <Right> <NOP>
 nnoremap <C-k> :m .+1<CR>==
 nnoremap <C-l> :m .-2<CR>==
 
+" Visual mode
+vnoremap <C-l> :m '<-2<CR>gv=gv
+vnoremap <C-k> :m '>+1<CR>gv=gv
+
 " move line up/down Insert mode
 " (C-k is for digraph) for instance C-k j3 for ϵ
 " inoremap <C-k> <ESC>:m .+1<CR>==gi
 " inoremap <C-l> <ESC>:m .-2<CR>==gi
 
-" Visual mode
-vnoremap <C-k> :m '>+1<CR>gv=gv
-vno"emap <C-l> :m '<-2<CR>gv=gv
 
 " split windows
 nnoremap <A-j> <C-W><C-h>
