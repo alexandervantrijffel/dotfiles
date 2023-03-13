@@ -30,7 +30,9 @@ let $BAT_THEME='Visual Studio Dark+'
 
 let g:signify_number_highlight = 1
 let g:signify_sign_add = '++'
-let g:signify_sign_change = '~~'
+let g:signify_sign_change = emoji#for('sparkles')
+let g:signify_sign_delete            = emoji#for('x')
+let g:signify_sign_delete_first_line = emoji#for('x') 
 
 autocmd User SignifyHunk call s:show_current_hunk()
 

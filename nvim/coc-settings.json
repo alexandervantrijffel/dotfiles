@@ -23,8 +23,6 @@
   "diagnostic.errorSign": "⤬",
   "diagnostic.warningSign": "❕",
   "diagnostic.infoSign": "💡",
-  "tabnine.priority": 10,
-  "tabnine.shortcut": "TN",
   "diagnostic.checkCurrentLine": false,
   "languageserver": {
     "golang": {

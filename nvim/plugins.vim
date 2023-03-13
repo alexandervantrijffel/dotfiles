@@ -40,6 +40,9 @@ Plug 'ap/vim-css-color'
 " Bottom status bar and top bar
 Plug 'nvim-tree/nvim-web-devicons'
 
+" https://www.webfx.com/tools/emoji-cheat-sheet/
+Plug 'junegunn/vim-emoji'
+
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 Plug 'nvim-lualine/lualine.nvim'
 
@@ -70,3 +73,5 @@ Plug 'brooth/far.vim'
 " Plug 'tomlion/vim-solidity'
 
 call plug#end()
+
+source $XDG_CONFIG_HOME/nvim/pluginconfig.vim
