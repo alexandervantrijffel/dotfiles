@@ -8,7 +8,7 @@ source /opt/fromgit/zsh-defer/zsh-defer.plugin.zsh
 # support for compdef (completions for zsh)
 export ZSH_DISABLE_COMPFIX="true"
 autoload -Uz compinit
-compinit -d $HOME/.cache/.zcompdump-$HOST
+compinit -d $XDG_CACHE_HOME/.zcompdump-$HOST
 compinit -u
 
 zstyle ':completion:*' completer _expand _complete _ignored
@@ -31,9 +31,6 @@ done
 for f in $DOTFILES/**/postinit.zsh; do 
   . "$f"
 done
-
-alias .d="z $DOTFILES"
-alias .v="z $DOTFILES && v"
 
 if type batcat 1>/dev/null; then
   alias cat='batcat -p '
