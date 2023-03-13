@@ -16,7 +16,7 @@ function RipgrepFzf(query, fullscreen)
   call fzf#vim#grep(initial_command, 1, spec, a:fullscreen)
 endfunction
 
-command!      -bang -nargs=* RgFzf call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --follow -- ".shellescape(<q-args>), 1, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:60%'), <bang>0)
+command! -bang -nargs=* RgFzf call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case --hidden --follow -- ".shellescape(<q-args>), 1, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:60%'), <bang>0)
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
@@ -29,7 +29,6 @@ let g:vimfiler_ignore_pattern = '^\%(\.git\|\.DS_Store\)$'
 
 let g:rg_highlight = 'true'
 let g:rg_command = 'rg --vimgrep --hidden --smart-case --follow'
-
 
 " the preview window of fzf uses bat so we have to configure bat theme here
 let $BAT_THEME='Visual Studio Dark+'
