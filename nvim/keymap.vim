@@ -130,10 +130,9 @@ nnoremap <leader>bl :Lines<cr>
 nnoremap <leader>k :bn<cr>
 nnoremap <leader>l :bp<cr>
 
-" 
-nnoremap <silent> <leader><leader>t    <Cmd>BufferPick<CR>
-nnoremap <silent> <leader><leader>o <Cmd>BufferOrderByDirectory<CR>
-
+" akinsho/bufferline.nvim
+nnoremap <silent> <leader><leader>t    <Cmd>BufferLinePick<CR>
+nnoremap <silent> <leader><leader>o <Cmd>BufferLineSortByDirectory<CR>
 
 " prevent that vim-go overwrites our K mapping
 let g:go_doc_keywordprg_enabled = 0
