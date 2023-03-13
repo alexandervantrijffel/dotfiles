@@ -6,7 +6,7 @@ if ! type fzf 1>/dev/null; then
 fi
 
 # use fzf for completion anywhere after pressing TAB
-znap source aloxaf/fzf-tab fzf-tab.plugin.zsh
+zsh-defer znap source aloxaf/fzf-tab fzf-tab.plugin.zsh
 
 export FZF_DEFAULT_OPTS="--bind 'ctrl-l:up,ctrl-k:down,ctrl-a:select-all,ctrl-d:preview-page-down,ctrl-u:preview-page-up' --cycle --ansi --height 80%"
 
