@@ -2,7 +2,7 @@ source $XDG_CONFIG_HOME/nvim/coc.vim
 source $XDG_CONFIG_HOME/nvim/go.vim
 source $XDG_CONFIG_HOME/nvim/typescript.vim
 
-let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.95 } }
+let g:fzf_layout = { 'window': { 'width': 0.96, 'height': 0.96 } }
 
 " jump to existing window if possible
 let g:fzf_buffers_jump = 1
@@ -55,6 +55,8 @@ function! s:show_current_hunk() abort
     echo printf('[Hunk %d/%d]', h.current_hunk, h.total_hunks)
   endif
 endfunction
+
+let g:rainbow_active = 1
 
 " useful: vim-jplus (join lines)
 " 'neosnippet-snippets', 'neosnippet.vim', 'neoyank.vim',
