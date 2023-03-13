@@ -16,10 +16,14 @@ let g:coc_global_extensions = [
   \ 'coc-highlight',
   \ 'coc-json',
   \ 'coc-prettier', 
-  \ 'coc-pyright', 
   \ 'coc-tsserver',
   \ 'coc-yaml',
   \ ]
+
+source $XDG_CONFIG_HOME/nvim/coc-keymap.vim
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Customize colors of coc popup menus
 func! s:my_colors_setup() abort
@@ -64,3 +68,4 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
+

@@ -1,9 +1,13 @@
 " Install with :PlugInstall
+" Update with :PlugUpdate
+" Remove with :PlugClean
+" Upgrade vim-plug with :PlugUpgrade
 
 " Plugins are installed to $HOME/.local/share/nvim/plugged
 
 call plug#begin()
 
+" :LspInfo
 Plug 'neovim/nvim-lspconfig'
 
 Plug 'alexandervantrijffel/vim-material'
@@ -30,12 +34,15 @@ Plug 'yuttie/comfortable-motion.vim'
 Plug 'tpope/vim-commentary'
 
 " Change color of #123456 hexcodes in text
-Plug 'chrisbra/colorizer'
+Plug 'ap/vim-css-color'
 
 " Bottom status bar and top bar
-Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-tree/nvim-web-devicons'
+
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'romgrk/barbar.nvim'
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
+
+" Plug 'romgrk/barbar.nvim'
 
 " Rainbow parentheses
 Plug 'luochen1990/rainbow'
@@ -51,7 +58,6 @@ Plug 'HerringtonDarkholme/yats.vim'
 " Git wrapper
 Plug 'tpope/vim-fugitive'
 
-Plug 'flazz/vim-colorschemes'
 " change working directory to project root
 " Plug 'airblade/vim-rooter'
 
