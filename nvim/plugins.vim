@@ -16,6 +16,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'antoinemadec/coc-fzf'
+source $XDG_CONFIG_HOME/nvim/coc.vim
 
 Plug 'easymotion/vim-easymotion'
 

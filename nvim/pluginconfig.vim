@@ -1,4 +1,3 @@
-source $XDG_CONFIG_HOME/nvim/coc.vim
 source $XDG_CONFIG_HOME/nvim/go.vim
 source $XDG_CONFIG_HOME/nvim/typescript.vim
 
@@ -7,8 +6,6 @@ let g:fzf_buffers_jump = 1
 
 " autocomplete
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx,*.js,*.ts"
-
-autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
 
 " Override default ignore pattern in file tree to still
 " show other . files

@@ -20,10 +20,13 @@ let g:coc_global_extensions = [
   \ 'coc-yaml',
   \ ]
 
-source $XDG_CONFIG_HOME/nvim/coc-keymap.vim
+source $XDG_CONFIG_HOME/nvim/cockeymap.vim
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
+
 
 " Customize colors of coc popup menus
 func! s:my_colors_setup() abort

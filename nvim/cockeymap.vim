@@ -10,8 +10,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call ShowDocumentation()<CR>
+" Use gk to show documentation in preview window.
+nnoremap <silent> gk :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
@@ -69,8 +69,8 @@ noremap <silent><nowait> <leader>T :<C-u>CocFzfList outline<cr>
 noremap <silent><nowait> <leader>t :<C-u>CocFzfList symbols<CR>
   " au FileType go nmap <leader>t :FzfTags<cr>
 nnoremap <silent><leader>x :<C-u>call CocAction('jumpReferences')<CR>
-nnoremap <silent><nowait> <leader>j  :call CocAction('diagnosticNext')<CR>
-nnoremap <silent><nowait> <leader>k  :call CocAction('diagnosticPrevious')<CR>
+nnoremap <silent> gn  :call CocAction('diagnosticNext')<CR>
+nnoremap <silent> gp  :call CocAction('diagnosticPrevious')<CR>
 noremap <silent><nowait> <leader>e :CocCommand explorer --preset floating<CR>
 let g:hardtime_ignore_buffer_patterns = [ ".*coc.*" ]
 
