@@ -1,5 +1,4 @@
 znap source junegunn/fzf shell/{completion,key-bindings}.zsh
-znap install junegunn/fzf
 
 if ! type fzf 1>/dev/null; then
   znap eval junegunn/fzf "./install --no-fish --no-bash --bin"

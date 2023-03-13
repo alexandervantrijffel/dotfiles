@@ -9,14 +9,14 @@
 export DOTFILES=$(readlink -e "$HOME/.zshenv" | xargs dirname | xargs dirname)
 export ZDOTDIR="${DOTFILES}/zsh"
 
+# start profiling (finish in .zshrc)
+zmodload zsh/zprof
+
 export LC_ALL=en_US.UTF-8
 
 if [[ ! -f "/tmp/.zprofiled" ]]; then
   touch /tmp/.zprofiled
 fi
-
-# start profiling (finish in .zshrc)
-# zmodload zsh/zprof
 
 for f in $DOTFILES/**/preenv.zsh; do 
   . "$f"

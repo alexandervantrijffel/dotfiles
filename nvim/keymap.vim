@@ -138,7 +138,7 @@ nnoremap L :bp<cr>
 " <C-/> to toggle preview window
 nnoremap <leader>a :RG<cr>
 
-nnoremap > V>gv
-nnoremap < V<gv
+nnoremap <nowait> > V>g
+nnoremap <nowait> < V<g
 vmap > >gv
 vmap < <gv
