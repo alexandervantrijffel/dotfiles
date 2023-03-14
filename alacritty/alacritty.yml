@@ -126,7 +126,7 @@ font:
     # family: Monospace
     # style: Regular
     # style: Bold
-    style: Bold
+    # style: Bold
 
   # Bold font face
   #bold:
