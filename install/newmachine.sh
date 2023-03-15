@@ -46,7 +46,6 @@ sudo chmod 777 -R /usr/local/share/.cache
 sudo npm install -g global add prettier eslint import-js neovim ts-node typescript typescript-language-server
 
 sudo ln -s $(pwd)/../sh/autotestgo.sh /usr/local/bin/autotestgo
-sudo ln -s $(pwd)/../sh/autorungo.sh /usr/local/bin/autorungo
 sudo ln -s $(pwd)/../sh/whatismyip.sh /usr/local/bin/whatismyip
 
 # from https://github.com/so-fancy/diff-so-fancy
