@@ -44,7 +44,7 @@ settings:
   hints.auto_follow:
     global: always
   hints.chars:
-    global: abcdefghjkmnopqrstuvwxyz234567890ABCDEFGHJKLMNOPQRSTUVWXYZ
+    global: abcdefghjkmnopqrstuvwxyz234567890
   hints.dictionary:
     global: /data/dev/github.com/alexandervantrijffel/dotfiles/home/qutebrowser/hintsdictionary
   # qt.highdpi:
