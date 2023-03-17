@@ -35,6 +35,7 @@ gitalias () {
   alias gl="git log --max-count=500 --stat --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
   alias gls="git log --max-count=500 --decorate --graph --color --pretty=format:'%C(yellow)%h %C(cyan)%ad %Cgreen%d %Creset%s %C(yellow)%an' --date=short"
   alias glp="git log -p "
+  alias gm="git merge"
   alias gma="git merge --abort"
   alias gmc="git merge --continue"
   alias gmm="git merge master"
