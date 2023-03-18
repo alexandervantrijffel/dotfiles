@@ -17,6 +17,10 @@ Plug 'williamboman/mason-lspconfig.nvim'
 " :LspInfo
 Plug 'neovim/nvim-lspconfig'
 
+" :TSInstallInfo
+" :TSUpdate
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 Plug 'alexandervantrijffel/vim-material'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
