@@ -7,6 +7,13 @@
 
 call plug#begin()
 
+" for installation of LSP's. Run this command when starting with 
+" new languages and file types.
+" :Mason
+" :MasonUpdate
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+
 " :LspInfo
 Plug 'neovim/nvim-lspconfig'
 
