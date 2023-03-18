@@ -17,3 +17,6 @@ augroup SHADA
 augroup END
 
 source $XDG_CONFIG_HOME/nvim/onvimenter.vim
+
+" run :h stdpath to find out the commands for retrieving nvim config/data
+" paths
