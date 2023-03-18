@@ -73,3 +73,4 @@ let g:rainbow_active = 1
 " run 'pip3 install pynvim' for vim
 "
 " run :UpdateRemotePlugins for tssserver
+"
