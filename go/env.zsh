@@ -1,4 +1,5 @@
 export GOPATH="$HOME/go"
+
 if [ -d /usr/lib/go ]; then
   # default install location for pacman go
   export GOROOT="/usr/lib/go"
