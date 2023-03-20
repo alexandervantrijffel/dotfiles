@@ -5,7 +5,7 @@
 
 export NVM_COMPLETION=true
 export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim')
-export NVM_LAZY_LOAD=false
+export NVM_LAZY_LOAD=true
 zsh-defer znap source "lukechilds/zsh-nvm"
 
 alias ya='yarn add -E'
