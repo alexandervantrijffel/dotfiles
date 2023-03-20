@@ -65,4 +65,6 @@ if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
   znap pull
 fi
 
+nvm upgrade
+
 pacman -Syu
