@@ -9,6 +9,7 @@ font pango:Roboto Nerd Font 10
 # run commands once per i3 session
 
 # dunst for notify-send, better than notification-daemon:
+# depends on libnotify
 exec --no-startup-id dunst
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
