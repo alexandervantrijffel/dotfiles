@@ -68,3 +68,5 @@ fi
 nvm upgrade
 
 pacman -Syu
+
+rustup update
