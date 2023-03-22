@@ -4,7 +4,7 @@ THISDIR=$(dirname ${0:A})
 TARGETFOLDER=$XDG_CONFIG_HOME/alacritty
 mkdir -pv $TARGETFOLDER
 
-[ ! -e /usr/share/applications/alacritty.desktop ] && sudo ln -s $CURDIR/alacritty.desktop /usr/share/applications/alacritty.desktop
+[ ! -L /usr/share/applications/alacritty.desktop ] && sudo ln -s $CURDIR/alacritty.desktop /usr/share/applications/alacritty.desktop
 
 . ${DOTFILES}/x/functions/ishidpi
 
@@ -16,5 +16,6 @@ if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then
     ln -sf $THISDIR/alacritty.arch.lodpi.yml $TARGETFOLDER/alacritty.yml
   fi
 else
-  ln -sf $THISDIR/alacritty.yml $TARGETFOLDER/alacritty.yml
+  [ ! -L $TARGETFOLDER/alacritty.yml ] && \
+    ln -sf $THISDIR/alacritty.yml $TARGETFOLDER/alacritty.yml
 fi

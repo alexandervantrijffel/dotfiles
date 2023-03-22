@@ -1,2 +1,2 @@
 #!/bin/zsh
-[ ! -f $HOME/.yarnrc ] && ln -s $THISDIR/.yarnrc.yml $HOME/.yarnrc
+[ ! -L $HOME/.yarnrc ] && ln -s $THISDIR/.yarnrc.yml $HOME/.yarnrc
