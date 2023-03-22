@@ -11,9 +11,6 @@ autoload -Uz compinit
 compinit -d $XDG_CACHE_HOME/.zcompdump-$HOST
 compinit -u
 
-zstyle ':completion:*' completer _expand _complete _ignored
-zstyle :compinstall filename '/home/lex/.zshrc'
-
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
 for f in $DOTFILES/**/preinit.zsh; do 
