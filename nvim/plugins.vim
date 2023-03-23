@@ -88,6 +88,12 @@ Plug 'brooth/far.vim'
 " Plug 'tell-k/vim-autopep8'
 " Plug 'tomlion/vim-solidity'
 
+
+
+Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
+Plug 'ThePrimeagen/harpoon'
+
+
 call plug#end()
 
 source $XDG_CONFIG_HOME/nvim/pluginconfig.vim
