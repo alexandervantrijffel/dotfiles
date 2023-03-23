@@ -27,6 +27,7 @@ VIM H screen top     M screen middle     L screen bottom
 %
 VIM <C-w>= balance windows
 %
+Easymotion
 VIM <leader><leader>s quick jump to character in document,
 <leader><leader>w jump to word,
 <leader><leader>b jump backwards to word
@@ -73,3 +74,7 @@ VIM :SignifyDiff view diff panels
 :SignifyHunkUnfo 
 %
 VIM create/edit new file in the folder of the current file :e %:h/filename
+%
+VIM harpoon
+<leader>ha add file
+<leader>hm show menu
