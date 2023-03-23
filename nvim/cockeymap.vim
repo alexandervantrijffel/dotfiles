@@ -10,6 +10,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+nmap rn <Plug>(coc-rename)
+
 " Use gk to show documentation in preview window.
 nnoremap <silent> gk :call ShowDocumentation()<CR>
 
@@ -28,7 +30,6 @@ inoremap <A-d> <Esc>:call <SID>show_documentation()<CR>
 nmap <A-d> <Esc>:call <SID>show_documentation()<CR>
 nmap sd :call <SID>show_documentation()<CR>
 
-nmap <leader>rn <Plug>(coc-rename)
 
 " vmap <leader>f <Plug>(coc-format)
 " nmap <leader>f <Plug>(coc-format)
@@ -68,7 +69,6 @@ endif
 noremap <silent><nowait> <leader>T :<C-u>CocFzfList outline<cr>
 noremap <silent><nowait> <leader>t :<C-u>CocFzfList symbols<CR>
   " au FileType go nmap <leader>t :FzfTags<cr>
-nnoremap <silent><leader>x :<C-u>call CocAction('jumpReferences')<CR>
 nnoremap <silent> gn  :call CocAction('diagnosticNext')<CR>
 nnoremap <silent> gp  :call CocAction('diagnosticPrevious')<CR>
 noremap <silent><nowait> <leader>e :CocCommand explorer --preset floating<CR>
