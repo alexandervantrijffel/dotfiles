@@ -9,6 +9,10 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> gn  :call CocAction('diagnosticNext')<CR>
+nnoremap <silent> gp  :call CocAction('diagnosticPrevious')<CR>
+noremap gT :<C-u>CocFzfList outline<cr>
+noremap gt :<C-u>CocFzfList symbols<CR>
 
 nmap rn <Plug>(coc-rename)
 
@@ -66,11 +70,7 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
   vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
 
-noremap <silent><nowait> <leader>T :<C-u>CocFzfList outline<cr>
-noremap <silent><nowait> <leader>t :<C-u>CocFzfList symbols<CR>
   " au FileType go nmap <leader>t :FzfTags<cr>
-nnoremap <silent> gn  :call CocAction('diagnosticNext')<CR>
-nnoremap <silent> gp  :call CocAction('diagnosticPrevious')<CR>
 noremap <silent><nowait> <leader>e :CocCommand explorer --preset floating<CR>
 let g:hardtime_ignore_buffer_patterns = [ ".*coc.*" ]
 
