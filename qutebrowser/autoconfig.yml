@@ -47,8 +47,8 @@ settings:
     global: abcdefghjkmnopqrstuvwxyz234567890
   hints.dictionary:
     global: /data/dev/github.com/alexandervantrijffel/dotfiles/home/qutebrowser/hintsdictionary
-  # qt.highdpi:
-  #   global: true
+  qt.highdpi:
+    global: false
   url.default_page:
     global: https://google.com/
   url.searchengines:
@@ -57,4 +57,4 @@ settings:
   url.start_pages:
     global: https://google.com
   zoom.default:
-    global: 100%
+    global: 80%
