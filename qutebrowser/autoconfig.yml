@@ -57,4 +57,4 @@ settings:
   url.start_pages:
     global: https://google.com
   zoom.default:
-    global: 80%
+    global: 100%

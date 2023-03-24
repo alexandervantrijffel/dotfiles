@@ -38,7 +38,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec alacritty
 
-bindsym $mod+Shift+e exec --no-startup-id i3-msg exec /opt/fromgit/rofimoji/picker/rofimoji.py
+# bindsym $mod+Shift+e exec --no-startup-id i3-msg exec /opt/fromgit/rofimoji/picker/rofimoji.py
 
 # kill focused window
 bindsym $mod+Shift+w kill
