@@ -19,3 +19,5 @@ export HISTFILE=$XDG_CONFIG_HOME/zsh/.zsh_history
 
 # # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 export HIST_STAMPS="yyyy-mm-dd"
+
+zsh-defer znap source alexandervantrijffel/zsh-history-filter
