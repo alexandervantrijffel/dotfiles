@@ -98,10 +98,6 @@ Plug 'ThePrimeagen/harpoon'
 
 Plug 'kwkarlwang/bufjump.nvim'
 
-" Do not yank when deleting or changing but keep the existing value in the
-" register
-Plug 'svermeulen/vim-cutlass'
-
 call plug#end()
 
 source $XDG_CONFIG_HOME/nvim/pluginconfig.vim
