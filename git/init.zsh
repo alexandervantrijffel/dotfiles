@@ -20,6 +20,7 @@ gitalias () {
   alias gca="git commit --amend"
   alias gcan="git commit --amend --no-edit"
   alias gcb="git checkout -b"
+  alias gco.="git checkout ."
   alias gcom="gco master && gpff && gs"
   alias gcoma="gco main && gpff && gs"
   alias gcop="gco -p"

@@ -11,7 +11,6 @@ let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-diagnostic',
   \ 'coc-eslint',
-  \ 'coc-explorer',
   \ 'coc-go',
   \ 'coc-highlight',
   \ 'coc-json',
