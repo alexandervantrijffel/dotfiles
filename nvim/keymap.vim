@@ -1,6 +1,7 @@
 source $XDG_CONFIG_HOME/nvim/setjkl.vim
 
 let g:mapleader = "'"
+nnoremap <leader> <nop>
 
 " default mappings
 " <C-g> show full path to current buffer

@@ -70,3 +70,5 @@ nvm upgrade
 pacman -Syu
 
 rustup update
+
+nvim --noplugin +PlugUpgrade +PlugUpdate +PlugClean! +qall
