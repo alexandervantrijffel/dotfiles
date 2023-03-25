@@ -23,3 +23,8 @@ t for new terminal in same directory. Start with :!t in vim
 $mod+shift+e emoji
 %
 ALT-C select and open subdirectory with fzf
+%
+alacritty
+CTRL+Shift+space  vim mode
+CTRL+Shift+f      search
+CTRL+U CTRL+D     scroll up/down in vim mode
