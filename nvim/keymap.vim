@@ -143,5 +143,8 @@ nnoremap <nowait> < V<g
 vmap > >gv
 vmap < <gv
 
-nmap gw <Plug>(easymotion-overwin-w)
-nmap ge <Plug>(easymotion-bd-e)
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+nnoremap gw <Plug>(easymotion-overwin-w)
+nnoremap ge <Plug>(easymotion-bd-e)
+nnoremap f <Plug>(easymotion-overwin-f)
