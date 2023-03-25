@@ -148,3 +148,5 @@ let g:EasyMotion_smartcase = 1
 nnoremap gw <Plug>(easymotion-overwin-w)
 nnoremap ge <Plug>(easymotion-bd-e)
 nnoremap f <Plug>(easymotion-overwin-f)
+
+" let g:yoinkIncludeDeleteOperations = 1

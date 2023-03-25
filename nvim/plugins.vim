@@ -1,8 +1,8 @@
- " Install with :PlugInstall
-"feat Update with :PlugUpdate
+" Install with :PlugInstall
+" Update with :PlugUpdate
 " Remove with :PlugClean
 " Upgrade vim-plug with :PlugUpgrade
-
+"
 " Plugins are installed to $HOME/.local/share/nvim/plugged
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -52,6 +52,9 @@ Plug 'tpope/vim-commentary'
 
 " Git wrapper
 Plug 'tpope/vim-fugitive'
+" :GV! view commit log of current file
+" :GV -S foobar -- src view commit log
+Plug 'junegunn/gv.vim'
 
 Plug 'tpope/vim-surround'
 
@@ -90,12 +93,14 @@ Plug 'brooth/far.vim'
 " Plug 'tell-k/vim-autopep8'
 " Plug 'tomlion/vim-solidity'
 
-
-
 Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 Plug 'ThePrimeagen/harpoon'
 
 Plug 'kwkarlwang/bufjump.nvim'
+
+" Do not yank when deleting or changing but keep the existing value in the
+" register
+Plug 'svermeulen/vim-cutlass'
 
 call plug#end()
 
