@@ -1,5 +1,5 @@
-" Install with :PlugInstall
-" Update with :PlugUpdate
+ " Install with :PlugInstall
+"feat Update with :PlugUpdate
 " Remove with :PlugClean
 " Upgrade vim-plug with :PlugUpgrade
 
@@ -50,6 +50,11 @@ Plug 'yuttie/comfortable-motion.vim'
 " Comment out line
 Plug 'tpope/vim-commentary'
 
+" Git wrapper
+Plug 'tpope/vim-fugitive'
+
+Plug 'tpope/vim-surround'
+
 " Change color of #986456 hexcodes in text
 Plug 'ap/vim-css-color'
 
@@ -74,9 +79,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 " Yet Another TypeScript Syntax
 Plug 'HerringtonDarkholme/yats.vim'
-
-" Git wrapper
-Plug 'tpope/vim-fugitive'
 
 " change working directory to project root
 " Plug 'airblade/vim-rooter'
