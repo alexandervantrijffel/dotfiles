@@ -9,8 +9,8 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-nnoremap <silent> gn  :call CocAction('diagnosticNext')<CR>
-nnoremap <silent> gb  :call CocAction('diagnosticPrevious')<CR>
+nnoremap <silent> gdn  :call CocAction('diagnosticNext')<CR>
+nnoremap <silent> gdp  :call CocAction('diagnosticPrevious')<CR>
 noremap gT :<C-u>CocFzfList outline<cr>
 noremap gt :<C-u>CocFzfList symbols<CR>
 
