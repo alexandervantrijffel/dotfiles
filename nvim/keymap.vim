@@ -116,13 +116,10 @@ nnoremap C "eC
 " noremap x "ex
 
 " fzf.vim
-nnoremap <C-p> :Files<cr>
+" nnoremap <C-p> :Files<cr>
+nnoremap gp :Files<cr>
 nnoremap <leader>bb :Buffers<cr>
 nnoremap <leader>bl :Lines<cr>
-
-" previous/next tab
-nnoremap <leader>k :bn<cr>
-nnoremap <leader>l :bp<cr>
 
 " akinsho/bufferline.nvim
 nnoremap <silent> <leader><leader>t    <Cmd>BufferLinePick<CR>
@@ -137,9 +134,13 @@ nnoremap L :bp<cr>
 " copilot-prev: <C-[>
 
 " <C-/> to toggle preview window
-nnoremap <leader>a :RG<cr>
+" nnoremap <leader>a :RG<cr>
+nnoremap gs :RG<cr>
 
 nnoremap <nowait> > V>g
 nnoremap <nowait> < V<g
 vmap > >gv
 vmap < <gv
+
+nmap gw <Plug>(easymotion-overwin-w)
+nmap ge <Plug>(easymotion-bd-e)
