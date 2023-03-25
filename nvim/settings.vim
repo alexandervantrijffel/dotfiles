@@ -5,6 +5,8 @@ set softtabstop=2
 set autoindent
 set nosmarttab
 
+set jumpoptions+=stack
+
 set nolist
 " let g:indentLine_setConceal = 0 
 
