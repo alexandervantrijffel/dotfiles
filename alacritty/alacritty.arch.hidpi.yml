@@ -127,7 +127,7 @@ font:
     # family: Sauce Code Pro Nerd Font
     # family: Monospace
     # style: Regular
-    # style: Bold
+    style: Bold
 
   # Bold font face
   #bold:
