@@ -10,13 +10,13 @@
     "markdown",
     "javascript",
     "javascriptreact",
-    "go",
-    "typescript",
-    "typescriptreact",
     "json",
     "graphql",
+    "go",
     "python",
-    "json"
+    "typescript",
+    "typescriptreact",
+    "yaml"
   ],
   "codeLens.enable": true,
   "typescript.referencesCodeLens.enable": true,
@@ -27,7 +27,7 @@
   "languageserver": {
     "golang": {
       "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "rootPatterns": ["go.work", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"],
       "initializationOptions": {
         "usePlaceholders": true
@@ -58,7 +58,8 @@
         "error": "error",
         "warning": "warning"
       }
-    }
+    },
+    "yaml": ["yamllint"]
   },
   "diagnostic-languageserver.formatFiletypes": {
     "php": "phpcbf"
