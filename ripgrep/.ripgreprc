@@ -16,6 +16,12 @@
 --glob
 !package-lock.json
 
+--glob
+!**/node_modules/*
+
+--glob
+!**/.next/*
+
 -C=2
 
 --color=always
