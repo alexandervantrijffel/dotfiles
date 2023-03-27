@@ -12,7 +12,9 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> gdn  :call CocAction('diagnosticNext')<CR>
 nnoremap <silent> gdp  :call CocAction('diagnosticPrevious')<CR>
 noremap gT :<C-u>CocFzfList outline<cr>
-noremap gt :<C-u>CocFzfList symbols<CR>
+" fails with go and coc-fzf:
+" noremap gt :<C-u>CocFzfList symbols<CR>
+noremap gt :<C-u>CocList symbols<CR>
 
 nmap rn <Plug>(coc-rename)
 

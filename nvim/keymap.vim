@@ -7,9 +7,9 @@ nnoremap <leader> <nop>
 " <C-g> show full path to current buffer
 " K show type info
 
-au FileType python nmap <A-f> :call Autopep8()<CR>
+au FileType python nmap gv :call Autopep8()<CR>
 
-au FileType go nmap <A-f> :GoFmt<cr>:GoBuild<cr>
+au FileType go nmap gv :GoFmt<cr>:GoBuild<cr>
 " au FileType go nmap <A-f> :call CocAction('runCommand', 'editor.action.organizeImport')<cr>:GoFmt<cr>:GoBuild<cr>
 
 au FileType go nmap <leader>r :GoRename<cr>
