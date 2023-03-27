@@ -56,7 +56,7 @@ Plug 'tpope/vim-fugitive'
 " :GV -S foobar -- src view commit log
 Plug 'junegunn/gv.vim'
 
-Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-surround'
 
 " Change color of #986456 hexcodes in text
 Plug 'ap/vim-css-color'
@@ -64,7 +64,6 @@ Plug 'ap/vim-css-color'
 " Bottom status bar and top bar
 Plug 'nvim-tree/nvim-web-devicons'
 
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 Plug 'nvim-lualine/lualine.nvim'
 
 " Plug 'romgrk/barbar.nvim'
