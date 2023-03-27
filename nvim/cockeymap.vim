@@ -1,8 +1,3 @@
-" suggestion menu:
-" <C-n> <C-p> to navigate items
-" <C-y> to confirm
-" <C-e> to close menu
-
 " Remap keys for gotos
 " nmap <silent> gd :call CocAction('jumpDefinition', 'tab drop')<CR>
 nmap <silent> gd <Plug>(coc-definition)
@@ -18,7 +13,7 @@ noremap gt :<C-u>CocList symbols<CR>
 
 nmap rn <Plug>(coc-rename)
 
-" Use gk to show documentation in preview window.
+" Use gk to show documentation in preview window. (K by default)
 nnoremap <silent> gk :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
@@ -29,17 +24,6 @@ function! ShowDocumentation()
   endif
 endfunction
 
-
-" Use sd or <A-d> to show documentation in preview window.
-" (K by default)
-inoremap <A-d> <Esc>:call <SID>show_documentation()<CR>
-nmap <A-d> <Esc>:call <SID>show_documentation()<CR>
-nmap sd :call <SID>show_documentation()<CR>
-
-
-" vmap <leader>f <Plug>(coc-format)
-" nmap <leader>f <Plug>(coc-format)
-
 " Fix autofix problem of current line
 nmap <leader>qf <Plug>(coc-fix-current)
 
@@ -48,9 +32,26 @@ nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<cr>
 " Show commands
 nnoremap <silent> <leader>c  :<C-u>CocList commands<cr>
 " Find symbol of current document
-nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
+" nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " Resume latest coc list
 nnoremap <silent> <space>r  :<C-u>CocListResume<CR>
+
+" suggestion menu:
+" <C-n> <C-p> to navigate items
+" <C-e> to close menu
+" <cr> or <C-y> to confirm
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+
+" use <c-tab> to trigger completion and navigate to the next complete item
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<C-Tab>" :
+      \ coc#refresh()
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -76,35 +77,5 @@ endif
 noremap <silent><nowait> <leader>e :CocCommand explorer --preset floating<CR>
 let g:hardtime_ignore_buffer_patterns = [ ".*coc.*" ]
 
-" " " Use tab for trigger completion with characters ahead and navigate.
-" " NOTE: There's always complete item selected by default, you may want to enable
-" " no select by `"suggest.noselect": true` in your configuration file.
-" " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" " other plugin before putting this into your config.
-" inoremap <silent><expr> <TAB>
-"       \ coc#pum#visible() ? coc#pum#next(1) :
-"       \ CheckBackspace() ? "\<Tab>" :
-"       \ coc#refresh()
-" inoremap <silent><expr> <A-l>
-"       \ coc#pum#visible() ? coc#pum#next(1) :
-"       \ CheckBackspace() ? "\<Tab>" :
-"       \ coc#refresh()
-" inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-" 
-" " " Make <CR> to accept selected completion item or notify coc.nvim to format
-" " " <C-g>u breaks current undo, please make your own choice.
-" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-" 
-" function! CheckBackspace() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1]  =~# '\s'
-" endfunction
-" 
-" " Use <c-space> to trigger completion.
-" if has('nvim')
-"   inoremap <silent><expr> <c-space> coc#refresh()
-" else
-"   inoremap <silent><expr> <c-@> coc#refresh()
-" endif
-" 
+" vmap <leader>f <Plug>(coc-format)
+" nmap <leader>f <Plug>(coc-format)
