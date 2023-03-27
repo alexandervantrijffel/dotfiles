@@ -17,7 +17,7 @@ call plug#begin()
 " new languages and file types.
 " :Mason
 " :MasonUpdate
-Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason.nvim', { 'do': ':MasonUpdate' }
 Plug 'williamboman/mason-lspconfig.nvim'
 
 " :LspInfo
