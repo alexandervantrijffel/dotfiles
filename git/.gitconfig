@@ -68,6 +68,8 @@
 	all = "!f() { ls -R -d */.git | xargs -I{} bash -c \"echo {} && git -C {}/../ $1\"; }; f"
 [pull]
 	rebase = true
+[url "git@ssh.dev.azure.com:v3/ns-topaas/"]
+  insteadOf = https://dev.azure.com/ns-topaas/
 [maintenance]
 	repo = /opt/fromgit/yay
 	repo = /opt/fromgit/zsh-defer
