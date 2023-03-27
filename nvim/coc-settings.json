@@ -5,19 +5,6 @@
   "suggest.noselect": false,
   "explorer.icon.enableNerdfont": true,
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "markdown",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "graphql",
-    "go",
-    "python",
-    "typescript",
-    "typescriptreact",
-    "yaml"
-  ],
   "codeLens.enable": true,
   "typescript.referencesCodeLens.enable": true,
   "diagnostic.errorSign": "⤬",
@@ -58,8 +45,7 @@
         "error": "error",
         "warning": "warning"
       }
-    },
-    "yaml": ["yamllint"]
+    }
   },
   "diagnostic-languageserver.formatFiletypes": {
     "php": "phpcbf"

@@ -1,20 +1,20 @@
 " Remap keys for gotos
 " nmap <silent> gd :call CocAction('jumpDefinition', 'tab drop')<CR>
-nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nnoremap <silent> gdn  :call CocAction('diagnosticNext')<CR>
-nnoremap <silent> gdp  :call CocAction('diagnosticPrevious')<CR>
+" nmap <silent> gr <Plug>(coc-references)
+" nnoremap <silent> gdn  :call CocAction('diagnosticNext')<CR>
+" nnoremap <silent> gdp  :call CocAction('diagnosticPrevious')<CR>
 noremap gT :<C-u>CocFzfList outline<cr>
 " fails with go and coc-fzf:
 " noremap gt :<C-u>CocFzfList symbols<CR>
 noremap gt :<C-u>CocList symbols<CR>
 
-nmap rn <Plug>(coc-rename)
+" nmap rn <Plug>(coc-rename)
 
 " Use gk to show documentation in preview window. (K by default)
-nnoremap <silent> gk :call ShowDocumentation()<CR>
+" nnoremap <silent> gk :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')

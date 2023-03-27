@@ -8,23 +8,20 @@
 
 let g:coc_global_extensions = [
   \ 'coc-actions',
-  \ 'coc-css',
-  \ 'coc-diagnostic',
-  \ 'coc-eslint',
-  \ 'coc-go',
-  \ 'coc-highlight',
   \ 'coc-json',
   \ 'coc-prettier', 
-  \ 'coc-tsserver',
+  \ 'coc-css',
+  \ 'coc-go',
+  \ 'coc-diagnostic',
+  \ 'coc-eslint',
   \ 'coc-yaml',
+  \ 'coc-tsserver',
   \ ]
+
 
 source $XDG_CONFIG_HOME/nvim/cockeymap.vim
 
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json']
+autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json', 'go.work']
 
 
 " Customize colors of coc popup menus

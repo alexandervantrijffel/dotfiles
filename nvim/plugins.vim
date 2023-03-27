@@ -32,8 +32,6 @@ Plug 'alexandervantrijffel/vim-material'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-Plug 'antoinemadec/coc-fzf'
-
 Plug 'easymotion/vim-easymotion'
 
 Plug 'github/copilot.vim'
@@ -41,6 +39,8 @@ Plug 'github/copilot.vim'
 Plug 'mhinz/vim-signify'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install' }
+
+Plug 'antoinemadec/coc-fzf'
 
 Plug '907th/vim-auto-save'
 
