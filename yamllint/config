@@ -1,0 +1,4 @@
+extends: default
+
+rules:
+ key-ordering: disable
