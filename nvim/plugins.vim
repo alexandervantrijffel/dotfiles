@@ -36,7 +36,7 @@ Plug 'easymotion/vim-easymotion'
 
 Plug 'github/copilot.vim'
 
-Plug 'mhinz/vim-signify'
+Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install' }
 
@@ -63,9 +63,6 @@ Plug 'ap/vim-css-color'
 
 " Bottom status bar and top bar
 Plug 'nvim-tree/nvim-web-devicons'
-
-" https://www.webfx.com/tools/emoji-cheat-sheet/
-Plug 'junegunn/vim-emoji'
 
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 Plug 'nvim-lualine/lualine.nvim'

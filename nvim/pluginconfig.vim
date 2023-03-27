@@ -31,31 +31,6 @@ let g:rg_command = 'rg --vimgrep --hidden --smart-case --follow'
 " the preview window of fzf uses bat so we have to configure bat theme here
 let $BAT_THEME='Visual Studio Dark+'
 
-" :SignifyDiff
-"
-" :SignifyHunkUndo
-"
-" ]c next hunk
-" [c previous hunk
-"
-" ]C last hunk
-" ]C first hunk
-
-let g:signify_number_highlight = 1
-let g:signify_sign_add = emoji#for('heavy_plus_sign')
-let g:signify_sign_change = emoji#for('exclamation')
-let g:signify_sign_delete            = emoji#for('x')
-let g:signify_sign_delete_first_line = emoji#for('x') 
-
-autocmd User SignifyHunk call s:show_current_hunk()
-
-function! s:show_current_hunk() abort
-  let h = sy#util#get_hunk_stats()
-  if !empty(h)
-    echo printf('[Hunk %d/%d]', h.current_hunk, h.total_hunks)
-  endif
-endfunction
-
 let g:rainbow_active = 1
 
 " useful: vim-jplus (join lines)
