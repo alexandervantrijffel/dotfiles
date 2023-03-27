@@ -1,7 +1,0 @@
-#!/bin/zsh
-THISDIR=${0:a:h}
-
-if [[ -d $XDG_CONFIG_HOME/qutebrowser ]] && [[ ! -L $XDG_CONFIG_HOME/qutebrowser/autoconfig.yml ]];then
-  echo linking 
-  ln -s $THISDIR/autoconfig.yml $XDG_CONFIG_HOME/qutebrowser/
-fi
