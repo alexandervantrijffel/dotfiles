@@ -9,11 +9,6 @@ nnoremap <leader> <nop>
 
 au FileType python nmap gv :call Autopep8()<CR>
 
-au FileType go nmap gv :GoFmt<cr>:GoBuild<cr>
-" au FileType go nmap <A-f> :call CocAction('runCommand', 'editor.action.organizeImport')<cr>:GoFmt<cr>:GoBuild<cr>
-
-au FileType go nmap <leader>r :GoRename<cr>
-
 " let g:autopep8_max_line_length=120
 " autocmd FileType python noremap <buffer> <A-f> :call Autopep8()<CR>
 " noremap <A-f> :CocCommand python.runLinting<CR>
@@ -25,39 +20,6 @@ inoremap <C-q> <esc>
 inoremap  <esc> <NOP>
 " for the foot pedal
 noremap <C-q> :q<esc>
-
-" " ,' Surround a word with 'single quotes'
-" map ,' ysiw'
-" vmap ,' c'<C-R>"'<ESC>
-
-" map ,` ysiw`
-" vmap ,` c`<C-R>"`<ESC>
-
-" map ," ysiw"
-" vmap ," c`<C-R>""<ESC>
-
-" " ,) or ,( Surround a word with (parens)
-" " The difference is in whether a space is put in
-" map ,( ysiw(
-" map ,) ysiw)
-" vmap ,( c( <C-R>" )<ESC>
-" vmap ,) c(<C-R>")<ESC>
-
-" " ,[ Surround a word with [brackets]
-" map ,] ysiw]
-" map ,[ ysiw[
-" vmap ,[ c[ <C-R>" ]<ESC>
-" vmap ,] c[<C-R>"]<ESC>
-
-" " ,{ Surround a word with {braces}
-" map ,} ysiw}
-" map ,{ ysiw{
-" vmap ,} c{ <C-R>" }<ESC>
-" vmap ,{ c{<C-R>"}<ESC>
-
-" map ,> ysiw>
-" map ,< ysiw<
-" vmap ,< c<<C-R>"><ESC>
 
 " replace text inside/around block elements, jump to next block if 
 " the cursor is not in one
@@ -149,4 +111,35 @@ nnoremap gw <Plug>(easymotion-overwin-w)
 nnoremap ge <Plug>(easymotion-bd-e)
 nnoremap f <Plug>(easymotion-overwin-f)
 
-" let g:yoinkIncludeDeleteOperations = 1
+" " ,' Surround a word with 'single quotes'
+" map ,' ysiw'
+" vmap ,' c'<C-R>"'<ESC>
+
+" map ,` ysiw`
+" vmap ,` c`<C-R>"`<ESC>
+
+" map ," ysiw"
+" vmap ," c`<C-R>""<ESC>
+
+" " ,) or ,( Surround a word with (parens)
+" " The difference is in whether a space is put in
+" map ,( ysiw(
+" map ,) ysiw)
+" vmap ,( c( <C-R>" )<ESC>
+" vmap ,) c(<C-R>")<ESC>
+
+" " ,[ Surround a word with [brackets]
+" map ,] ysiw]
+" map ,[ ysiw[
+" vmap ,[ c[ <C-R>" ]<ESC>
+" vmap ,] c[<C-R>"]<ESC>
+
+" " ,{ Surround a word with {braces}
+" map ,} ysiw}
+" map ,{ ysiw{
+" vmap ,} c{ <C-R>" }<ESC>
+" vmap ,{ c{<C-R>"}<ESC>
+
+" map ,> ysiw>
+" map ,< ysiw<
+" vmap ,< c<<C-R>"><ESC>

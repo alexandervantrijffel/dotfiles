@@ -1,5 +1,4 @@
 source $XDG_CONFIG_HOME/nvim/coc.vim
-source $XDG_CONFIG_HOME/nvim/go.vim
 source $XDG_CONFIG_HOME/nvim/typescript.vim
 
 let g:fzf_layout = { 'window': { 'width': 0.96, 'height': 0.96 } }

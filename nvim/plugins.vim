@@ -66,12 +66,8 @@ Plug 'nvim-tree/nvim-web-devicons'
 
 Plug 'nvim-lualine/lualine.nvim'
 
-" Plug 'romgrk/barbar.nvim'
-
 " Rainbow parentheses
 Plug 'luochen1990/rainbow'
-
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -89,8 +85,9 @@ Plug 'brooth/far.vim'
 " Plug 'tell-k/vim-autopep8'
 " Plug 'tomlion/vim-solidity'
 
-Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
+Plug 'nvim-lua/plenary.nvim'
 Plug 'ThePrimeagen/harpoon'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 
 Plug 'kwkarlwang/bufjump.nvim'
 

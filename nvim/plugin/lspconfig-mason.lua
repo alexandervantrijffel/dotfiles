@@ -9,13 +9,10 @@ nvim_lsp.bashls.setup{}
 nvim_lsp.docker_compose_language_service.setup{}
 nvim_lsp.dockerls.setup{}
 nvim_lsp.dockerls.setup{}
-nvim_lsp.goimports.setup{}
 nvim_lsp.gopls.setup{}
 nvim_lsp.tailwindcss.setup{}
-nvim_lsp.tsserver.setup{}
 nvim_lsp.yamlls.setup{}
--- this breaks undo/redo
--- nvim_lsp.golangci_lint_ls.setup{}
+nvim_lsp.golangci_lint_ls.setup{}
 
 vim.keymap.set('n', 'gde', vim.diagnostic.open_float)
 vim.keymap.set('n', 'gdp', vim.diagnostic.goto_prev)
@@ -52,3 +49,27 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- end, opts)
   end,
 })
+
+-- https://www.reddit.com/r/neovim/comments/lwz8l7/how_to_use_tsservers_organize_imports_with_nvim/
+--
+-- https://stackoverflow.com/questions/67760988/neovim-0-5-organize-imports-on-save
+
+local function organize_imports()
+  local params = {
+    command = "_typescript.organizeImports",
+    arguments = {vim.api.nvim_buf_get_name(0)},
+    title = ""
+  }
+  vim.lsp.buf.execute_command(params)
+end
+
+nvim_lsp.tsserver.setup {
+  -- on_attach = on_attach,
+  -- capabilities = capabilities,
+  commands = {
+    OrganizeImports = {
+      organize_imports,
+      description = "Organize Imports"
+    }
+  }
+}
