@@ -22,6 +22,9 @@
 --glob
 !**/.next/*
 
+--glob
+!**/packer_compiled.lua
+
 -C=2
 
 --color=always

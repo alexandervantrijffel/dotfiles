@@ -1,28 +1,37 @@
-"   re-enable this when needed
+" replaced with lsp
+" let g:coc_global_extensions = [
+"   \ 'coc-actions',
+"   \ 'coc-intelephense
+"   \ 'coc-json',
+"   \ 'coc-prettier', 
 "   \ 'coc-pyright',
-"  coc-intelephense
-" \ 'coc-phpls', 
-"
+"   \ 'coc-phpls', 
+"   \ 'coc-css',
+"   \ 'coc-go',
+"   \ 'coc-diagnostic',
+"   \ 'coc-eslint',
+"   \ 'coc-yaml',
+"   \ 'coc-tsserver',
+"   \ ]
 
-" graphql_dependency_manual_install: yarn add global graphql-language-service-cli
-
-let g:coc_global_extensions = [
-  \ 'coc-actions',
-  \ 'coc-json',
-  \ 'coc-prettier', 
-  \ 'coc-css',
-  \ 'coc-go',
-  \ 'coc-diagnostic',
-  \ 'coc-eslint',
-  \ 'coc-yaml',
-  \ 'coc-tsserver',
-  \ ]
-
+" let g:coc_global_extensions = [
+"   \ 'coc-actions',
+"   \ 'coc-intelephense
+"   \ 'coc-json',
+"   \ 'coc-prettier', 
+"   \ 'coc-pyright',
+"   \ 'coc-phpls', 
+"   \ 'coc-css',
+"   \ 'coc-go',
+"   \ 'coc-diagnostic',
+"   \ 'coc-eslint',
+"   \ 'coc-yaml',
+"   \ 'coc-tsserver',
+"   \ ]
 
 source $XDG_CONFIG_HOME/nvim/cockeymap.vim
 
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml', 'pyrightconfig.json', 'go.work']
-
 
 " Customize colors of coc popup menus
 func! s:my_colors_setup() abort

@@ -94,9 +94,9 @@ use {'jose-elias-alvarez/null-ls.nvim'}
 
 use {'kwkarlwang/bufjump.nvim'}
 
-use {'neoclide/coc.nvim', branch = 'release', run ='yarn install' }
+-- used for gT outline, gt symbols and autosuggestions
+use {'antoinemadec/coc-fzf', requires= {'neoclide/coc.nvim', branch = 'release', run ='yarn install' } }
 
-use {'antoinemadec/coc-fzf'}
 end)
 
 -- Automatically run :PackerCompile whenever plugins.lua is updated

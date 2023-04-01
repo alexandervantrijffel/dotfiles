@@ -1,4 +1,5 @@
-lua require('plugins');
+lua require('packer-plugins');
+lua require('keymap');
 lua require('theme');
 
 source $XDG_CONFIG_HOME/nvim/settings.vim

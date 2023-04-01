@@ -1,25 +1,8 @@
 source $XDG_CONFIG_HOME/nvim/setjkl.vim
 
-let g:mapleader = "'"
-nnoremap <leader> <nop>
-
 " default mappings
 " <C-g> show full path to current buffer
 " K show type info
-
-au FileType python nmap gv :call Autopep8()<CR>
-
-" let g:autopep8_max_line_length=120
-" autocmd FileType python noremap <buffer> <A-f> :call Autopep8()<CR>
-" noremap <A-f> :CocCommand python.runLinting<CR>
-
-" no esc
-inoremap jj <esc>
-inoremap <C-c> <esc>uu
-inoremap <C-q> <esc>
-inoremap  <esc> <NOP>
-" for the foot pedal
-noremap <C-q> :q<esc>
 
 " replace text inside/around block elements, jump to next block if 
 " the cursor is not in one
@@ -96,7 +79,6 @@ nnoremap L :bp<cr>
 " copilot-prev: <C-[>
 
 " <C-/> to toggle preview window
-" nnoremap <leader>a :RG<cr>
 nnoremap gf :RG<cr>
 nnoremap gh :History<cr>
 

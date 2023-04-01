@@ -1,5 +1,4 @@
 {
-  "eslint.packageManager": "yarn",
   "suggest.enablePreview": true,
   "suggest.enablePreselect": true,
   "suggest.noselect": false,
