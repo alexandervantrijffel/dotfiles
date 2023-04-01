@@ -35,10 +35,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
--- https://www.reddit.com/r/neovim/comments/lwz8l7/how_to_use_tsservers_organize_imports_with_nvim/
---
--- https://stackoverflow.com/questions/67760988/neovim-0-5-organize-imports-on-save
-
 local function organize_imports()
   local params = {
     command = "_typescript.organizeImports",
@@ -47,8 +43,6 @@ local function organize_imports()
   }
   vim.lsp.buf.execute_command(params)
 end
-
-
 
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end

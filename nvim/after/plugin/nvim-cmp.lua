@@ -50,8 +50,6 @@ cmp.setup({
     { name = 'cmp-cmdline' },
   },{
     { name = 'cmp-nvim-lsp-document-symbol' },
-  },{
-    { name = 'cmp-treesitter' },
   })
 })
 
