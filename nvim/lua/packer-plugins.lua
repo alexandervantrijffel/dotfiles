@@ -95,7 +95,7 @@ use {'jose-elias-alvarez/null-ls.nvim'}
 use {'kwkarlwang/bufjump.nvim'}
 
 use { 'hrsh7th/nvim-cmp', 
-  requires = {{'hrsh7th/cmp-nvim-lsp'}, {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},{'hrsh7th/cmp-cmdline'}, {'hrsh7th/cmp-nvim-lsp-document-symbol'}, {'ray-x/cmp-treesitter'}}
+  requires = {{'hrsh7th/cmp-nvim-lsp'}, {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},{'hrsh7th/cmp-cmdline'}, {'hrsh7th/cmp-nvim-lsp-document-symbol'}}
 }
 
 use { 'ibhagwan/fzf-lua',

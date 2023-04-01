@@ -1,4 +1,5 @@
 vim.opt.termguicolors = true
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -37,5 +38,5 @@ require('lualine').setup {
   tabline = {},
   winbar = {},
   inactive_winbar = {},
-  extensions = {}
+  extensions = { 'fugitive' }
 }
