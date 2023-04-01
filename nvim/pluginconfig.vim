@@ -30,20 +30,3 @@ let g:rg_command = 'rg --vimgrep --hidden --smart-case --follow'
 let $BAT_THEME='Visual Studio Dark+'
 
 let g:rainbow_active = 1
-
-" useful: vim-jplus (join lines)
-" 'neosnippet-snippets', 'neosnippet.vim', 'neoyank.vim',
-" Required to prevent format error with coc neoformat
-
-" run 'yarn global add standard prettier-standard babel-eslint eslint@latest eslint-plugin-prettier eslint-plugin-react eslint-config-standard eslint-plugin-import eslint-plugin-standard eslint-plugin-react@latest @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest neovim'
-
-" run `yarn global add import-js` for vim-import-js 
-"
-"
-" coc-tsserver has a dependency on github.com/facebook/watchman for updating
-" imports on renamed files
-
-" run 'pip3 install pynvim' for vim
-"
-" run :UpdateRemotePlugins for tssserver
-"

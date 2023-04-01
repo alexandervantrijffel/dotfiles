@@ -1,13 +1,3 @@
-require("mason").setup()
-require("mason-lspconfig").setup {
-  -- automatically install language servers setup below for lspconfig
-  automatic_installation = true
-}
-
-vim.keymap.set('n', 'gde', vim.diagnostic.open_float)
-vim.keymap.set('n', 'gdp', vim.diagnostic.goto_prev)
-vim.keymap.set('n', 'gdn', vim.diagnostic.goto_next)
-vim.keymap.set('n', 'gdl', vim.diagnostic.setloclist)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
@@ -16,6 +6,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     -- Enable completion triggered by <c-x><c-o>
     vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+
+  vim.keymap.set('n', 'gde', vim.diagnostic.open_float)
+  vim.keymap.set('n', 'gdp', vim.diagnostic.goto_prev)
+  vim.keymap.set('n', 'gdn', vim.diagnostic.goto_next)
+  vim.keymap.set('n', 'gdl', vim.diagnostic.setloclist)
 
     -- Buffer local mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
@@ -62,8 +57,6 @@ local on_attach = function(client, bufnr)
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 end
 
-
-  
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
@@ -130,10 +123,11 @@ lspconfig['gopls'].setup{
 
 lspconfig.tsserver.setup {
   capabilities = capabilities,
-  on_attach = function(client)
-    -- disable formatting because we use prettier
-    client.resolved_capabilities.document_formatting = false
-  end,
+  on_attach = on_attach,
+  -- function(client)
+  --   -- disable formatting because we use prettier
+  --   client.resolved_capabilities.document_formatting = false
+  -- end,
   commands = {
     OrganizeImports = {
       organize_imports,
