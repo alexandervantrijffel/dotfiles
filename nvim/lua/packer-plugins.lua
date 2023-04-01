@@ -26,11 +26,6 @@ local packer = require('packer').startup(function(use)
        run = ':TSUpdate'
    }
 
-  -- Yet Another TypeScript Syntax
-  -- Do we need this??
-  use {'HerringtonDarkholme/yats.vim'}
-
-
   use {'akinsho/bufferline.nvim', tag = 'v3.*', requires = 'nvim-tree/nvim-web-devicons'}
 
   use {'alexandervantrijffel/vim-material'}
@@ -101,6 +96,14 @@ use { 'hrsh7th/nvim-cmp',
 use { 'ibhagwan/fzf-lua',
   requires = { 'nvim-tree/nvim-web-devicons' }
 }
+
+  use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
+
+
+
 
 end)
 
