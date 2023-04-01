@@ -10,8 +10,6 @@ VIM g; jump to last edited line       25G jump to linenumber 25
 VIM ysMOTION" insert quotes around motion,
 Example ysaw", cs'" change surrounding quotes, ds delete surrounding punctuation mark
 %
-VIM s substitute char and enter insert mode. S substitute line, enter insert mode
-%
 VIM F back find
 T back till
 ; repeat t/T/f/F
@@ -29,9 +27,9 @@ VIM <C-w>= balance windows
 %
 Easymotion
 VIM <leader><leader>s quick jump to character in document,
-<leader><leader>w jump to word,
-<leader><leader>b jump backwards to word
+<leader><leader>w jump to word
 <leader><leader>e jump to word end (with vim-easymotion)
+<leader><leader>s search for character
 %
 VIM create new file and start editing immediately with w filepath
 %
@@ -53,10 +51,6 @@ VIM With split windows <A-j> left window <A-;> right window
 %
 VIM <C-g> show full path to current file
 %
-VIM vimfiler file tree r rename file, N new file, K new directory, mm move file, dd delete file
-s v - open file in split vertical edit
-s g - open file in split horizontally edit
-%
 VIM % goto matching ( { ^
 %
 :lcd %:p:h set working directory of current window to the path of the opened file (%)
@@ -69,9 +63,6 @@ VIM gcc for commenting/uncommenting current line
 %
 VIM <leader><leader>t easymotion for buffer tabs
 <leader><leader>o sort buffer tabs on name
-%
-VIM :SignifyDiff view diff panels
-:SignifyHunkUnfo 
 %
 VIM create/edit new file in the folder of the current file :e %:h/filename
 %

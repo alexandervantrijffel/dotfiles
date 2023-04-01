@@ -10,10 +10,6 @@
 	status = auto
 	branch = auto
   diff = auto
-[merge]
-  # ff = only
-	tool = fugitive
-	renormalize = true
 [apply]
 	whitespace = nowarn
 [push]
@@ -33,10 +29,15 @@
 	submoduleSummary = true
 [core]
 	editor = nvim
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = delta
   # fix CRLF by replacing it with LF
   autocrlf = input
 	excludesfile = /home/lex/.config/git/ignore
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
@@ -51,6 +52,12 @@
 	whitespace = red reverse
 [branch]
 	autosetuprebase = always
+[merge]
+  conflictstyle = diff3
+	tool = fugitive
+	renormalize = true
+[diff]
+    colorMoved = default
 [mergetool "fugitive"]
 	cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
 [rerere]
@@ -75,7 +82,6 @@
 	repo = /opt/fromgit/zsh-defer
 	repo = /opt/fromgit/zsh-snap
 	repo = /opt/fromgit/alias-tips
-	repo = /opt/fromgit/diff-so-fancy
 	repo = /opt/fromgit/fast-syntax-highlighting
 	repo = /opt/fromgit/fzf
 	repo = /opt/fromgit/kubectx
