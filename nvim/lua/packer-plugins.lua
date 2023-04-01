@@ -94,14 +94,11 @@ use {'jose-elias-alvarez/null-ls.nvim'}
 
 use {'kwkarlwang/bufjump.nvim'}
 
--- used for gT outline, gt symbols
-use {'antoinemadec/coc-fzf', 
-  requires= {'neoclide/coc.nvim', 
-  branch = 'release', 
-  run ='yarn install' } }
-
 use { 'hrsh7th/nvim-cmp', 
   requires = { {'hrsh7th/cmp-nvim-lsp'}, {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'}, {'hrsh7th/cmp-cmdline'}}
+}
+use { 'ibhagwan/fzf-lua',
+  requires = { 'nvim-tree/nvim-web-devicons' }
 }
 
 end)
