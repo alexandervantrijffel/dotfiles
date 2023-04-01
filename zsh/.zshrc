@@ -73,10 +73,6 @@ if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
   if ! type prettyping &>/dev/null; then
     znap install denilsonsa/prettyping
   fi
-  if ! type diff-so-fancy &>/dev/null; then
-    # install go repos, or executables in a repo
-    znap install so-fancy/diff-so-fancy
-  fi
   if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then 
     znap source zsh-users/zsh-history-substring-search
     zsh-defer znap source zsh-users/zsh-syntax-highlighting

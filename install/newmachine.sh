@@ -48,9 +48,6 @@ sudo npm install -g global add prettier eslint import-js neovim ts-node typescri
 sudo ln -s $(pwd)/../sh/autotestgo.sh /usr/local/bin/autotestgo
 sudo ln -s $(pwd)/../sh/whatismyip.sh /usr/local/bin/whatismyip
 
-# from https://github.com/so-fancy/diff-so-fancy
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-
 git config --global color.ui true
 
 git config --global color.diff-highlight.oldNormal    "red bold"
