@@ -77,6 +77,8 @@ nnoremap L :bp<cr>
 
 " copilot-next: <C-[>
 " copilot-prev: <C-[>
+imap <C-n> <Plug>(copilot-next)
+imap <silent><script><expr> <C-Space> copilot#Accept("\<CR>")
 
 " <C-/> to toggle preview window
 nnoremap gf :RG<cr>

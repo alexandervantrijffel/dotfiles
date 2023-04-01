@@ -4,16 +4,6 @@ require("mason-lspconfig").setup {
   automatic_installation = true
 }
 
-local nvim_lsp = require('lspconfig')
-nvim_lsp.bashls.setup{}
-nvim_lsp.docker_compose_language_service.setup{}
-nvim_lsp.dockerls.setup{}
-nvim_lsp.dockerls.setup{}
-nvim_lsp.gopls.setup{}
-nvim_lsp.tailwindcss.setup{}
-nvim_lsp.yamlls.setup{}
-nvim_lsp.golangci_lint_ls.setup{}
-
 vim.keymap.set('n', 'gde', vim.diagnostic.open_float)
 vim.keymap.set('n', 'gdp', vim.diagnostic.goto_prev)
 vim.keymap.set('n', 'gdn', vim.diagnostic.goto_next)
@@ -63,7 +53,85 @@ local function organize_imports()
   vim.lsp.buf.execute_command(params)
 end
 
-nvim_lsp.tsserver.setup {
+
+
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+end
+
+
+  
+-- Set up lspconfig.
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local lspconfig = require('lspconfig')
+
+lspconfig['tsserver'].setup {
+  cmd = {'tsserver'},
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+lspconfig['dockerls'].setup {
+  cmd = {'dockerls'},
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+lspconfig['tailwindcss'].setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+lspconfig['yamlls'].setup {
+  cmd = {'yamlls'},
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+lspconfig['bashls'].setup {
+  cmd = {'bashls'},
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+lspconfig['docker_compose_language_service'].setup {
+  cmd = {'docker_compose_language_service'},
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+lspconfig['golangci_lint_ls'].setup {
+  cmd = {'golangci_lint_ls'},
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+lspconfig['gopls'].setup{
+  cmd = {'gopls'},
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    gopls = {
+      experimentalPostfixCompletions = true,
+      analyses = {
+        unusedparams = true,
+        shadow = true,
+      },
+      staticcheck = true,
+    },
+  },
+  init_options = {
+    usePlaceholders = true,
+  }
+}
+
+-- setup completion for rust https://github.com/hrsh7th/nvim-cmp/wiki/Language-Server-Specific-Samples
+
+
+lspconfig.tsserver.setup {
   -- on_attach = on_attach,
   -- capabilities = capabilities,
   commands = {
