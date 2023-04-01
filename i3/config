@@ -397,3 +397,6 @@ bindsym $mod+Shift+` move container to workspace prev
 # switch to next workspace
 # bindsym $mod+e workspace next
 # bindsym $mod+Shift+e move container to workspace next
+
+exec_always --no-startup-id "picom --config $HOME/.config/picom/picom.conf"
+
