@@ -10,6 +10,7 @@ local feedkey = function(key, mode)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
+
 cmp.setup({
   window = {
     -- completion = cmp.config.window.bordered(),
@@ -50,7 +51,7 @@ cmp.setup({
     { name = 'cmp-cmdline' },
   },{
     { name = 'cmp-nvim-lsp-document-symbol' },
-  })
+  }),
 })
 
 -- Set configuration for specific filetype.
