@@ -1,12 +1,13 @@
+lua require('plugins');
+lua require('theme');
+
 source $XDG_CONFIG_HOME/nvim/settings.vim
 
-source $XDG_CONFIG_HOME/nvim/plugins.vim
+source $XDG_CONFIG_HOME/nvim/pluginconfig.vim
 
 source $XDG_CONFIG_HOME/nvim/abbr.vim
 source $XDG_CONFIG_HOME/nvim/keymap.vim
 source $XDG_CONFIG_HOME/nvim/bclose.vim
-
-colorscheme material
 
 au CursorHold * checktime    
 

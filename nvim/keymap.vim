@@ -109,7 +109,7 @@ let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 nnoremap gw <Plug>(easymotion-overwin-w)
 nnoremap ge <Plug>(easymotion-bd-e)
-nnoremap f <Plug>(easymotion-overwin-f)
+nnoremap gs <Plug>(easymotion-overwin-f)
 
 " " ,' Surround a word with 'single quotes'
 " map ,' ysiw'
