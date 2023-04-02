@@ -18,6 +18,12 @@ cmp.setup({
     -- completion = cmp.config.window.bordered(),
     -- documentation = cmp.config.window.bordered(),
   },
+  snippet = {
+      -- REQUIRED - you must specify a snippet engine
+      expand = function(args)
+        require('luasnip').lsp_expand(args.body)
+      end,
+    },
   mapping = {
     ['<C-c>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
@@ -47,6 +53,8 @@ cmp.setup({
     { name = 'nvim_lsp' },
   }, {
     { name = 'buffer' },
+  }, {
+    { name = 'luasnip' },
   }, {
     { name = 'cmp-path' },
   }, {

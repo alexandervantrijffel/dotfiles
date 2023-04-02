@@ -148,16 +148,16 @@ vim.diagnostic.config({
       local icon, highlight
       if diagnostic.severity == 1 then
         icon = "λ"
-        highlight = "Normal"
+        highlight = "DiagnosticSignError"
       elseif diagnostic.severity == 2 then
         icon = "λ"
-        highlight = "Normal"
+        highlight = "DiagnosticSignWarn"
       elseif diagnostic.severity == 3 then
         icon = "λ"
-        highlight = "Normal"
+        highlight = "DiagnosticSignInfo"
       elseif diagnostic.severity == 4 then
         icon = "λ"
-        highlight = "Normal"
+        highlight = "DiagnosticSignHint"
       end
       return i .. "/" .. total .. " " .. icon .. "  ", highlight
     end,
