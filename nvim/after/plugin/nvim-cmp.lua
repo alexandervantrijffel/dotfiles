@@ -17,7 +17,7 @@ cmp.setup({
     -- documentation = cmp.config.window.bordered(),
   },
    mapping = {
-    ['<C-e>'] = cmp.mapping.abort(),
+    ['<C-c>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-u>'] = cmp.mapping.scroll_docs(4),

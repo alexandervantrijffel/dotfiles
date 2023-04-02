@@ -3,15 +3,40 @@ local null_ls = require("null-ls")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
-  -- find more sources at https://github.com/nvim-lua/plenary.nvim
+  -- find more sources at https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
     sources = {
-         -- null_ls.builtins.diagnostics.eslint,
+
         null_ls.builtins.diagnostics.eslint_d.with({
               diagnostics_format = '[eslint] #{m}\n(#{c})'
             }),
+        -- null_ls.builtins.formatting.eslint_d 
         null_ls.builtins.formatting.prettierd,
+        null_ls.builtins.diagnostics.tsc,
+
+        null_ls.builtins.code_actions.ltrs, -- rust
+        null_ls.builtins.diagnostics.ltrs,
+        null_ls.builtins.formatting.rustfmt,
+
+        null_ls.builtins.code_actions.gitsigns,
+        null_ls.builtins.code_actions.refactoring,
+        null_ls.builtins.code_actions.shellcheck,
+        null_ls.builtins.diagnostics.actionlint, -- github actions workflows
+
         null_ls.builtins.formatting.golines,
-        null_ls.builtins.completion.spell,
+        null_ls.builtins.code_actions.gomodifytags,
+        null_ls.builtins.diagnostics.golangci_lint,
+
+        null_ls.builtins.diagnostics.luacheck,
+
+        null_ls.builtins.diagnostics.markdownlint,
+        null_ls.builtins.formatting.remark,
+
+        null_ls.builtins.diagnostics.markuplint, -- html
+        null_ls.builtins.diagnostics.yamllint,
+        null_ls.builtins.diagnostics.zsh,
+        null_ls.builtins.formatting.beautysh,
+
+        null_ls.builtins.formatting.rustywind, -- tailwindcss
     },
 
     -- format on save

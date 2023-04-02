@@ -14,3 +14,4 @@ zsh/.zcompdump*
 keyboard/init_*
 nvim/pack
 **/packer_compiled.lua
+**/.luarc.json
