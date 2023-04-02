@@ -3,8 +3,6 @@ lua require('keymap');
 lua require('theme');
 lua require('settings');
 
-source $XDG_CONFIG_HOME/nvim/settings.vim
-
 source $XDG_CONFIG_HOME/nvim/pluginconfig.vim
 
 source $XDG_CONFIG_HOME/nvim/abbr.vim

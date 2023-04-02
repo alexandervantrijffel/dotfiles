@@ -2,10 +2,31 @@ vim.o.expandtab = true
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
+
 vim.o.number = true
 vim.o.relativenumber = true
+vim.cmd [[
+  " set absolute numbers in insert mode
+  augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+  augroup END
+]]
+
+vim.cmd [[
+  set jumpoptions+=stack
+
+  " yank to system clipboard
+  set clipboard+=unnamed,unnamedplus
+  " Don't pass messages to |ins-completion-menu|.
+  set shortmess+=c
+
+  set completeopt+=noselect
+]]
+
 -- keep n lines below and above the cursor
-vim.o.scroll = 5
+vim.o.scroll = 8
 vim.o.smartindent = true
 vim.o.errorbells = false
 vim.o.autochdir = false
@@ -24,11 +45,19 @@ vim.o.cmdheight = 1
 vim.o.updatetime = 500
 -- highlight search results
 vim.o.incsearch = true
+-- live update of substitution
+vim.o.inccommand = 'nosplit'
 vim.o.backup = false
 vim.o.writebackup = false
 -- merge signcolumn and number column into one
 vim.o.signcolumn = 'yes'
 vim.o.termguicolors = true
+
+vim.o.undofile = true
+vim.o.hidden = true
+vim.o.undodir= os.getenv('XDG_DATA_HOME') .. '/nvim/undo'
+vim.o.undolevels = 10000
+vim.o.undoreload = 10000
 
 vim.cmd [[silent! colorscheme material]]
 
@@ -37,3 +66,4 @@ vim.cmd [[hi DiagnosticFloatingError guifg=#EEFFFF guibg=none]]
 vim.cmd [[hi DiagnosticFloatingWarn guifg=#EEFFFF guibg=none]]
 vim.cmd [[hi DiagnosticFloatingInformation guifg=#EEFFFF guibg=none]]
 vim.cmd [[hi DiagnosticFloatingHint guifg=#EEFFFF guibg=none]]
+
