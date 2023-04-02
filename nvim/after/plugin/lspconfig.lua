@@ -56,13 +56,11 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
 
 lspconfig['tsserver'].setup {
-  cmd = {'tsserver'},
   on_attach = on_attach,
   capabilities = capabilities
 }
 
 lspconfig['dockerls'].setup {
-  cmd = {'dockerls'},
   on_attach = on_attach,
   capabilities = capabilities
 }
@@ -73,25 +71,27 @@ lspconfig['tailwindcss'].setup {
 }
 
 lspconfig['yamlls'].setup {
-  cmd = {'yamlls'},
   on_attach = on_attach,
   capabilities = capabilities
 }
 
 lspconfig['bashls'].setup {
-  cmd = {'bashls'},
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
+  filetypes = { 'sh', 'zsh', 'zshrc', 'bash', 'inc', 'command', 'zsh_*' },
+  settings = {
+    bashIde = {
+      globPattern = "**/*@(.sh|.inc|.bash|.command|.zshrc|.zsh|zsh_*)"
+    }
+  }
 }
 
 lspconfig['docker_compose_language_service'].setup {
-  cmd = {'docker_compose_language_service'},
   on_attach = on_attach,
   capabilities = capabilities
 }
 
 lspconfig['golangci_lint_ls'].setup {
-  cmd = {'golangci_lint_ls'},
   on_attach = on_attach,
   capabilities = capabilities
 }
@@ -151,3 +151,21 @@ lspconfig.rust_analyzer.setup {
   },
 }
 
+
+vim.diagnostic.config({
+  float = {
+    source = 'always',
+    border = border
+  },
+  underline = true,
+  signs = true,
+  virtual_text = true,
+  float = {
+      show_header = true,
+      source = 'if_many',
+      border = 'rounded',
+      focusable = false,
+  },
+  update_in_insert = false, -- default to false
+  severity_sort = false, -- default to false
+})
