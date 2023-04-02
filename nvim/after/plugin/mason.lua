@@ -1,5 +1,15 @@
-require("mason").setup()
+local servers = {
+  "bashls",
+  "gopls",
+  "lua_ls",
+  "rust_analyzer",
+  "tsserver",
+}
+
+require("mason").setup(
+)
 require("mason-lspconfig").setup {
   -- automatically install language servers setup below for lspconfig
-  automatic_installation = true
+  automatic_installation = true,
+  ensure_installed = servers,
 }
