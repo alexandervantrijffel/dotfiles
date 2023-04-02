@@ -37,18 +37,31 @@ vim.o.list = false
 vim.o.modeline = false
 vim.o.smartcase = true
 vim.o.ignorecase = true
+
 vim.o.splitright = true
-vim.o.hlsearch = true
+
 vim.o.cmdheight = 1
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
 vim.o.updatetime = 500
+
+vim.o.cursorline = true
+vim.o.hlsearch = true
 -- highlight search results
 vim.o.incsearch = true
 -- live update of substitution
 vim.o.inccommand = 'nosplit'
+vim.cmd [[
+  " when entering insert mode, disable search highlighting once
+  augroup diablehlsearchoninsert
+    autocmd!
+    autocmd! InsertEnter * call feedkeys("\<Cmd>noh\<cr>" , 'n')
+  augroup END
+]]
+
 vim.o.backup = false
 vim.o.writebackup = false
+
 -- merge signcolumn and number column into one
 vim.o.signcolumn = 'yes'
 vim.o.termguicolors = true
@@ -62,8 +75,8 @@ vim.o.undoreload = 10000
 vim.cmd [[silent! colorscheme material]]
 
 vim.cmd [[hi Normal ctermfg=none ctermbg=none guibg=none]]
+vim.cmd [[hi Search guibg=#82AAFF guifg=#1B222E gui=NONE ]]
 vim.cmd [[hi DiagnosticFloatingError guifg=#EEFFFF guibg=none]]
 vim.cmd [[hi DiagnosticFloatingWarn guifg=#EEFFFF guibg=none]]
 vim.cmd [[hi DiagnosticFloatingInformation guifg=#EEFFFF guibg=none]]
 vim.cmd [[hi DiagnosticFloatingHint guifg=#EEFFFF guibg=none]]
-
