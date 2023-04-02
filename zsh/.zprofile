@@ -7,27 +7,27 @@ THISDIR=${0:a:h}
 echo "Running ~/.zprofile"
 
 if [ ! -L ~/.zshenv ]; then
-  ln -s $THISDIR/.zshenv ~/
+    ln -s $THISDIR/.zshenv ~/
 fi
 
 . /etc/profile
 
 if [ -z "$ZSH_VERSION" ]; then
-  echo "Please use zsh"
-  exit 1
+    echo "Please use zsh"
+    exit 1
 fi
 
 if [ ! -d "/opt/fromgit/zsh-defer" ]; then
-  mkdir -p /opt/fromgit/
-  git clone --depth 1 https://github.com/romkatv/zsh-defer.git /opt/fromgit/zsh-defer
+    mkdir -p /opt/fromgit/
+    git clone --depth 1 https://github.com/romkatv/zsh-defer.git /opt/fromgit/zsh-defer
 fi
 
-for f in $DOTFILES/**/zprofile.zsh; do 
-  . "$f"
+for f in $DOTFILES/**/zprofile.zsh; do
+    . "$f"
 done
 
 if [[ ! $DISPLAY && $(tty) = /dev/tty1 ]]; then
-  if ! xset q &>/dev/null; then
-    exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
-  fi
+    if ! xset q &>/dev/null; then
+        exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
+    fi
 fi

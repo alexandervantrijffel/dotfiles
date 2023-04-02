@@ -13,36 +13,36 @@ compinit -u
 
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
-for f in $DOTFILES/**/preinit.zsh; do 
-  . "$f"
+for f in $DOTFILES/**/preinit.zsh; do
+    . "$f"
 done
 
 if type prettyping 1>/dev/null; then
-  alias ping='prettyping'
+    alias ping='prettyping'
 fi
 
-for f in $DOTFILES/**/init.zsh; do 
-  . "$f"
+for f in $DOTFILES/**/init.zsh; do
+    . "$f"
 done
 
-for f in $DOTFILES/**/postinit.zsh; do 
-  . "$f"
+for f in $DOTFILES/**/postinit.zsh; do
+    . "$f"
 done
 
 if type batcat 1>/dev/null; then
-  alias cat='batcat -p '
+    alias cat='batcat -p '
 elif type bat 1>/dev/null; then
-  alias cat='bat -p '
+    alias cat='bat -p '
 fi
 if type htop 1>/dev/null; then
-  alias top="sudo htop" # alias top and fix high sierra bug
+    alias top="sudo htop" # alias top and fix high sierra bug
 fi
 alias lps="lpass show -x -G "
 alias md5sum=$'md5sum | awk -F \' \' \'{print $1}\' | tee /dev/tty | pbcopy'
 alias open='xdg-open'
 if ! type pbcopy 1>/dev/null; then
-  alias pbcopy='xclip -selection clipboard'
-  alias pbpaste='xclip -selection clipboard -o'
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
 fi
 alias pass="date +%s | sha256sum | base64 | head -c 24 | tee /dev/tty | pbcopy"
 alias psg="ps -a | grep $1"
@@ -66,25 +66,25 @@ setopt AUTO_CONTINUE
 
 if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
     # show aliases hints if abbrevations are available for typed commands
-  znap source djui/alias-tips
-  znap source zsh-users/zsh-autosuggestions
-  zsh-defer znap source zsh-users/zsh-completions
-  znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
-  if ! type prettyping &>/dev/null; then
-    znap install denilsonsa/prettyping
-  fi
-  if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then 
-    znap source zsh-users/zsh-history-substring-search
-    zsh-defer znap source zsh-users/zsh-syntax-highlighting
-  fi
-  zsh-defer znap source zdharma-continuum/fast-syntax-highlighting
-  local mods=({cp,docker,docker-compose,rsync,ssh-agent,kubectl,kubectx})
-  zsh-defer znap source ohmyzsh/ohmyzsh plugins/$^mods
+    znap source djui/alias-tips
+    znap source zsh-users/zsh-autosuggestions
+    zsh-defer znap source zsh-users/zsh-completions
+    znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
+    if ! type prettyping &>/dev/null; then
+        znap install denilsonsa/prettyping
+    fi
+    if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then
+        znap source zsh-users/zsh-history-substring-search
+        zsh-defer znap source zsh-users/zsh-syntax-highlighting
+    fi
+    zsh-defer znap source zdharma-continuum/fast-syntax-highlighting
+    local mods=({cp,docker,docker-compose,rsync,ssh-agent,kubectl,kubectx})
+    zsh-defer znap source ohmyzsh/ohmyzsh plugins/$^mods
 
-  zsh-defer znap source pjvds/zsh-cwd
-  # this plugin is conflicting with aloxaf/fzf-tab
-  # znap source bonnefoa/kubectl-fzf shell/kubectl_fzf.plugin.zsh
-fi 
+    zsh-defer znap source pjvds/zsh-cwd
+    # this plugin is conflicting with aloxaf/fzf-tab
+    # znap source bonnefoa/kubectl-fzf shell/kubectl_fzf.plugin.zsh
+fi
 
 # after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
