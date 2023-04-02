@@ -41,9 +41,6 @@ local packer = require('packer').startup(function(use)
 
   use { 'alexandervantrijffel/vim-material' }
 
-  -- also check picom.conf for opacity
-  use { 'xiyaowong/transparent.nvim' }
-
   use {
     'junegunn/fzf.vim',
     requires = {
@@ -58,7 +55,7 @@ local packer = require('packer').startup(function(use)
 
   use { 'lewis6991/gitsigns.nvim' }
 
-  use { '907th/vim-auto-save' }
+  use { 'Pocco81/auto-save.nvim' }
 
   -- Smooth scrolling
   use { 'yuttie/comfortable-motion.vim' }
@@ -68,6 +65,7 @@ local packer = require('packer').startup(function(use)
 
   -- Git wrapper
   use { 'tpope/vim-fugitive' }
+
   -- :GV! view commit log of current file
   -- :GV -S foobar -- src view commit log
   use { 'junegunn/gv.vim' }
@@ -81,12 +79,6 @@ local packer = require('packer').startup(function(use)
 
   -- Rainbow parentheses
   use { 'luochen1990/rainbow' }
-
-  use { 'yuezk/vim-js' }
-  use { 'maxmellon/vim-jsx-pretty' }
-
-  -- :Far and :Far (interactive) - find and replace in multiple files
-  use { 'brooth/far.vim' }
 
   use { 'nvim-lua/plenary.nvim' }
   use { 'ThePrimeagen/harpoon' }
@@ -110,6 +102,10 @@ local packer = require('packer').startup(function(use)
     config = function() require('colorizer').setup {'*'; } end
 
   }
+
+  -- :Far and :Far (interactive) - find and replace in multiple files
+  -- use { 'brooth/far.vim' }
+
 end)
 
 -- Automatically run :PackerCompile whenever plugins.lua is updated

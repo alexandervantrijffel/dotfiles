@@ -11,18 +11,16 @@ local feedkey = function(key, mode)
 end
 
 
+-- cmp uses Pmenu and PmenuSel highlight groups
+
 cmp.setup({
   window = {
     -- completion = cmp.config.window.bordered(),
     -- documentation = cmp.config.window.bordered(),
   },
   mapping = {
-    -- start completion
-    ['<C-space>'] = cmp.mapping.complete(),
     ['<C-c>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-u>'] = cmp.mapping.scroll_docs(4),
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -41,6 +39,9 @@ cmp.setup({
         --   feedkey("<Plug>(luasnip-jump-prev)", "")
       end
     end, { "i", "s" }),
+    -- ['<C-Space>'] = cmp.mapping.complete(),
+    -- ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    -- ['<C-u>'] = cmp.mapping.scroll_docs(4),
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
@@ -53,6 +54,12 @@ cmp.setup({
   }, {
     { name = 'cmp-nvim-lsp-document-symbol' },
   }),
+  window = {
+    completion = cmp.config.window.bordered({
+      border = 'single',
+      winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+    }),
+},
 })
 
 -- Set configuration for specific filetype.

@@ -139,10 +139,28 @@ vim.diagnostic.config({
     spacing = 12,
   },
   float = {
-    show_header = true,
+    header = "",
+    scope= 'line',
     source = 'always',
-    border = 'rounded',
+    border = 'single',
     focusable = false,
+    prefix = function(diagnostic, i, total)
+      local icon, highlight
+      if diagnostic.severity == 1 then
+        icon = "λ"
+        highlight = "Normal"
+      elseif diagnostic.severity == 2 then
+        icon = "λ"
+        highlight = "Normal"
+      elseif diagnostic.severity == 3 then
+        icon = "λ"
+        highlight = "Normal"
+      elseif diagnostic.severity == 4 then
+        icon = "λ"
+        highlight = "Normal"
+      end
+      return i .. "/" .. total .. " " .. icon .. "  ", highlight
+    end,
   },
   update_in_insert = false,
   severity_sort = true,
