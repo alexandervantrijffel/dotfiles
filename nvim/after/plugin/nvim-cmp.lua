@@ -1,4 +1,4 @@
-local cmp = require'cmp'
+local cmp = require 'cmp'
 
 local has_words_before = function()
   unpack = unpack or table.unpack
@@ -16,7 +16,9 @@ cmp.setup({
     -- completion = cmp.config.window.bordered(),
     -- documentation = cmp.config.window.bordered(),
   },
-   mapping = {
+  mapping = {
+    -- start completion
+    ['<C-space>'] = cmp.mapping.complete(),
     ['<C-c>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
@@ -24,8 +26,8 @@ cmp.setup({
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      -- elseif vim.fn["luasnip#available"](1) == 1 then
-      --   feedkey("<Plug>(luasnip-expand-or-jump)", "")
+        -- elseif vim.fn["luasnip#available"](1) == 1 then
+        --   feedkey("<Plug>(luasnip-expand-or-jump)", "")
       elseif has_words_before() then
         cmp.complete()
       else
@@ -35,21 +37,20 @@ cmp.setup({
     ["<S-Tab>"] = cmp.mapping(function()
       if cmp.visible() then
         cmp.select_prev_item()
-      -- elseif vim.fn["luasnip#jumpable"](-1) == 1 then
-      --   feedkey("<Plug>(luasnip-jump-prev)", "")
+        -- elseif vim.fn["luasnip#jumpable"](-1) == 1 then
+        --   feedkey("<Plug>(luasnip-jump-prev)", "")
       end
     end, { "i", "s" }),
   },
-
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
   }, {
     { name = 'buffer' },
-  },{
+  }, {
     { name = 'cmp-path' },
-  },{
+  }, {
     { name = 'cmp-cmdline' },
-  },{
+  }, {
     { name = 'cmp-nvim-lsp-document-symbol' },
   }),
 })
@@ -80,5 +81,3 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
-
-
