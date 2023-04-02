@@ -2,10 +2,11 @@ vim.opt.termguicolors = true
 
 require('lualine').setup {
   options = {
-    icons_enabled = false,
+    icons_enabled = true,
     theme = 'auto',
     -- component_separators = { left = '', right = ''},
-    component_separators = {left = '', right = '' },
+    -- 
+    component_separators = {left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {
       statusline = {},
@@ -26,10 +27,11 @@ require('lualine').setup {
     lualine_b = { 'diagnostics' },
     lualine_c = { { 'filename', path = 1 } },
     -- lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_x = { 'branch', 'filetype' },
+    lualine_x = { 'branch' },
     -- lualine_y = {'progress'},
     lualine_y = {},
-    lualine_z = { 'location' }
+    -- lualine_z = { 'location' }
+    lualine_z = { 'filetype' }
   },
   inactive_sections = {
     lualine_a = {},
