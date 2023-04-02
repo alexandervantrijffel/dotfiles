@@ -9,13 +9,14 @@ vim.cmd [[
   augroup END
 ]]
 
-vim.opt.jumpoptions:append('stack')
 -- yank to system clipboard
 vim.opt.clipboard:append('unnamed')
 vim.opt.clipboard:append('unnamedplus')
+
 -- Don't pass messages to |ins-completion-menu|.
 vim.opt.shortmess:append('c')
 vim.opt.completeopt:append('noselect')
+vim.opt.jumpoptions:append('stack')
 
 -- keep n lines below and above the cursor
 vim.o.scroll = 10
@@ -41,7 +42,7 @@ vim.o.colorcolumn = '80'
 -- delays and poor user experience.
 vim.o.updatetime = 200
 
-vim.o.cursorline = true
+-- vim.o.cursorline = true
 vim.o.hlsearch = true
 -- highlight search results
 vim.o.incsearch = true

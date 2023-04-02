@@ -34,12 +34,6 @@ noremap ca" /"<cr>ca"
 noremap ca' /'<cr>ca'
 noremap ca` /{<cr>ca`
 
-" yank to clipboard
-vnoremap <C-c> "+y
-" copy line to clipboard
-nnoremap <C-c> "+yy
-vnoremap Y "+y$
-
 " when pasting in visual mode, do not put the visual selection in the
 " clipboard; keep the clipboard as is
 xnoremap <expr> p 'pgv"'.v:register.'y`>'
@@ -56,9 +50,9 @@ nnoremap cf "ecf
 nnoremap C "eC
 
 " when deleting, yank to register e
-" nnoremap d "ed
-" when deleting, yank to register e
-" noremap x "ex
+nnoremap d "ed
+nnoremap x "ex
+nnoremap X "eX
 
 " fzf.vim
 " nnoremap <C-p> :Files<cr>

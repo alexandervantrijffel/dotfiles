@@ -40,7 +40,7 @@ local packer = require('packer').startup(function(use)
 
   use { 'akinsho/bufferline.nvim', tag = 'v3.*', requires = 'nvim-tree/nvim-web-devicons' }
 
-  use { 'alexandervantrijffel/vim-material' }
+  use 'alexandervantrijffel/vim-material'
 
   use {
     'junegunn/fzf.vim',
@@ -50,43 +50,43 @@ local packer = require('packer').startup(function(use)
     }
   }
 
-  use { 'easymotion/vim-easymotion' }
+  use 'easymotion/vim-easymotion'
 
-  use { 'github/copilot.vim' }
+  use 'github/copilot.vim'
 
-  use { 'lewis6991/gitsigns.nvim' }
+  use 'lewis6991/gitsigns.nvim'
 
-  use { 'Pocco81/auto-save.nvim' }
+  use 'Pocco81/auto-save.nvim'
 
   -- Smooth scrolling
-  use { 'yuttie/comfortable-motion.vim' }
+  use 'yuttie/comfortable-motion.vim'
 
   -- Comment out line
-  use { 'tpope/vim-commentary' }
+  use 'tpope/vim-commentary'
 
   -- Git wrapper
-  use { 'tpope/vim-fugitive' }
+  use 'tpope/vim-fugitive'
 
   -- :GV! view commit log of current file
   -- :GV -S foobar -- src view commit log
-  use { 'junegunn/gv.vim' }
+  use 'junegunn/gv.vim'
 
-  use { 'tpope/vim-surround' }
+  use 'tpope/vim-surround'
 
   -- Bottom status bar and top bar
-  use { 'nvim-tree/nvim-web-devicons' }
+  use 'nvim-tree/nvim-web-devicons'
 
-  use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
+  use  {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
 
   -- Rainbow parentheses
-  use { 'luochen1990/rainbow' }
+  use 'luochen1990/rainbow'
 
-  use { 'nvim-lua/plenary.nvim' }
-  use { 'ThePrimeagen/harpoon' }
-  use { 'jose-elias-alvarez/null-ls.nvim' }
+  use 'nvim-lua/plenary.nvim'
+  use 'ThePrimeagen/harpoon'
+  use 'jose-elias-alvarez/null-ls.nvim'
 
   use { 'ibhagwan/fzf-lua',
-    requires = { 'nvim-tree/nvim-web-devicons' }
+    requires = { 'nvim-tree/nvim-web-devicons'}
   }
 
   use { 'windwp/nvim-ts-autotag',
@@ -105,7 +105,7 @@ local packer = require('packer').startup(function(use)
   }
 
   -- :Far and :Far (interactive) - find and replace in multiple files
-  -- use { 'brooth/far.vim' }
+  -- use 'brooth/far.vim'
 
 end)
 

@@ -22,8 +22,12 @@ vim.keymap.set('n', '<C-q>', vim.cmd.quit, {
 vim.keymap.set('n', 'J', 'J$')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
--- rename word under cursor
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- copy full line
+vim.keymap.set('n',  'Y', 'mz0"+y$`z')
+
+-- substitute selection with multi cursor
+vim.keymap.set("x", "<leader>s", '"zy<Esc>:%s/<C-R>z//g<Left><Left>')
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
