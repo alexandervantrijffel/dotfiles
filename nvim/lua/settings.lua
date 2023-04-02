@@ -31,12 +31,13 @@ vim.o.autochdir = false
 vim.o.swapfile = false
 vim.o.smarttab = false
 vim.o.list = false
+vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.ignorecase = true
 vim.o.splitright = true
 vim.o.cmdheight = 1
 -- merge signcolumn and number column into one
-vim.o.signcolumn = 'yes'
+vim.wo.signcolumn = 'yes'
 vim.o.colorcolumn = '80'
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.

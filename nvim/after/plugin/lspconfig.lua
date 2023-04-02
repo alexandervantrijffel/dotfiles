@@ -147,13 +147,13 @@ vim.diagnostic.config({
     prefix = function(diagnostic, i, total)
       local icon, highlight
       if diagnostic.severity == 1 then
-        icon = "λ"
+        icon = ""
         highlight = "DiagnosticSignError"
       elseif diagnostic.severity == 2 then
-        icon = "λ"
+        icon = ""
         highlight = "DiagnosticSignWarn"
       elseif diagnostic.severity == 3 then
-        icon = "λ"
+        icon = ""
         highlight = "DiagnosticSignInfo"
       elseif diagnostic.severity == 4 then
         icon = "λ"
