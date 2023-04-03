@@ -11,7 +11,7 @@ null_ls.setup({
             }),
         -- null_ls.builtins.formatting.eslint_d 
         null_ls.builtins.formatting.prettierd,
-        null_ls.builtins.diagnostics.tsc,
+        -- null_ls.builtins.diagnostics.tsc,
 
         null_ls.builtins.code_actions.ltrs, -- rust
         null_ls.builtins.diagnostics.ltrs,
@@ -24,7 +24,9 @@ null_ls.setup({
 
         null_ls.builtins.formatting.golines,
         null_ls.builtins.code_actions.gomodifytags,
-        null_ls.builtins.diagnostics.golangci_lint,
+        -- don't use https://github.com/golangci/golangci-lint/issues/2654 is solved
+        -- this is replaced with a custom config for golangci-lint in lspconfig
+        -- null_ls.builtins.diagnostics.golangci_lint,
 
         null_ls.builtins.diagnostics.luacheck,
 

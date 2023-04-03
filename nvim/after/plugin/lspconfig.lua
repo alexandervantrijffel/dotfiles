@@ -38,9 +38,23 @@ lspconfig.docker_compose_language_service.setup {
   capabilities = capabilities
 }
 
+local configs = require 'lspconfig/configs'
+if not configs.golangcilsp then
+  configs.golangcilsp = {
+    default_config = {
+      cmd = { 'golangci-lint-langserver' },
+      root_dir = lspconfig.util.root_pattern('.git', 'go.mod', 'go.work'),
+      init_options = {
+        command = { "go", "list -f '{{.Dir}}' -m | xargs golangci-lint run --issues-exit-code=1" },
+      }
+    },
+  }
+end
+
 lspconfig.golangci_lint_ls.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
+  filetypes = { 'go', 'gomod' }
 }
 
 local runtime_path = vim.split(package.path, ';')
@@ -140,7 +154,7 @@ vim.diagnostic.config({
   },
   float = {
     header = "",
-    scope= 'line',
+    scope = 'line',
     source = 'always',
     border = 'single',
     focusable = false,
