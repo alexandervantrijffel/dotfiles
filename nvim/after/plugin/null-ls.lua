@@ -11,6 +11,7 @@ null_ls.setup({
             }),
         -- null_ls.builtins.formatting.eslint_d 
         null_ls.builtins.formatting.prettierd,
+        -- don't enable this; it leads to performance issues and issues with undo
         -- null_ls.builtins.diagnostics.tsc,
 
         null_ls.builtins.code_actions.ltrs, -- rust
