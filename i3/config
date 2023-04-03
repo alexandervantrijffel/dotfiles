@@ -391,8 +391,8 @@ bindsym $mod+Shift+Control+f exec --no-startup-id i3-msg exec $(which qutebrowse
 exec --no-startup-id i3-msg "workspace $dev1; exec alacritty"
 
 # switch to previous workspace
-bindsym $mod+` workspace prev
-bindsym $mod+Shift+` move container to workspace prev
+# bindsym $mod+` workspace prev
+# bindsym $mod+Shift+` move container to workspace prev
 
 # switch to next workspace
 # bindsym $mod+e workspace next
