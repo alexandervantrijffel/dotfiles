@@ -2,21 +2,21 @@ vim.g.mapleader = ' '
 
 -- no escape
 vim.keymap.set('n', '<Leader>', '<nop>', {
-    noremap = true,
+  noremap = true,
 })
 vim.keymap.set('i', 'jj', '<esc>', {
-    noremap = true,
+  noremap = true,
 })
 vim.keymap.set('i', '<C-c>', '<esc>u', {
-    noremap = true,
+  noremap = true,
 })
 vim.keymap.set('i', '<esc>', '<nop>', {
-    noremap = true,
+  noremap = true,
 })
 -- for the foot pedal
 vim.keymap.set('n', '<C-q>', vim.cmd.quit, {
-    noremap = true,
-    silent = true
+  noremap = true,
+  silent = true
 })
 
 vim.keymap.set('n', 'J', 'J$')
@@ -24,10 +24,13 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- copy full line
-vim.keymap.set('n',  'Y', 'mz0"+y$`z')
+vim.keymap.set('n', 'Y', 'mz0"+y$`z')
 
 -- substitute selection with multi cursor
 vim.keymap.set("x", "<leader>s", '"zy<Esc>:%s/<C-R>z//g<Left><Left>')
+
+vim.keymap.set("n", "<leader>n", vim.cmd.cnext)
+vim.keymap.set("n", "<leader>p", vim.cmd.cprev)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer

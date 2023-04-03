@@ -43,7 +43,7 @@ vim.o.colorcolumn = '80'
 -- delays and poor user experience.
 vim.o.updatetime = 200
 
--- vim.o.cursorline = true
+vim.o.cursorline = true
 vim.o.hlsearch = true
 -- highlight search results
 vim.o.incsearch = true
