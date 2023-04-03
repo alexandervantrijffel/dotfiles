@@ -13,6 +13,13 @@ vim.keymap.set('i', '<C-c>', '<esc>u', {
 vim.keymap.set('i', '<esc>', '<nop>', {
   noremap = true,
 })
+
+-- for the foot pedal
+vim.keymap.set('i', '<C-q>', "<esc>", {
+    noremap = true,
+    silent = true
+})
+
 -- for the foot pedal
 vim.keymap.set('n', '<C-q>', vim.cmd.quit, {
   noremap = true,
