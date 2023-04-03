@@ -1,3 +1,4 @@
+lua require('ensure-packer');
 lua require('packer-plugins');
 lua require('keymap');
 lua require('theme');
