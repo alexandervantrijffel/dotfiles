@@ -123,62 +123,46 @@ lspconfig.tsserver.setup {
   }
 }
 
--- setup completion for rust https://github.com/hrsh7th/nvim-cmp/wiki/Language-Server-Specific-Samples
-
-lspconfig.rust_analyzer.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  settings = {
-    ["rust-analyzer"] = {
-      assist = {
-        importGranularity = "module",
-        importPrefix = "by_self",
-      },
-      cargo = {
-        loadOutDirsFromCheck = true,
-      },
-      procMacro = {
-        enable = true,
+-- Configure LSP through rust-tools.nvim plugin.
+-- rust-tools will configure and enable certain LSP features for us.
+-- See https://github.com/simrat39/rust-tools.nvim#configuration
+require("rust-tools").setup({
+  tools = {
+    inlay_hints = {
+      auto = true,
+      show_parameter_hints = false,
+      parameter_hints_prefix = "",
+      other_hints_prefix = "",
+    },
+  },
+  -- all the opts to send to nvim-lspconfig
+  -- these override the defaults set by rust-tools.nvim
+  -- see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rust_analyzer
+  server = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+      -- to enable rust-analyzer settings visit:
+      -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
+      ["rust-analyzer"] = {
+        checkOnSave = {
+          command = "clippy",
+        },
+        assist = {
+          importGranularity = "module",
+          importPrefix = "by_self",
+        },
+        cargo = {
+          loadOutDirsFromCheck = true,
+        },
+        procMacro = {
+          enable = true,
+        },
       },
     },
   },
-}
-
-vim.diagnostic.config({
-  underline = false,
-  signs = true,
-  virtual_text = {
-    source = 'always',
-    prefix = 'λ', -- '●',
-    spacing = 12,
-  },
-  float = {
-    header = "",
-    scope = 'line',
-    source = 'always',
-    border = 'single',
-    focusable = false,
-    prefix = function(diagnostic, i, total)
-      local icon, highlight
-      if diagnostic.severity == 1 then
-        icon = ""
-        highlight = "DiagnosticSignError"
-      elseif diagnostic.severity == 2 then
-        icon = ""
-        highlight = "DiagnosticSignWarn"
-      elseif diagnostic.severity == 3 then
-        icon = ""
-        highlight = "DiagnosticSignInfo"
-      elseif diagnostic.severity == 4 then
-        icon = "λ"
-        highlight = "DiagnosticSignHint"
-      end
-      return i .. "/" .. total .. " " .. icon .. "  ", highlight
-    end,
-  },
-  update_in_insert = false,
-  severity_sort = true,
 })
+
 
 vim.fn.sign_define("DiagnosticSignError", { text = "✗", texthl = "DiagnosticSignError" })
 vim.fn.sign_define("DiagnosticSignWarn", { text = "!", texthl = "DiagnosticSignWarn" })

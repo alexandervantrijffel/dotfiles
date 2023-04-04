@@ -41,7 +41,7 @@ vim.wo.signcolumn = 'yes'
 vim.o.colorcolumn = '80'
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
-vim.o.updatetime = 200
+vim.o.updatetime = 100
 
 vim.o.cursorline = true
 vim.o.hlsearch = true
@@ -65,9 +65,15 @@ vim.o.undodir= os.getenv('XDG_DATA_HOME') .. '/nvim/undo'
 vim.o.undolevels = 10000
 vim.o.undoreload = 10000
 
+-- menuone: popup even when there's only one match
+-- noinsert: Do not insert text until a selection is made
+-- noselect: Do not auto-select, nvim-cmp plugin will handle this for us.
+vim.o.completeopt = "menuone,noinsert,noselect"
+
 -- prevent arbitrary code execution https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
 vim.o.modeline = false
 vim.opt.isfname:append('@-@')
+
 
 vim.cmd [[silent! colorscheme material]]
 vim.o.termguicolors = true

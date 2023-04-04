@@ -18,16 +18,17 @@ local packer = require('packer').startup(function(use)
     run = ':MasonUpdate'
   }
 
-  use { 'hrsh7th/nvim-cmp',
-    requires = {
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'hrsh7th/cmp-buffer' },
-      { 'hrsh7th/cmp-path' },
-      { 'hrsh7th/cmp-cmdline' },
-      { 'hrsh7th/cmp-nvim-lsp-document-symbol' },
-      { 'saadparwaiz1/cmp_luasnip'},
-    }
-  }
+  use("hrsh7th/nvim-cmp")
+  use({
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+    "hrsh7th/cmp-cmdline",
+    'hrsh7th/cmp-nvim-lsp-document-symbol',
+    'saadparwaiz1/cmp_luasnip',
+    after = { "hrsh7th/nvim-cmp" },
+    requires = { "hrsh7th/nvim-cmp" },
+  })
 
   use({ "L3MON4D3/LuaSnip", run = "make install_jsregexp" })
 
@@ -37,6 +38,13 @@ local packer = require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+
+  use({
+    "j-hui/fidget.nvim",
+    config = function()
+      require("fidget").setup()
+    end
+  })
 
   use { 'akinsho/bufferline.nvim', tag = 'v3.*', requires = 'nvim-tree/nvim-web-devicons' }
 
@@ -76,7 +84,7 @@ local packer = require('packer').startup(function(use)
   -- Bottom status bar and top bar
   use 'nvim-tree/nvim-web-devicons'
 
-  use  {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
+  use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
 
   -- Rainbow parentheses
   use 'luochen1990/rainbow'
@@ -86,27 +94,29 @@ local packer = require('packer').startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim'
 
   use { 'ibhagwan/fzf-lua',
-    requires = { 'nvim-tree/nvim-web-devicons'}
+    requires = { 'nvim-tree/nvim-web-devicons' }
   }
 
   use { 'windwp/nvim-ts-autotag',
     config = function() require('nvim-ts-autotag').setup() end
   }
-  use {
-    'windwp/nvim-autopairs',
-    config = function() require('nvim-autopairs').setup {} end
-  }
+  -- use {
+  --   'windwp/nvim-autopairs',
+  --   config = function() require('nvim-autopairs').setup {} end
+  -- }
 
   -- colors for hex #ffffff #ABCDEF
   use {
     'norcalli/nvim-colorizer.lua',
-    config = function() require('colorizer').setup {'*'; } end
+    config = function() require('colorizer').setup { '*', } end
 
   }
 
+  -- Adds extra functionality over rust analyzer
+  use("simrat39/rust-tools.nvim")
+
   -- :Far and :Far (interactive) - find and replace in multiple files
   -- use 'brooth/far.vim'
-
 end)
 
 -- Automatically run :PackerCompile whenever plugins.lua is updated
