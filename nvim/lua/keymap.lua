@@ -1,4 +1,4 @@
-vim.g.mapleader = ' '
+vim.g.mapleader = "'"
 
 -- no escape
 vim.keymap.set('n', '<Leader>', '<nop>', {
