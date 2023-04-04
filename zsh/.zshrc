@@ -17,9 +17,7 @@ for f in $DOTFILES/**/preinit.zsh; do
     . "$f"
 done
 
-if type prettyping 1>/dev/null; then
-    alias ping='prettyping'
-fi
+type prettyping 1>/dev/null && alias ping='prettyping'
 
 for f in $DOTFILES/**/init.zsh; do
     . "$f"
@@ -34,16 +32,15 @@ if type batcat 1>/dev/null; then
 elif type bat 1>/dev/null; then
     alias cat='bat -p '
 fi
-if type htop 1>/dev/null; then
-    alias top="sudo htop" # alias top and fix high sierra bug
-fi
+! type htop 1>/dev/null && alias top="sudo htop" # alias top and fix high sierra bug
 alias lps="lpass show -x -G "
 alias md5sum=$'md5sum | awk -F \' \' \'{print $1}\' | tee /dev/tty | pbcopy'
 alias open='xdg-open'
-if ! type pbcopy 1>/dev/null; then
+! type pbcopy 1>/dev/null && {
     alias pbcopy='xclip -selection clipboard'
     alias pbpaste='xclip -selection clipboard -o'
-fi
+}
+
 alias pass="date +%s | sha256sum | base64 | head -c 24 | tee /dev/tty | pbcopy"
 alias psg="ps -a | grep $1"
 alias pwd="pwd -L"
@@ -70,9 +67,7 @@ if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
     znap source zsh-users/zsh-autosuggestions
     zsh-defer znap source zsh-users/zsh-completions
     znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
-    if ! type prettyping &>/dev/null; then
-        znap install denilsonsa/prettyping
-    fi
+    ! type prettyping &>/dev/null && znap install denilsonsa/prettyping
     if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then
         znap source zsh-users/zsh-history-substring-search
         zsh-defer znap source zsh-users/zsh-syntax-highlighting

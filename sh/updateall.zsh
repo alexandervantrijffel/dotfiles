@@ -31,38 +31,36 @@ sudo snap set system refresh.retain=2
 echo updating git repositories
 { cd /opt/fromgit && find . -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$(pwd)/{} pull origin master \; }
 
-if [[ "$ARCH" =~ "arm64" ]]; then 
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-  chmod u+x nvim.appimage
-  DIR="$(dirname "$(which nvim)")"
-  echo dir $DIR
-  sudo mv ${DIR}/nvim ${DIR}/nvim.prev
-  sudo mv nvim.appimage ${DIR}/nvim
+if [[ "$ARCH" =~ "arm64" ]]; then
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+    chmod u+x nvim.appimage
+    DIR="$(dirname "$(which nvim)")"
+    echo dir $DIR
+    sudo mv ${DIR}/nvim ${DIR}/nvim.prev
+    sudo mv nvim.appimage ${DIR}/nvim
 fi
 
 { cd ~/.SpaceVim && git pull }
 
-if [[ "$ARCH" =~ "arm64" ]]; then 
-  { cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" }
+if [[ "$ARCH" =~ "arm64" ]]; then
+    { cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" }
 else
-  { cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl" }
+    { cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl" }
 }
 fi
 sudo chmod +x /usr/local/bin/kubectl
 
 docker system prune -a -f
 
-if type notify-send 1>/dev/null; then
-  notify-send -i display "updateall.sh completed"
-fi 
+type notify-send 1>/dev/null && notify-send -i display "updateall.sh completed"
 
-if [[ $(lsb_release -a 2>/dev/null) =~ "Ubuntu" ]]; then 
-  sh ${THISDIR}/deleteoldsnapversions.sh
+if [[ $(lsb_release -a 2>/dev/null) =~ "Ubuntu" ]]; then
+sh ${THISDIR}/deleteoldsnapversions.sh
 fi
 
 if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
-  source /opt/fromgit/zsh-snap/znap.zsh
-  znap pull
+source /opt/fromgit/zsh-snap/znap.zsh
+znap pull
 fi
 
 nvm upgrade

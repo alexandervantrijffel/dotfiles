@@ -1,31 +1,27 @@
 #!/bin/zsh
-# the file should only contain the function (no variables, no main code), 
+# the file should only contain the function (no variables, no main code),
 # to auto start the autoloaded function on first execution
 
 togglexdpi() {
-  SYMLINKFILE=${HOME}/.config/X11/.Xresources
+    SYMLINKFILE=${HOME}/.config/X11/.Xresources
 
-  CURTARGET=$(readlink ${SYMLINKFILE})
+    CURTARGET=$(readlink ${SYMLINKFILE})
 
-  rm -f ${SYMLINKFILE}
-  # # defaults to lodpi if .Xresources file does not exist
-  if [[ $CURTARGET =~ "hidpi" ]]; then
-    ln -s $DOTFILES/x/.Xresources.lodpi ${SYMLINKFILE} 
-    if [ $? -ne 0 ]; then return $?; fi
-    xrandr --output Virtual-1 --auto --mode 5120x1440 --pos 0x0 --rotate normal --dpi 110 --scale 1x1
-    if type notify-send 1>/dev/null; then
-      notify-send -i display "lodpi mode" -u low
+    rm -f ${SYMLINKFILE}
+    # # defaults to lodpi if .Xresources file does not exist
+    if [[ $CURTARGET =~ "hidpi" ]]; then
+        ln -s $DOTFILES/x/.Xresources.lodpi ${SYMLINKFILE}
+        if [ $? -ne 0 ]; then return $?; fi
+        xrandr --output Virtual-1 --auto --mode 5120x1440 --pos 0x0 --rotate normal --dpi 110 --scale 1x1
+        type notify-send 1>/dev/null && notify-send -i display "lodpi mode" -u low
+    else
+        ln -s $DOTFILES/x/.Xresources.hidpi ${SYMLINKFILE}
+        if [ $? -ne 0 ]; then return $?; fi
+        # --mode 3840x2400
+        xrandr --output Virtual-1 --auto --pos 0x0 --rotate normal --dpi 227 --scale 1x1
+        type notify-send 1>/dev/null && notify-send -i display "hidpi mode" -u low
     fi
-  else
-    ln -s $DOTFILES/x/.Xresources.hidpi ${SYMLINKFILE} 
-    if [ $? -ne 0 ]; then return $?; fi
-    # --mode 3840x2400
-    xrandr --output Virtual-1 --auto --pos 0x0 --rotate normal --dpi 227 --scale 1x1
-    if type notify-send 1>/dev/null; then
-      notify-send -i display "hidpi mode" -u low
-    fi
-  fi
-  . $DOTFILES/alacritty/zprofile.zsh
-  . $DOTFILES/x/init.zsh
-  i3-msg restart
+    . $DOTFILES/alacritty/zprofile.zsh
+    . $DOTFILES/x/init.zsh
+    i3-msg restart
 }

@@ -1,4 +1,4 @@
-if type feh 1>/dev/null; then
+type feh 1>/dev/null && {
     BGFOLDER=$HOME/Pictures/backgrounds
     [[ ! -d $BGFOLDER ]] && BGFOLDER=$HOME/pictures/backgrounds
 
@@ -10,4 +10,4 @@ if type feh 1>/dev/null; then
 
     # foreground window
     alias fehfg='nohup feh -zrs --scale-down --image-bg black --slideshow-delay 3600 ~/Pictures/fehbackgrounds > /tmp/feh.nohup.out.${RANDOM} &'
-fi
+}

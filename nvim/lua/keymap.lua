@@ -4,7 +4,7 @@ vim.g.mapleader = ' '
 vim.keymap.set('n', '<Leader>', '<nop>', {
   noremap = true,
 })
-vim.keymap.set('i', 'jj', '<esc>', {
+vim.keymap.set('i', 'jj', '<esc><Right>', {
   noremap = true,
 })
 vim.keymap.set('i', '<C-c>', '<esc>u', {
