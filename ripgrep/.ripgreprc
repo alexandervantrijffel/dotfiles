@@ -25,6 +25,9 @@
 --glob
 !**/packer_compiled.lua
 
+--glob
+!target/*
+
 -C=2
 
 --color=always
