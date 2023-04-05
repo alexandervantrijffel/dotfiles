@@ -30,9 +30,6 @@ vim.keymap.set('n', 'J', 'J$')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
--- copy full line
-vim.keymap.set('n', 'Y', 'mz0"+y$`z')
-
 -- substitute selection with multi cursor
 vim.keymap.set("x", "<leader>s", '"zy<Esc>:%s/<C-R>z//g<Left><Left>')
 
