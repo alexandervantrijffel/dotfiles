@@ -69,7 +69,6 @@ local packer = require('packer').startup(function(use)
   -- Smooth scrolling
   use 'yuttie/comfortable-motion.vim'
 
-  -- Comment out line
   use 'tpope/vim-commentary'
 
   -- Git wrapper
@@ -100,7 +99,6 @@ local packer = require('packer').startup(function(use)
   use { 'windwp/nvim-ts-autotag',
     config = function() require('nvim-ts-autotag').setup() end
   }
-<<<<<<< HEAD
 
   use {
     'windwp/nvim-autopairs',

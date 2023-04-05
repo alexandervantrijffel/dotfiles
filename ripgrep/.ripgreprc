@@ -8,6 +8,9 @@
 !git/*
 
 --glob
+!**/pnpm-lock.yaml
+
+--glob
 !.yarn/*
 
 --glob
