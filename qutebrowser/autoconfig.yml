@@ -21,24 +21,23 @@ settings:
         ;: scroll right
         D: tab-close
   colors.webpage.bg:
-    global: '#282a36'
+    global: "#282a36"
   colors.webpage.darkmode.enabled:
     global: true
   completion.open_categories:
     global:
-    - searchengines
-    - quickmarks
-    - bookmarks
-    - history
-    - filesystem
+      - searchengines
+      - quickmarks
+      - bookmarks
+      - history
+      - filesystem
   content.cookies.store:
     global: true
   content.geolocation:
     http://localhost:3000: true
     https://lastnoted.com: true
   content.headers.user_agent:
-    global: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
-      Chrome/111.0.0.0 Safari/537.36
+    global: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
   content.javascript.can_access_clipboard:
     global: true
   hints.auto_follow:
