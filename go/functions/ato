@@ -1,5 +1,17 @@
 #!/bin/zsh
 
 function ato() {
-  gotestsum --watch .
+    [ -f go.mod ] && {
+        gotestsum --watch .
+    }
+
+    [ -f Cargo.toml ] && {
+        cargo watch -x check -x test
+    }
+
+    [ -f pnpm-lock.yaml ] && {
+        pnpm run test
+    }
+
+    echo "Ecosystem not supported"
 }

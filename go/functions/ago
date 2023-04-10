@@ -1,6 +1,18 @@
 #!/bin/zsh
 
 function ago() {
-  TORUN=${1:-go run -tags=debug .}
-  reflex -r '\.go$' -s -- sh -c "$TORUN 2>&1"
+    [ -f go.mod ] && {
+        TORUN=${1:-go run -tags=debug .}
+        reflex -r '\.go$' -s -- sh -c "$TORUN 2>&1"
+    }
+
+    [ -f Cargo.toml ] && {
+        cargo-watch -x check -x run
+    }
+
+    [ -f pnpm-lock.yaml ] && {
+        pnpm run dev --host
+    }
+
+    echo "Ecosystem not supported"
 }
