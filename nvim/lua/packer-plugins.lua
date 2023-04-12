@@ -100,10 +100,10 @@ local packer = require('packer').startup(function(use)
     config = function() require('nvim-ts-autotag').setup() end
   }
 
-  use {
-    'windwp/nvim-autopairs',
-    config = function() require('nvim-autopairs').setup {} end
-  }
+  -- use {
+    -- 'windwp/nvim-autopairs',
+    -- config = function() require('nvim-autopairs').setup {} end
+  -- }
 
   -- colors for hex #ffffff #ABCDEF
   use {
