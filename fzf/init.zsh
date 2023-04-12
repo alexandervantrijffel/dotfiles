@@ -1,8 +1,7 @@
 znap source junegunn/fzf shell/{completion,key-bindings}.zsh
 
 ! type fzf 1>/dev/null && {
-    znap eval junegunn/fzf "./install --no-fish --no-bash --bin"
-    znap install junegunn/fzf
+    znap source junegunn/fzf shell/{completion,key-bindings}.zsh
 }
 
 # use fzf for completion anywhere after pressing TAB
