@@ -39,6 +39,7 @@ caddy 2.6.4-1
 cairo 1.17.8-2
 cairomm 1.14.4-1
 cantarell-fonts 1:0.303.1-1
+cargo-watch 8.4.0-1
 cfitsio 1:4.2.0-1
 cifs-utils 7.0-3
 cmake 3.26.2-1
