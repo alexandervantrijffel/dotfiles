@@ -7,7 +7,7 @@ function ago() {
     }
 
     [ -f Cargo.toml ] && {
-        cargo-watch -x check -x run
+        RUST_BACKTRACE=1 cargo-watch -x check -x run
     }
 
     [ -f pnpm-lock.yaml ] && {
