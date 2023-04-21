@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 function ago() {
-    [ -f go.mod ] && {
+    [ -f go.mod ] || [ -f go.work ] && {
         TORUN=${1:-go run -tags=debug .}
         reflex -r '\.go$' -s -- sh -c "$TORUN 2>&1"
     }

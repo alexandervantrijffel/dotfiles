@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 function ato() {
-    [ -f go.mod ] && {
+    [ -f go.mod ] || [ -f go.work ] && {
         gotestsum --watch .
     }
 
