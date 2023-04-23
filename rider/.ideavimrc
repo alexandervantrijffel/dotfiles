@@ -37,91 +37,12 @@
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
   augroup END
 
-  " run 'npm install --global standard prettier-standard babel-eslint eslint eslint-plugin-prettier' for this
-  let g:ale_linters = {
-            \   'javascript': ['standard'],
-            \   'go': ['golangci-lint'],
-            \}
-  " \   'go': ['gopls'],
-  let g:ale_fixers = {'javascript': ['prettier-standard']}
-  let g:ale_list_window_size = 10
-  let g:jsx_ext_required = 0 " Allow JSX in normal JS files 
-  let g:ale_completion_enabled = 1
-  let g:ale_lint_on_save = 1
-  let g:ale_fix_on_save = 0
-  let g:ale_go_golangci_lint_options = '-E goimports -D typecheck'
-
-  au FileType javascript nmap <A-f> :ALEFix<cr>:w<cr>
-
-  let g:spacevim_automatic_update = 1
-
-  " based on dein.vim plugin manager
-  " Update with :DeinUpdate
-  " update / install others with :UpdateRemotePlugins
-  "
-
-  let g:spacevim_custom_plugins = [
-            \ ['junegunn/fzf.vim', {'merged' : 0}],
-            \ ['907th/vim-auto-save', {'merged' : 0}],
-            \ ['tpope/vim-commentary', {'merged' : 0}],
-            \ ]
-
-  " run 'pip3 install pynvim' for vim
-  " and :GoInstallBinaries
-  " or :GoUpdate
-  " or later :GoUpdateBinaries
-  "
-  " or :SPUpdate
-  " and 
-  " :SPUpdate spacevim
-  
-  " for deoplete-tabnine run install.sh in $HOME/.cache/. .... tbodt/deoplete-tabnine 
-  " to install in case of errors
-  " to update pull repo ~/.cache/vimfiles/repos/github.com/zxqfl/tabnine-vimu
-
-
   nnoremap <C-p> :FZF<CR>
 
   " When the installation of ack.vim fails, run this command:
   " git clone --config transfer.fsckObjects=false https://github.com/mileszs/ack.vim.git ~/.cache/vimfiles/repos/github.com/mileszs/ack.vim
 
-  if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
-  endif
-  nmap <leader>a :Ack! 
 
-  let g:go_fmt_command = "goimports"
-  let g:go_fmt_autosave = 0
-  let g:go_info_mode='gopls'
-
-  au FileType go nmap <leader>r :GoRename<cr>
-  au FileType go nmap <leader>t :GoDeclsDir<cr>
-  au FileType go nmap <leader>i :GoInfo<cr>
-  au FileType go nmap <leader><F12> :GoReferrers<cr>
-
-  au FileType go nmap <A-f> :GoFmt<cr>:w<cr>:GoBuild<cr>
-
-  au FileType go nmap gi :GoInfo<cr>
-
-  let g:deoplete#enable_at_startup = 1
-  " autocomplete
-  let g:deoplete#sources#go#pointer = 1
-  let g:deoplete#sources#go#builtin_objects = 1
-  let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-  let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-  set completeopt+=noselect
-
-  :call CustomMappings()
-
-  " close buffer with \bd or :Bclose
-  :call InstallBclose()
-
-endf
-
-func! myspacevim#after() abort
-endf
-
-function CustomMappings()
   nnoremap <C-t> :action SearchEverywhere <CR>
   nmap Y y$
 
