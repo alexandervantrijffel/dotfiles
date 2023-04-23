@@ -139,7 +139,10 @@ require("rust-tools").setup({
   -- these override the defaults set by rust-tools.nvim
   -- see https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#rust_analyzer
   server = {
-    on_attach = on_attach,
+    on_attach = function(_, bufnr)
+      -- Code action groups
+      vim.keymap.set("n", "<leader>ca", rt.code_action_group.code_action_group, { buffer = bufnr })
+    end,
     capabilities = capabilities,
     settings = {
       -- to enable rust-analyzer settings visit:

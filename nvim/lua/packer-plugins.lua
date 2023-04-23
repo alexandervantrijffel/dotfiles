@@ -112,7 +112,7 @@ local packer = require('packer').startup(function(use)
 
   }
 
-  -- Adds extra functionality over rust analyzer
+  -- Adds extra functionality to rust analyzer
   use("simrat39/rust-tools.nvim")
 
   -- :Far and :Far (interactive) - find and replace in multiple files
