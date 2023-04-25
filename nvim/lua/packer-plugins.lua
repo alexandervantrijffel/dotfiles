@@ -85,9 +85,6 @@ local packer = require('packer').startup(function(use)
 
   use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
 
-  -- Rainbow parentheses
-  use 'luochen1990/rainbow'
-
   use 'nvim-lua/plenary.nvim'
   use 'ThePrimeagen/harpoon'
   use 'jose-elias-alvarez/null-ls.nvim'

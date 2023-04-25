@@ -28,5 +28,3 @@ let g:rg_command = 'rg --vimgrep --hidden --smart-case --follow'
 
 " the preview window of fzf uses bat so we have to configure bat theme here
 let $BAT_THEME='Visual Studio Dark+'
-
-let g:rainbow_active = 1
