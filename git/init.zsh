@@ -44,7 +44,7 @@ gitalias () {
     alias gmnc="git merge --no-commit --no-ff"
     alias gfa="git fetch --all --tags --prune"
     alias gp="git push"
-    # alias gpu="git push -u origin \$(gb)"
+    alias gpu="git push -u origin \$(gb)"
     alias gpf='echo no gpf please'
     alias gp!="git push --force"
     alias gpff="git pull --recurse-submodules"
