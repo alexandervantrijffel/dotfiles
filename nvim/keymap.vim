@@ -50,9 +50,9 @@ nnoremap cf "ecf
 nnoremap C "eC
 
 " when deleting, yank to register e
-nnoremap d "ed
-nnoremap x "ex
-nnoremap X "eX
+" nnoremap d "ed
+" nnoremap x "ex
+" nnoremap X "eX
 
 " fzf.vim
 " nnoremap <C-p> :Files<cr>
