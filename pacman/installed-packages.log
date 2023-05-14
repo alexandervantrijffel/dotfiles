@@ -390,6 +390,7 @@ pam 1.5.2-2
 pambase 20221020-1
 pango 1:1.50.14-1
 pangomm 2.46.3-1
+parted 3.6-1
 patch 2.7.6-9
 pciutils 3.9.0-2
 pcre 8.45-3
