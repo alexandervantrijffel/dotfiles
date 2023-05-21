@@ -17,10 +17,15 @@ lspconfig.tailwindcss.setup {
   capabilities = capabilities
 }
 
-lspconfig.yamlls.setup {
+lspconfig.yamlls.setup({
   on_attach = on_attach,
-  capabilities = capabilities
-}
+  capabilities = capabilities,
+  settings = {
+    yaml = {
+      keyOrdering = false
+    }
+  }
+})
 
 lspconfig.bashls.setup {
   on_attach = on_attach,

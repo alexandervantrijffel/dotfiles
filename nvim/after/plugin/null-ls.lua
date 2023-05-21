@@ -38,7 +38,7 @@ null_ls.setup({
     null_ls.builtins.formatting.remark,
 
     null_ls.builtins.diagnostics.markuplint,     -- html
-    null_ls.builtins.diagnostics.yamllint,
+    -- null_ls.builtins.diagnostics.yamllint,
     null_ls.builtins.diagnostics.zsh,
     null_ls.builtins.formatting.beautysh,
 
