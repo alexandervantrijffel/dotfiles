@@ -484,7 +484,7 @@ python-validate-pyproject 0.12.2-4
 python-virtualenv 20.21.0-1
 python-virtualenv-clone 0.5.7-4
 python-virtualenvwrapper 4.8.4-8
-python-wcwidth 0.2.6-1
+python-wcwidth 0.2.6-1.1
 python-wheel 0.40.0-3
 python-yaml 6.0-3
 qt5-base 5.15.9+kde+r151-1

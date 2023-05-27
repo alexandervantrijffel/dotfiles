@@ -102,3 +102,4 @@
 	repo = /opt/fromgit/kubectl-fzf
 	repo = /opt/fromgit/prezto
 	repo = /opt/fromgit/zsh-history-filter
+	repo = /opt/fromgit/diff-so-fancy
