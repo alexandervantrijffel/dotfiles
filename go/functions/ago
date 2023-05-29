@@ -4,14 +4,22 @@ function ago() {
     [ -f go.mod ] || [ -f go.work ] && {
         TORUN=${1:-go run -tags=debug .}
         reflex -r '\.go$' -s -- sh -c "$TORUN 2>&1"
+        return
     }
 
     [ -f Cargo.toml ] && {
         RUST_BACKTRACE=1 cargo-watch -x check -x run
+        return
     }
 
     [ -f pnpm-lock.yaml ] && {
         pnpm run dev --host
+        return
+    }
+
+    [ -d .chalice ] && {
+      reflex -r '\.py$' -s -- sh -c "chalice local"
+      return
     }
 
     echo "Ecosystem not supported"
