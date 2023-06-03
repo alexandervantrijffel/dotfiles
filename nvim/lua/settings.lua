@@ -19,8 +19,8 @@ vim.opt.completeopt:append('noselect')
 vim.opt.jumpoptions:append('stack')
 
 -- keep n lines below and above the cursor
-vim.o.scroll = 10
-vim.o.scrolloff = 24
+vim.o.scroll = 6
+vim.o.scrolloff = 6
 vim.o.smartindent = true
 vim.o.expandtab = true
 vim.o.shiftwidth = 2
