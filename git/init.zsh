@@ -61,7 +61,9 @@ gitalias () {
     alias gsl="git stash list"
     alias gss="git stash save"
     alias gst="git stash"
-    alias gsw="git show "
+    alias gsw="git show"
+    alias gwa="git worktree add"
+    alias gwr="git worktree remove"
     alias ts="git fetch origin \$(gb) && tig status"
 }
 zsh-defer gitalias
