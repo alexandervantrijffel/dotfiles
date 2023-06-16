@@ -42,7 +42,7 @@ gitalias () {
     alias gmm="git merge master"
     alias gmma="git merge main"
     alias gmnc="git merge --no-commit --no-ff"
-    alias gfa="git fetch --all --tags --prune"
+    alias gfa="git fetch --all --tags"
     alias gp="git push"
     alias gpu="git push -u origin \$(gb)"
     alias gpf='echo no gpf please'
