@@ -8,7 +8,7 @@ function ago() {
     }
 
     [ -f Cargo.toml ] && {
-        RUST_BACKTRACE=1 cargo-watch -x check -x run
+        RUST_BACKTRACE=1 cargo-watch -q -c -w src/ -x check -x 'run -q'
         return
     }
 
