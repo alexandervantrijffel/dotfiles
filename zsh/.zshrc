@@ -64,8 +64,8 @@ setopt AUTO_CONTINUE
 if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
     # show aliases hints if abbrevations are available for typed commands
     znap source djui/alias-tips
-    znap source zsh-users/zsh-autosuggestions
-    znap source zsh-users/zsh-completions
+    # znap source zsh-users/zsh-autosuggestions
+    zsh-defer znap source zsh-users/zsh-completions
     znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
     ! type prettyping &>/dev/null && znap install denilsonsa/prettyping
     if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then
