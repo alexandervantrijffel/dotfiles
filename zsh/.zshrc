@@ -54,8 +54,6 @@ COMPLETION_WAITING_DOTS="true"
 # sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 
-# make sure the autosuggestions color differs from the solarized dark background color
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 setopt MENU_COMPLETE  # select first menu option automatically
 setopt NO_NOMATCH  # stop zsh from catching ^ chars.
 setopt PROMPT_SUBST  # prompt substitution
@@ -64,7 +62,7 @@ setopt AUTO_CONTINUE
 if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
     # show aliases hints if abbrevations are available for typed commands
     znap source djui/alias-tips
-    # znap source zsh-users/zsh-autosuggestions
+
     zsh-defer znap source zsh-users/zsh-completions
     znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
     ! type prettyping &>/dev/null && znap install denilsonsa/prettyping
@@ -76,9 +74,11 @@ if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
     local mods=({cp,docker,docker-compose,rsync,ssh-agent,kubectl,kubectx})
     zsh-defer znap source ohmyzsh/ohmyzsh plugins/$^mods
 
+    # make sure the autosuggestions color differs from the solarized dark background color
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
+    znap source zsh-users/zsh-autosuggestions
+
     zsh-defer znap source pjvds/zsh-cwd
-    # this plugin is conflicting with aloxaf/fzf-tab
-    # znap source bonnefoa/kubectl-fzf shell/kubectl_fzf.plugin.zsh
 fi
 
 # after entering repeat command like !-2, press space to auto-expand the command
