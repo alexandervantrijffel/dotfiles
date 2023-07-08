@@ -66,7 +66,13 @@ local packer = require('packer').startup(function(use)
 
   use 'lewis6991/gitsigns.nvim'
 
-  use 'Pocco81/auto-save.nvim'
+  use({
+    "Pocco81/auto-save.nvim",
+    config = function()
+       require("auto-save").setup {
+     }
+   end,
+  })
 
   -- Smooth scrolling
   use 'yuttie/comfortable-motion.vim'
@@ -113,6 +119,22 @@ local packer = require('packer').startup(function(use)
 
   -- Adds extra functionality to rust analyzer
   use("simrat39/rust-tools.nvim")
+
+  -- show command window and messages in popup windows
+  -- Commands:
+  --
+  -- :Noice or :Noice history shows the message history
+  -- :Noice last shows the last message in a popup
+  -- :Noice dismiss dismiss all visible messages
+  -- :Noice errors shows the error messages in a split. Last errors on top
+  use {
+    'folke/noice.nvim',
+    requires = {
+      'MunifTanjim/nui.nvim',
+      'rcarriga/nvim-notify',
+    }
+  }
+
 
   -- :Far and :Far (interactive) - find and replace in multiple files
   -- use 'brooth/far.vim'
