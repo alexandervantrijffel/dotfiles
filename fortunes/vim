@@ -67,5 +67,6 @@ VIM <leader><leader>t easymotion for buffer tabs
 VIM create/edit new file in the folder of the current file :e %:h/filename
 %
 VIM harpoon
-<leader>ha add file
-<leader>hm show menu
+ha add file
+hm show menu
+In the menu edit listings like any text file (D for delete line).

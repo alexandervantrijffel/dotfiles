@@ -8,3 +8,6 @@ vim.keymap.set("n", "hz", function() ui.nav_file(1) end)
 vim.keymap.set("n", "hx", function() ui.nav_file(2) end)
 vim.keymap.set("n", "hc", function() ui.nav_file(3) end)
 vim.keymap.set("n", "hv", function() ui.nav_file(4) end)
+
+vim.keymap.set("n", "hn", function() ui.nav_next() end)
+vim.keymap.set("n", "hp", function() ui.nav_prev() end)
