@@ -77,7 +77,7 @@ imap <silent><script><expr> <C-e> copilot#Accept("\<CR>")
 nnoremap gf :RG<cr>
 nnoremap gh :History<cr>
 
-nnoremap <nowait> > V>g
+  nnoremap <nowait> > V>g
 nnoremap <nowait> < V<g
 vmap > >gv
 vmap < <gv

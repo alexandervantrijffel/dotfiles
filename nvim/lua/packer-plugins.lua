@@ -120,6 +120,24 @@ local packer = require('packer').startup(function(use)
   -- Adds extra functionality to rust analyzer
   use("simrat39/rust-tools.nvim")
 
+  -- :WhichKey <leader>
+  -- :WhichKey g
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
+
+  -- :Far and :Far (interactive) - find and replace in multiple files
+  -- use 'brooth/far.vim'
+
   -- show command window and messages in popup windows
   -- Commands:
   --
