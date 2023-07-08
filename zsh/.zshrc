@@ -62,7 +62,8 @@ setopt AUTO_CONTINUE
 if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
     # show aliases hints if abbrevations are available for typed commands
     znap source djui/alias-tips
-
+    # completions crash because of this one:
+    zsh-defer znap source zsh-users/zsh-autosuggestions
     zsh-defer znap source zsh-users/zsh-completions
     znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
     ! type prettyping &>/dev/null && znap install denilsonsa/prettyping
