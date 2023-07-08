@@ -33,9 +33,6 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 -- substitute selection with multi cursor
 vim.keymap.set("x", "<leader>s", '"zy<Esc>:%s/<C-R>z//g<Left><Left>')
 
-vim.keymap.set("n", "<leader>n", vim.cmd.cnext)
-vim.keymap.set("n", "<leader>p", vim.cmd.cprev)
-
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
 vim.api.nvim_create_autocmd('LspAttach', {

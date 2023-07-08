@@ -32,11 +32,11 @@ if type nvim 1>/dev/null; then
   # start with fzf search mode
   alias v="$(which nvim)"
   # start with rg search mode
-  alias vg="$(which nvim) +Rg"
+  alias vf="$(which nvim) +Rg"
 
   alias .d="z $DOTFILES"
   alias .v="z $DOTFILES && v"
-  alias .vg="z $DOTFILES && v +Rg"
+  alias .vf="z $DOTFILES && v +Rg"
 else
   alias v="vi"
 fi

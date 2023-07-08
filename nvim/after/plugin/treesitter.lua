@@ -4,7 +4,7 @@ require 'nvim-treesitter.configs'.setup {
   ensure_installed = { "bash", "css", "diff", "gitcommit",
     "go", "gomod", "gosum", "gowork", "graphql", "json",
     "lua", "markdown_inline", "sql", "tsx", "javascript", "typescript",
-    "vim", "yaml", "rust", "toml" },
+    "vim", "yaml", "rust", "toml", "vimdoc" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
