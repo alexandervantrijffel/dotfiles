@@ -69,9 +69,9 @@ local packer = require('packer').startup(function(use)
   use({
     "Pocco81/auto-save.nvim",
     config = function()
-       require("auto-save").setup {
-     }
-   end,
+      require("auto-save").setup {
+      }
+    end,
   })
 
   -- Smooth scrolling
@@ -106,8 +106,8 @@ local packer = require('packer').startup(function(use)
   }
 
   -- use {
-    -- 'windwp/nvim-autopairs',
-    -- config = function() require('nvim-autopairs').setup {} end
+  -- 'windwp/nvim-autopairs',
+  -- config = function() require('nvim-autopairs').setup {} end
   -- }
 
   -- colors for hex #ffffff #ABCDEF
@@ -127,17 +127,37 @@ local packer = require('packer').startup(function(use)
   -- :Noice last shows the last message in a popup
   -- :Noice dismiss dismiss all visible messages
   -- :Noice errors shows the error messages in a split. Last errors on top
-  use {
-    'folke/noice.nvim',
-    requires = {
-      'MunifTanjim/nui.nvim',
-      'rcarriga/nvim-notify',
-    }
-  }
+  -- use {
+  --   'folke/noice.nvim',
+  --   requires = {
+  --     'MunifTanjim/nui.nvim',
+  --     'rcarriga/nvim-notify',
+  --   }
+  -- }
 
+  -- require("notify").setup({
+  --   background_colour = "#1E2D3D",
+  -- })
+ 
+  -- require("noice").setup({
+  --   lsp = {
+  --     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+  --     override = {
+  --       ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+  --       ["vim.lsp.util.stylize_markdown"] = true,
+  --       ["cmp.entry.get_documentation"] = true,
+  --     },
+  --   },
+  --   -- you can enable a preset for easier configuration
+  --   presets = {
+  --     bottom_search = true, -- use a classic bottom cmdline for search
+  --     command_palette = true, -- position the cmdline and popupmenu together
+  --     long_message_to_split = true, -- long messages will be sent to a split
+  --     inc_rename = false, -- enables an input dialog for inc-rename.nvim
+  --     lsp_doc_border = false, -- add a border to hover docs and signature help
+  --   },
+  -- })
 
-  -- :Far and :Far (interactive) - find and replace in multiple files
-  -- use 'brooth/far.vim'
 end)
 
 -- Automatically run :PackerCompile whenever plugins.lua is updated
