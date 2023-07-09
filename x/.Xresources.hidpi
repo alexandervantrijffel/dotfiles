@@ -8,6 +8,6 @@ Xft.antialias: 1
 Xft.rgba: rgb
 
 ! for i3 menu
-rofi.dpi: 140
+rofi.dpi: 100
 
 ! macbook air M1 2020 has 227 ppi
