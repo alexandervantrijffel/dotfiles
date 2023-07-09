@@ -39,7 +39,7 @@ wk.register({
     d = {
       "diagnostic",
       e = "Show diagnostics",
-      l = "Add buffer diagnostics to the location list",
+      l = "Show diagnostics in a panel",
       n = "GoTo next diagnostic",
       p = "GoTo previous diagnostic",
     },
