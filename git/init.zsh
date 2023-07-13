@@ -48,6 +48,7 @@ gitalias () {
     alias gpf='echo no gpf please'
     alias gp!="git push --force"
     alias gpff="git pull --recurse-submodules"
+    alias gr="git reset"
     alias gr.="git reset ."
     alias gra="git rebase --abort"
     alias grv="git remote -v"
