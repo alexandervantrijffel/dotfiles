@@ -10,4 +10,5 @@ type kubectl &>/dev/null && {
     alias k="kubectl"
     alias kgpw="kubectl get pods -w"
     alias kns="kubectl ns"
+    alias kgn="kubectl get nodes"
 }
