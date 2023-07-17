@@ -1,4 +1,4 @@
-[ -d $HOME/.krew ] &&  PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+[ -d $HOME/.krew ] && export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 [ -f $HOME/.kube/config ] && export KUBECONFIG=$HOME/.kube/config
 
 type kubectl &>/dev/null && {
