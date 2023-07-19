@@ -77,7 +77,6 @@ if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
 
     # make sure the autosuggestions color differs from the solarized dark background color
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
-    znap source zsh-users/zsh-autosuggestions
 
     zsh-defer znap source pjvds/zsh-cwd
 fi
