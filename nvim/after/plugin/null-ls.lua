@@ -17,8 +17,8 @@ null_ls.setup({
     -- don't enable this; it leads to performance issues and issues with undo
     -- null_ls.builtins.diagnostics.tsc,
 
-    null_ls.builtins.code_actions.ltrs,     -- rust
-    null_ls.builtins.diagnostics.ltrs,
+    -- null_ls.builtins.code_actions.ltrs,     -- rust
+    -- null_ls.builtins.diagnostics.ltrs,
     null_ls.builtins.formatting.rustfmt,
 
     null_ls.builtins.code_actions.gitsigns,
@@ -35,9 +35,9 @@ null_ls.setup({
     null_ls.builtins.diagnostics.luacheck,
 
     null_ls.builtins.diagnostics.markdownlint,
-    null_ls.builtins.formatting.remark,
+    -- null_ls.builtins.formatting.remark,
 
-    null_ls.builtins.diagnostics.markuplint,     -- html
+    -- null_ls.builtins.diagnostics.markuplint,     -- html
     -- null_ls.builtins.diagnostics.yamllint,
     null_ls.builtins.diagnostics.zsh,
     null_ls.builtins.formatting.beautysh,
