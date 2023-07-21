@@ -1,6 +1,6 @@
 # install zoxide with pacman
 
-THISDIR=${0:a:h}
+THISDIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 type zoxide &>/dev/null && {
   zsh-defer eval "$(zoxide init zsh --cmd z --hook pwd)"

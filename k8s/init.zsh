@@ -1,5 +1,6 @@
 [ -d $HOME/.krew ] && export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 [ -f $HOME/.kube/config ] && export KUBECONFIG=$HOME/.kube/config
+[ -f $HOME/.kube/pcb3.8799.nstrein.ns.nl-dev-bench-config ] && export KUBECONFIG=$HOME/.kube/config:$HOME/.kube/pcb3.8799.nstrein.ns.nl-dev-bench-config
 
 type kubectl &>/dev/null && {
     source <(kubectl completion zsh)

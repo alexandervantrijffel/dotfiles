@@ -1,2 +1,2 @@
 #!/bin/zsh
-. ${0:a:h}/aptrm.sh
+THISDIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"

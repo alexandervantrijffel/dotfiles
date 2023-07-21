@@ -1,5 +1,5 @@
 #!/bin/zsh
-THISDIR=${0:a:h}
+THISDIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 # this is required to prevent that zsh-vim-mode overwrites CTRL-R of fzf and tab of fzf-tab
 export VIM_MODE_NO_DEFAULT_BINDINGS=true

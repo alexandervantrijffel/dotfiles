@@ -1,5 +1,5 @@
 #!/bin/zsh
-THISDIR=$(dirname ${0:A}) 
+THISDIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 if [ ! -d $XDG_CONFIG_HOME/X11 ]; then
     mkdir -p $XDG_CONFIG_HOME/X11

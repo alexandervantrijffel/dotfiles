@@ -1,5 +1,5 @@
 #!/bin/zsh
-THISDIR=${0:a:h}
+THISDIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 # .zprofile: sourced in login shell
 # symlink this file manually to ~/.zprofile
