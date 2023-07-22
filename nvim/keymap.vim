@@ -58,7 +58,7 @@ nnoremap C "eC
 " nnoremap <C-p> :Files<cr>
 nnoremap gp :Files<cr>
 nnoremap <leader>bb :Buffers<cr>
-nnoremap <leader>bl :Lines<cr>
+nnoremap <leader>bf :Lines<cr>
 
 " akinsho/bufferline.nvim
 nnoremap <silent> <leader><leader>t    <Cmd>BufferLinePick<CR>
