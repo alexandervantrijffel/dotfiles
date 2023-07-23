@@ -4,7 +4,6 @@
 
 source /opt/fromgit/zsh-defer/zsh-defer.plugin.zsh
 
-
 # support for compdef (completions for zsh)
 export ZSH_DISABLE_COMPFIX="true"
 autoload -Uz compinit
@@ -81,6 +80,8 @@ if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
     zsh-defer znap source pjvds/zsh-cwd
 fi
 
+[ -f $HOME/.config/zsh/.zshrc.local ] && source $HOME/.config/zsh/.zshrc.local
+
 # after entering repeat command like !-2, press space to auto-expand the command
 bindkey ' ' magic-space
 
@@ -90,3 +91,4 @@ bindkey "^F" forward-word
 
 # finish profiling (started in .zshenv)
 # zprof > /tmp/zprof.dump
+#
