@@ -45,8 +45,6 @@ https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool
 %
 VIM :0Glog to view history of current file. :copen to open earlier version of file. :G for git status, stage/unstage/ignore file. :Gblame (with vim-fugitive)
 %
-VIM <space>fo open current file in file tree
-%
 VIM With split windows <A-j> left window <A-;> right window
 %
 VIM <C-g> show full path to current file
