@@ -135,6 +135,18 @@ local packer = require('packer').startup(function(use)
     end
   }
 
+  -- use({
+  --   "jackMort/ChatGPT.nvim",
+  --   config = function()
+  --     require("chatgpt").setup()
+  --   end,
+  --   requires = {
+  --     "MunifTanjim/nui.nvim",
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-telescope/telescope.nvim"
+  --   }
+  -- })
+
   -- :Far and :Far (interactive) - find and replace in multiple files
   -- use 'brooth/far.vim'
 
@@ -156,7 +168,7 @@ local packer = require('packer').startup(function(use)
   -- require("notify").setup({
   --   background_colour = "#1E2D3D",
   -- })
- 
+
   -- require("noice").setup({
   --   lsp = {
   --     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
@@ -175,7 +187,6 @@ local packer = require('packer').startup(function(use)
   --     lsp_doc_border = false, -- add a border to hover docs and signature help
   --   },
   -- })
-
 end)
 
 -- Automatically run :PackerCompile whenever plugins.lua is updated
