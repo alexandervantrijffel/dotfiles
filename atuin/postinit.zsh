@@ -1,0 +1,1 @@
+znap source atuinsh/atuin
