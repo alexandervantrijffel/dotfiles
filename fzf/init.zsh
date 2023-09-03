@@ -1,9 +1,5 @@
 znap source junegunn/fzf shell/{completion,key-bindings}.zsh
 
-! type fzf 1>/dev/null && {
-    znap source junegunn/fzf shell/{completion,key-bindings}.zsh
-}
-
 # use fzf for completion anywhere after pressing TAB
 zsh-defer znap source aloxaf/fzf-tab fzf-tab.plugin.zsh
 
