@@ -12,8 +12,8 @@ null_ls.setup({
     null_ls.builtins.diagnostics.jsonlint,
     null_ls.builtins.formatting.fixjson,
 
-    null_ls.builtins.code_actions.ltrs,     -- rust
-    null_ls.builtins.diagnostics.ltrs,
+    -- null_ls.builtins.code_actions.ltrs,     -- rust
+    -- null_ls.builtins.diagnostics.ltrs,
     null_ls.builtins.formatting.rustfmt,
 
     null_ls.builtins.code_actions.gitsigns,
