@@ -28,3 +28,5 @@ done
 
 [ -d  "$HOME/bin" ] && PATH="$PATH:$HOME/bin"
 [ -d  "$HOME/.local/bin" ] && PATH="$PATH:$HOME/.local/bin"
+
+alias assume=". assume"

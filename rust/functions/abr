@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+function abr() {
+    [ -f Cargo.toml ] && {
+        RUST_BACKTRACE=1 cargo-watch -q -c -w src/ -x check
+        return
+    }
+
+    echo "Ecosystem not supported"
+}
