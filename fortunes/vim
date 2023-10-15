@@ -1,6 +1,3 @@
-VIM Multi replace by selecting the text to replace in visual mode
-Press CTRL+R for replace command. Press CTRL+R 0 in colon command mode to paste from register 0.
-%
 VIM Multi replace by searching for the full text to replace,
 enter cgn, repeat the . dot command multiple times to apply to multiple search results.
 Jump to next search result with gn, previous with gN. dgn for delete search result.
@@ -26,10 +23,10 @@ VIM H screen top     M screen middle     L screen bottom
 VIM <C-w>= balance windows
 %
 Easymotion
-VIM <leader><leader>s quick jump to character in document,
-<leader><leader>w jump to word
-<leader><leader>e jump to word end (with vim-easymotion)
-<leader><leader>s search for character
+VIM gs quick jump to character in document,
+gw jump to word
+ge jump to word end (with vim-easymotion)
+gs search for character
 %
 VIM create new file and start editing immediately with w filepath
 %

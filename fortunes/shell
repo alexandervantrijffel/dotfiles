@@ -6,23 +6,9 @@ BASH SHELL: CTRL+D close
 CTRL+S Stop output to screen (when processes dump too much data to stdout)
 CTRL+Q resume output
 %
-BASH SHELL: CTRL+R recall command
-CTRL+O execute command found with CTRL+R
-CTRL+G close recall command
-%
 list open network ports with processes: sudo ss -t -p 
 %
 pstree hierarchical tree of processes
-%
-sudoedit for editing protected files
-%
-$mod+Shift+e rofimoji
-%
-t for new terminal in same directory. Start with :!t in vim
-%
-$mod+shift+e emoji
-%
-ALT-C select and open subdirectory with fzf
 %
 alacritty
 CTRL+Shift+space  vim mode
