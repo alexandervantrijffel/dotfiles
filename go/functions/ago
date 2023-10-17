@@ -9,7 +9,6 @@ function ago() {
 
     [ -f Cargo.toml ] && {
       if [[ -z "${@// }" ]];then
-
         RUST_BACKTRACE=1 cargo-watch -q -c -w src/ -x check -x "run -q"
       else 
         RUNCMD="run -q $@"
@@ -17,7 +16,7 @@ function ago() {
         return
       fi
     }
-
+debug,
     [ -f pnpm-lock.yaml ] && {
         pnpm run dev --host
         return

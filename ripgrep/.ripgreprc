@@ -29,6 +29,9 @@
 !**/packer_compiled.lua
 
 --glob
+!**/.aws-sam
+
+--glob
 !target/*
 
 -C=2
