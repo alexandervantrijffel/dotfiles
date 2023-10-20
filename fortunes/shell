@@ -1,6 +1,6 @@
 View directory history: dirs -v 
 %
-show calendar: cal -A 2     
+show calendar: cal -n 6
 %
 BASH SHELL: CTRL+D close
 CTRL+S Stop output to screen (when processes dump too much data to stdout)
@@ -14,3 +14,12 @@ alacritty
 CTRL+Shift+space  vim mode
 CTRL+Shift+f      search
 CTRL+U CTRL+D     scroll up/down in vim mode
+%
+run `builtin echo` to run the builtin command that might be overriden by an alias or function
+%
+run `command cat` to run the original command that is overwritten by an alias or function
+%
+pomodoro start --wait "MyTask"
+%
+user id + group id + all groups bekijken van user lex:
+`id lex`
