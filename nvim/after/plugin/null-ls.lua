@@ -3,11 +3,11 @@ local null_ls = require("null-ls")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
+  -- view with :NullLsLog
+  -- debug = true,
+
   -- find more sources at https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
   sources = {
-    null_ls.builtins.diagnostics.eslint_d.with({
-      diagnostics_format = '[eslint] #{m}\n(#{c})'
-    }),
     null_ls.builtins.formatting.eslint_d,
     null_ls.builtins.diagnostics.jsonlint,
     null_ls.builtins.formatting.fixjson,
