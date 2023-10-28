@@ -1,1 +1,0 @@
-export BROWSER=$(which qutebrowser)
