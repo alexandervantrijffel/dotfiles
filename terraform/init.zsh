@@ -1,4 +1,4 @@
-alias ta="terraform apply"
+alias ta="terraform apply --auto-approve"
 alias td="terraform destroy"
 alias ti="terraform init"
 alias tp="terraform plan"
