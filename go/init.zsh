@@ -9,3 +9,5 @@ alias gomt="go mod tidy"
 FPATH=${FPATH}:$THISDIR/functions
 autoload -z ago
 autoload -z ato
+
+export PATH="$PATH:$(go env GOPATH)/bin"
