@@ -30,3 +30,4 @@ done
 [ -d  "$HOME/.local/bin" ] && PATH="$PATH:$HOME/.local/bin"
 
 alias assume=". assume"
+. "$HOME/.cargo/env"

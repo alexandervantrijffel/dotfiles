@@ -65,6 +65,9 @@ fi
 
 nvm upgrade
 
-pacman -Syu
+type rustup > /dev/null 2>&1 && {
+  rustup self update
+  rustup update
+}
 
-rustup update
+pacman -Syu
