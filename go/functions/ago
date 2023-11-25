@@ -16,7 +16,7 @@ function ago() {
         return
       fi
     }
-debug,
+
     [ -f pnpm-lock.yaml ] && {
         pnpm run dev --host
         return
