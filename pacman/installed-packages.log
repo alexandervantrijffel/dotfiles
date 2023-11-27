@@ -7,8 +7,8 @@ alacritty 0.12.3-1
 alsa-lib 1.2.10-2
 alsa-topology-conf 1.2.5.1-3
 alsa-ucm-conf 1.2.10-2
-amd-ucode 20231030.2b304bfe-1
-aom 3.7.0-1
+amd-ucode 20231110.74158e7a-1
+aom 3.7.1-1
 appmenu-gtk-module 0.7.6-1
 archlinux-keyring 20231113-1
 argon2 20190702-5
@@ -23,7 +23,7 @@ avahi 1:0.8+r139+ge5b0bad-1
 awesome-terminal-fonts 1.1.0-4
 base 3-2
 base-devel 1-1
-bash 5.2.015-5
+bash 5.2.021-1
 bash-completion 2.11-3
 bat 0.24.0-1
 bind 9.18.20-1
@@ -42,7 +42,7 @@ caddy 2.7.5-1
 cairo 1.18.0-1
 cairomm 1.14.5-1
 cantarell-fonts 1:0.303.1-1
-cfitsio 1:4.3.0-1
+cfitsio 1:4.3.1-1
 chromium 119.0.6045.159-1
 cifs-utils 7.0-3
 cmake 3.27.8-1
@@ -102,7 +102,7 @@ gcc-libs 12.1.0-2.1
 gdbm 1.23-2
 gdk-pixbuf-xlib 2.40.2-2
 gdk-pixbuf2 2.42.10-2
-gettext 0.22.3-1
+gettext 0.22.4-1
 giflib 5.2.1-2
 git 2.43.0-1
 git-delta 0.16.5-1
@@ -233,7 +233,7 @@ libinput 1.24.0-1
 libisl 0.26-1
 libjpeg-turbo 3.0.1-1
 libjxl 0.8.2-2
-libksba 1.6.4-1
+libksba 1.6.5-1
 libldap 2.6.6-2
 libluv 1.45.0_0-1
 libmanette 0.2.6-5
@@ -328,7 +328,7 @@ libxinerama 1.1.5-1
 libxkbcommon 1.6.0-1
 libxkbcommon-x11 1.6.0-1
 libxkbfile 1.1.2-1
-libxml2 2.12.0-1
+libxml2 2.12.1-1
 libxmu 1.1.4-1
 libxrandr 1.5.4-1
 libxrender 0.9.11-1
@@ -344,8 +344,8 @@ libyuv r2426+464c51a0-1
 licenses 20231011-1
 linux-aarch64 6.2.10-1
 linux-api-headers 6.4-1
-linux-firmware 20231030.2b304bfe-1
-linux-firmware-whence 20231030.2b304bfe-1
+linux-firmware 20231110.74158e7a-1
+linux-firmware-whence 20231110.74158e7a-1
 llvm-libs 16.0.6-1
 lm_sensors 1:3.6.0.r41.g31d1f125-2
 lmdb 0.9.30-3
@@ -416,7 +416,7 @@ patch 2.7.6-10
 pciutils 3.10.0-1
 pcre 8.45-4
 pcre2 10.42-2
-pcsclite 2.0.0-1
+pcsclite 2.0.1-1
 perl 5.38.0-1
 perl-error 0.17029-5
 perl-mailtools 2.21-7
@@ -440,7 +440,6 @@ python 3.11.6-1
 python-annotated-types 0.6.0-1
 python-attrs 22.2.0-3
 python-autocommand 2.2.2-4
-python-blessed 1.20.0-4
 python-botocore 1.31.25-1
 python-certifi 2023.11.17-1
 python-cffi 1.16.0-1
@@ -453,14 +452,12 @@ python-cryptography 41.0.5-1
 python-dateutil 2.8.2-5
 python-defusedxml 0.7.1-5
 python-distlib 0.3.7-1
-python-editor 1.0.4-9
 python-fastjsonschema 2.19.0-1
 python-filelock 3.12.4-1
 python-greenlet 3.0.1-1
 python-identify 2.5.32-1
 python-idna 3.4-3
 python-inflect 7.0.0-2
-python-inquirer 3.1.3-1
 python-jaraco.context 4.3.0-3
 python-jaraco.functools 3.9.0-1
 python-jaraco.text 3.11.1-3
@@ -481,8 +478,8 @@ python-platformdirs 4.0.0-1
 python-ply 3.11-12
 python-pycparser 2.21-5
 python-pycurl 7.45.2-3
-python-pydantic 2.4.2-1
-python-pydantic-core 1:2.10.1-1
+python-pydantic 2.5.2-1
+python-pydantic-core 1:2.14.5-1
 python-pygments 2.16.1-1
 python-pynvim 0.4.3-3
 python-pyqt5 5.15.10-1
@@ -492,11 +489,10 @@ python-pyqt6 6.6.0-2
 python-pyqt6-sip 13.6.0-1
 python-pyqt6-webengine 6.6.0-1
 python-pysocks 1.7.1-8
-python-readchar 4.0.3-1
 python-requests 2.31.0-1
 python-requests-toolbelt 1.0.0-1
 python-rich 13.7.0-1
-python-setuptools 1:68.0.0-1
+python-setuptools 1:68.1.0-1
 python-shtab 1.6.4-1
 python-six 1.16.0-8
 python-stevedore 5.1.0-1
@@ -505,7 +501,7 @@ python-termcolor 2.3.0-1
 python-toml 0.10.2-9
 python-tomli 2.0.1-3
 python-tornado 6.3.1-1
-python-trove-classifiers 2023.11.14-1
+python-trove-classifiers 2023.11.22-1
 python-typing_extensions 4.8.0-1
 python-uc-micro-py 1.0.2-1
 python-urllib3 1.26.15-1
@@ -513,7 +509,6 @@ python-validate-pyproject 0.13-1
 python-virtualenv 20.24.6-1
 python-virtualenv-clone 0.5.7-4
 python-virtualenvwrapper 4.8.4-8
-python-wcwidth 0.2.9-1
 python-wheel 0.40.0-3
 python-yaml 6.0.1-2
 qt5-base 5.15.11+kde+r146-1
@@ -531,7 +526,7 @@ qt6-webengine 6.6.0-1
 qutebrowser 3.0.2-1
 rav1e 0.6.6-3
 re2 1:20231101-1
-readline 8.2.001-2
+readline 8.2.007-1
 recode 3.7.14-1
 remark-cli 5.0.0-1
 rhash 1.4.4-1
@@ -549,7 +544,7 @@ smbclient 4.19.2-1
 snappy 1.1.10-1
 speex 1.2.1-1
 speexdsp 1.2.1-1
-sqlite 3.44.0-1
+sqlite 3.44.1-1
 srt 1.5.3-1
 sshpass 1.10-1
 startup-notification 0.12-8
@@ -605,7 +600,7 @@ xcb-util-wm 0.4.2-1
 xcb-util-xrm 1.3-2
 xclip 0.13-4
 xdg-dbus-proxy 0.1.5-1
-xdg-utils 1.1.3+45+g301a1a4-1
+xdg-utils 1.2.0r17+g21fb316-1
 xf86-input-libinput 1.4.0-1
 xkeyboard-config 2.40-1
 xorg-fonts-encodings 1.0.7-1
