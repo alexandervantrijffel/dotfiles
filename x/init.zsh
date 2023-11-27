@@ -5,6 +5,13 @@ FPATH=${FPATH}:$THISDIR/functions
 autoload -z togglexdpi
 autoload -z ishidpi
 
+if ! xrandr | grep -q "5120x1440_60.00"; then
+  echo adding diplay mode 5120x1440_60.00
+  xrandr --newmode "5120x1440_60.00"  624.50  5120 5496 6048 6976  1440 1443 1453 1493 -hsync +vsync
+  xrandr --addmode Virtual-1 5120x1440_60.00
+  xrandr --output Virtual-1 --auto --mode 5120x1440_60.00 --pos 0x0 --rotate normal --dpi 100 --scale 1x1
+fi
+
 if ishidpi; then
     type notify-send 1>/dev/null && notify-send -i display "hidpi mode" -u low
     export GDK_SCALE=2
