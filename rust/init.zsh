@@ -7,3 +7,8 @@ export RUSTC_WRAPPER=sccache
 FPATH=${FPATH}:$THISDIR/functions
 autoload -z abr
 autoload -z samabr
+
+FPATH=${FPATH}:$THISDIR/functions
+autoload -z ago
+autoload -z ato
+autoload -z atdr

@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# auto test rust with docker
+function atdr() {
+    [ -f docker-compose.yml ] && {
+        docker-compose up -d
+    }
+    
+    source ~/github/alexandervantrijffel/secrets/export_aws_localstack_credentials.sh
+
+    [ -f Cargo.toml ] && {
+        RUST_BACKTRACE=1 DYNAMO_DB_ENDPOINT=http://localhost:8000 ato
+    }
+
+    echo "Ecosystem not supported"
+}
