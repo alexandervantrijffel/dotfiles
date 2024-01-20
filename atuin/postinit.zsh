@@ -1,1 +1,1 @@
-znap source atuinsh/atuin
+zsh-defer znap source atuinsh/atuin
