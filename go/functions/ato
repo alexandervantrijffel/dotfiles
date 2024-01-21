@@ -6,7 +6,8 @@ function ato() {
     }
 
     [ -f Cargo.toml ] && {
-        cargo watch -x check -x test
+        RUNCMD="test -q $@"
+        cargo watch -x check -x "$RUNCMD"
     }
 
     [ -f pnpm-lock.yaml ] && {
