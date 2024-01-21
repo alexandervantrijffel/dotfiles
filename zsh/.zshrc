@@ -91,4 +91,5 @@ bindkey "^F" forward-word
 
 # finish profiling (started in .zshenv)
 # zprof > /tmp/zprof.dump
+zprof | head -n 15
 #
