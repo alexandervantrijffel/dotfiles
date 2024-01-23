@@ -2,7 +2,7 @@
 
 function ato() {
     [ -f go.mod ] || [ -f go.work ] && {
-        gotestsum --watch .
+        gotestsum --watch ./...
     }
 
     [ -f Cargo.toml ] && {
