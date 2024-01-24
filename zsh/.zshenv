@@ -10,7 +10,7 @@ export DOTFILES=$(readlink -e "$HOME/.zshenv" | xargs dirname | xargs dirname)
 export ZDOTDIR="${DOTFILES}/zsh"
 
 # start profiling (finish in .zshrc)
-zmodload zsh/zprof
+# zmodload zsh/zprof
 
 export LC_ALL=en_US.UTF-8
 
