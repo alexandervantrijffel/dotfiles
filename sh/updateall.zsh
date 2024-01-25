@@ -70,4 +70,6 @@ type rustup > /dev/null 2>&1 && {
   rustup update
 }
 
-pacman -Syu
+sudo paccache -r
+sudo pacman -Syu
+yay -Scc --noconfirm
