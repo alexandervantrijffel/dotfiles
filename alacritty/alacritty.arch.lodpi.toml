@@ -3,7 +3,7 @@ background = "#282a36"
 foreground = "#839496"
 
 [font]
-size = 10.0
+size = 9.0
 
 [font.normal]
 family = "Cousine"
@@ -39,7 +39,7 @@ save_to_clipboard = false
 
 [window]
 decorations = "none"
-opacity = 0.8
+opacity = 0.9
 startup_mode = "Windowed"
 
 [window.padding]
