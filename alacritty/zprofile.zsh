@@ -9,11 +9,11 @@ mkdir -pv $TARGETFOLDER
 . ${DOTFILES}/x/functions/ishidpi
 
 if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then 
+  rm $TARGETFOLDER/alacritty.yml
   if ishidpi; then
-    ln -sf $THISDIR/alacritty.arch.hidpi.yml $TARGETFOLDER/alacritty.yml
+    ln -sf $THISDIR/alacritty.arch.hidpi.toml $TARGETFOLDER/alacritty.toml
   else 
-    echo picking lodpi
-    ln -sf $THISDIR/alacritty.arch.lodpi.yml $TARGETFOLDER/alacritty.yml
+    ln -sf $THISDIR/alacritty.arch.lodpi.toml TARGETFOLDER/alacritty.toml
   fi
 else
   [ ! -L $TARGETFOLDER/alacritty.yml ] && \

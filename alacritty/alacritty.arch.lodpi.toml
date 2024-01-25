@@ -1,0 +1,51 @@
+[colors.primary]
+background = "#282a36"
+foreground = "#839496"
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "Cousine"
+style = "Bold"
+
+[[keyboard.bindings]]
+action = "Up"
+key = "L"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Down"
+key = "K"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Left"
+key = "J"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Right"
+key = "Semicolon"
+mode = "Vi|~Search"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Command"
+
+[selection]
+save_to_clipboard = false
+
+[window]
+decorations = "none"
+opacity = 0.8
+startup_mode = "Windowed"
+
+[window.padding]
+x = 0
+y = 0
+
+[window.position]
+x = 0
+y = 0
