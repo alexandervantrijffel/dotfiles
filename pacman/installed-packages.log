@@ -88,6 +88,7 @@ fftw 3.3.10-4
 file 5.45-1
 filesystem 2024.01.19-1
 findutils 4.9.0-3
+firefox 122.0-1
 flac 1.4.3-1
 flex 2.6.4-5
 fontconfig 2:2.15.0-2
@@ -367,6 +368,7 @@ luarocks 3.9.2-1
 lz4 1:1.9.4-2
 lzo 2.10-5
 m4 1.4.19-3
+mailcap 2.1.54-1
 make 4.4.1-2
 man-db 2.12.0-1
 md4c 0.5.1-1
