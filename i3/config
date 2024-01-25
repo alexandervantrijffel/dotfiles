@@ -159,7 +159,7 @@ bindsym $mod+Shift+Control+r exec maim -s ~/Downloads/Screenshot-$(date +'screen
 bindsym $mod+Shift+Control+a exec maim -i $(xdotool getwindowfocus) ~/Downloads/Screenshot-$(date +'screenshot_%Y%m%d_%H%M%S.png').png
 # copy region to imgur
 # (requires https://github.com/tremby/imgur.sh)
-bindsym $mod+Shift+u exec "i3-msg exec rm -f /tmp/screenshot-imgur.png; maim -s /tmp/screenshot-imgur.png && $(which qutebrowser) $(imgur /tmp/screenshot-imgur.png | head)"
+bindsym $mod+Shift+u exec "i3-msg exec rm -f /tmp/screenshot-imgur.png; maim -s /tmp/screenshot-imgur.png && $(which firefox) $(imgur /tmp/screenshot-imgur.png | head)"
 
 # I3 exit menu
 mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
@@ -380,13 +380,13 @@ mode "$mode_gaps_left" {
         bindsym Escape mode "default"
 }
 
-# always launch qutebrowser on workspace 5
+# always launch firefox on workspace 5
 # retrieve the class and instance with:
 # `xprop | grep WM_CLASS`
-assign [class="qutebrowser" instance="qutebrowser"] $web5
+assign [class="firefox" instance="firefox"] $web5
 
-bindsym $mod+Shift+f workspace $web5; exec --no-startup-id i3-msg exec $(which qutebrowser)
-bindsym $mod+Shift+Control+f exec --no-startup-id i3-msg exec $(which qutebrowser)
+bindsym $mod+Shift+f workspace $web5; exec --no-startup-id i3-msg exec $(which firefox)
+bindsym $mod+Shift+Control+f exec --no-startup-id i3-msg exec $(which firefox)
 
 exec --no-startup-id i3-msg "workspace $dev1; exec alacritty"
 
