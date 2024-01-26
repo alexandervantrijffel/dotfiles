@@ -13,7 +13,7 @@ if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then
   if ishidpi; then
     ln -sf $THISDIR/alacritty.arch.hidpi.toml $TARGETFOLDER/alacritty.toml
   else 
-    ln -sf $THISDIR/alacritty.arch.lodpi.toml TARGETFOLDER/alacritty.toml
+    ln -sf $THISDIR/alacritty.arch.lodpi.toml $TARGETFOLDER/alacritty.toml
   fi
 else
   [ ! -L $TARGETFOLDER/alacritty.yml ] && \
