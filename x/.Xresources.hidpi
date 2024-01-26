@@ -1,5 +1,5 @@
 URxvt*font:    xft:Roboto Nerd Font:style=Bold:size=10
-Xft.dpi: 254
+Xft.dpi: 227
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull

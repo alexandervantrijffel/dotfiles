@@ -17,7 +17,7 @@ togglexdpi() {
         ln -s $DOTFILES/x/.Xresources.hidpi ${SYMLINKFILE}
         if [ $? -ne 0 ]; then return $?; fi
         # --mode 3024x1890
-        xrandr --output Virtual-1 --auto --pos 0x0 --rotate normal --dpi 254 --scale 1x1
+        xrandr --output Virtual-1 --auto --pos 0x0 --rotate normal --dpi 227 --scale 1x1
         type notify-send 1>/dev/null && notify-send -i display "hidpi mode" -u low
     fi
     . $DOTFILES/alacritty/zprofile.zsh
