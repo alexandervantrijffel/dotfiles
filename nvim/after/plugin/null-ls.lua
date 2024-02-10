@@ -36,9 +36,11 @@ null_ls.setup({
     null_ls.builtins.formatting.rustywind,     -- tailwindcss
 
     null_ls.builtins.formatting.prettierd.with({
-      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less", "html", "json", "jsonc",  "markdown", "markdown.mdx", "graphql", "handlebars" }
+      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less",  "json", "jsonc",  "markdown", "markdown.mdx", "graphql", "handlebars" }
       -- this is disabled because it merges # comments in yaml with the previous line which sucks
       -- "yaml",
+      -- this is disabled because it puts all Askama / Jijnja tags on a single lines
+      -- "html",
     })
     -- null_ls.builtins.diagnostics.markuplint,     -- html
     -- don't use https://github.com/golangci/golangci-lint/issues/2654 is solved
