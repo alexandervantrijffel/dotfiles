@@ -73,6 +73,7 @@ echo ""
 echo "install go manually before continueing: https://golang.org/dl/"
 read blah
 
+go install github.com/cortesi/modd/cmd/modd@latest
 go get -u github.com/cespare/reflex
 go get -u github.com/golangci/golangci-lint
 go get -u gotest.tools/gotestsum

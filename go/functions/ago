@@ -3,6 +3,7 @@
 function ago() {
     [ -f go.mod ] || [ -f go.work ] && {
         TORUN=${1:-go run -tags=debug .}
+        # TODO migrate to modd
         reflex -r '\.go$' -s -- sh -c "$TORUN 2>&1"
         return
     }
@@ -23,6 +24,7 @@ function ago() {
     }
 
     [ -d .chalice ] && {
+      # TODO migrate to modd
       reflex -r '\.py$' -s -- sh -c "chalice local"
       return
     }
