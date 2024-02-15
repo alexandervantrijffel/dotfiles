@@ -10,10 +10,12 @@ function ago() {
 
     [ -f Cargo.toml ] && {
       if [[ -z "${@// }" ]];then
-        RUST_BACKTRACE="${RUST_BACKTRACE:-0}" cargo-watch -q -c -w src/ -x check -x "run -q"
+        # disabled -x check
+        RUST_BACKTRACE="${RUST_BACKTRACE:-0}" cargo-watch -c -w . -x "run "
       else 
-        RUNCMD="run -q $@"
-        RUST_BACKTRACE="${RUST_BACKTRACE:-0}" cargo-watch -q -c -w . -x check -x "$RUNCMD"
+        RUNCMD="run $@"
+        # disabled -x check
+        RUST_BACKTRACE="${RUST_BACKTRACE:-0}" cargo-watch -c -w . -x "$RUNCMD"
         return
       fi
     }
