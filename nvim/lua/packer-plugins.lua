@@ -117,8 +117,13 @@ local packer = require('packer').startup(function(use)
 
   }
 
-  -- Adds extra functionality to rust analyzer
-  use("simrat39/rust-tools.nvim")
+  -- Define rust-analyzer settings such as features and target to pass to rust-analyzer
+  -- in rust-analyzer.toml in the root of the repo
+  use {
+    'mrcjkb/rustaceanvim',
+    version = '^4',
+    ft = { 'rust' },
+  }
 
   -- :WhichKey <leader>
   -- :WhichKey g
