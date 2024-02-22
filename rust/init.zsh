@@ -1,7 +1,7 @@
 #!/bin/zsh
 THISDIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
-export RUSTFLAGS="-L /usr/lib/aarch64-linux-gnu -C target=native"
+export RUSTFLAGS="-L /usr/lib/aarch64-linux-gnu"
 export RUSTC_WRAPPER=sccache
 # export RUST_LOG=debug
 

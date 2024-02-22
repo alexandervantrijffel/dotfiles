@@ -6,7 +6,7 @@ function ato() {
     }
 
     [ -f Cargo.toml ] && {
-        RUNCMD="nextest run $@"
+        RUNCMD="nextest run --timings $@"
         cargo-watch -c -w . -x "$RUNCMD"
     }
 
