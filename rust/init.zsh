@@ -13,3 +13,7 @@ FPATH=${FPATH}:$THISDIR/functions
 autoload -z ago
 autoload -z ato
 autoload -z atdr
+
+# this can be removed
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+[ -f /home/lex/.config/cargo/env ] && . "/home/lex/.config/cargo/env"
