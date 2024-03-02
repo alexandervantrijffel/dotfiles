@@ -64,6 +64,7 @@ device-mapper 2.03.23-1
 diffutils 3.10-1
 dnssec-anchors 20190629-3
 docker 1:25.0.3-1
+docker-buildx 0.12.1-1
 docker-compose 2.24.6-1
 dosfstools 4.2-3
 double-conversion 3.3.0-1
@@ -377,9 +378,11 @@ mtdev 1.1.6-2
 ncurses 6.4_20230520-1
 neofetch 7.1.0-2
 neovim 0.9.5-2
+net-tools 2.10-2
 netctl 1.29-1
 nettle 3.9.1-1
 networkmanager 1.46.0-2
+nmap 7.94-2
 node-gyp 10.0.1-1
 nodejs 21.6.2-1
 nodejs-nopt 7.2.0-1
@@ -517,6 +520,7 @@ talloc 2.4.1-1
 tar 1.35-2
 tdb 1.4.9-1
 terminus-font 4.49.1-6
+terraform 1.7.4-1
 tevent 1:0.15.0-1
 texinfo 7.1-2
 tldr 3.2.0-1
