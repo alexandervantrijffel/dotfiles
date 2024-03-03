@@ -14,6 +14,8 @@ autoload -z ago
 autoload -z ato
 autoload -z atdr
 
+[ -d ~/.cargo/bin ] && export PATH="$PATH:$HOME/.cargo/bin"
+
 # this can be removed
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 [ -f /home/lex/.config/cargo/env ] && . "/home/lex/.config/cargo/env"
