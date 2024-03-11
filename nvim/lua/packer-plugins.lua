@@ -117,12 +117,29 @@ local packer = require('packer').startup(function(use)
 
   }
 
-  -- Define rust-analyzer settings such as features and target to pass to rust-analyzer
-  -- in rust-analyzer.toml in the root of the repo
   use {
     'mrcjkb/rustaceanvim',
     version = '^4',
     ft = { 'rust' },
+    config = function()
+      vim.g.rustaceanvim = {
+        -- Plugin configuration
+        tools = {
+        },
+        -- LSP configuration
+        server = {
+          default_settings = {
+            -- rust-analyzer language server configuration
+            ['rust-analyzer'] = {
+              cargo = {
+                features = 'all'
+              }
+            },
+          },
+        },
+    }
+
+    end
   }
 
   -- :WhichKey <leader>
