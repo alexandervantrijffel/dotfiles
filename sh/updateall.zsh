@@ -52,6 +52,8 @@ sudo chmod +x /usr/local/bin/kubectl
 
 sudo docker system prune -a -f
 
+pnpm store prune
+
 type notify-send 1>/dev/null && notify-send -i display "updateall.sh completed"
 
 if [[ $(lsb_release -a 2>/dev/null) =~ "Ubuntu" ]]; then
