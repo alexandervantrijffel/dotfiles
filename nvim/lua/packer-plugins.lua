@@ -144,6 +144,7 @@ local packer = require('packer').startup(function(use)
 
   -- :WhichKey <leader>
   -- :WhichKey g
+  -- add descriptions to whichkey.lua
   use {
     "folke/which-key.nvim",
     config = function()
@@ -156,6 +157,8 @@ local packer = require('packer').startup(function(use)
       }
     end
   }
+
+  use 'mbbill/undotree'
 
   -- use({
   --   "jackMort/ChatGPT.nvim",

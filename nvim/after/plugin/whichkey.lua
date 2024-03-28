@@ -52,6 +52,7 @@ wk.register({
     s = "easymotion GoTo character",
     t = "GoTo workspace symbols",
     T = "GoTo document symbols",
+    u = ":UndoTreeToggle",
     w = "easymotion GoTo start of word",
     y = "GoTo type definition",
   },

@@ -88,6 +88,7 @@ nnoremap gw <Plug>(easymotion-overwin-w)
 nnoremap ge <Plug>(easymotion-bd-e)
 nnoremap gs <Plug>(easymotion-overwin-f)
 
+
 " " ,' Surround a word with 'single quotes'
 " map ,' ysiw'
 " vmap ,' c'<C-R>"'<ESC>

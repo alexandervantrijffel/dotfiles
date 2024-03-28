@@ -69,3 +69,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- end, opts)
   end,
 })
+
+vim.keymap.set('n', 'gu', vim.cmd.UndotreeToggle)
+vim.cmd [[
+  if !exists('g:undotree_WindowLayout')
+      let g:undotree_WindowLayout = 2
+  endif
+]]
+
