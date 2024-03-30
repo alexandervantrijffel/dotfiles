@@ -75,3 +75,5 @@ type rustup > /dev/null 2>&1 && {
 sudo paccache -r
 sudo pacman -Syu
 yay -Scc --noconfirm
+# cleanup outdated build files of projects with this command inside the project directory
+# cargo sweep --time 30
