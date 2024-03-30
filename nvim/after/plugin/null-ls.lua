@@ -23,8 +23,8 @@ null_ls.setup({
     -- }),
     null_ls.builtins.formatting.djlint.with({
       filetypes = { "html", "jinja" },
-      close_void_tags = true,
-      line_break_after_multiline_tag = true,
+      ignore_blocks = { "call" },
+      ignore_tag = { "call" },
       profile = "jinja",
     }),
 
