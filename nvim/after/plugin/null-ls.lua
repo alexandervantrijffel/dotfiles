@@ -16,6 +16,18 @@ null_ls.setup({
     -- null_ls.builtins.diagnostics.ltrs,
     null_ls.builtins.formatting.rustfmt,
 
+    -- -- html, jinja
+    -- null_ls.builtins.diagnostics.curlylint,
+    -- null_ls.builtins.formatting.djhtml.with({
+    --   filetypes = { "html", "jinja" },
+    -- }),
+    null_ls.builtins.formatting.djlint.with({
+      filetypes = { "html", "jinja" },
+      close_void_tags = true,
+      line_break_after_multiline_tag = true,
+      profile = "jinja",
+    }),
+
     null_ls.builtins.code_actions.gitsigns,
     null_ls.builtins.code_actions.refactoring,
     null_ls.builtins.code_actions.shellcheck,
@@ -36,7 +48,7 @@ null_ls.setup({
     null_ls.builtins.formatting.rustywind,     -- tailwindcss
 
     null_ls.builtins.formatting.prettierd.with({
-      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less",  "json", "jsonc",  "markdown", "markdown.mdx", "graphql", "handlebars" }
+      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less", "json", "jsonc",  "markdown", "markdown.mdx", "graphql", "handlebars" }
       -- this is disabled because it merges # comments in yaml with the previous line which sucks
       -- "yaml",
       -- this is disabled because it puts all Askama / Jijnja tags on a single lines

@@ -17,6 +17,16 @@ lspconfig.tailwindcss.setup {
   capabilities = capabilities
 }
 
+lspconfig.html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+lspconfig.htmx.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
 lspconfig.yamlls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
