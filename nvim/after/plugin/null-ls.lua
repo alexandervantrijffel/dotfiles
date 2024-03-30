@@ -16,16 +16,22 @@ null_ls.setup({
     -- null_ls.builtins.diagnostics.ltrs,
     null_ls.builtins.formatting.rustfmt,
 
-    -- -- html, jinja
-    -- null_ls.builtins.diagnostics.curlylint,
-    -- null_ls.builtins.formatting.djhtml.with({
-    --   filetypes = { "html", "jinja" },
-    -- }),
     null_ls.builtins.formatting.djlint.with({
       filetypes = { "html", "jinja" },
-      ignore_blocks = { "call" },
-      ignore_tag = { "call" },
-      profile = "jinja",
+      generator_opts = {
+        command = "djlint",
+        args = {
+            "--blank-line-before-tag",
+            "macro",
+            "--blank-line-after-tag",
+            "endmacro",
+            "--profile",
+            "jinja",
+            "--reformat",
+            "-",
+        },
+        to_stdin = true,
+    },
     }),
 
     null_ls.builtins.code_actions.gitsigns,
