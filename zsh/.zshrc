@@ -64,6 +64,9 @@ if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
     # completions crash because of this one:
     zsh-defer znap source zsh-users/zsh-autosuggestions
     zsh-defer znap source zsh-users/zsh-completions
+
+    # try this one
+    # zsh-defer znap source zsh-users/zsh-autocomplete
     znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
     ! type prettyping &>/dev/null && znap install denilsonsa/prettyping
     if [[ $(lsb_release -a 2>/dev/null) =~ "Arch" ]]; then
