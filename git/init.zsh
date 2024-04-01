@@ -18,6 +18,7 @@ gitalias () {
     alias gbD="git branch -D"
     alias gc-="git checkout -"
     alias gca="git commit --amend"
+    alias gcam="git commit -S -v -am"
     alias gcan="git commit --amend --no-edit"
     alias gcb="git checkout -b"
     alias gco.="git checkout ."
