@@ -27,3 +27,4 @@ user id + group id + all groups bekijken van user lex:
 use tokei to count lines of code
 %
 use modd to start processes on file changes
+%

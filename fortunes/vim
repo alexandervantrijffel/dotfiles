@@ -65,3 +65,4 @@ VIM harpoon
 ha add file
 hm show menu
 In the menu edit listings like any text file (D for delete line).
+%
