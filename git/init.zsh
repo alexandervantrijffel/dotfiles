@@ -8,9 +8,8 @@ export GIT_CONFIG_GLOBAL=$XDG_CONFIG_HOME/git/config
 gitalias () {
     alias g="git"
     alias ga="git add"
-    alias ga.="git add ."
+    alias ga.="git add --all ."
     alias gap="git add . --patch && gs"
-    alias gaa="git add --all ."
     alias gb="git branch | grep \* | cut -d ' ' -f2"
     alias gba="git branch -a"
     # list remote branches by last commit date
@@ -18,7 +17,8 @@ gitalias () {
     alias gbD="git branch -D"
     alias gc-="git checkout -"
     alias gca="git commit --amend"
-    alias gcam="git commit -S -v -am"
+    alias gcaa="git add --all . && git commit -S -v -a"
+    alias gcaam="git add --all . && git commit -S -v -a -m"
     alias gcan="git commit --amend --no-edit"
     alias gcb="git checkout -b"
     alias gco.="git checkout ."
