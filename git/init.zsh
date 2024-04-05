@@ -5,6 +5,11 @@ export GIT_CONFIG_GLOBAL=$XDG_CONFIG_HOME/git/config
 # https://github.com/scmbreeze/scm_breeze
 # [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
+
+# for some reason, these two are not applied with zsh-defer gitalias
+alias gcaa="git add --all . && git commit -S -v -a"
+alias gcaam="git add --all . && git commit -S -v -a -m"
+
 gitalias () {
     alias g="git"
     alias ga="git add"
@@ -17,8 +22,6 @@ gitalias () {
     alias gbD="git branch -D"
     alias gc-="git checkout -"
     alias gca="git commit --amend"
-    alias gcaa="git add --all . && git commit -S -v -a"
-    alias gcaam="git add --all . && git commit -S -v -a -m"
     alias gcan="git commit --amend --no-edit"
     alias gcb="git checkout -b"
     alias gco.="git checkout ."
