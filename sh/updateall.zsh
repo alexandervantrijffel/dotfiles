@@ -4,6 +4,11 @@ THISDIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 tldr -u
 
 go clean -modcache
+# get latest version of gopls
+go install golang.org/x/tools/gopls@latest
+# get latest version of golangci-lint
+curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin
+
 
 echo updating yarn packages
 # yarn global upgrade
