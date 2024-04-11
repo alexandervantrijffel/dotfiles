@@ -21,6 +21,8 @@ null_ls.setup({
       generator_opts = {
         command = "djlint",
         args = {
+            "--ignore-blocks",
+            "call",
             "--blank-line-before-tag",
             "macro",
             "--blank-line-after-tag",
