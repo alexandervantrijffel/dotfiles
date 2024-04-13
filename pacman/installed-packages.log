@@ -145,6 +145,7 @@ gupnp-igd 1.6.0-1
 gzip 1.13-2
 harfbuzz 8.4.0-1
 harfbuzz-icu 8.4.0-1
+helm 3.14.3-1
 hicolor-icon-theme 0.17-3
 hidapi 0.14.0-2
 highway 1.1.0-1
