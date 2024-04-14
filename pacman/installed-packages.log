@@ -7,7 +7,7 @@ alacritty 0.13.2-2
 alsa-lib 1.2.11-1
 alsa-topology-conf 1.2.5.1-3
 alsa-ucm-conf 1.2.11-1
-amd-ucode 20240312.3b128b60-1
+amd-ucode 20240409.1addd7dc-1
 aom 3.8.2-1
 appmenu-gtk-module 24.02-1
 archlinux-keyring 20240313-1
@@ -55,7 +55,7 @@ containerd 1.7.15-1
 coreutils 9.5-1
 cowsay 3.04-5
 cppdap 1.58.0-1
-cryptsetup 2.7.1-1
+cryptsetup 2.7.2-1
 curl 8.7.1-5
 dav1d 1.4.1-1
 db5.3 5.3.28-4
@@ -356,8 +356,8 @@ libyuv r2426+464c51a0-1
 licenses 20240206-1
 linux-aarch64 6.8.4-1
 linux-api-headers 6.7-1
-linux-firmware 20240312.3b128b60-1
-linux-firmware-whence 20240312.3b128b60-1
+linux-firmware 20240409.1addd7dc-1
+linux-firmware-whence 20240409.1addd7dc-1
 lld 17.0.6-1
 lld16 16.0.6-1
 llvm-libs 17.0.6-2
@@ -398,7 +398,7 @@ nmap 7.94-2
 node-gyp 10.1.0-2
 nodejs 21.7.2-1
 nodejs-nopt 7.2.0-1
-npm 10.5.1-1
+npm 10.5.2-1
 npth 1.7-1
 nspr 4.35-2
 nss 3.99-1
@@ -420,7 +420,7 @@ orc 0.4.38-1
 p11-kit 0.25.3-1
 pacman 6.1.0-3
 pacman-mirrorlist 20230206-1
-pam 1.6.0-4
+pam 1.6.1-2
 pambase 20230918-1
 pango 1:1.52.2-1
 pangomm 2.46.4-1
@@ -524,7 +524,7 @@ talloc 2.4.2-1
 tar 1.35-2
 tdb 1.4.10-2
 terminus-font 4.49.1-6
-terraform 1.7.5-1
+terraform 1.8.0-1
 tevent 1:0.16.1-2
 texinfo 7.1-2
 tldr 3.2.0-1
@@ -541,7 +541,7 @@ tree-sitter-query 0.2.1-2
 tree-sitter-vimdoc 2.5.1-2
 tslib 1.23-1
 ttf-roboto-mono-nerd 3.2.0-1
-typescript 5.4.4-1
+typescript 5.4.5-1
 tzdata 2024a-1
 unibilium 2.1.1-2
 unzip 6.0-20
