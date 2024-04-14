@@ -15,7 +15,7 @@ go install github.com/cortesi/modd/cmd/modd@latest
 
 echo updating yarn packages
 # yarn global upgrade
-yarn cache clean --all
+yarn cache clean --all || true
 
 npm cache clean --force
 
@@ -80,8 +80,19 @@ type rustup > /dev/null 2>&1 && {
   rustup update
 }
 
-sudo paccache -r
-sudo pacman -Syu
-yay -Scc --noconfirm
+type paccache > /dev/null 2>&1 && {
+  sudo paccache -r
+}
+type pacman > /dev/null 2>&1 && {
+  sudo pacman -Syu
+}
+type yay > /dev/null 2>&1 && {
+  yay -Scc --noconfirm
+}
 # cleanup outdated build files of projects with this command inside the project directory
 # cargo sweep --time 30
+#
+type cargo > /dev/null 2>&1 && {
+  cargo install cargo-watch
+  cargo install cargo-nextest --locked
+}
