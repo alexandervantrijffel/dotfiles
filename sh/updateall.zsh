@@ -1,6 +1,14 @@
 #!/bin/zsh
 THISDIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
+# if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
+# source /opt/fromgit/zsh-snap/znap.zsh
+# znap pull
+# fi
+
+# echo updating git repositories
+# { cd /opt/fromgit && find . -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$(pwd)/{} pull origin master \; }
+
 tldr -u
 
 go clean -modcache
@@ -9,13 +17,9 @@ go install golang.org/x/tools/gopls@latest
 # get latest version of golangci-lint
 curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin
 
-go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
-go install google.golang.org/protobuf/cmd/protoc-gen-go
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go install github.com/cortesi/modd/cmd/modd@latest
-
-echo updating yarn packages
-# yarn global upgrade
-yarn cache clean --all || true
 
 npm cache clean --force
 
@@ -35,9 +39,6 @@ pip cache purge
 # # 2 is the minimum
 # sudo snap set system refresh.retain=2
 
-echo updating git repositories
-{ cd /opt/fromgit && find . -maxdepth 1 -type d -exec git --git-dir={}/.git --work-tree=$(pwd)/{} pull origin master \; }
-
 if [[ "$ARCH" =~ "arm64" ]]; then
     curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
     chmod u+x nvim.appimage
@@ -51,27 +52,16 @@ nvim --noplugin +PlugUpgrade +PlugUpdate +PlugClean! +qall
 
 # { cd ~/.SpaceVim && git pull }
 
-if [[ "$ARCH" =~ "arm64" ]]; then
-    { cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" }
-else
-    { cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl" }
-fi
-sudo chmod +x /usr/local/bin/kubectl
+# if [[ "$ARCH" =~ "arm64" ]]; then
+#     { cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" }
+# else
+#     { cd /usr/local/bin && sudo curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl" }
+# fi
+# sudo chmod +x /usr/local/bin/kubectl
 
 sudo docker system prune -a -f
 
 pnpm store prune
-
-type notify-send 1>/dev/null && notify-send -i display "updateall.sh completed"
-
-if [[ $(lsb_release -a 2>/dev/null) =~ "Ubuntu" ]]; then
-sh ${THISDIR}/deleteoldsnapversions.sh
-fi
-
-if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
-source /opt/fromgit/zsh-snap/znap.zsh
-znap pull
-fi
 
 nvm upgrade
 
@@ -96,3 +86,11 @@ type cargo > /dev/null 2>&1 && {
   cargo install cargo-watch
   cargo install cargo-nextest --locked
 }
+
+type rustup > /dev/null 2>&1 && {
+  echo updating yarn packages
+  # yarn global upgrade
+  yarn cache clean --all || true
+}
+
+type notify-send 1>/dev/null && notify-send -i display "updateall.sh completed"
