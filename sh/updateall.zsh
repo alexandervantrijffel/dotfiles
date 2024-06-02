@@ -1,6 +1,12 @@
 #!/bin/zsh
 THISDIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
+
+# update saw for aws cloudwatch logs in the console
+# by navigating to https://github.com/TylerBrock/saw/releases
+# install .deb package with `_ dpkg -i <file.deb>`
+go install github.com/TylerBrock/saw@latest
+
 # if [ -s /opt/fromgit/zsh-snap/znap.zsh ]; then
 # source /opt/fromgit/zsh-snap/znap.zsh
 # znap pull
