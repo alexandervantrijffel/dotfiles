@@ -61,12 +61,16 @@ null_ls.setup({
       -- "yaml",
       -- this is disabled because it puts all Askama / Jijnja tags on a single lines
       -- "html",
-    })
+    }),
+    null_ls.builtins.diagnostics.tfsec,
+    null_ls.builtins.formatting.terraform_fmt,
     -- null_ls.builtins.diagnostics.markuplint,     -- html
+    --
     -- don't use https://github.com/golangci/golangci-lint/issues/2654 is solved
     -- this is replaced with a custom config for golangci-lint in lspconfig
     -- null_ls.builtins.diagnostics.golangci_lint,
     -- don't enable this; it leads to performance issues and issues with undo
+
   },
   -- format on save
   on_attach = function(client, bufnr)
