@@ -29,6 +29,11 @@ key = "Semicolon"
 mode = "Vi|~Search"
 
 [[keyboard.bindings]]
+action = "ToggleViMode"
+key = "Space"
+mods = "Shift|Control"
+
+[[keyboard.bindings]]
 action = "Quit"
 key = "Q"
 mods = "Command"
