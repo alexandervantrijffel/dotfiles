@@ -26,6 +26,11 @@ curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/insta
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go install github.com/cortesi/modd/cmd/modd@latest
+curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin
+
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go install github.com/cortesi/modd/cmd/modd@latest
 
 npm cache clean --force
 
@@ -34,7 +39,7 @@ sudo python3 -m pip install --upgrade pip
 # pip install --upgrade pip setuptools wheel
 # pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo -H python3 -m pip install -U
 pip cache purge
-pnpm store prune
+sudo pnpm store prune
 sudo rm /var/lib/systemd/coredump/*
 
 # echo apt update and upgrade
