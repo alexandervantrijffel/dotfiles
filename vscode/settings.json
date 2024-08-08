@@ -1,9 +1,0 @@
-{
-  "workbench.colorTheme": "Default Dark+",
-  "files.associations": {
-    "**/azure-pipelines.*": "azure-pipelines"
-  },
-  "redhat.telemetry.enabled": true,
-  "security.workspace.trust.untrustedFiles": "open"
-}
-
