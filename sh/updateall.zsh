@@ -34,6 +34,8 @@ sudo python3 -m pip install --upgrade pip
 # pip install --upgrade pip setuptools wheel
 # pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo -H python3 -m pip install -U
 pip cache purge
+pnpm store prune
+sudo rm /var/lib/systemd/coredump/*
 
 # echo apt update and upgrade
 # sudo apt update
@@ -69,6 +71,8 @@ sudo docker system prune -a -f
 
 pnpm store prune
 
+rm ~/.cache
+
 nvm upgrade
 
 type rustup > /dev/null 2>&1 && {
@@ -93,7 +97,7 @@ type cargo > /dev/null 2>&1 && {
   cargo install cargo-nextest --locked
 }
 
-type rustup > /dev/null 2>&1 && {
+type yarn > /dev/null 2>&1 && {
   echo updating yarn packages
   # yarn global upgrade
   yarn cache clean --all || true
