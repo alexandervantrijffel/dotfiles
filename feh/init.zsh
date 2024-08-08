@@ -2,7 +2,7 @@ type feh 1>/dev/null && {
     BGFOLDER=$HOME/Pictures/fehbackgrounds
     [[ ! -d $BGFOLDER ]] && BGFOLDER=$HOME/pictures/fehbackgrounds
 
-    [ -d $BGFOLDER ] && feh --slideshow-delay 1800 --bg-fill $BGFOLDER -z -r -D1800
+    [ -d $BGFOLDER ] && zsh-defer feh --slideshow-delay 1800 --bg-fill $BGFOLDER -z -r -D1800
 
     # --bg-tile
     # --bg-fill or --bg-scale?

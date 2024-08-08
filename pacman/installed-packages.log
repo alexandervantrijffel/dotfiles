@@ -385,7 +385,7 @@ npth 1.7-1
 nspr 4.35-3
 nss 3.103-1
 numactl 2.0.18-1
-nvm 0.39.7-1
+nvm 0.40.0-1
 ocl-icd 2.3.2-2
 oniguruma 6.9.9-1
 opencore-amr 0.1.6-2
@@ -399,6 +399,7 @@ openssl 3.3.1-1
 opus 1.5.2-1
 p11-kit 0.25.5-1
 pacman 6.1.0-3
+pacman-contrib 1.10.6-1
 pacman-mirrorlist 20230206-1
 pam 1.6.1-2
 pambase 20230918-1

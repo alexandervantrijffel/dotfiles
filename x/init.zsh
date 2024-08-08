@@ -6,7 +6,7 @@ autoload -z togglexdpi
 autoload -z ishidpi
 
 if ishidpi; then
-    type notify-send 1>/dev/null && notify-send -i display "hidpi mode" -u low
+    type notify-send 1>/dev/null && zsh-defer notify-send -i display "hidpi mode" -u low
     export GDK_SCALE=2
     export GDK_DPI_SCALE=0.5
     export QT_SCALE_FACTOR=2
@@ -19,7 +19,7 @@ else
       xrandr --output Virtual-1 --auto --mode 5120x1440_60.00 --pos 0x0 --rotate normal --dpi 110 --scale 1x1
     fi
 
-    type notify-send 1>/dev/null && notify-send -i display "lodpi mode" -u low
+    type notify-send 1>/dev/null && zsh-defer notify-send -i display "lodpi mode" -u low
     export QT_SCALE_FACTOR=1
     export GDK_SCALE=1
     export GDK_DPI_SCALE=1.0

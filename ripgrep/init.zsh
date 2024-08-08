@@ -4,7 +4,7 @@
     # sudo apt-get install ripgrep
     ARCH=$(dpkg --print-architecture)
     if [[ "$ARCH" != *"arm64"* ]]; then
-        znap eval BurntSushi/ripgrep 'mv ripgrep rg'
+        zsh-defer znap eval BurntSushi/ripgrep 'mv ripgrep rg'
     fi
 }
 
