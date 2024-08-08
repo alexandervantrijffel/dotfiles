@@ -110,5 +110,6 @@ type yarn > /dev/null 2>&1 && {
   # yarn global upgrade
   yarn cache clean --all || true
 }
+sudo rm ~/.local/share/yarn/berry/cache/*
 
 type notify-send 1>/dev/null && notify-send -i display "updateall.sh completed"
