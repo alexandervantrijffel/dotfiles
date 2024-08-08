@@ -369,7 +369,7 @@ mkinitcpio-busybox 1.36.1-1
 mobile-broadband-provider-info 20240407-1
 mpdecimal 4.0.0-2
 mpfr 4.2.1-4
-mpg123 1.32.6-1
+mpg123 1.32.7-1
 msgpack-c 5.0.0-2
 mtdev 1.1.7-1
 ncurses 6.5-3

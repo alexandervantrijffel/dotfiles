@@ -85,17 +85,12 @@ fi
 
 [ -f $HOME/.config/zsh/.zshrc.local ] && source $HOME/.config/zsh/.zshrc.local
 
-# after entering repeat command like !-2, press space to auto-expand the command
-bindkey ' ' magic-space
-
-# execute auto suggestion with CTRL E
-bindkey "^E" autosuggest-execute
-bindkey "^F" forward-word
 
 znap source "softmoth/zsh-vim-mode"
 
-# for softmoth/zsh-vim-mode
-bindkey 'jj' vi-cmd-mode
+# after entering repeat command like !-2, press space to auto-expand the command
+bindkey ' ' magic-space
+
 
 # Press C-v in insert mode or normal/command mode for editing the command line in the default editor
 autoload edit-command-line; zle -N edit-command-line
@@ -118,3 +113,9 @@ bindkey -M viins '^q' exit_zsh
 # finish profiling (started in .zshenv)
 # zprof > /tmp/zprof.dump
 # zprof | head -n 15
+
+# execute auto suggestion with CTRL E
+bindkey "^E" autosuggest-execute
+bindkey "^F" forward-word
+# for softmoth/zsh-vim-mode
+bindkey 'jj' vi-cmd-mode
