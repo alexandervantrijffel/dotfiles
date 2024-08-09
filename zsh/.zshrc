@@ -119,3 +119,5 @@ bindkey "^E" autosuggest-execute
 bindkey "^F" forward-word
 # for softmoth/zsh-vim-mode
 bindkey 'jj' vi-cmd-mode
+
+bindkey '^P' up-history
