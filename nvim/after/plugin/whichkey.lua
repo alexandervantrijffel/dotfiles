@@ -44,8 +44,6 @@ wk.add({
  { "<leader>hv", desc = "Harpoon to fourth file" },
  { "gD", desc = "GoTo declaration" },
  { "gd", group = "diagnostic" },
- { "gde", desc = "Show diagnostics" },
- { "gdl", desc = "Show diagnostics in a panel" },
  { "gdn", desc = "GoTo next diagnostic" },
  { "gdp", desc = "GoTo previous diagnostic" },
  { "ge", desc = "easymotion GoTo end of word" },

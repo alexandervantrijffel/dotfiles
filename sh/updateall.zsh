@@ -23,6 +23,7 @@ go install golang.org/x/tools/gopls@latest
 # get latest version of golangci-lint
 curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin
 
+
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go install github.com/cortesi/modd/cmd/modd@latest
@@ -72,11 +73,13 @@ nvim --noplugin +PlugUpgrade +PlugUpdate +PlugClean! +qall
 # fi
 # sudo chmod +x /usr/local/bin/kubectl
 
+echo make sure that all containers of psawsrs are started before continuing with docker system prune
+read line
 sudo docker system prune -a -f
 
 pnpm store prune
 
-rm ~/.cache
+rm -r ~/.cache
 
 nvm upgrade
 
