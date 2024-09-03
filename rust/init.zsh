@@ -5,7 +5,7 @@ export RUSTFLAGS="-L /usr/lib/aarch64-linux-gnu"
 export RUSTC_WRAPPER=sccache
 # export RUST_LOG=debug
 #
-export CARGO_TARGET_DIR=/tmp
+export CARGO_TARGET_DIR=/tmp/target
 
 export MYSQLCLIENT_LIB_DIR=/usr/lib/aarch64-linux-gnu/
 export MYSQLCLIENT_VERSION=8.0.37
