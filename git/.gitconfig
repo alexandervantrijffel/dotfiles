@@ -60,6 +60,7 @@
     colorMoved = default
 [mergetool "fugitive"]
 	cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
+  keepBackup = false
 [rerere]
 	enabled = true
 [filter "lfs"]
