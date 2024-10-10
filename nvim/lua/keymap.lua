@@ -81,3 +81,17 @@ vim.cmd [[
       let g:undotree_WindowLayout = 2
   endif
 ]]
+
+local function CopilotAcceptOneCharacter()
+  local suggestion = vim.fn['copilot#Accept']("")
+  local bar = vim.fn['copilot#TextQueuedForInsertion']()
+  return bar:sub(1, 1)
+end
+local function CopilotAcceptOneWord()
+  local suggestion = vim.fn['copilot#Accept']("")
+  local bar = vim.fn['copilot#TextQueuedForInsertion']()
+  return vim.fn.split(bar,  [[[ .]\zs]])[1]
+end
+
+map('i', '<C-;>', CopilotAcceptOneCharacter, {expr = true, remap = false})
+map('i', '<C-l>', CopilotAcceptOneWord, {expr = true, remap = false})
