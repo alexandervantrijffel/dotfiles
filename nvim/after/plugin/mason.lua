@@ -3,7 +3,7 @@ local servers = {
   "gopls",
   "lua_ls",
   "rust_analyzer",
-  "tsserver",
+  "ts_ls",
 }
 
 require("mason").setup(
