@@ -93,5 +93,5 @@ local function CopilotAcceptOneWord()
   return vim.fn.split(bar,  [[[ .]\zs]])[1]
 end
 
-map('i', '<C-;>', CopilotAcceptOneCharacter, {expr = true, remap = false})
-map('i', '<C-l>', CopilotAcceptOneWord, {expr = true, remap = false})
+map('i', '<C-l>', CopilotAcceptOneCharacter, {expr = true, remap = false})
+map('i', '<C-f>', CopilotAcceptOneWord, {expr = true, remap = false})
