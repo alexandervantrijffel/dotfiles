@@ -159,6 +159,7 @@ local packer = require('packer').startup(function(use)
   }
 
   use 'mbbill/undotree'
+  use 'NoahTheDuke/vim-just'
 
   -- use({
   --   "jackMort/ChatGPT.nvim",

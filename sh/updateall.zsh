@@ -106,6 +106,11 @@ type cargo > /dev/null 2>&1 && {
 
   cargo install cargo-update
   cargo install-update -a
+
+  cargo nextest self update
+
+  # update just completions from the latest version
+  just --completions zsh >> $DOTFILES/just/init.zsh
 }
 
 type yarn > /dev/null 2>&1 && {
