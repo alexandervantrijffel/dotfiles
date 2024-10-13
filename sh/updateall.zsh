@@ -103,6 +103,9 @@ type yay > /dev/null 2>&1 && {
 type cargo > /dev/null 2>&1 && {
   cargo install cargo-watch
   cargo install cargo-nextest --locked
+
+  cargo install cargo-update
+  cargo install-update -a
 }
 
 type yarn > /dev/null 2>&1 && {
