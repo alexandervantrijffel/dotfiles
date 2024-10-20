@@ -98,6 +98,7 @@ lspconfig.lua_ls.setup {
 
 lspconfig.gopls.setup {
   cmd = { 'gopls' },
+  cmd_env = {GOFUMPT_SPLIT_LONG_LINES="on"},
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
@@ -108,6 +109,9 @@ lspconfig.gopls.setup {
         shadow = true,
       },
       staticcheck = true,
+      gofumpt = true,
+      ["local"] = "dev.azure.com/ns-topaas",
+      buildFlags = { "-tags=feature_tests", "-tags=debug" },
     },
   },
   init_options = {
