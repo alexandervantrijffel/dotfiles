@@ -84,3 +84,6 @@ vim.cmd [[hi DiagnosticFloatingError guifg=#EEFFFF guibg=none]]
 vim.cmd [[hi DiagnosticFloatingWarn guifg=#EEFFFF guibg=none]]
 vim.cmd [[hi DiagnosticFloatingInformation guifg=#EEFFFF guibg=none]]
 vim.cmd [[hi DiagnosticFloatingHint guifg=#EEFFFF guibg=none]]
+
+-- disable mouse
+vim.opt.mouse = ""
