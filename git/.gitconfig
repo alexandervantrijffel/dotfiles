@@ -121,3 +121,5 @@
 	repo = /opt/fromgit/zsh-users/zsh-syntax-highlighting
 	repo = /opt/fromgit/atuinsh/atuin
 	repo = /opt/fromgit/atuin
+[init]
+	defaultBranch = main
