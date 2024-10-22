@@ -134,14 +134,13 @@
 # This applies for new installs. Old installs will keep the old behaviour unless configured otherwise.
 enter_accept = true
 
-
 ## Defaults to "emacs".  This specifies the keymap on the startup of `atuin
 ## search`.  If this is set to "auto", the startup keymap mode in the Atuin
 ## search is automatically selected based on the shell's keymap where the
 ## keybinding is defined.  If this is set to "emacs", "vim-insert", or
 ## "vim-normal", the startup keymap mode in the Atuin search is forced to be
 ## the specified one.
-# keymap_mode = "auto"
+keymap_mode = "vim-insert"
 
 ## Cursor style in each keymap mode.  If specified, the cursor style is changed
 ## in entering the cursor shape.  Available values are "default" and
@@ -152,7 +151,7 @@ enter_accept = true
 # network_timeout = 5
 
 ## Timeout (in seconds) for acquiring a local database connection (sqlite)
-# local_timeout = 5
+local_timeout = 3
 
 ## Set this to true and Atuin will minimize motion in the UI - timers will not update live, etc. 
 ## Alternatively, set env NO_MOTION=true
@@ -160,15 +159,15 @@ enter_accept = true
 
 #[stats]
 # Set commands where we should consider the subcommand for statistics. Eg, kubectl get vs just kubectl
-#common_subcommands = [
-#  "cargo",
-#  "go",
-#  "git",
-#  "npm",
-#  "yarn",
-#  "pnpm",
-#  "kubectl",
-#]
+common_subcommands = [
+  "cargo",
+  "go",
+  "git",
+  "npm",
+  "yarn",
+  "pnpm",
+  "kubectl",
+]
 #
 # Set commands that should be totally stripped and ignored from stats
-#common_prefix = ["sudo"]
+common_prefix = ["sudo","_"]
