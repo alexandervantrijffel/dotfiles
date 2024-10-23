@@ -95,3 +95,6 @@ end
 
 map('i', '<C-l>', CopilotAcceptOneCharacter, {expr = true, remap = false})
 map('i', '<C-f>', CopilotAcceptOneWord, {expr = true, remap = false})
+map('n', '<leader>w', vim.cmd.write)
+
+vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
