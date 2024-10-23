@@ -13,3 +13,7 @@ require("mason-lspconfig").setup {
   automatic_installation = true,
   ensure_installed = servers,
 }
+-- leave the setup of rust_analyzer to rustaceanvim
+require('mason-lspconfig').setup_handlers {
+  ['rust_analyzer'] = function() end,
+}
