@@ -70,6 +70,25 @@ local packer = require('packer').startup(function(use)
     "Pocco81/auto-save.nvim",
     config = function()
       require("auto-save").setup {
+        debounce_delay = 1000, -- saves the file at most every `debounce_delay` milliseconds
+
+        trigger_events = {"TextChanged"}, -- vim events that trigger auto-save. See :h events
+
+        -- function that determines whether to save the current buffer or not
+        -- return true: if buffer is ok to be saved
+        condition = function(buf)
+            local fn = vim.fn
+            local utils = require("auto-save.utils.data")
+
+            -- Add "html" to the list of file types that should not be auto-saved
+            local excluded_filetypes = {"html"}
+            if
+                fn.getbufvar(buf, "&modifiable") == 1 and
+                utils.not_in(fn.getbufvar(buf, "&filetype"), excluded_filetypes) then
+                return true -- met condition(s), can save
+            end
+            return false -- can't save
+        end,
       }
     end,
   })
